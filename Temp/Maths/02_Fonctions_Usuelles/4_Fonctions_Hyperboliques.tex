@@ -1,0 +1,122 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Fonctions Usuelles}
+\author{MPSI 2}
+\def\titre{Fonctions Hyperboliques}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+
+	\section{Cosinus hyperbolique et Sinus hyperbolique}
+		\begin{defi}
+			On appelle cosinus et sinus hyperboliques les parties paires et impaires de l'exponentielle:
+			$$\forall x\in\mathbb{R},ch\left(x\right)=\frac{e^x+e^{-x}}{2} \ \ \ \text{et} \ \ \ sh\left(x\right)=\frac{e^x-e^{-x}}{2}$$
+		\end{defi}
+		
+		\subsection{Parties paires et impaires d'une fonction}
+			\begin{prop}
+				Soit $f\colon\mathbb{R}\longrightarrow\mathbb{R}$ une application definie sur $\mathbb{R}$ et a valeurs reelles. \\
+				Alors il existe un unique couple d'applications definies sur $\mathbb{R}$ et a valeurs dans $\mathbb{R}$, $\left(g,h\right)$, telles que :\\
+				$$\systeme{&\forall x\in\mathbb{R},f\left(x\right)=g\left(x\right)+h\left(x\right) \\
+						   &g\ \text{est paire et }h\ \text{est impaire}}$$
+				L'application $g$ s'appelle la partie paire de $f$ et $h$ la partie impaire de $f$.
+			\end{prop}
+			\begin{preuve}
+				Soit $f\colon\mathbb{R}\longrightarrow\mathbb{R}$ une application fixee.\\ \ \\
+				\cercle{1} Supposons qu'il existe deux applications definies sur $\mathbb{R}$ a valeurs dans $\mathbb{R}$ telles que:
+				\begin{tab}
+					$$\systeme{&f\left(x\right)=g\left(x\right)+h\left(x\right) \\
+							   &g\ \text{est paire et }h\ \text{est impaire}}$$
+					Alors pour x reel,
+					$$\begin{aligned}
+						f\left(x\right)&=g\left(x\right)+h\left(x\right) \\
+						f\left(-x\right)&=g\left(x\right)-h\left(x\right)
+					\end{aligned}$$
+					Ainsi, $g\left(x\right)$ et $h\left(x\right)$ verifient :
+					$$\systeme{f\left(x\right)&=g\left(x\right)+h\left(x\right) \\
+							   f\left(-x\right)&=g\left(x\right)-h\left(x\right)}$$
+					Donc : $\begin{aligned}[t]g\left(x\right)&=\frac{f\left(x\right)+f\left(-x\right)}{2} \\
+								 \text{et }h\left(x\right)&=\frac{f\left(x\right)-f\left(-x\right)}{2}\end{aligned}$\newpage \ \\
+					\textbf{Conclusion 1 :} 
+					\begin{tab}
+						Si $g$ et $h$ existent, alors :
+						$$\fonction{g}{\mathbb{R}}{\mathbb{R}}{x}{\frac{f\left(x\right)+f\left(-x\right)}{2}} \ \ \ \text{et} \ \ \ \fonction{h}{\mathbb{R}}{\mathbb{R}}{x}{\frac{f\left(x\right)-f\left(-x\right)}{2}}$$
+					\end{tab}
+					\textbf{Conclusion 2 :} 
+					\begin{tab}
+						En particulier, si $g$ et $h$ existent, alors ils sont uniques.
+					\end{tab}\ \\
+				\end{tab}
+				\cercle{2} On considere $g$ et $h$ les deux applications definies sur $\mathbb{R}$ par :
+				\begin{tab}
+					$$\forall x\in\mathbb{R},g\left(x\right)=\frac{f\left(x\right)+f\left(-x\right)}{2} \ \ \ \text{et} \ \ \ h\left(x\right)=\frac{f\left(x\right)-f\left(-x\right)}{2}$$
+					Montrer que $g$ et $h$ verifient :
+					$$\systeme{&f\left(x\right)=g\left(x\right)+h\left(x\right) \\
+							   &g\ \text{est paire et }h\ \text{est impaire}}$$
+					Pour $x$ reel :
+					\begin{liste}
+						\item $\begin{aligned}[t]g\left(x\right)+h\left(x\right)&=\frac{f\left(x\right)+f\left(-x\right)}{2}+\frac{f\left(x\right)-f\left(-x\right)}{2} \\
+																				  &=\frac{1}{2}\left(f\left(x\right)+f\left(x\right)+f\left(-x\right)-f\left(-x\right)\right) \\
+																				  &=f\left(x\right)\end{aligned}$
+						\item $g\left(-x\right)=\frac{f\left(-x\right)+f\left(x\right)}{2}=g\left(x\right)$ \\
+							$h\left(-x\right)=\frac{f\left(-x\right)-f\left(x\right)}{2}=-h\left(x\right)$
+					\end{liste}
+					Ceci etant valable pour tout x reel, on conclut que :
+					$$\systeme{&f\left(x\right)=g\left(x\right)+h\left(x\right) \\
+							   &g\ \text{est paire et }h\ \text{est impaire}}$$
+					\textbf{Conclusion Generale :}
+					\begin{tab}
+						Il existe un unique couple d'application $\left(g,h\right)$ tel que :
+						$$\systeme{&f\left(x\right)=g\left(x\right)+h\left(x\right) \\
+								   &g\ \text{est paire et }h\ \text{est impaire}}$$
+					\end{tab}
+				\end{tab}
+			\end{preuve}\ \\ \ \\
+			\textbf{Retour aux fonctions hyperboliques :} \\
+			$$\forall x\in\mathbb{R},ch\left(x\right)=\frac{e^x+e^{-x}}{2} \ \ \ \text{et} \ \ \ sh\left(x\right)=\frac{e^x-e^{-x}}{2}$$
+			D'apres la propriete precedente, $ch$ est paire et $sh$ est impaire.
+			\begin{prop}
+				\begin{liste}
+					\item $\forall x\in\mathbb{R},ch\left(x\right)\geq0$
+					\item $ch$ et $sh$ sont deux applications definies sur $\mathbb{R}$ et : $\begin{aligned}[t]ch'=sh\\
+																												   sh'=ch\end{aligned}$
+					\item $ch$ et $sh$ sont deux fonctions de classe $\mathscr{C}^\infty$ sur $\mathbb{R}$
+				\end{liste}
+			\end{prop} \ \\
+			\textbf{Etude de sh :}\\ \ \\
+			\begin{tikzpicture}
+				\tkzTabInit{$x$/1,$ch\left(x\right)$/1,$sh\left(x\right)$/2}{$0$,$+\infty$}
+				\tkzTabLine{1,+,}
+				\tkzTabVar{-/$0$,+/$+\infty$}
+			\end{tikzpicture}\\ \ \\
+			\textbf{Etude de ch :}\\ \ \\
+			\begin{tikzpicture}
+				\tkzTabInit{$x$/1,$sh\left(x\right)$/1,$ch\left(x\right)$/2}{$0$,$+\infty$}
+				\tkzTabLine{0,+,}
+				\tkzTabVar{-/$1$,+/$+\infty$}
+			\end{tikzpicture}
+			\begin{prop}
+				Pour tout x dans $\mathbb{R}$ :
+				\begin{liste}
+					\item $ch\left(x\right)+sh\left(x\right)=e^x$
+					\item $ch\left(x\right)-sh\left(x\right)=e^{-x}$
+					\item $ch^2\left(x\right)-sh^2\left(x\right)=1$
+				\end{liste}
+			\end{prop}\newpage
+	
+	\section{Tangente hyperbolique}
+		\begin{defi}
+			La fonction tangente hyperbolique est definie par $th=\frac{sh}{ch}$.\\
+			C'est une application definie sur $\mathbb{R}$ car $ch>0$ sur $\mathbb{R}$.\\
+			On a, pour tout x reel, $\begin{aligned}[t]th\left(x\right)&=\frac{e^{2x}-1}{e^{2x}+1}\\
+																		 &=\frac{1-e^{-2x}}{1+e^{-2x}}\end{aligned}$
+		\end{defi}
+		\textbf{Etude de th :}\\ \ \\
+		\begin{tikzpicture}
+			\tkzTabInit{$x$/1,$th'\left(x\right)$/1,$th\left(x\right)$/2}{$0$,$+\infty$}
+			\tkzTabLine{1,+,}
+			\tkzTabVar{-/$0$,+/$1$}
+		\end{tikzpicture}
+\end{document}
