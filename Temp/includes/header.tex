@@ -1,0 +1,47 @@
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{changepage}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathrsfs}
+\usepackage{tikz, tkz-tab}
+\usepackage{titling}
+
+\newtheoremstyle{dotless}{}{}{\itshape}{}{\bfseries}{}{ }{}
+\theoremstyle{dotless}
+
+\newtheorem{defs}{Definition}[subsection]
+\newenvironment{defi}{\definecolor{shadecolor}{RGB}{255,236,217}\begin{shaded}\begin{defs}\ \\}{\end{defs}\end{shaded}}
+
+\newtheorem{pro}{Propriete}[subsection]
+\newenvironment{prop}{\definecolor{shadecolor}{RGB}{230,230,255}\begin{shaded}\begin{pro}\ \\}{\end{pro}\end{shaded}}
+
+\newtheorem{cor}{Corollaire}[subsection]
+\newenvironment{coro}{\definecolor{shadecolor}{RGB}{245,250,255}\begin{shaded}\begin{cor}\ \\}{\end{cor}\end{shaded}}
+
+\setlength{\droptitle}{-1in}
+\predate{}
+\postdate{}
+\date{}
+\title{\chapitre\\\titre\vspace{-.25in}}
+
+\pagestyle{fancy}
+\makeatletter
+\lhead{\chapitre\ - \titre}
+\rhead{\@author}
+\makeatother
+
+\newenvironment{preuve}{\begin{framed}\begin{proof}[\unskip\nopunct]}{\end{proof}\end{framed}}
+\newenvironment{liste}{\begin{itemize}[leftmargin=*,noitemsep, topsep=0pt]}{\end{itemize}}
+\newenvironment{tab}{\begin{adjustwidth}{.5cm}{}}{\end{adjustwidth}}
+
+\newcommand{\uu}[1] {_{_{#1}}}
+\newcommand{\lbracket}{[\![}
+\newcommand{\rbracket}{]\!]}
+\newcommand{\fonction}[5]{\begin{aligned}[t]#1\colon&#2&&\longrightarrow#3 \\&#4&&\longmapsto#5\end{aligned}}
+\newcommand{\systeme}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\cercle}[1]{\textcircled{\scriptsize{#1}}}

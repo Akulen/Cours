@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper]{article}
+
+\def\chapitre{Complexes}
+\author{MPSI 2}
+\def\titre{Equations dans $\mathbb{C}$}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	
+	\section{Racine carree d'un complexe}
+		\subsection{Methode trigonometrique}
+			Soit $z\uu0$ un complexe non nul. Resolvons $z^2 = z\uu0$ \\
+			Notons $z=\rho e^{i\theta}$ et $z\uu0=\rho\uu0e^{i\alpha}$ \\ \\
+			$$\begin{aligned}
+				z=z\uu0&\iff\left\{\begin{aligned}				
+					&\rho^2=\rho\uu0 \\
+					&2\theta\equiv\alpha\ [2\pi]\end{aligned}\right. \\
+				&\iff\left\{\begin{aligned}
+					&\rho=\sqrt{\rho\uu0} \\
+					\exists k\in\mathbb{Z},\ &\theta=\frac{\alpha}{2}+k\pi
+					\end{aligned}\right. \\
+				&\iff z=\sqrt{\rho\uu0}e^{i\frac{\alpha}{2}}\text{ ou }z=-\sqrt{\rho\uu0}e^{i\frac{\alpha}{2}}
+			\end{aligned}$$
+			Les solutions sont opposees \\
+		\subsection{Methode Algebrique}
+			Notons $z=x+iy$ et $z\uu0=a+ib$. Resolvons $z^2=z\uu0$ \\
+			$$\begin{aligned}
+				z^2=z\uu0 &\iff x^2+2ixy-y^2=a+ib \\
+				&\iff \left\{\begin{aligned}
+					x^2-y^2&=a \\
+					2xy&=b
+				\end{aligned}\right. \\
+				&\iff \left\{\begin{aligned}
+					x^2-y^2&=a \\
+					-x^2y^2&=\frac{-b}{4} \\
+					2xy&=b
+				\end{aligned}\right. \\
+				&\iff \left\{\begin{aligned}
+					&x^2\text{ et }y^2\text{ sont les racines du polynome }X^2-aX-\frac{b^2}{4} \\
+					&2xy=b
+				\end{aligned}\right.
+			\end{aligned}$$ \\
+	\section{Equation du 2$^{\text{nd}}$ degre}
+		Resolution de $az^2+bz+c=0$ avec $\iff \left\{\begin{aligned}(a,b,c)\in\mathbb{C}^2\\a\neq0\end{aligned}\right.$\\
+		$$\begin{aligned}
+			az^2+bz+c=a\left[\left(z-\frac{b}{2a}\right)^2-\frac{b^2}{4a^2}+\frac{c}{a}\right] \\
+			az^2+bz+c=0\iff\left(z-\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}+\frac{c}{a}
+		\end{aligned}$$
+		On pose $\Delta=b^2-4ac$ et $\delta=\sqrt{\Delta}$ \\
+		$$\begin{aligned}
+			az^2+bz+c=0 &\iff \left(z+\frac{b}{2a}\right)=\frac{\Delta}{4a^2} \\
+			&\iff z=\frac{-b-\delta}{2a}\text{ ou }z=\frac{-b+\delta}{2a}
+		\end{aligned}$$
+		De plus, $\begin{aligned}[t]\text{produit des racines}&=\frac{c}{a}\\\text{somme des racines}&=-\frac{b}{a}\end{aligned}$ \\
+	\section{Resolution d'equations du type $z^n=a$}
+		\subsection{Racines$^n$ de l'unite}
+			\begin{defi}
+				Soit $n$ un entier naturel non nul.\\
+				Les racines$^n$ de l'unite sont les solutions de l'equation $z^n=1$
+			\end{defi}
+			Cas particuliers :
+			\begin{liste}
+				\item$n=2\ \iff\omega\uu0=1$ ou $\omega\uu1=-1$
+				\item$n=3\ \iff\omega\uu0=1$ ou $\omega\uu1=e^{i\frac{2\pi}{3}}=j$ ou $\omega\uu2=j=\bar{j}$
+				\item$n=4\ \iff\omega\uu0=1$ ou $\omega\uu1=i$ ou $\omega\uu3=-1$ ou $\omega\uu3=-i$\\
+			\end{liste}
+			On note $U_{n}=\left\{\omega\uu{k},\ \forall k\in\lbracket0;n-1\rbracket\right\}$. $U$ muni de la multiplication est un groupe cyclique car $\omega\uu1$ engendre le groupe.
+			\begin{prop}
+				\begin{liste}
+					\item$\forall n\in\mathbb{N},\ U_n=\left\{e^{i\frac{2k\pi}{n}},\ k\in\lbracket0;n-1\rbracket\right\}$ \\
+					\item $U$ est l'ensemble des racines$^n$ de l'unite
+					\item Les images M$_k$ affixes de $\omega\uu{k}$ forment un polygone regulier a n cotes.
+				\end{liste}
+			\end{prop}
+			\begin{preuve}
+				Etudions la position relative de M$_{n-1}$ par rapport a M$_k$
+				$$\begin{aligned}
+					\forall k\in\lbracket0;n-1\rbracket, \omega\uu{k+1}&=e^{i\frac{2(k+1)\pi}{n}} \\
+					&=\omega\uu{k}\ e^{i\frac{2\pi}{n}} \\
+					\text{et : }\omega\uu0&=\omega\uu{n-1}\ e^{i\frac{2\pi}{n}} \\\\
+				\end{aligned}$$
+				$$\begin{aligned}
+					\omega\uu{k+1}=\omega\uu{k}\ e^{i\frac{2\pi}{n}}
+					&\iff\left\{\begin{aligned}
+						&\left|\omega\uu{k+1}\right|=\left|\omega\uu{k}\right| \\
+						&arg\left(\frac{\omega\uu{k+1}}{\omega\uu{k}}\right)\equiv\frac{2\pi}{n}\ \left[2\pi\right]
+					\end{aligned}\right.\\
+					&\iff\left\{\begin{aligned}
+						&\left|\omega\uu{k+1}\right|=\left|\omega\uu{k}\right| \\
+						&mes\left(\overrightarrow{\text{OM}}_{k}\ ;\overrightarrow{\text{OM}}_{k+1}\right)\equiv\frac{2\pi}{n}\ \left[2\pi\right]
+					\end{aligned}\right.
+				\end{aligned}$$
+				\begin{tab}
+					M$_{k+1}$ est donc l'image de M$_k$ par la rotation d'angle $\frac{2\pi}{n}$ autour du centre O. \\
+					De meme, M$_0$ est l'image de M$_{n-1}$ par la meme rotation. \\\\
+					On en deduit que, pour tout $k$, le triangle OM$_k$M$_{k+1}$ a pour image par cette rotation le triangle OM$_{k+1}$M$_{k+2}$\\
+					En particulier, $\left|\left|\overrightarrow{\text{M}_k\text{M}_{k+1}}\right|\right|=\left|\left|\overrightarrow{\text{M}_{k+1}\text{M}_{k+2}}\right|\right|$. \\\\
+				\end{tab}
+				\textbf{Conclusion:} Donc M$_0$M$_1$...M$_{n-1}$ est un polygone regulier.
+			\end{preuve}
+			\begin{prop}
+				Le polygone regulier a n cotes est symetrique par rapport a l'axe reel.\\
+				Les $\omega\uu{k}$ sont deux a deux conjugues.
+			\end{prop}
+			\begin{preuve}
+				Pour cette demonstation, $n\in\mathbb{N}^*$ et $\left(k;k'\right)\in\lbracket0;n-1\rbracket^2$ \\
+				$$\begin{aligned}
+					\left(\mathcal{S}\right):\ \omega\uu{k}=\overline{\omega\uu{k'}}&\iff e^{i\frac{2k\pi}{n}}=e^{i\frac{2k'\pi}{n}} \\
+					&\iff\frac{2k\pi}{n}\equiv\frac{2k'\pi}{n}\ \left[2\pi\right] \\
+					&\iff\left\{\begin{aligned}
+						\exists p\in\mathbb{Z},\ k+k'=np\\
+						0\leq k+k'\leq2n-2
+					\end{aligned}\right.
+				\end{aligned}$$ \\
+				Si $p\notin\left\{0;1\right\}$, le systeme est incompatible. \\
+				On a donc :
+				$$\begin{aligned}
+					\mathcal{S}\iff&\left\{\begin{aligned}
+						&k=-k'\\
+						&\left(k;k'\right)\in\lbracket0;n-1\rbracket^2
+					\end{aligned}\right.
+					&&\text{  ou  }
+					&&\left\{\begin{aligned}
+						&k=-k'+n\\
+						&\left(k;k'\right)\in\lbracket0;n-1\rbracket^2
+					\end{aligned}\right. \\
+					\iff &k=k'=0
+					&&\text{  ou  }
+					&&\ \ k'=n-k
+				\end{aligned}$$
+			\end{preuve}
+			\begin{prop}
+				Soit n un entier naturel superieur ou egal a 1. \\
+				Alors la somme des racines$^n$ de l'unite vaut 0
+			\end{prop}
+			\begin{preuve}
+				Somme triviale des termes d'une suite geometrique avec $k$ allant de $0$ a $n-1$
+			\end{preuve}
+		\subsection{Racines$^n$ d'un complexe $a$}
+			Resolution de $z^n=a$ avec $a$ et $z$ non nuls:\\
+			\begin{tab}
+				Formes trigonometriques: $z=\rho e^{i\theta}$ et $a=\rho\uu0e^{i\alpha}$
+				$$\begin{aligned}
+					z^n=a&\iff \systeme{\rho^n&=\rho\uu0\\ n\theta&\equiv\alpha\ \left[2\pi\right]}\\
+					&\iff\systeme{&\rho=\rho\uu0^{\frac{1}{n}}\\&\exists k\in\mathbb{Z},\ \theta\equiv\frac{a}{n}+\frac{2k\pi}{n}}\\
+					&\iff\exists k\in\lbracket0;n-1\rbracket,\ z=\rho\uu0^\frac{1}{n}\ e^{i\left(\frac{\alpha}{n}+\frac{2k\pi}{n}\right)} \\
+					&\iff\exists k\in\lbracket0;n-1\rbracket,\ z=\rho\uu0^\frac{1}{n}\ e^{i\frac{\alpha}{n}}\ \omega\uu{k}
+				\end{aligned}$$
+			\end{tab}
+			L'ensemble des solutions realise une bijection sur $U_n$.\\
+			Les affixes des solutions forment un polygone regulier obtenu a par une similitude du polygone regulier a n cotes.
+			
+\end{document}

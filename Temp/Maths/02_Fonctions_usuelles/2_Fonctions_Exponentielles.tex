@@ -1,0 +1,65 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Fonctions Usuelles}
+\author{MPSI 2}
+\def\titre{Fonctions Exponentielles}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\begin{defi}
+		\begin{liste}
+			\item La fonction exponentielle est l'application reciproque de $ln$, notee $exp$.
+			\item $\forall a\in\mathbb{R}^{+*}\setminus\{1\}$, la fonction exponentielle en base $a$ est l'application reciproque de $log_a$. On note $exp_e=exp$
+		\end{liste}
+	\end{defi}
+	\begin{prop}
+		\begin{liste}
+			\item $exp$ realise une bijection de $\mathbb{R}^{+*}$ sur $\mathbb{R}$
+			\item $\forall x\in\mathbb{R},\ exp_a'(x)=ln(a)\ exp_a(x)$
+			\item $exp_a$ est de classe $\mathcal{C}^\infty$ sur $\mathbb{R}$.
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+			\begin{liste}
+				\item Par le theoreme des fonctions reciproques.
+				\item Par reccuerence.
+			\end{liste}
+	\end{preuve}
+	\textbf{Valeurs remarquables:}
+	\begin{tab}\begin{liste}
+		\item $exp_a(0)=1$
+		\item $exp_a(1)=a$
+	\end{liste}\end{tab}
+	\begin{prop}\begin{liste}
+		\item $\forall x\in\mathbb{R}^{+*}\setminus\{1\},\ \forall(x,y)\in\mathbb{R}^2,\ exp_a(x+y)=exp_a(x)\ exp_a(y)$\\
+		\item $\forall(a,b)\in\left(\mathbb{R}^{+*}\setminus\{1\}\right)^2,\ \forall x\in\mathbb{R},\ exp_{ab}(x)=exp_a(x)\ exp_b(x)$
+	\end{liste}\end{prop}
+	\begin{preuve}
+		Application de log aux quantites:\\
+		\textbf{1/} Soit a et b deux reels:
+		\begin{tab}$\begin{aligned}
+			&log_a(exp_a(x+y))=x+y\\
+			&\begin{aligned}log_a(exp_a(x)\ exp_a(y))&=log_a(exp_a(x))+log_a(exp_a(y))\\
+				&=x+y\end{aligned}\end{aligned}$\\
+			Les deux quantites sont egales et \textbf{log est bijective} donc:\\
+			$exp_a(x+y)=exp_a(x)\ exp_a(y)$
+		\end{tab}
+		\textbf{2/} On utilise $log_{ab}$\\
+		\begin{tab}$\begin{aligned}
+				&log_{ab}(x)=x\\
+				&\begin{aligned}log_{ab}(exp_a(x\ exp_b(x))&=log_{ab}(exp_a(x))+log_{ab}(exp_b(x))\\
+					&=\frac{ln(a)}{ln(ab)}x+\frac{ln(b)}{ln(ab)}x\\
+					&=\frac{ln(a)+ln(b)}{ln(ab)}x\\
+					&=x
+		\end{aligned}\end{aligned}$\\\\
+		Les deux quantites sont egales, donc:\\
+		$\forall(a,b)\in\left(\mathbb{R}^{+*}\setminus\{1\}\right)^2,\ \forall x\in\mathbb{R},\ exp_{ab}(x)=exp_a(x)\ exp_b(x)$\end{tab}		
+	\end{preuve}
+	\textbf{Remarques}\\
+	\begin{liste}\item $exp_a(x)=exp(x\ ln(a))$
+		\item $\forall a\in\mathbb{R}^{+*}\setminus\{1\},\ \forall x\in\mathbb{R},\ a^x=exp_a(x)$\\
+			D'ou les proprietes classiques sur les exposants
+	\end{liste}
+\end{document}
