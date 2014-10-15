@@ -1,0 +1,98 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{EDL}
+\author{MPSI 2}
+\def\titre{Equations Differentielles Lineaires du second ordre}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Generalites}
+		\begin{defi}
+			Soit $\mathcal{I}$ un intervalle reel.
+			$a$,$b$,$c$,$d$ des applications definies sur $\mathcal{I}$ a valeurs dans $\mathbb{K}$ et continues sur $\mathcal{I}$.
+			On appelle equation differentielle lineaire du second ordre toute relation du type :
+			$$\begin{aligned}
+				\forall x\in\mathcal{I},a\left(x\right)y''\left(x\right)+b\left(x\right)y'\left(x\right)+c\left(x\right)y\left(x\right)&=d\left(x\right)\\
+																												   &\text{ d'inconnue y}
+			\end{aligned}$$
+		\end{defi}
+		\begin{defi}
+			Une solution particuliere sur $\mathcal{I}$ de l'equation differentielle precedente est une application $\phi\colon\mathcal{I}\longrightarrow\mathbb{K}$ telle que :
+			\begin{liste}
+				\item $\phi$ est deux foix derivable sur $\mathcal{I}$.
+				\item $\forall x\in\mathcal{I},a\left(x\right)\phi''\left(x\right)+b\left(x\right)\phi'\left(x\right)+c\left(x\right)\phi\left(x\right)=d\left(x\right)$
+			\end{liste}
+		\end{defi}
+		\textbf{Remarque :} L'ensemble des solutions de l'equation differentielle lineaire du second ordre homogene
+		$$
+			\forall x\in\mathcal{I},a\left(x\right)y''\left(x\right)+b\left(x\right)y'\left(x\right)+c\left(x\right)y\left(x\right)=0
+		$$
+		a une structure d'espace vectoriel (non vide et stable par combinaisons lineaires).
+		
+	\section{Equation Differentielle Lineaire du second ordre a coefficients constants}
+		\subsection{Definitions}
+			\begin{defi}
+				Soit $\left(a,b,c\right)\in\mathbb{K}^3$ tels que $a\neq0$.
+				Soit $d\colon\mathcal{I}\longrightarrow\mathbb{K}$ une application continue sur $\mathcal{I}$.
+				On appelle equation differentielle lineaire du second ordre a coefficients constants une relation du type :
+				$$
+					\forall x\in\mathcal{I},ay''\left(x\right)+by'\left(x\right)+cy\left(x\right)=d\left(x\right)
+				$$
+			\end{defi}
+		\newpage
+		\subsection{Etude de l'equation homogene associee}
+			$$\begin{aligned}
+				\forall x\in\mathcal{I},ay''\left(x\right)+by'\left(x\right)+cy\left(x\right)&=0\\
+																								&\text{avec}\left(a,b,c\right)\in\mathbb{K}^3,a\neq0
+			\end{aligned}$$
+			\begin{prop}
+				(Solutions reelles)\\
+				On suppose $a,b,c$ reels et $a\neq0$\\
+				Soit l'equation differentielle homogene associee :
+				$$
+					\forall x\in\mathcal{I},ay''\left(x\right)+by'\left(x\right)+cy\left(x\right)=0 \ \ \ \left(2\right)
+				$$
+				On considere l'equation $ar^2+br+c=0 \ \left(E\right)$ d'inconnue $r$.\\
+				$\left(E\right)$ s'appelle l'equation caracteristique associee a $\left(2\right)$\\
+				\textbf{Cas 1 :} $\left(E\right)$ admet deux solutions reelles distinctes $r\uu1$ et $r\uu2$.
+				\begin{tab}
+					$y$ est solution de $\left(2\right)$ ssi:
+					$$
+						\exists\left(k\uu1,k\uu2\right)\in\mathbb{R}^2,\forall x\in\mathbb{R},y\left(x\right)=k\uu1e^{r\uu1x}+k\uu2e^{r\uu2x}
+					$$
+				\end{tab}
+				\textbf{Cas 2 :} $\left(E\right)$ admet une unique solution reelle $r\uu0$.
+				\begin{tab}
+					$y$ est solution de $\left(2\right)$ ssi:
+					$$
+						\exists\left(\lambda,\mu\right)\in\mathbb{R}^2,\forall x\in\mathbb{R},y\left(x\right)=\left(\lambda x+\mu\right)e^{r\uu0x}					$$
+				\end{tab}
+				\textbf{Cas 3 :} $\left(E\right)$ admet deux solutions complexes non reelles conjuguees $\alpha\pm\imath\beta$.
+				\begin{tab}
+					$y$ est solution de $\left(2\right)$ ssi:
+					$$
+						\exists\left(a,b\right)\in\mathbb{R}^2,\forall x\in\mathbb{R},y\left(x\right)=e^{\alpha x}\left(a\cos\beta x+\imath\sin\beta x\right)
+					$$
+				\end{tab}
+			\end{prop}
+			\begin{prop}
+				(moins importante, solutions complexes)\\
+				On suppose $a,b,c$ complexes et $a\neq0$.\\
+				\textbf{Cas 1 :} $\left(E\right)$ admet deux solutions distinctes $r\uu1$ et $r\uu2$.
+				\begin{tab}
+					$y$ est solution de $\left(2\right)$ ssi:
+					$$
+						\exists\left(k\uu1,k\uu2\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},y\left(x\right)=k\uu1e^{r\uu1x}+k\uu2e^{r\uu2x}
+					$$
+				\end{tab}
+				\textbf{Cas 2 :} $\left(E\right)$ admet une unique solution $r\uu0$.
+				\begin{tab}
+					$y$ est solution de $\left(2\right)$ ssi:
+					$$
+						\exists\left(\lambda,\mu\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},y\left(x\right)=\left(\lambda x+\mu\right)e^{r\uu2x}
+					$$
+				\end{tab}
+			\end{prop}
+\end{document}
