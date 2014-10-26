@@ -1,0 +1,123 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{EDL}
+\author{MPSI 2}
+\def\titre{Equations Differentielles Lineaires du premier ordre}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Generalites}
+		\begin{defi}
+			Soit $I$ un intervalle reel.\\
+			Soient $a$, $b$ et $c$ trois fonctions definies sur $I$ a valeurs reelles ou complexes.\\
+			$$\begin{aligned}&&\fonction{a}{I}{\mathbb{K}}{x}{a(x)} &&\fonction{b}{I}{\mathbb{K}}{x}{b(x)} &&\fonction{c}{I}{\mathbb{K}}{x}{c(x)} \end{aligned}$$\\
+			On suppose $a$ $b$ et $c$ continues sur $I$\\
+			\\
+			On appelle equation differentielle lineaire du premier ordre une relation du type:\\
+			$$\forall x\in I,\ a(x)\,y'(x)+b(x)\,y(x)=c(x)$$
+		\end{defi}
+		\begin{defi}
+			\begin{liste}
+				\item $c$ est le second membre de l'equation differentielle.
+				\item $\forall x\in I,\ a(x)\,y'(x)+b(x)\,y(x)=0$ est le second membre de l'equation.
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $J$ un sous-intervalle de $I$.\\
+			On appelle solution de l'equation differentielle toute application $\Phi$ telle que:\\
+			$\fonction{\Phi}{J}{\mathbb{K}}{x}{\Phi(x)}$\\
+			Telle que :\begin{liste}
+							\item $\Phi$ soit derivable sur $J$
+							\item $\forall x\in J,\ a(x)\Phi'(x)+b(x)\Phi(x)=c(x)$
+							\end{liste}
+		\end{defi}
+		\textbf{Remarque:} l'ensemble $\mathcal{S}\uu0$ des solutions de l'EDHA sur $I$ est stable par combinaison lineaire et non vide ($y=0$ est solution)\\
+		On dit alors que $S_0$ a une structure d'espace vectoriel
+	\section{Etude de l'equation $\forall x\in I,\ y'(x)+\alpha y(x)=0$}
+	Pour $\alpha$ continue sur I.\\
+	\\
+	\begin{prop}
+		L'ensemble $\mathcal{S}\uu0$ des solutions de l'ED $\forall x\in I,\ y'(x)+\alpha y(x)=0$ est:\\
+		$$\mathcal{S}_0=\left\{\lambda\times g,\ \lambda\in\mathbb{R}\right\}$$\\
+		avec $g(x)=exp\left(\int\limits^x_{x_0}A(x)\right)$ et $A(x)$ une primitive de $\alpha$ sur I
+	\end{prop}
+	\begin{preuve}
+		On etudie l'expression $y'(x)=-\alpha y(x)$, et on cherche une primitive de $-\alpha$.\\
+		L'exponentielle de cette primitive est solution de l'expression ($g(x)$).\\
+		\\
+		On cherche une fonction $u$ telle que $y=u\,g$ soit solution de l'expression precedente.\\
+		Par calcul, on trouve: $\forall x\in I,\ u'(x)=0$, donc u est constante sur I.\\
+		\\
+		Ainsi, toutes les solutions de l'expression sont de la forme de la propriete.
+	\end{preuve}
+	\textbf{Remarques:}\\
+	\begin{liste}
+		\item $S_0$ est un espace vectoriel sur $\mathbb{K}$ de dimention 1, dont une base est donnee par $g$. On parle de droite affine.
+		\item Il est possible de caracteriser la faction exponentielle par l'unique solution du systeme\\
+			$\left\{\begin{aligned}&\forall x\in\mathbb{R},\ y'(x)=y(x)\\
+				&y(0)=1\end{aligned}\right.$\\
+		\item Si y est solution de l'ED, de deux choses l'une:
+			\begin{liste}
+				\item $y$ est l'application nulle sur $I$.
+				\item $y$ ne s'annule jamais sur $I$ 
+			\end{liste}
+	\end{liste}
+	\section{Cas general: $\forall x\in I,\ a(x)y'(x)+b(x)y(x)=c(x)$}
+		\subsection{Resolution de l'EDHA}
+			$a$ est continue sur $I$. Soit $J$ un intervalle ou $a$ ne s'annule pas. Alors:\\\\
+			$\begin{aligned}&\forall x \in J,\ q(x)\,y'(x)+b(x)\,y(x)=0\\
+				\iff&\forall x \in J,\ y'(x)+\frac{b(x)}{a(x)}y(x)=0\end{aligned}$\\
+			D'apres la propriete precedente, l'ensemble des solutions est un espace vectriel de dimention 1.\\
+			\\
+			Pour $x\uu0\in J$, on note $Z_0$ l'application définie sur $J$ par:\\
+			$\forall x\in J,\ Z_0(x)=-exp\left(\int\limits_{x\uu0}^x\frac{b(t)}{a(t)}\,dt\right)$\\
+			$Z_0$ est une solution de l'EDHA.
+		\subsection{Resolution de l'ED}
+			Soit $y\uu0$ une solution particuliere de l'ED. Donc $y\uu0$ est derivable sur $J$ et:\\
+			$\forall x\in J,\ a(x)\,y\uu0'(x)+b(x)\,y\uu0(x)=c(x)$\\
+			\\
+			$y$ est solution de l'ED\\
+			$\begin{aligned}&\iff\forall x\in J,\ a(x)\,y'(x)+b(x)\,y(x)=c(x)\\
+				&\iff\forall x\in J,\ a(x)\,y'(x)+b(x)\,y(x)=a(x)\,y\uu0'(x)+b(x)\,y\uu0(x)\\
+				&\iff\forall x\in J,\ a(x)(y-y\uu0)(x)+b(x)(y-y\uu0)(x)=0\\
+				&\iff(y-y\uu0)\text{ est solution de l'EDHA}\\
+				&\iff\exists\lambda\in\mathbb{K},\ \forall x\in J,\ (y-y\uu0)(x)=\lambda Z_0(x)\\
+				&\iff\exists\lambda\in\mathbb{K},\ \forall x\in J,\ y(x)=y\uu0+\lambda Z_0\end{aligned}$\\
+			\\
+			On a demontre:
+			\begin{prop}
+				\begin{liste}
+					\item l'ensemble des solutions de l'ED $a(x)\,y'(x)+b(x)\,y(x)=c(x)$ est :\\
+						$\mathcal{S}_J=\left\{y\uu0+\lambda Z_0,\ \lambda\in\mathbb{K}\right\}$\\
+						avec $\fonction{Z_0}{J}{\mathbb{K}}{x}{-exp\left(-\int\limits_{x\uu0}^x\frac{b(t)}{a(t)}\,dt\right)}$\\
+						et $y\uu0$ solution particuliere de l'ED.
+					\item $\mathcal{S}_J$est un espace affine d'espace vectoriel sous-jacent l'ensemble des solutions de l'EDHA.\\
+		c'est un espace vectoriel de dimension 1, on parle de droite affine.
+				\end{liste}
+			\end{prop}
+		\subsection{Determination d'une solution particuliere}
+			Il existe deux fonctions $y$ et $u$ derivables sur $J$ telles que:\\
+			$\forall x\in J,\ y(x)=u(x)\,Z_0(x)$\\
+			$y$ est solution de l'ED $\iff \forall x\in J,\ u'(x)=\frac{c(x)}{a(x)\,Z_0(x)}$\\
+			On choisit une primitive $u\uu0$ de $u'$ et $y\uu0=u\uu0\,Z_0$, les solutions de l'ED sont donc de la forme:\\
+			$y=y\uu0+\lambda Z_0$
+		\subsection{Probleme de Cauchy}
+			Soit $I$ un intervalle reel et $a$; $b$, $c$ trois applications continues sur $I$ a valeurs dans $\mathbb{K}$.
+			Soit l'ED: $\forall s\in I,\ a(x)\,y'(x)+b(x)\,y(x)=c(x)$\\
+			\\
+			\textbf{Soit $(x\uu0,y\uu0\in I\times\mathbb{K}$. Existe-t-il une solution $y:x\rightarrow\mathbb{K}$ satisfaisant $y(x\uu0)=y\uu0$ ?}
+			\begin{prop}
+				Si $a$ ne s'annule pas sur $I$, alors il existe une unique solution $y:I\rightarrow\mathbb{K}$ telle que:\\
+				$\left\{\begin{aligned}&\forall x\in I,\ a(x)\,y'(x)+b(x)\,y(x)=c(x)\\&y(x\uu0)=y\uu0\end{aligned}\right.$
+			\end{prop}
+			\textbf{Remarques si $\mathbb{K=R}$}
+			\begin{liste}
+				\item Si $a$ ne s'annule pas sur $I$, il existe une unique \textbf{courbe solution} passant oar le pint de coordonnees $(x\uu0,y\uu0)$
+				\item par application de cette propriete, deux courbes integrales ne se coupent jamais.
+			\end{liste}
+			\begin{preuve}
+				Determiner les solutions litterales de l'ED, et exprimer $y(x\uu0)=y\uu0$ en fonction des expressions precedentes. En deduire $\lambda$ unique.
+			\end{preuve}
+\end{document} 
