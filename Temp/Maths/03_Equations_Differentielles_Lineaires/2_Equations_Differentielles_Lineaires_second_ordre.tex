@@ -95,4 +95,130 @@
 					$$
 				\end{tab}
 			\end{prop}
+			\begin{preuve}
+				Soit $\left(a,b,c\right)\in\mathbb(C)^3$ et $a\neq0$.\\
+				Soit l'equation differentielle homogene :
+				$$
+					\forall x\in\mathbb{R},ay''\left(x\right)+by'\left(x\right)+cy\left(x\right)=0 \ \ \ \left(2\right)
+				$$
+				\begin{liste}
+					\item Recherche d'une solution exponentielle.\\
+						Soit $r\in\mathbb{C}$ fixe.\\
+						Soit $z\uu0\colon x\longmapsto e^{rx}$ une application deux foix derivable.
+						$$\begin{aligned}
+							&z\uu0\left(x\right)&&=e^{rx}\\
+							&z\uu0'\left(x\right)&&=re^{rx}\\
+							&z\uu0''\left(x\right)&&=r^2e^{rx}
+						\end{aligned}$$
+						$z\uu0$ est solution de $\left(2\right)$ sur $\mathbb{R}$ :
+						$$\begin{aligned}
+							&\iff\forall x\in\mathbb{R},az\uu0''\left(x\right)+bz\uu0'\left(x\right)+cz\uu0\left(x\right)=0\\
+							&\iff\forall x\in\mathbb{R},e^{rx}\left(ar^2+br+c\right)=0\\
+							&\iff\forall x\in\mathbb{R},ar^2+br+c=0 \ \ \ \text{car }\forall x\in\mathbb{R},e^{rx}>0
+						\end{aligned}$$
+						\textbf{Conclusion :} $z\uu0$ est solution de $\left(2\right)$ ssi $r$ est racine de l'equation caracteristique.
+					\item Determination des autres solutions.\\
+						Soit $g\colon\mathbb{R}\longrightarrow\mathbb{C}$ une application deux foix derivable sur $\mathbb{R}$.\\
+						Alors il existe une application $u$ definie sur $\mathbb{R}$ a valeurs dans $\mathbb{C}$ telle que :
+						$$\begin{aligned}
+							\forall x\in\mathbb{R},y\left(x\right)&=u\left(x\right)e^{rx} \\
+												    y\left(x\right)&=e^{rx}u\left(x\right) \\
+												   y'\left(x\right)&=e^{rx}\left(ru\left(x\right)+u'\left(x\right)\right) \\
+												  y''\left(x\right)&=e^{rx}\left(r^2u\left(x\right)+2ru'\left(x\right)+u''\left(x\right)\right) \\
+						\end{aligned}$$
+						$y$ est solution de $\left(2\right)$ sur $\mathbb{R}$ :
+						$$\begin{aligned}
+							&\iff\forall x\in\mathbb{R},a\left(r^2u\left(x\right)+ru'\left(x\right)+u''\left(x\right)\right)+b\left(ru\left(x\right)+u'\left(x\right)\right)+cu\left(x\right)=0 \\
+							&\iff\forall x\in\mathbb{R},au''\left(x\right)+\left(2ra+b\right)u'\left(x\right)+\left(ar^2+br+c\right)u\left(x\right)=0 \\
+							&\iff\forall x\in\mathbb{R},au''\left(x\right)+\left(2ra+b\right)u'\left(x\right)=0
+						\end{aligned}$$
+						On pose $v=u'$ pour obtenir une equation differentielle d'ordre un. \\
+						$y$ est solution de $\left(2\right)$ sur $\mathbb{R}$ :
+						$$\begin{aligned}
+							&\forall x\in\mathbb{R},av'\left(x\right)+\left(2ra+b\right)v\left(x\right)=0 \\
+							&\forall x\in\mathbb{R},av'\left(x\right)=-\frac{2ra+b}{a}v\left(x\right) \\
+							&\exists\lambda\in\mathbb{C},\forall x\in\mathbb{R},v\left(x\right)=\lambda\exp\left(-\left(2r+\frac{b}{a}\right)x\right) \\
+						\end{aligned}$$
+						\textbf{Cas 1 :} L'equation caracteristique admet deux racines $r\uu1$ et $r\uu2$.
+						\begin{tab}
+							On applique ce qui precede avec $r=r\uu1$ et $r\uu1+r\uu2=-\frac{b}{a}$. \\
+							$y$ est solution de $\left(2\right)$ sur $\mathbb{R}$ :
+							$$\begin{aligned}
+								&\iff\exists\lambda\in\mathbb{C},\forall x\in\mathbb{R},&v\left(x\right)&=\lambda e^{\left(-2r\uu1+r\uu1+r\uu2\right)x} \\
+								&\iff\exists\lambda\in\mathbb{C},\forall x\in\mathbb{R},&v\left(x\right)&=\lambda e^{\left(-r\uu1+r\uu2\right)x} \\
+								&\iff\exists\lambda\in\mathbb{C},\exists\mu\in\mathbb{C},\forall x\in\mathbb{R},&u\left(x\right)&=\frac{\lambda}{r\uu2-r\uu1}e^{\left(r\uu2-r\uu1\right)x}+\mu \\
+								&\iff\exists\left(\lambda,\mu\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},&y\left(x\right)&=\frac{\lambda}{r\uu2-r\uu1}e^{r\uu2x}+\mu e^{r\uu1x} \\
+								&\iff\exists\left(k\uu1,k\uu2\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},&y\left(x\right)&=k\uu1e^{r\uu2x}+k\uu2 e^{r\uu1x}
+							\end{aligned}$$
+						\end{tab}
+						\textbf{Cas 2:} L'equation caracteristique admet une racine unique $r\uu0$.
+						\begin{tab}
+							Alors $r\uu0=-\frac{b}{2a}$. On applique ce qui precede le cas 1 avec $r=r\uu0$. \\
+							$y$ est solution de $\left(2\right)$ sur $\mathbb{R}$ :
+							$$\begin{aligned}
+								&\iff\exists\lambda\in\mathbb{C},\forall x\in\mathbb{R},&v\left(x\right)&=\lambda \\
+								&\iff\exists\left(\lambda,\mu\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},&u\left(x\right)&=\lambda x+\mu \\
+								&\iff\exists\left(\lambda,\mu\right)\in\mathbb{C}^2,\forall x\in\mathbb{R},&y\left(x\right)&=\left(\lambda x+\mu\right)e^{r\uu0x}
+							\end{aligned}$$
+						\end{tab}
+				\end{liste}
+				\textbf{Conclusion :} Ceci demontre :
+				\begin{liste}
+					\item La propriete sur les solutions complexes
+					\item Si $\left(a,b,c\right)\in\mathbb{R}^3$, la propriete sur les solutions reelles dans les deux premiers cas, en remplacant "$\exists\lambda\in\mathbb{C}/\exists\left(\lambda,\mu\right)\in\mathbb{C}^2/\exists\left(k\uu1,k\uu2\right)\in\mathbb{C}^2$" par "$\exists\lambda\in\mathbb{R}/\exists\left(\lambda,\mu\right)\in\mathbb{R}^2/\exists\left(k\uu1,k\uu2\right)\in\mathbb{R}^2$"
+				\end{liste}
+			\end{preuve}
+			\textbf{Structure de l'ensemble des solutions de $\left(2\right)$} \\
+			\textbf{Cas reel :} $\left(a,b,c\right)\in\mathbb{R}^3,a\neq0$
+			\begin{tab}
+				L'ensemble des solutions reelles de $\left(2\right)$ est un espace vectoriel reel de dimension deux dont une base est $\left(z\uu1,z\uu2\right)$ non vide et stable par combinaisons lineaires a coefficients reels avec :
+				\begin{liste}
+					\item $z\uu1\colon x\longmapsto e^{r\uu1x}$ et $z\uu2\colon x\longmapsto e^{r\uu2x}$ si l'equation caracteristique admet deux racines reelles $r\uu1$ et $r\uu2$
+						$$
+							\mathcal{S}=\left\{y\in\mathcal{F}\left(\mathbb{R},\mathbb{R}\right),\exists\left(k\uu1,k\uu2\right)\in\mathbb{R}^2,y=k\uu1z\uu1+k\uu2z\uu2\text{ sur }\mathbb{R}\right\}
+						$$
+					\item $z\uu1\colon x\longmapsto e^{r\uu0x}$ et $z\uu2\colon x\longmapsto xe^{r\uu0x}$ si l'equation caracteristique admet une racine reelle unique $r\uu0$
+						$$
+							\mathcal{S}=\left\{\lambda z\uu1+\mu z\uu2,\left(\lambda,\mu\right)\in\mathbb{R}^2\right\}
+						$$
+					\item $z\uu1\colon x\longmapsto e^{\alpha x}\cos\beta x$ et $z\uu2\colon x\longmapsto e^{\alpha x}\sin\beta x$ si l'equation caracteristique admet deux racine complexes conjuguees $\alpha\pm\imath\beta$
+						$$
+							\mathcal{S}=\left\{Az\uu1+Bz\uu2,\left(A,B\right)\in\mathbb{C}^2\right\}
+						$$
+				\end{liste}
+			\end{tab}
+			\textbf{Cas complexe :} $\left(a,b,c\right)\in\mathbb{C}^3,a\neq0$
+			\begin{tab}
+				L'ensemble des solutions complexes de $\left(2\right)$ est un espace vectoriel complexe de dimension deux dont une base est $\left(z\uu1,z\uu2\right)$ avec :
+				\begin{liste}
+					\item $z\uu1\colon x\longmapsto e^{r\uu1x}$ et $z\uu2\colon x\longmapsto e^{r\uu2x}$ si l'equation caracteristique admet deux racines $r\uu1$ et $r\uu2$
+					\item $z\uu1\colon x\longmapsto e^{r\uu0x}$ et $z\uu2\colon x\longmapsto xe^{r\uu0x}$ si l'equation caracteristique admet une racine unique $r\uu0$
+				\end{liste}
+			\end{tab}
+			\textbf{Remarque :} Toute solution de $\left(2\right)$ sur $\mathbb{R}$ existe de maniere unique comme combinaison lineaire de $z\uu1$ et $z\uu2$
+		\subsection{Resolution de l'equation differentielle}
+			$$\begin{aligned}
+				\forall x\in\mathcal{I},ay''\left(x\right)+by'\left(x\right)+cy\left(x\right)=d\left(x\right)& \ \ \ \left(1\right)\\
+																								\text{avec}&\left(a,b,c\right)\in\mathbb{K}^3,a\neq0 \\
+																												&d\colon\mathcal{I}\longmapsto\mathbb{K}\text{ continue}
+			\end{aligned}$$
+			\subsubsection{Structure de l'ensemble des solutions}
+				Soit $y\uu0$ une solution particuliere de $\left(1\right)$ sur $mathcal{I}$.\\
+				Soit $y$ ube application definie sur $mathcal{I}$ a valeurs dans $mathbb{K}$, deux foix derivable sur $\mathcal{I}$.
+				$y$ est solution de $\lf1$ sur $\I$ :
+				$$\begin{aligned}
+					&\iff\forall x\in\I,ay''\lf{x}+by'\lf{x}+cy\lf{x}=b\lf{x} \\
+					&\iff\forall x\in\I,ay''\lf{x}+by'\lf{x}+cy\lf{x}=ay''\uu0\lf{x}+by'\uu0\lf{x}+cy\uu0\lf{x} \\
+					&\iff\forall x\in\I,a(y-y\uu0)''\lf{x}+b(y-y\uu0)'\lf{x}+c(y-y\uu0)\lf{x}=0 \\
+					&\iff y-y\uu0\text{ est solution de }\lf2\text{ sur }\I \\
+					&\iff\exists\lf{\lambda,\mu}\in\K^2,y-y\uu0=\lambda z\uu1+\mu z\uu2\text{ sur }\I \\
+					&\iff\exists\lf{\lambda,\mu}\in\K^2,\forall x\in\I,y\lf{x}=y\uu0\lf{x}+\lambda z\uu1\lf{x}+\mu z\uu2\lf{x}
+				\end{aligned}$$
+				\textbf{Conclusion :} L'ensemble $S$ des solutions de $\lf1$ sur $\I$ est :
+				$$S=\left\{y\uu0+\lambda z\uu1+\mu z\uu2,\lf{\lambda,\mu}\in\K^2\right\}$$
+				Structure d'espace affine d'espace vectoriel sous-jacent l'ensemble $S$ des solutions de l'equation differentielle homogene associee $\lf2$.
+			\subsubsection{Etude de $d$}
+				\begin{liste}
+					\item Si $d$ est une fonction polynomiale, on cherche $y\uu0$ sous forme polynomiale de degre $\deg\lf{d}+$ un nombre dependant de $a$, $b$ et $c$.
+				\end{liste}
 \end{document}
