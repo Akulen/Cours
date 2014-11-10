@@ -1,0 +1,49 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Elements de Theorie des Ensembles}
+\author{MPSI 2}
+\def\titre{Operations Ensemblistes}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Complementaire : ${^cF},F^c,\bar{F},C_EF,E\setminus F$}
+		Soit $E$ un ensemble
+		\begin{defi}
+			Soit $F$ un sous ensemble de $E$.\\
+			$$\lf{x\in{^cF}}\iff\text{non}\lf{x\in F}$$
+		\end{defi}
+	\section{Reunion}
+		\begin{defi}
+			Soit $F$ et $G$ deux sous ensembles de $E$.
+			$$\lf{x\in F\cup G}\iff\lf{\lf{x\in F}\ou\lf{x\in G}}$$
+		\end{defi}
+	\section{Intersection}
+		\begin{defi}
+			Soit $F$ et $G$ deux sous ensembles de $E$.
+			$$\lf{x\in F\cap G}\iff\lf{\lf{x\in F}\et\lf{x\in G}}$$
+		\end{defi}
+		\begin{prop}
+			${^c\lf{F\cup G}}={^cF}\cap{^cG}$ \\
+			${^c\lf{F\cap G}}={^cF}\cup{^cG}$ \\
+			${^c\lf{^cF}}=F$
+		\end{prop}
+		\begin{preuve}
+			$$\begin{aligned}
+				x\in{^c\lf{F\cup G}}&\iff\neg\lf{x\in F\cup G} \\
+									&\iff\neg\lf{\lf{x\in F}\ou\lf{x\in G}} \\
+									&\iff\neg\lf{x\in F}\et\neg\lf{x\in G} \\
+									&\iff\lf{x\in {^cF}}\et\lf{x\in {^cG}} \\
+									&\iff x\in {^cF}\cap{^cG}
+			\end{aligned}$$
+		\end{preuve}
+	\section{Difference symetrique}
+		\begin{defi}
+			Soit $F$ et $G$ deux sous ensembles de $E$.
+			$$\begin{aligned}
+				x\in F\Delta G\iff\lf{x\in F}\xou \\
+				F\Delta G=C\uu{F\cup G}F\cap G
+			\end{aligned}$$
+		\end{defi}
+\end{document}
