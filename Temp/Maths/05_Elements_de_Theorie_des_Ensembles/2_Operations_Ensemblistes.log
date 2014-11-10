@@ -1,11 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.6)  5 NOV 2014 23:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.6)  10 NOV 2014 19:45
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**2_Operations_Ensemblistes.tex
+**\input ./2_Operations_Ensemblistes.tex
 (./2_Operations_Ensemblistes.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -628,29 +627,42 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./2_Operations_Ensemblist
-es.aux) ) 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] (./2_Operations_Ensemblistes.aux) ) 
 Here is how much of TeX's memory you used:
- 12495 strings out of 495028
- 228405 string characters out of 6181497
- 299106 words of memory out of 5000000
- 15404 multiletter control sequences out of 15000+600000
+ 12497 strings out of 495028
+ 228410 string characters out of 6181497
+ 304196 words of memory out of 5000000
+ 15407 multiletter control sequences out of 15000+600000
  15546 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 58i,6n,55p,465b,197s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on 2_Operations_Ensemblistes.pdf (1 page, 65198 bytes).
+ 58i,13n,55p,474b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on 2_Operations_Ensemblistes.pdf (2 pages, 87054 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 50 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
