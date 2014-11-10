@@ -32,7 +32,18 @@
 		\begin{preuve}
 			$$\begin{aligned}
 				x\in{^c\lf{F\cup G}}&\iff\neg\lf{x\in F\cup G} \\
-									&
+									&\iff\neg\lf{\lf{x\in F}\ou\lf{x\in G}} \\
+									&\iff\neg\lf{x\in F}\et\neg\lf{x\in G} \\
+									&\iff\lf{x\in {^cF}}\et\lf{x\in {^cG}} \\
+									&\iff x\in {^cF}\cap{^cG}
 			\end{aligned}$$
 		\end{preuve}
+	\section{Difference symetrique}
+		\begin{defi}
+			Soit $F$ et $G$ deux sous ensembles de $E$.
+			$$\begin{aligned}
+				x\in F\Delta G\iff\lf{x\in F}\xou \\
+				F\Delta G=C\uu{F\cup G}F\cap G
+			\end{aligned}$$
+		\end{defi}
 \end{document}
