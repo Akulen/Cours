@@ -1,0 +1,118 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\newcommand{\vdashv}{\mathrel{\text{\ooalign{$\vdash$\cr$\dashv$\cr}}}}
+
+\def\chapitre{Relations Binaires}
+\author{MPSI 2}
+\def\titre{Relations d'\'equivalence sur un ensemble}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{G\'en\'eralit\'es}
+		Soit $E$ un ensemble non vide.
+		\begin{defi}
+			On appelle \underline{relation binaire sur $E$} le couple $(E,G)$ o\`u $G$ est un graphe de $E$ dans $E$.
+		\end{defi}\ \\
+		\textbf{Notations}: $\begin{aligned}[t]&(E,G), \mathcal{R}\\
+					&\forall(x,y)\in E^2,\ x\,\mathcal{R}\,y\iff(x,y)\in G\end{aligned}$
+		\begin{tab}
+			Notons $\Delta_E=\left\{(x,x),x\in E\right\}$\\
+			$\Delta_E$ s'appelle la diagonale de $E$\\
+			On en d\'efinit une relation binaire:
+			\begin{tab}
+				$\begin{aligned}\forall(x,y)\in E^2,\ x\,\mathcal{R}\,y&\iff(x,y)\in\Delta_E\\
+					&\iff x=y\end{aligned}$
+			\end{tab}
+		\end{tab}
+	\section{Relations d'\'equivalences}
+		Soit $\mathcal{R}$ une relation binaire sur $E$
+		\begin{defi}$\mathcal{R}$ est \underline{r\'eflexive} si $\forall x\in E,\ x\,\mathcal{R}\, x$\end{defi}
+		\begin{defi}$\mathcal{R}$ est \underline{sym\'etrique} si $\forall(x,y)\in E^2,\ (x\,\mathcal{R}\,y)\Rightarrow(y\,\mathcal{R}\,x)$\end{defi}
+		\begin{defi}$\mathcal{R}$ est \underline{transitive} si $\forall(x,y,z)\in E^3,\ (x\,\mathcal{R}\,y\ et\ y\,\mathcal{R}\,z)\Rightarrow(x\,\mathcal{R}\,z)$\end{defi}
+		\begin{defi}$\mathcal{R}$ est une \underline{relation d'\'equivalence} sur $E$ si $\mathcal{R}$ est r\'eflexive, sym\'etrique et transitive.\end{defi}
+		\begin{defi}
+			Soit $\mathcal{R}$ une relation d'\'equivalence sur $E$.\\
+			Soit $x$ un \'el\'ement de $E$.\\
+			\\
+			On appelle \underline{classe d'\'equivalence de $x$ suivant $\mathcal{R}$} le sous ensemble de $E$:\\
+			$\mathcal{C_R}(x)=\left\{y\in E,\ x\,\mathcal{R}\,y\right\}$
+		\end{defi}
+		\begin{prop}
+			La famille des classes d'\'equivalences suivant $\mathcal{R}$, $\left(\mathcal{C_R}(x)\right)_{x\in E}$ est une partition de $E$.
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item[\cercle{1}] Montrer que: $\mathcal{C_R}(x)\neq\varnothing$\\
+					$\mathcal{R}$ est r\'eflexive, donc $x\,\mathcal{R}\,x$\\
+					Autrement dit, $x\in \mathcal{C_R}(x)$ donc $\mathcal{C_R}(x)\neq\varnothing$\\
+				\item[\cercle{2}] $\begin{aligned}[t]\text{Montrer que: }&\bigcup\limits_{x\in E}\mathcal{C_R}(x)=E\\
+					\iff&\bigcup\limits_{x\in E}\mathcal{C_R}(x)\subset E\text{ et que }E\subset\bigcup\limits_{x\in E}\mathcal{C_R}(x)\end{aligned}$
+					\begin{liste}
+						\item[a)] Les classes d'\'equivalences sont des sous-ensembles de $E$.\\
+							$\forall x\in E,\ \mathcal{C_R}(x)\subset E$\\
+							Ainsi, $\bigcup\limits_{x\in E}\mathcal{C_R}(x)\subset E$
+						\item[b)] $\begin{aligned}[t]\text{Montrer que: }&E\subset\bigcup\limits_{x\in E}\mathcal{C}\mathcal{R}(x)\\
+							\iff&\forall t\in E,\ t\in\bigcup\limits_{x\in E}\mathcal{C_R}(x)\end{aligned}$\\
+							$\mathcal{R}$ est r\'eflexive, donc $t\in \mathcal{C_R}(t)$\\
+							En posant $t=x)$ on d\'emontre la proposition.\\
+							Cela \'etant vrai pour tout $x$, on obtient $E\subset\bigcup\limits_{x\in E}\mathcal{C_R}(x)$
+					\end{liste}\ \\
+				\item[\cercle{3}]$\begin{aligned}[t]\text{Montrer que: }&\forall(x,y)\in E^2,\ \mathcal{C_R}(x)=\mathcal{C_R}(y)\text{ ou } \mathcal{C_R}(x)\cap \mathcal{C_R}(y)=\varnothing\\
+					\iff&\forall(x,y)\in E^2,\ \left(\mathcal{C_R}(x)\cap \mathcal{C_R}(y)\neq\varnothing\right)\Rightarrow \left(\mathcal{C_R}(x)=\mathcal{C_R}(y)\right)\end{aligned}$\\
+					\underline{H$_1$}: Soit $(x,y)$ un couple d'\'el\'ements de $E$ tels que $\mathcal{C_R}(x)\cap \mathcal{C_R}(y)\neq\varnothing$\\
+					$\begin{aligned}\text{Montrer que: }&\mathcal{C_R}(x)=\mathcal{C}\mathcal{R}(y)\\
+					\iff&\mathcal{C_R}(x)\subset \mathcal{C_R}(y)\text{ et }\mathcal{C_R}(y)\subset \mathcal{C_R}(x)\end{aligned}$
+					\begin{liste}
+						\item[a)] $\begin{aligned}[t]\text{Montrer que: }&\mathcal{C_R}(x)\subset \mathcal{C_R}(y)\\
+							\iff&\forall z\in E,\ z\in \mathcal{C_R}(x)\Rightarrow z\in \mathcal{C_R}(y)\end{aligned}$\\
+							\underline{H$_2$}: Soit $z$ un \'el\'ement de $\mathcal{C_R}(x)$\\
+							Montrer que $z\in \mathcal{C_R}(y)$\\
+							D'apr\`es H$_1$, $\exists t\in E,\ t\in \mathcal{C_R}(x)\cap \mathcal{C_R}(y)$\\
+							\underline{H$_3$}: Soit $t\uu0\in E$ tel que $t\uu0\in \mathcal{C_R}(x)$ et $t\uu0\in\mathcal{C_R}(y)$\\
+							$\begin{aligned}\text{Montrer que: }&z\in \mathcal{C_R}\\
+							\iff&z\,\mathcal{R}\,y\end{aligned}$\\
+							D'apr\`es H$_2$: $z\,\mathcal{R}\,x$\\
+							D'apr\`es H$_3$: $t\uu0\,\mathcal{R}\,x$\\
+							Par sym\'etrie et transitivit\'e: $z\,\mathcal{R}\,t\uu0$\\
+							D'apr\`es H$_2$: $t\uu0\,\mathcal{R}\,y$\\
+							Par transitivit\'e: $z\,\mathcal{R}\,y$\\
+							\\
+							Conclusion 1: $z\in\mathcal{C_R}\Rightarrow z\in\mathcal{C_R}$\\
+							Conclusion 2: $\begin{aligned}[t]&\text{Ceci \'etant vrai pour tout }z\text{ dans }E\text{:}\\
+							&\mathcal{C_R}(x)\subset\mathcal{C_R}(y)\end{aligned}$
+						\item[b)] Montrer que $\mathcal{C_R}(y)\subset \mathcal{C_R}(x)$\\
+							En \'echangeant les rôles de $x$ et $y$, et par une d\'emonstration analogue, on obtient:\\
+							$\mathcal{C_R}(y)\subset \mathcal{C_R}(x)$
+					\end{liste}
+					Finalement: $\mathcal{C_R}(x)=\mathcal{C_R}(y)$\\
+					Conclusion G\'en\'erale: $\forall(x,y)\in E^2,\ \mathcal{C_R}(x)\cap\mathcal{C_R}(y)\neq\varnothing\Rightarrow\mathcal{C_R}=\mathcal{C_R}$
+			\end{liste}\ \\
+			La famille $(\mathcal{C_R}(x))_{x\in E}$ est une partition de $E$.
+		\end{preuve}
+		\begin{prop}
+			Soit $\left(A_i\right)_{i\in I}$ une partition de $E$, alors, il existe une relation d'\'equivalence $\mathcal{R}$ dont la famille des classes d'\'equivalences est cette partition.
+		\end{prop}
+		\begin{preuve}
+			Soit $\mathcal{R}$ une relation binaire d\'efinie par:\\
+			$\forall(x,y)\in E^2,\ x\,\mathcal{R}\,y\iff\exists i\in I,\ x\in A_i\text{ et }y\in A_i$
+			\begin{liste}
+				\item[\cercle{1}] Montrer que $\mathcal{R}$ est une relation d'\'equivalence sur $E$.\\
+				\begin{liste}
+					\item[a)] $\begin{aligned}[t]\text{Montrer que }&\mathcal{R}\text{ est r\'eflectve}\\
+						\iff&\forall x\in E,\ x\,\mathcal{R}\,x\end{aligned}$\\
+						\underline{H$_1$}: Soit $x$ un \'el\'ement de $E$\\
+						Montrer que: $\exists i\in I,\ x\in A_i$\\
+						$A_i$ est une partition de de $E$, donc d'apr\`es H$_1$,\\
+						$\exists i\in I,\ x\in A_i$
+					\item[b)]  $\begin{aligned}[t]\text{Montrer que }&\mathcal{R}\text{ est sym\'etrique}\\
+						\iff&\forall (x,y)\in E^2,\ (x\,\mathcal{R}\,y)\Rightarrow(y\,\mathcal{R}\,x)\end{aligned}$\\
+						\underline{H$_2$}: Soit $(x,y)\in E^2$ tel que $x\,\mathcal{R}\,y$\\
+						H$_2$: $\exists i\in I,\ x\in A_i\text{ et }y\in A_i\iff\exists i\in I,\ y\in A_i \text{ et } x\in A_i$\\
+						On a donc $y\,\mathcal{R}\,x$\\
+						Donc $\mathcal{R}$ est sym\'etrique.
+				\end{liste}
+			\end{liste}
+		\end{preuve}
+\end{document}

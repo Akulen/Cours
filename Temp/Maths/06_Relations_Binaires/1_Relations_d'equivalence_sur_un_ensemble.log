@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  10 NOV 2014 19:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  10 NOV 2014 23:22
 entering extended mode
-**2_Operations_sur_les*propositions.tex
+**1_Relations_d'equivalence_sur_un_ensemble.tex
 
-("C:\Users\Utilisateur\Documents\Cours\Temp\Maths\04_Elements_de_Logique\2_Oper
-ations_sur_les propositions.tex"
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\06_Relations_Binaires\1_Relati
+ons_d'equivalence_sur_un_ensemble.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -98,6 +98,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2004/08/06 v2.20
@@ -554,8 +557,8 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \c@pro=\count140
 \c@cor=\count141
 )
-("C:\Users\Utilisateur\Documents\Cours\Temp\Maths\04_Elements_de_Logique\2_Oper
-ations_sur_les propositions.aux")
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\06_Relations_Binaires\1_Relati
+ons_d'equivalence_sur_un_ensemble.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
@@ -632,88 +635,78 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 12.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+) [1
 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 35--41
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--19
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--30
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--30
+Underfull \hbox (badness 10000) in paragraph at lines 68--85
 
  []
 
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ´ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--49
-
- []
-
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 66--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
-
+Overfull \vbox (4.24005pt too high) detected at line 93
  []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.71667pt.
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [2]
-("C:\Users\Utilisateur\Documents\Cours\Temp\Maths\04_Elements_de_Logique\2_Oper
-ations_sur_les propositions.aux") ) 
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+[3] [4]
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\06_Relations_Binaires\1_Relati
+ons_d'equivalence_sur_un_ensemble.aux) ) 
 Here is how much of TeX's memory you used:
- 13997 strings out of 493921
- 275382 string characters out of 3147264
- 331257 words of memory out of 3000000
- 16998 multiletter control sequences out of 15000+200000
- 14242 words of font info for 58 fonts, out of 3000000 for 9000
+ 14197 strings out of 493921
+ 277374 string characters out of 3147264
+ 336316 words of memory out of 3000000
+ 17197 multiletter control sequences out of 15000+200000
+ 13433 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,12n,61p,465b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "2_Operations_sur_les propositions.pdf" (2 pages, 75662 bytes
-).
+ 57i,12n,61p,473b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on 1_Relations_d'equivalence_sur_un_ensemble.pdf (4 pages, 12988
+3 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
