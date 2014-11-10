@@ -1,0 +1,108 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\newcommand{\vdashv}{\mathrel{\text{\ooalign{$\vdash$\cr$\dashv$\cr}}}}
+
+\def\chapitre{\'El\'ements de Logique}
+\author{MPSI 2}
+\def\titre{Op\'erations sur les propositions}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Codage et valeurs logiques}
+		Soit $A$ une proposition. On lui associe une valeur logique (Vrai ou Faux) ou binaire \\($0$ ou $1$)
+		\\
+		Soient $A$ et $B$. Si $A$ et $B$ ont la m\^eme valeur logique, on note $A\vdashv B$\\
+		\\
+		Soient $a$ et $b$ deux codages binaires.
+		\begin{liste}
+			\item N\'egation de $a$: $\neg a=1-a$\\
+			\item $"a\vee b"$, "$a$ ou $b$", "$a$ sup $b$"\\
+				\begin{tabular}{ c | c | c  }
+					$a$ & $b$ &($a\vee b$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$1$\\
+					$0$&$1$&$1$\\
+					$0$&$0$&$0$\\
+				\end{tabular}
+				$a\vee b=a+b-a\,b$\\\\
+			\item "$a\land b$", "$a$ et $b$", "$a$ inf $b$"\\
+				\begin{tabular}{ c | c | c  }
+					$a$ & $b$ &($a\land b$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$0$\\
+					$0$&$1$&$0$\\
+					$0$&$0$&$0$\\
+				\end{tabular}
+				$a\land b=a\,b$
+		\end{liste}
+	\section{Op\'erations \'el\'ementaires sur les propositions}
+		Soient $A$ et $B$ deux propositions de codage binaire $a$ et $b$. On a  alors:
+		\begin{liste}
+			\item N\'egation de $A$: c'est la proposition dont le codage binaire est $\neg a$.\\
+				\begin{tabular}{ c | c }
+					$A$ & $non(A)$\\\hline 
+					$1$&$0$\\
+					$0$&$1$\\
+				\end{tabular}\\\\
+			\item Disjonction: "$A$ ou $B$" est la proposition cod\'ee par "$a\vee b$".\\
+				\begin{tabular}{ c | c | c  }
+					$A$ & $B$ &($A\vee B$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$1$\\
+					$0$&$1$&$1$\\
+					$0$&$0$&$0$\\
+				\end{tabular} 
+				$\begin{aligned}
+					&\text{\textbullet}\ \text{"}A\text{ ou }B\text{" est Vraie si }A\text{ est Vraie ou si }B\text{ est Vraie.}\\
+					&\text{\textbullet}\ \text{"}A\text{ ou }B\text{" est Fausse ssi "}A\text{ et }B\text{" est Fausse.}
+				\end{aligned}$
+		\end{liste}
+	\section{Autres op\'erations}
+		\begin{liste}
+			\item La conjonction
+				\begin{defi}"$A$ et $B$" est la proposition "$non(\,non(A)\ ou\ non(B))$"\end{defi}
+				\begin{tabular}{ c | c | c  }
+					$A$ & $B$ &($A\vee B$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$0$\\
+					$0$&$1$&$0$\\
+					$0$&$0$&$0$\\
+				\end{tabular} \textbullet\ "$A$ et $B$" est cod\'ee par "$a\land b$"\\\\
+			\item L'implication 
+				\begin{defi}"$A\Rightarrow B$" est la proposition "$non(A)\ ou\ B$"\end{defi}
+				\begin{tabular}{ c | c | c  }
+					$A$ & $B$ &($A\Rightarrow B$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$0$\\
+					$0$&$1$&$1$\\
+					$0$&$0$&$1$\\
+				\end{tabular}
+				$\begin{aligned}
+					&\text{\textbullet}\ \text{Si }A\text{ est Fausse, }A\Rightarrow B\text{ est Vraie par d\'efinition.}\\
+					&\text{\textbullet}\ \text{Si }A\text{ est Vraie, il faUt d\'emontrer que }B\text{ est Vraie.}
+				\end{aligned}$\pagebreak
+			\item La contrapos\'e: "$A\Rightarrow B$" et "$non(B)\Rightarrow non(A)$" ont la m\^eme valeur logique.\\
+				D\'emonstration triviale.\\
+			\item l'\'equivalence
+				\begin{defi}"$A\Leftrightarrow B$" est la proposition "$(A\Rightarrow B)\ et\ (B\Rightarrow A)$" \end{defi}
+				\begin{tabular}{ c | c | c  }
+					$A$ & $B$ &($A\Leftrightarrow B$)\\\hline 
+					$1$&$1$&$1$\\
+					$1$&$0$&$0$\\
+					$0$&$1$&$0$\\
+					$0$&$0$&$1$\\
+				\end{tabular}
+		\end{liste}
+		\underline{Remarques:}
+		\begin{liste}
+			\item[\textbf{1/}] N\'egation de "ou" et "et":
+				\begin{liste}
+					\item $non(a\ ou\ b)\vdashv non(A)\ et\ non(B)$
+					\item $non(a\ et\ b)\vdashv non(A)\ ou\ non(B)$
+				\end{liste}
+			\item[\textbf{2/}] N\'egation de l'implication:
+				$non(A\Rightarrow B)\vdashv A\ et\ non(B)$
+		\end{liste}
+\end{document}
