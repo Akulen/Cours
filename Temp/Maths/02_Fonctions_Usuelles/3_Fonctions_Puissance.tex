@@ -8,15 +8,15 @@
 
 \begin{document}
 	\maketitle
-	\section{Definition}
-		\subsection{Definition}
+	\section{D\'efinition}
+		\subsection{D\'efinition}
 			\begin{defi}
 				Soit $\alpha\in\mathbb{R},$\\
 				$\fonction{f_\alpha}{\mathbb{R}^{+*}}{\mathbb{R}}{x}{x^\alpha=exp(\alpha\ ln(x))}$\\
 				$f_\alpha$ s'appelle la fonction puissance $\alpha$
 			\end{defi}
 			\begin{prop}
-				Pour tout $(x,y)$ strictement positifs, pour tout $(\alpha,\beta)$ reels:\\
+				Pour tout $(x,y)$ strictement positifs, pour tout $(\alpha,\beta)$ r\'eels:\\
 				\begin{liste}
 					\item $x^{\alpha+\beta}=x^\alpha\ x^\beta$
 					\item $\left(x^\alpha\right)^\beta=x^{\alpha\beta}$
@@ -24,8 +24,8 @@
 					\item $ln\left(x^\alpha\right)=\alpha ln(x)$
 				\end{liste}
 			\end{prop}
-		\subsection{Etude de $f_\alpha$}
-			\textbf{Derivabilite} $f$ est derivable par composee de fonctions derivables
+		\subsection{\'Etude de $f_\alpha$}
+			\textbf{D\'erivabilit\'e} $f$ est d\'erivable par compos\'ee de fonctions d\'erivables
 				\begin{tab}
 					$\begin{aligned}\forall x\in\mathbb{R}^{+*},\ f'_\alpha(x)&=\frac{\alpha}{x}exp(\alpha ln(x))\\
 						&=\alpha exp((\alpha-1)ln(x))\end{aligned}$\\\\\\
@@ -37,14 +37,14 @@
 					\begin{liste}
 						\item Si $\alpha<0$, alors $\lim\limits_{x\rightarrow+\infty}f_\alpha(x)=0$
 						\item Si $\alpha>0$, alors $\lim\limits_{x\rightarrow+\infty}f_\alpha(x)=+\infty$\\
-							\textbf{De quelle maniere $f_\alpha$ tend-t-elle vers $+\infty?$}\\
-								On etudie $\lim\limits_{x\rightarrow+\infty}\frac{f_\alpha(x)}{x}$\\
+							\textbf{De quelle mani\`ere $f_\alpha$ tend-t-elle vers $+\infty?$}\\
+								On \'etudie $\lim\limits_{x\rightarrow+\infty}\frac{f_\alpha(x)}{x}$\\
 								Or $\frac{f_\alpha(x)}{x}=exp((\alpha-1)ln(x))$
 								\begin{liste}
 									\item Si $0<\alpha<1$ alors $\lim\limits_{x\rightarrow+\infty}\frac{f_\alpha(x)}{x}=0$,\\
-											Donc $\mathscr{C}_{f_\alpha}$ admet une \textbf{branche parabolique de direction asymptotique} $Oy$
-									\item Si $1<\alpha$ alors $\lim\limits_{x\rightarrow+\infty}\frac{f_\alpha(x)}{x}=0$,\\
-										Donc $\mathscr{C}_{f_\alpha}$ admet une \textbf{branche parabolique de direction asymptotique} $Ox$
+											Donc $\mathscr{C}_{f_\alpha}$ admet une \textbf{branche parabolique de direction asymptotique} $Ox$
+									\item Si $1<\alpha$ alors $\lim\limits_{x\rightarrow+\infty}\frac{f_\alpha(x)}{x}=\infty$,\\
+										Donc $\mathscr{C}_{f_\alpha}$ admet une \textbf{branche parabolique de direction asymptotique} $Oy$
 								\end{liste}
 					\end{liste}
 				\end{tab}\pagebreak
@@ -52,12 +52,12 @@
 				\begin{liste}
 					\item Si $\alpha<0$, $\lim\limits_{x\rightarrow0}f_\alpha(x)=+\infty$
 					\item Si $\alpha>0$, $\lim\limits_{x\rightarrow0}f_\alpha(x)=0$\\
-							Dans ce cas, notons $\tilde{f}_\alpha$ l'application definie sur $\mathbb{R}$ par:\\
+							Dans ce cas, notons $\tilde{f}_\alpha$ l'application d\'efinie sur $\mathbb{R}$ par:\\
 							$\tilde{f}_\alpha(x)=\systeme{&f_\alpha(x) &\text{si } x>0\\
 							&0 &\text{si } x=0}$\\
-							D'apres le taux d'accroissement:\begin{liste}
-								\item Si $\alpha>1$, $\tilde{f}'_\alpha(0)=0$, donc $\mathscr{C}_{\tilde{f}_\alpha}$ admet une demi-tangente d'equation $y=0$
-								\item Si $0<\alpha<1$, $\lim\limits_{x\rightarrow0}exp((\alpha-1)ln(x))=+\infty$, donc $\mathscr{C}_{\tilde{f}_\alpha}$ admet une demi-tangente d'equation $x=0$
+							D'apr\`es le taux d'accroissement:\begin{liste}
+								\item Si $\alpha>1$, $\tilde{f}'_\alpha(0)=0$, donc $\mathscr{C}_{\tilde{f}_\alpha}$ admet une demi-tangente d'\'equation $y=0$
+								\item Si $0<\alpha<1$, $\lim\limits_{x\rightarrow0}exp((\alpha-1)ln(x))=+\infty$, donc $\mathscr{C}_{\tilde{f}_\alpha}$ admet une demi-tangente d'\'equation $x=0$
 							\end{liste}
 				\end{liste}
 	\section{Fonctions Puissance Vs. Fonctions racines$^n$}
@@ -65,23 +65,23 @@
 			\item Soit $n$ un entier \textbf{pair non nul}
 					\begin{tab}
 						$\fonction{g_n}{\mathbb{R}}{\mathbb{R}}{x}{x^n}$\\
-						$g_n$ realise une bijection de $\mathbb{R}^+$ sur $\mathbb{R}^+$
+						$g_n$ r\'ealise une bijection de $\mathbb{R}^+$ sur $\mathbb{R}^+$
 					\end{tab}
-					Son application reciproque s'appelle la fonction \textbf{racine$^n$}
+					Son application r\'eciproque s'appelle la fonction \textbf{racine$^n$}
 					$\fonction{}{\mathbb{R}^+}{\mathbb{R}^+}{x}{\sqrt[n]{x}}$
 			\item Soit $n$ un entier\textbf{impair non nul}
 					\begin{tab}
 						$\fonction{g_n}{\mathbb{R}}{\mathbb{R}}{x}{x^n}$\\
-						$g_n$ realise une bijection de $\mathbb{R}$ sur $\mathbb{R}$
+						$g_n$ r\'ealise une bijection de $\mathbb{R}$ sur $\mathbb{R}$
 					\end{tab}
-					Son application reciproque s'appelle la fonction \textbf{racine$^n$}
+					Son application r\'eciproque s'appelle la fonction \textbf{racine$^n$}
 					$\fonction{}{\mathbb{R}}{\mathbb{R}}{x}{\sqrt[n]{x}}$
-			\item Par ailleurs, pour tout $n$ entier naturel non nul, $f_\frac{1}{n}$ est l'application reciproque de $\fonction{f_n}{\mathbb{R}^{+*}}{\mathbb{R}}{x}{\sqrt[n]{x}}$\\
-			Donc par unicite de la reciproque on peut ecrire: $\forall x\in\mathbb{R}^{+*},\ \sqrt[n]{x}=x^\frac{1}{n}$\\
+			\item Par ailleurs, pour tout $n$ entier naturel non nul, $f_\frac{1}{n}$ est l'application r\'eciproque de $\fonction{f_n}{\mathbb{R}^{+*}}{\mathbb{R}}{x}{\sqrt[n]{x}}$\\
+			Donc par unicit\'e de la r\'eciproque on peut \'ecrire: $\forall x\in\mathbb{R}^{+*},\ \sqrt[n]{x}=x^\frac{1}{n}$\\
 		\end{liste}
-	\section{Theoreme de comparaison}
+	\section{Th\'eor\`eme de comparaison}
 		\begin{prop}
-			Soient $\alpha$ et $\beta$ deux reels strictement positifs.
+			Soient $\alpha$ et $\beta$ deux r\'eels strictement positifs.
 			\begin{liste}
 				\item $\lim\limits_{x\rightarrow+\infty}\frac{\left(ln(x)\right)^\beta}{x^\alpha}=0$
 				\item $\lim\limits_{x\rightarrow+\infty}\frac{\left(exp(x)\right)^\alpha}{x^\beta}=+\infty$
@@ -95,8 +95,8 @@
 						Donc pour $x\geq1$ on a: $\begin{aligned}[t]&0\leq\int\limits_1^x\frac{1}{t}\,dt\leq2\int\limits_1^x\frac{1}{2\sqrt{x}}\,dt\\
 						\iff&0\leq ln(x)\leq2\sqrt{x}-2\\
 						\iff&0\leq\frac{ln(x)}{x}\leq\frac{2\sqrt{x}-2}{x}\end{aligned}$\\\\
-						Par consequent, $\lim\limits_{x\rightarrow+\infty}\frac{ln(x)}{x}=0$
-				\item Soient $\alpha$ et $\beta$ deux reels strictement positifs. Pour $x>1$:\\
+						Par cons\'equent, $\lim\limits_{x\rightarrow+\infty}\frac{ln(x)}{x}=0$
+				\item Soient $\alpha$ et $\beta$ deux r\'eels strictement positifs. Pour $x>1$:\\
 						$\begin{aligned}
 							\frac{ln(x)^\beta}{x^\alpha}&=\left(\frac{ln(x)}{x^\frac{\alpha}{\beta}}\right)^\beta\\
 							&=\left(\frac{\frac{\beta}{\alpha}\,ln\left(x^\frac{\alpha}{\beta}\right)}{x^\frac{\alpha}{\beta}}\right)^\beta\\
@@ -109,7 +109,7 @@
 								\item $\lim\limits_{t\rightarrow+\infty}\frac{ln(t)}{t}=0$
 								\item $\lim\limits_{u\rightarrow0}u^\beta=0$
 							\end{liste}
-							Donc par composees de limites, $\lim\limits_{x\rightarrow+\infty}\frac{\left(ln(x)\right)^\beta}{x^\alpha}=0$
+							Donc par compos\'ees de limites, $\lim\limits_{x\rightarrow+\infty}\frac{\left(ln(x)\right)^\beta}{x^\alpha}=0$
 						\end{tab}
 				\item Passage a l'exponentielle et passage a l'inverse.
 				\item etc.

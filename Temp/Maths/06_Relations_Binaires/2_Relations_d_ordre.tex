@@ -1,0 +1,96 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\newcommand{\vdashv}{\mathrel{\text{\ooalign{$\vdash$\cr$\dashv$\cr}}}}
+
+\def\chapitre{Relations Binaires}
+\author{MPSI 2}
+\def\titre{Relations d'ordre}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{D\'efinition}
+		Soit $E$ un ensemble non vide.\\
+		Soit $\mathcal{R}$ une relation binaire sur $E$.
+		\begin{defi}
+			$\mathcal{R}$ est une \underline{relation d'ordre} sur $E$ si:
+			\begin{liste}
+				\item $\mathcal{R}$ est r\'eflexive.
+				\item $\mathcal{R}$ est antisym\'etrique: $\forall(x,y)\in E^2,\ (x\,\mathcal{R}\,y \text{ et }y\,\mathcal{R}\,x)\Rightarrow(x=y)$
+				\item $\mathcal{R}$ est transitive.
+			\end{liste}
+		\end{defi}\ \\
+		Notations: $x\,\mathcal{R}\,y$, $x\leq y$\\
+		Se note aussi $x\preccurlyeq y$\\
+		\begin{defi}
+			Soit $\preccurlyeq$ une relation d'ordre sur $E$.\\
+			\begin{liste}
+				\item On dit que l'ordre est \underline{total} si deux \'el\'ements de $E$ sont toujours en relation:\\
+					$\forall(x,y)\in E^2,\ (x\preccurlyeq y)$ ou $(y\preccurlyeq x)$.
+				\item Sinon, on dit que l'ordre est partiel.
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.
+			\begin{liste}
+				\item $m\in E$ est le \underline{plus petit \'el\'ement} de $E$ si: $\forall x\in E,\ m\preccurlyeq x$
+				\item $M\in E$ est le \underline{plus grand \'el\'ement} de $E$ si: $\forall x\in E,\ x\preccurlyeq M$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+		Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.
+			\begin{liste}
+				\item $m\in E$ est un \underline{\'el\'ement minimal} de $E$ si:\\
+					$\forall x\in E,\ (x \preccurlyeq m)\Rightarrow (x=m)$
+				\item $M\in E$ est un \underline{\'el\'ement maximal} de $E$ si:\\
+					$\forall x\in E,\ (M\preccurlyeq x)\Rightarrow (x=M)$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.\\
+			Soit $A$ un sous-ensemble de $E$
+			\begin{liste}
+				\item $\alpha\in E$ est un \underline{minorant de $A$ dans $E$} si:\\
+					$\forall x\in E,\ (x\in A)\Rightarrow(\alpha\preccurlyeq x)$
+				\item $\beta\in E$ est un \underline{majorant de $A$ dans $E$} si:\\
+					$\forall x\in E,\ (x\in A)\Rightarrow(x\preccurlyeq\beta)$
+			\end{liste}
+		\end{defi}
+	\section{Ordre naturel sur $\mathbb{N}$}
+		\begin{defi}
+			$\forall(x,y)\in \mathbb{N},\ x\leqslant y\iff\exists n\in\mathbb{N}, y=x+n$
+		\end{defi}
+		C'est un ordre total de plus petit \'el\'ement $0$.
+		\begin{prop}
+			Tout sous-ensemble de $\mathbb{N}$ admet un plus petit \'el\'ement.
+		\end{prop}
+		\begin{coro}
+			Tout sous-ensemble non vide et major\'e de $\mathbb{N}$ admet un plus grand \'el\'ement.
+		\end{coro}
+		\begin{preuve}
+			Soit $A$ un sous-ensemble non vide et major\'e de $\mathbb{N}$.\\
+			On consid\`ere $B$ l'ensemble des majorants de $A$.\\
+			$B=\{x\in\mathbb{N},\ \forall a\in A, x\geqslant a\}$\\
+			$A$ est major\'e donc $B$ est un sous-ensemble non vide de $\mathbb{N}$.\\
+			D'apr\`es la propri\'et\'e caract\'eristique de $\mathbb{N}$ $B$ admet un plus petit \'el\'ement que l'on note $\alpha$\\
+			On a: $\left\lbrace\begin{aligned}&\alpha\in\mathbb{N}\\&\forall a\in A,\ a\leqslant\alpha\end{aligned}\right.$\\
+			Montrer que $\alpha\in\mathbb{N}$\\
+			\underline{HA}: $\alpha \notin A$\\
+			Alors $\forall x\in A,\ a<\alpha$\\
+			Ou encore, puisque $\alpha$ est entier: $\forall a\in A,\ a\leqslant\alpha-1$\\
+			On a donc $\alpha-1$ entier naturel et $\alpha-1$ majorant de $A$.\\
+			Donc $\alpha\in B$ et $\alpha-1<\alpha$, ce qui contredit $\alpha$ plus petit élément de $B$.\\
+			\\
+			Donc $\alpha\in A$\\
+			Conclusion: $\alpha$ est le plus grand élément de $A$.
+		\end{preuve}
+		\begin{coro}
+			\textbf{Principe de récurrence}\\
+			\\
+			Soit $P$ une proposition portant sue les entiers naturels.\\
+			Soit $P(n)$ le prédicat associé a $n$.\\
+			$$\exists n\uu0\in\mathbb{N},\ \left[P(n\uu0)\text{ et }\left(\forall n\in\mathbb{N},\ P(n)\Rightarrow P(n+1)\right)\right]\Rightarrow\left[\forall n\in\mathbb{N},\ n\geqslant n\uu0\Rightarrow P(n)\right]$$
+		\end{coro}
+		%faire la démo, page 7-5-2
+\end{document}

@@ -108,11 +108,69 @@
 						$\exists i\in I,\ x\in A_i$
 					\item[b)]  $\begin{aligned}[t]\text{Montrer que }&\mathcal{R}\text{ est sym\'etrique}\\
 						\iff&\forall (x,y)\in E^2,\ (x\,\mathcal{R}\,y)\Rightarrow(y\,\mathcal{R}\,x)\end{aligned}$\\
-						\underline{H$_2$}: Soit $(x,y)\in E^2$ tel que $x\,\mathcal{R}\,y$\\
+						\underline{H$_1$}: Soit $(x,y)\in E^2$ tel que $x\,\mathcal{R}\,y$\\
 						H$_2$: $\exists i\in I,\ x\in A_i\text{ et }y\in A_i\iff\exists i\in I,\ y\in A_i \text{ et } x\in A_i$\\
 						On a donc $y\,\mathcal{R}\,x$\\
 						Donc $\mathcal{R}$ est sym\'etrique.
+					\item[c)] $\begin{aligned}[t]\text{Montrer que }&\mathcal{R}\text{ est transitive}\\
+						\iff&\forall (x,y,z)\in E^3,\ (x\,\mathcal{R}\,y\text{ et }y\,\mathcal{R}\,z)\Rightarrow(x\,\mathcal{R}\,z)\end{aligned}$\\
+						\underline{H$_1$}: Soit $x$, $y$ et $z$ trois \'el\'ements de $E$ tels que $x\,\mathcal{R}\,y$ et $y\,\mathcal{R}\,z$
+						H$_1$: $\exists i\in I,\ (x\in A_I$ et $y\in A_I)$ et ($\exists j\in I,\ y\in A_j$ et $z\in A_j$)\\
+						\underline{H$_2$}: Soit $i\uu0$ et $i'\uu0$ deux \'el\'ements de $I$ tels que $\systeme{& x\in A_{i_0},& y\in A_{i_0}\\& y\in A_{i'_0},& z\in A_{i'_0}}$\\
+						Donc $y\in A_{i_0}\cap A_{i'_0}$\\
+						Or $(A_i)_{i\in I}$ est une partition de E\\
+						Donc $A_{i_0}=A_{i'_0}$\\
+						Donc $x$, $y$ et $z$ sont des \'el\'ements de $A_{i_0}$,\\
+						Donc $x\,\mathcal{R}\,z$
+						Donc $\mathcal{R}$ est transitive.
 				\end{liste}
+				Conclusion \cercle{1}: $\mathcal{R}$ est une relation d'\'equivalence.\\
+				\item[\cercle{2}]$\begin{aligned}[t]\text{Montrer que}&\text{ les } A_i\text{ sont les classes d'\'equivalences suivant }\mathcal{R}\\
+					\iff& \forall i\in I,\ \exists x\in E,\ A_i=C_\mathcal{R}(x)\end{aligned}$\\
+					\underline{H$_1$}: Soit $i$ un \'el\'ement de $I$.\\
+					Montrer que $\exists x\in E, A_i=C_\mathcal{R}(x)$\\
+					$(A_i)_{i\in I}$ est une partition de E, donc en particulier\\
+					$A_i$ non vide, \'ecrit:\\
+					$\exists x\in E, x\in A_i$\\
+					\underline{H$_2$}: Soit $x\uu0$ un \'el\'ement de $A_i$ fix\'e.\\
+					$\begin{aligned}[t]\text{Montrer que }& A_i=C_\mathcal{R}(x\uu0)\\
+					\iff& \left(A_i\subset C_\mathcal{R}(x\uu0)\right)\text{ et }\left(C_\mathcal{R}(x\uu0)\subset A_i\right)\end{aligned}$\\
+					\begin{liste}
+						\item[a)] $\begin{aligned}[t]\text{Montrer que }& A_i\subset C_\mathcal{R}(x\uu0)\\
+							\iff& \forall y\in E,\ y\in A_i\Rightarrow y\in C_\mathcal{R}(x\uu0)\end{aligned}$\\
+							\underline{H$_3$}: Soit $y$ un \'el\'ement de $A_i$.\\
+							Montrer que $y\in C_\mathcal{R}(x\uu0)$\\
+							D'apr\`es H$_1$ et H$_2$, on a $y\in A_i$ et $x\in A_i$\\
+							Donc $x\,\mathcal{R}\,y$ par d\'efinition de $\mathcal{R}$\\
+							Cela \'etant valable pour tout $i$ dans $I$ et pour tout $y$ dans $A_i$, \\
+							$A_i\subset C_\mathcal{R}(x\uu0)$
+						\item[b)] $\begin{aligned}[t]\text{Montrer que }& C_\mathcal{R}(x\uu0)\subset A_i\\
+							\iff& \forall j\in E,\ y\in C_\mathcal{R}(x\uu0)\Rightarrow y\in A_j\end{aligned}$\\
+							\underline{H$_4$}: Soit $y$ un \'el\'ement de $C_\mathcal{R}(x\uu0)$\\
+							Montrer que $y\in A_i$\\
+							H$_4$: $y\,\mathcal{R}\,x\uu0$, autrement dit:\\
+							$\exists j\in I,\ y\in A_j\text{ et }x\uu0\in A_j$\\
+							\underline{H$_5$}: Soit $j\uu0$ un \'el\'ement de $I$ tel que $y\in A_j\text{ et }x\uu0\in A_j$\\
+							D'apr\`es H$_2$: $x\uu0\in A_i$\\
+							Avec H$_2$ et H$_3$, on en d\'eduit que $x\uu0\in A_i\cap A_{j\uu0}$\\
+							Or $(A_i)_{i\in I}$ est une partition de $E$, donc $A_i=A_{j\uu0}$\\
+							Montrer que $y\in A_i$\\
+							Or, $y\in A_{j\uu0}$, donc $y\in A_i$\\
+							Cela \'etant valable pour tout y dans $A_i$,\\
+							$ C_\mathcal{R}(x\uu0)\subset A_i$
+					\end{liste}
+				Conclusion \cercle{2}: $\forall i\in I,\ \exists x\in E,\ A_i=C_\mathcal{R}(x)$
 			\end{liste}
+			Conclusion g\'en\'erale: Par raisonnement sur des conditions n\'ecessaires et suffisantes, la propri\'et\'e est d\'emontr\'ee
 		\end{preuve}
+	\section{Partition associ\'ee a une application}
+		Soit $E$ un ensemble non vide, soit $F$ un ensemble.\\
+		Soit une application $\fonction{f}{E}{F}{x}{f(x)}$
+		\begin{defi}
+			On appelle \underline{relation d'\'equivalence associ\'ee a $f$} la relation d\'efinie par:\\
+			$$\forall(x,y)\in E^2,\ x\,\mathcal{R}\,y\iff f(x)=f(y)$$
+		\end{defi}
+		\begin{defi}
+			On appelle \underline{partition associ\'ee a $f$} la famille des classes d'\'equivalences suivant $\mathcal{R}_f$
+		\end{defi}
 \end{document}
