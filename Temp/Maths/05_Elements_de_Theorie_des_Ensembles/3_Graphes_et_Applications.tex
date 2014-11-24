@@ -15,16 +15,16 @@
 			On appelle graphe de $E$ dans $F$ tout sous ensemble $G$ de $E\times F$
 		\end{defi}
 		\begin{defi}
-			On appelle correspondance de $E$ vers $F$ tout triplet $\lf{G,E,F}$ o\'u $E$ et $F$ sont deux ensembles et $G$ un graphe de $E$ vers $F$.
+			On appelle correspondance de $E$ vers $F$ tout triplet $\lf{G,E,F}$ o\`u $E$ et $F$ sont deux ensembles et $G$ un graphe de $E$ vers $F$.
 		\end{defi}
 		\begin{defi}
 			Soit $E$ et $F$ deux ensembles. \\
-			Soit $\lf{G,E,F}$ une correspondance de $E$ vers $F$, On dit que $\lf{G,E,F}$ est une application de $E$ dans $F$ si pour tout element de $E$, l'ensemble des $y$ de $F$ tels que $\lf{x,y}$ soit dans $G$ est reduit a un et un seul element.
+			Soit $\lf{G,E,F}$ une correspondance de $E$ vers $F$, On dit que $\lf{G,E,F}$ est une application de $E$ dans $F$ si pour tout \'el\'ement de $E$, l'ensemble des $y$ de $F$ tels que $\lf{x,y}$ soit dans $G$ est r\'eduit a un et un seul \'el\'ement
 		\end{defi}\ \\
 		\textbf{Notations :}
 		\begin{tab}
 			$f\colon\lf{G,E,F}$ ou $\fonction{f}{E}{F}{x}{y\text{ tel que }\lf{x,y}\in G}$  \\
-			Pour tout $x$ de $F$, l'ensemble $\{y\in F,\lf{x,y}\in G\}$ est reduit a un seul element. On notera cet element $f\lf{x}$.
+			Pour tout $x$ de $F$, l'ensemble $\{y\in F,\lf{x,y}\in G\}$ est r\'eduit a un seul \'el\'ement On notera cet \'el\'ement $f\lf{x}$.
 		\end{tab}
 		\begin{defi}
 			Soit $f$ une application de $E$ dans $F$. \\
@@ -39,12 +39,12 @@
 		\begin{defi}
 			Soit $f\colon E\longrightarrow F$ une application. \\
 			Soit $B$ un sous-ensemble de $F$. \\
-			On appelle image reciproque de $B$ par $f$ le sous-ensemble de $E$ note $f^{-1}<B>$ tel que $f^{-1}<B>=\{x\in E,f\lf{x}\in B\}$.
+			On appelle image r\'eciproque de $B$ par $f$ le sous-ensemble de $E$ note $f^{-1}<B>$ tel que $f^{-1}<B>=\{x\in E,f\lf{x}\in B\}$.
 		\end{defi}\ \\
 		\textbf{Remarques :}
 		\begin{liste}
 			\item $f^{-1}<F> = E$
-			\item Soit $y$ un element de $F$. On prend $B=\{y\}$
+			\item Soit $y$ un \'el\'ement de $F$. On prend $B=\{y\}$
 				$$\begin{aligned}
 					f^{-1}<B>&=f^{-1}<\{y\}>\\
 							 &=\{x\in E, f\lf{x}=y\}
@@ -53,16 +53,16 @@
 		\begin{defi}
 			Soit $f$ une application de $E$ dans $F$.
 			\begin{liste}
-				\item $f$ est dite injective si deux element distincts de $E$ ont des images distinctes par $f$.
-				\item $f$ est dite surjective si tout element de $F$ est dans $f\lf{E}$.
-				\item $f$ est dite bijective si elle est sujective et injective.
+				\item $f$ est dite injective si deux \'el\'ement distincts de $E$ ont des images distinctes par $f$.
+				\item $f$ est dite surjective si tout \'el\'ement de $F$ est dans $f\lf{E}$.
+				\item $f$ est dite bijective si elle est surjective et injective.
 			\end{liste}
 		\end{defi}
 		\begin{defi}
 			\begin{liste}
 				\item Soit $f$ une application de $E$ dans $F$. \\
 					Soit $A$ un sous-ensemble de $E$. \\
-					On appelle restriction de $f$ a $A$ l'application notee $f_{|_A}$ telle que :
+					On appelle restriction de $f$ a $A$ l'application not\'ee $f_{|_A}$ telle que :
 					$$\fonction{f}{A}{F}{x}{f\lf{x}}$$
 				\item Soit $f$ une application de $E$ dans $F$. \\
 					Soit $E'$ un ensemble tel que $E$ soit un sous-ensemble de $E'$.
@@ -73,12 +73,12 @@
 		\begin{defi}
 			Soit $E$ un ensemble. \\
 			Soit $A$ un sous-ensemble de $E$. \\
-			On appelle application caracteristique de $A$ (fonction indicatrice de $A$) l'unique application notee $\mathds{1}_A$ et definie par :
+			On appelle application caract\'eristique de $A$ (fonction indicatrice de $A$) l'unique application not\'ee $\mathds{1}_A$ et d\'efinie par :
 			$$\fonction{\mathds{1}_A}{E}{\{0,1\}}{x}{\lf{x\in A}}$$
 		\end{defi}
 		\begin{prop}
 			Notons $\mathcal{P}\lf{E}$ l'ensemble des sous-ensembles de $E$. \\
-			Notons $\mathcal{F}\lf{E,\{0,1\}}$ l'ensemble des applications definies sur $E$ a valeurs dans $\{0,1\}$. \\
-			L'application $\fonction{\phi}{\mathcal{P}\lf{E}}{\mathcal{F}\lf{E,\{0,1\}}}{A}{\mathds{1}_A}$ realise une bijection de $\mathcal{P}\lf{E}$ sur $\mathcal{F}\lf{E,\{0,1\}}$.
+			Notons $\mathcal{F}\lf{E,\{0,1\}}$ l'ensemble des applications d\'efinies sur $E$ a valeurs dans $\{0,1\}$. \\
+			L'application $\fonction{\phi}{\mathcal{P}\lf{E}}{\mathcal{F}\lf{E,\{0,1\}}}{A}{\mathds{1}_A}$ r\'ealise une bijection de $\mathcal{P}\lf{E}$ sur $\mathcal{F}\lf{E,\{0,1\}}$.
 		\end{prop}
 \end{document}
