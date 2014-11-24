@@ -1,0 +1,55 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Suites R\'eelles}
+\author{MPSI 2}
+\def\titre{G\'en\'eralit\'es}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Droite numérique achevée $\overline{\mathbb{R}}$}
+		\begin{defi}
+			On note $\overline{\mathbb{R}}$ la réunion de $\mathbb{R}$ et de deux éléments distincts: $-\infty$ et $+\infty$\\
+			$\overline{\mathbb{R}}=\mathbb{R}\cup\{-\infty,+\infty\}$
+		\end{defi}
+		\begin{liste}
+			\item On peut prolonger partiellement les lois internes $+$ et $\times$ \`a $\overline{\mathbb{R}}$, mais il existe des opération indéfinies.
+			\item On peut prolonger la relation d'ordre naturelle de $\mathbb{R}$ \`a $\overline{\mathbb{R}}$: $\overline{\mathbb{R}}$ est ordonné.
+		\end{liste}
+		Utilisation: une suite tend vers un élément de $\overline{\mathbb{R}}$
+	\section{Définitions}
+		\begin{defi}
+			On appelle suite réelle toute application $\fonction{\phi}{\mathbb{N}}{\mathbb{R}}{n}{\phi(n)}$
+		\end{defi}
+		\begin{flushleft}
+			Une suite réelle est une famille d'éléments indexée par $\mathbb{N}$\\
+			Notations: $\begin{aligned}& u_n=\phi(n)\\ & u=(u_n)_{n\in\mathbb{N}}=\phi \end{aligned}$
+		\end{flushleft}
+		\begin{defi}
+			On appelle ensemble des valeurs de $(u_n)_{n\in\mathbb{N}}$ le sous ensemble de $\mathbb{R}$:
+			$$A=\{x\in\mathbb{R},\ \exists n\in\mathbb{N},\ x=u_n \}$$
+		\end{defi}
+		\begin{defi}
+			On dit que $u$ est une suite monotone si $\phi$ est monotone.\\
+			De m\^eme avec croissante et décroissante.
+		\end{defi}
+		\begin{defi}
+			On dit que $u$ est majorée si $A$ est majoré dans $\mathbb{R}$\\
+			De m\^eme avec minorée et bornée.
+		\end{defi}
+	\section{Notations et limites}
+		\subsection{Limites réelles}
+			\begin{defi}
+				Soit $u=(u_n)_{n\in\mathbb{R}}$ une suite réelle, et $l$ un réel.\\
+				On dit que \underline{$u$ converge vers $l$} si pour tout intervalle $I$ centré en $l$, il existe un rang $n_0$ \`a partir duquel tous les $u_n$ sont dans $I$:
+				$$\forall\epsilon\in\mathbb{R}^{+*},\ \exists n_0\in\mathbb{N},\ n\geqslant n_0\Rightarrow|u_n-l|<\epsilon$$
+			\end{defi}
+			\begin{prop}
+				Si $u$ converge vers un $l$ réel, alors \underline{$l$ est unique.}
+			\end{prop}
+			\begin{preuve}
+				Utiliser les définitions, raisonner par l'absurde avec $\epsilon=\frac{l_2-l_1}{2}$
+			\end{preuve}
+			%Feuille 8-2-1
+\end{document}
