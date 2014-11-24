@@ -233,7 +233,7 @@
 					& n_1<n_2
 				\end{aligned}\right.$\\
 				$n_1<n_2$ donc $x<n_1+1\leqslant n_2\leqslant x$\\
-				Donc  $n$ est unique.\\
+				Donc  $n$ est unique.
 			\end{preuve}
 		\subsection{Propriétés de $\mathbb{R}$}
 			\begin{prop}
@@ -242,10 +242,40 @@
 			\end{prop}
 			\begin{preuve}
 				Soit $x$ et $y$ deux réels tels que $x<y$\\
-				$y-x\in\mathbb{R^+}\Rightarrow\exists n\in\mathbb{N}, n(y-x)>1$\\
+				$y-x\in\mathbb{R^+}\Rightarrow\exists n\in\mathbb{N},\ n(y-x)>1$\\
 				Soit $n$ un tel entier naturel.\\
 				Donc $y<x+\frac{1}{n}$\\
 				Soit $k$ la partie entière de $nx$:\\
-				$k\leqslant x<k+1$
+				$k\leqslant x<k+1$\\
+				$\frac{k}{n}\leqslant x<\frac{x+1}{n}\leqslant x+\frac{1}{n}<y$\\
+				Posons $q=\frac{k+1}{n}$\\
+				$q$ est rationnel, donc $\mathbb{Q}$ est dense dans $\mathbb{R}$\\
+				Soit $x$ et $y$ deux réels tels que $x<y$\\
+				$e$ est un irrationnel strictement positif donc $\frac{x}{e}<\frac{y}{e}$\\
+				$\frac{x}{e}$ et $\frac{y}{e}$ sont deux réels, donc:\\
+				$\exists q\in\mathbb{Q},\ \frac{x}{e}<q<\frac{y}{e}$\\
+				Soit $q$ un tel élément.\\
+				Donc $x<q\,e<y$\\
+				Donc $\mathbb{Q}\setminus\mathbb{R}$ est dense dans $\mathbb{R}$
+			\end{preuve}
+			\begin{defi}
+				Soit $I$ un sous-ensemble de $\mathbb{R}$\\
+				$I$ est un intervalle si $I$ est une partie convexe de $\mathbb{R}$:\\
+				$$\forall(a,b)\in I^2,\ (a<b)\Rightarrow(\forall x\in\mathbb{R},\ a<x<b\Rightarrow x\in I)$$
+			\end{defi}
+			\begin{prop}
+				Les seuls intervalles réels sont les sous-ensembles du type:\\
+				$\mathbb{R};\ \varnothing\\
+				\left]a,b\right[;\ \left[a,b\right[;\ \left]a,b\right];\ \left[a,b\right]\\
+				\left]a,+\infty\right[;\ \left[a,+\infty\right[;\ \left]-\infty,b\right[;\ \left]-\infty,b\right]$
+			\end{prop}
+			\begin{preuve}
+				Soit $I$ une partie de $\mathbb{R}$
+				\begin{tab}\begin{liste}
+					\item[\cercle1] Montrer que si $I$ est de l'un des types ci-dessus, $I$ est un intervalle.\\
+						\begin{liste}
+							\item[\textbullet]$I$ ni minorée ni majorée. Montrer que $I\
+						\end{liste}
+				\end{liste}\end{tab}
 			\end{preuve}
 \end{document}
