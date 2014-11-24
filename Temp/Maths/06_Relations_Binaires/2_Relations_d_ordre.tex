@@ -20,9 +20,11 @@
 				\item $\mathcal{R}$ est antisym\'etrique: $\forall(x,y)\in E^2,\ (x\,\mathcal{R}\,y \text{ et }y\,\mathcal{R}\,x)\Rightarrow(x=y)$
 				\item $\mathcal{R}$ est transitive.
 			\end{liste}
-		\end{defi}\ \\
-		Notations: $x\,\mathcal{R}\,y$, $x\leq y$\\
-		Se note aussi $x\preccurlyeq y$\\
+		\end{defi}
+		\begin{flushleft}
+			Notations: $x\,\mathcal{R}\,y$, $x\leq y$\\
+			Se note aussi $x\preccurlyeq y$
+		\end{flushleft}
 		\begin{defi}
 			Soit $\preccurlyeq$ une relation d'ordre sur $E$.\\
 			\begin{liste}
@@ -63,6 +65,7 @@
 		\end{defi}
 		C'est un ordre total de plus petit \'el\'ement $0$.
 		\begin{prop}
+			Propri\'et\'e caract\'eristique de $\mathbb{N}$:\\
 			Tout sous-ensemble de $\mathbb{N}$ admet un plus petit \'el\'ement.
 		\end{prop}
 		\begin{coro}
@@ -80,17 +83,155 @@
 			Alors $\forall x\in A,\ a<\alpha$\\
 			Ou encore, puisque $\alpha$ est entier: $\forall a\in A,\ a\leqslant\alpha-1$\\
 			On a donc $\alpha-1$ entier naturel et $\alpha-1$ majorant de $A$.\\
-			Donc $\alpha\in B$ et $\alpha-1<\alpha$, ce qui contredit $\alpha$ plus petit élément de $B$.\\
+			Donc $\alpha\in B$ et $\alpha-1<\alpha$, ce qui contredit $\alpha$ plus petit \'el\'ement de $B$.\\
 			\\
 			Donc $\alpha\in A$\\
-			Conclusion: $\alpha$ est le plus grand élément de $A$.
+			Conclusion: $\alpha$ est le plus grand \'el\'ement de $A$.
 		\end{preuve}
 		\begin{coro}
-			\textbf{Principe de récurrence}\\
+			\textbf{Principe de r\'ecurrence}\\
 			\\
 			Soit $P$ une proposition portant sue les entiers naturels.\\
-			Soit $P(n)$ le prédicat associé a $n$.\\
+			Soit $P(n)$ le pr\'edicat associ\'e a $n$.\\
 			$$\exists n\uu0\in\mathbb{N},\ \left[P(n\uu0)\text{ et }\left(\forall n\in\mathbb{N},\ P(n)\Rightarrow P(n+1)\right)\right]\Rightarrow\left[\forall n\in\mathbb{N},\ n\geqslant n\uu0\Rightarrow P(n)\right]$$
 		\end{coro}
-		%faire la démo, page 7-5-2
+		\begin{preuve}
+			\underline{H$_1$}: Soit $n_0$ un entier naturel tel que (\underline{H$_1'$}) $P(n_0)$ et (\underline{H$_1''$}) $\forall n\in\mathbb{N},\ P(n)\Rightarrow P(n+1)$\\
+			Montrer que $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow P(n)$\\
+			On consid\`ere l'ensemble $E$, ensemble des $n\in\mathbb{N}, (n\geqslant n_0\text{ et }\neg P(n))$\\
+			Montrer que $E=\varnothing$\\
+			\underline{HA}: Supposons $E$ non vide.\\
+			D'apr\`es la propri\'et\'e caract\'eristique, $E$ admet un plus petit \'el\'ement, pot\'e $p_0$.\\
+			$p_0$ v\'erifie: $\begin{aligned}[t] & p_0\in\mathbb{N}\\ & p_0\geqslant n_0 \\ & P(p_0)\text{ est Faux}\end{aligned}$\\
+			Par ailleurs, $P(n_0)$ est Vrai, donc $p_0>n_0$, ou encore $p_0-1\geqslant n_0$\\
+			Or, $p_0>p_0-1$, donc $p_0-1$ n'est pas dans $E$, donc $P(p_0-1)$ est Vrai.\\
+			D'apr\`es H$_1''$, avec $n=p_0-1$, $P(p_0)$ est Vrai, ce qui est en contradiction avec HA.\\
+			Donc HA est fausse, $E=\varnothing$\\
+			Conclusion: $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow P(n)$
+		\end{preuve}
+	\section{Ordre sur $\mathbb{R}$}
+		Ordre sur $\mathbb{R}$: $x\leqslant y\iff y-x\in\mathbb{R}^+$. Il est total.
+		\begin{prop}
+			$(\mathbb{R},+,\times,\leqslant)$ est un \underline{corps totalement ordonn\'e}.\\
+			\begin{liste}
+				\item $(\mathbb{R},+)$ est un groupe commutatif car:
+					\begin{liste}
+						\item[]$+$ est associative: $\forall(x,y,z)\in \mathbb{R}^3,\ x+(y+z)=(x+y)+z$
+						\item[]$+$ admet in \'el\'ement neutre: $\forall x\in\mathbb{R},\ x+0=x$
+						\item[]$+$ octroie un \'el\'ement sym\'etrique: $-x$ (car $\forall x\in\mathbb{R},\ x+(-x)=0$)
+						\item[]$+$ est commutative: $\forall(x,y)\in\mathbb{R},\ x+y=y+x$
+					\end{liste}
+				\item $(\mathbb{R}^*,\times)$ est un groupe commutatif car:
+					\begin{liste}
+						\item[]$\times$ est associative: $\forall(x,y,z)\in \mathbb{R}^3,\ x\times(y\times z)=(x\times y)\times z$
+						\item[]$\times$ admet in \'el\'ement neutre: $\forall x\in\mathbb{R},\ x\times1=x$
+						\item[]$\times$ octroie un \'el\'ement sym\'etrique: $\frac{1}{x}$ (car $\forall x\in\mathbb{R},\ x\times\frac{1}{x}=1$)
+						\item[]$\times$ est commutative: $\forall(x,y)\in\mathbb{R},\ xy=yx$
+					\end{liste}
+				\item La relation d'ordre est compatible avec les op\'erateurs:
+					\begin{liste}
+						\item[]$\forall(x,y,x',y')\in\mathbb{R},\ (x\leqslant y\text{ et }x'\leqslant y')\Rightarrow(x+x'\leqslant y+y')$
+						\item[]$\forall(x,y,z)\in\mathbb{R}\times\mathbb{R}\times\mathbb{R}^+,\ (x\leqslant y)\Rightarrow (z\,x\leqslant z\,y)$
+					\end{liste}
+			\end{liste}
+		\end{prop}
+		\begin{defi}
+			Soit $(E,\leqslant)$ un ensemble ordonn\'e.
+			\begin{liste}
+				\item Soit $A$ une partie de $E$ non vide et major\'ee, $B$ l'ensemble des majorants de $A$.\\
+					$B=\left\{x\in E,\ \forall a\in E,\ (a\in A\Rightarrow a\leqslant x) \right\}$\\
+					On appelle \underline{borne sup\'erieure de $A$} le plus petit \'el\'ement de $B$ (lorsqu'il existe).
+				\item  Soit $A$ une partie de $E$ non vide et minor\'ee, $B$ l'ensemble des minorants de $A$.\\
+					$B=\left\{x\in E,\ \forall a\in E,\ (a\in A\Rightarrow a\geqslant x) \right\}$\\
+					On appelle \underline{borne inf\'erieure de $A$} le plus grand \'el\'ement de $B$ (lorsqu'il existe).
+			\end{liste}
+		\end{defi}
+		Notation: $Sup(A)$, $Inf(A)$\\
+		\begin{prop}
+			Propri\'et\'e caract\'eristique de $\mathbb{R}$:
+			\begin{liste}
+				\item Propri\'et\'e de la borne sup\'erieure:\\
+					Tout ensemble non vide et major\'e de $\mathbb{R}$ admet une borne sup\'erieure.
+				\item Propri\'et\'e de la borne inf\'erieure:\\
+					Tout ensemble non vide et minor\'e de $\mathbb{R}$ admet une borne inf\'erieure.
+			\end{liste}
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Remarque}: Soit $A$ une partie de $\mathbb{R}$ non vide et major\'ee (minor\'ee), et $\alpha$ sa borne sup\'erieure (inf\'erieure).\\
+			$\begin{aligned}
+				\alpha\text{ est caract\'eris\'e par: \textbullet\ }&\alpha \text{ est un majorant (minorant) de }A\\
+					\text{\textbullet\ }&\text{si }\beta\text{ est strictement inf\'erieur (sup\'erieur) a }\alpha\text{, il n'est pas majorant }\\
+					&\text{(minorant) de }A\end{aligned}$
+			\begin{liste}
+				\item \textbf{Crit\`ere 1:} $\alpha$ est la borne sup\'erieure de $A$ si et seulement si:\\
+					$\left\{\begin{aligned}
+						&\forall x\in\mathbb{R},\ x\in A\Rightarrow x\leqslant\alpha\\
+						&\forall\beta\in\mathbb{R},\ (\beta\leqslant\alpha)\Rightarrow(\exists x\in\R,\ x\in A\text{ et }\beta<x\leqslant\alpha)
+					\end{aligned} \right.$
+				\item \textbf{Crit\`ere 2:} $\alpha$ est la borne sup\'erieure de $A$ si et seulement si:\\
+					$\left\{\begin{aligned}
+						&\forall x\in\mathbb{R},\ x\in A\Rightarrow x\leqslant\alpha\\
+						&\forall\epsilon\in\mathbb{R}^{+*},\ \exists x\in\mathbb{R},\ (x\in A\text{ et }x-\epsilon<x\leqslant\alpha)
+					\end{aligned} \right.$
+			\end{liste}\ \\
+		\end{flushleft}
+		\begin{coro}
+			$\mathbb{R}$ est \underline{Archim\'edien}: $\forall x\in\mathbb{R},\ x>0\Rightarrow(\exists n\in\mathbb{N}^*,\ n>x)$
+		\end{coro}
+		\begin{coro}
+			$\forall(a,b)\in\mathbb{R}^{+*^2},\ \exists n\in\mathbb{N},\ n\,a>b$
+		\end{coro}
+		\begin{preuve}
+			\textbf{Corollaire 1:}\\
+			Soit $x$ un r\'eel positif.\\
+			On consid\`ere $A=\{n\in\mathbb{N},\ n>x\}$\\
+			Montrer que $A\neq\varnothing$\\
+			\underline{HA}: $A=\varnothing$\\
+			Alors $\forall n\in\mathbb{N},\ n\leqslant x$\\
+			Donc $\mathbb{N}$ est une partie non vide et major\'ee de $\mathbb{R}$.\\
+			Donc $A$ admet une borne sup\'erieure, que l'on note $\alpha$\\
+			En utilisant le critère 2 avec $\epsilon=\frac{1}{2}$:\\
+			$\exists x'\in\mathbb{N},\ \alpha-\frac{1}{2}<x\leqslant\alpha$\\
+			Or $x'+1$ est un entier naturel v\'erifiant $\alpha+\frac{1}{2}<x'+1$\\
+			Ce qui contredit le fait que $\alpha$ soit le majorant de $\mathbb{N}$.\\
+			Conclusion: $A\neq\varnothing$\\
+			Conclusion g\'en\'erale: $\mathbb{R}$ est Archim\'edien.\\
+			\\
+			\textbf{Corollaire 2}: prendre $x=\frac{b}{a}$
+		\end{preuve}
+		\begin{coro}
+			\underline{Partie Entière}: $\forall x\in\mathbb{R},\ \exists n\in\mathbb{Z},\ \text{unique},\ n\leqslant x<n+1$
+		\end{coro}
+		\begin{preuve}
+			\textbf{\'Existance:}\\
+			Soit $x$ un réel positif.\\
+			Soit $A=\left\{ n\in\mathbb{N},\ n>x \right\}$\\
+			$A$ est non vide car $\mathbb{R}$ est archimédien\\
+			Donc $A$ admet un plus petit élément, noté $n_0$.\\
+			On a: $0\leqslant x<n_0$ donc $1\leqslant n_0$. Donc $n_0-1\in\mathbb{N}$ et $n_0-1\notin A$\\
+			Donc $n_0-1\leqslant x<n_0$.\\
+			En posant $n=n_0-1$, on a: $n\leqslant x<n+1$\\\\\\
+			Soit $x$ un réel strictement négatif.\\
+			$-x\in\mathbb{R^+}$, donc on applique la partie précédente.\\
+			$\exists p\in\mathbb{N}, p\leqslant -x<p+1$\\
+			Soit $p_0$ cet entier.\\
+			Donc $-p_0-1<x\leqslant p_0$\\
+			\begin{liste}
+				\item $x=-p_0$\\
+					On peut alors écrire $-p_0\leqslant x < -p_0+1$\\
+					On note $n=-p_0$
+				\item $x\neq -p_0$\\
+					On peut alors écrire $-p_0-1\leqslant x<-p_0$\\
+					On note $n=-p_0-1$
+			\end{liste}\ \\
+			\textbf{Unicité:}\\
+			Supposons qu'il existe deux entiers $n_1$ et $n_2$ tels que:\\
+			$\left\{ \begin{aligned}
+				& n_1\leqslant x<n_1+1\\
+				& n_2\leqslant x<n_2+1\\
+				& n_1<n_2
+			\end{aligned}\right.$\\
+			$n_1<n_2$ donc $x<n_1+1\leqslant n_2\leqslant x$\\
+			Donc  $n$ est unique.\\
+		\end{preuve}
 \end{document}
