@@ -119,4 +119,46 @@
 			\tkzTabLine{1,+,}
 			\tkzTabVar{-/$0$,+/$1$}
 		\end{tikzpicture}
+	
+	\section{Fonctions circulaires reciproques}
+		\subsection{arcsinus et arccosinus}
+			$\sin$ est definie continue strictement croissante sur $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ et $\sin\lf{\frac{\pi}{2}}=1$ et $\sin\lf{-\frac{\pi}{2}}=-1$. \\
+			Donc $\sin$ realise une bijection de $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ sur $[-1,1]$.
+			\begin{defi}
+				La fonction arcsinus est la fonction reciproque de $\sin_{|_{\left[-\frac{\pi}{2},\frac{\pi}{2}\right]}}$.
+				$$\fonction{\arcsin}{[-1,1]}{\left[-\frac{\pi}{2},\frac{\pi}{2}\right]}{x}{\arcsin\lf{x}}$$
+			\end{defi}\newpage
+			$\cos$ est definie continue strictement decroissante sur $\left[0,\pi\right]$ et $\cos\lf{0}=1$ et $\cos\lf{\pi}=-1$.\\
+			Donc $\cos$ realise une bijection de $\left[0,\pi\right]$ sur $[-1,1]$.
+			\begin{defi}
+				La fonction arccosinus est la fonction reciproque de $\cos_{|_{\left[0,\pi\right]}}$.
+				$$\fonction{\arccos}{[-1,1]}{\left[0,\pi\right]}{x}{\arccos\lf{x}}$$
+			\end{defi}
+			\textbf{Remarques :}
+			\begin{liste}
+				\item $\forall x\in[-1,1],\sin\lf{\arcsin(x)}=x$
+				\item $\forall\theta\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right],\arcsin\lf{\sin(\theta)}=\theta$
+				\item Si $\alpha$ appartient a $\left[\frac{\pi}{2},\frac{3\pi}{2}\right],\arcsin\lf{\sin(\alpha)}=\pi-\alpha$
+				\item $\forall x\in[-1,1],\cos\lf{\arccos(x)}=x$
+				\item $\forall\theta\in\left[0,\pi\right],\arccos\lf{\cos(\theta)}=\theta$
+				\item Si $\alpha$ appartient a $\left[-\pi,0\right],\arccos\lf{\cos(\alpha)}=-\alpha$
+				\item Pour $x$ dans $[-1,1],\cos\lf{\arcsin(x)}=\sqrt{1-x^2}$
+				\item Pour $x$ dans $[-1,1],\sin\lf{\arccos(x)}=\sqrt{1-x^2}$
+				\item $\forall x\in[-1,1],\arcsin(x)+\arccos(x)=\frac{\pi}{2}$
+				\item $\forall x\in[-1,1],\arcsin'(x)=\frac{1}{\sqrt{1-x^2}}$
+				\item $\forall x\in[-1,1],\arccos'(x)=\frac{1}{\sqrt{1-x^2}}$
+			\end{liste}
+		\subsection{arctangente}
+			$\tan$ realise une bijection de $\left]-\frac{\pi}{2},\frac{\pi}{2}\right[$ sur $\R$.
+			\begin{defi}
+				La fonction arctangente est la fonction reciproque de $\tan_{|_{\left]-\frac{\pi}{2},\frac{\pi}{2}\right[}}$.
+				$$\fonction{\arctan}{[-1,1]}{\left]-\frac{\pi}{2},\frac{\pi}{2}\right[}{x}{\arctan\lf{x}}$$
+			\end{defi}
+			\textbf{Remarques :}
+			\begin{liste}
+				\item $\forall x\in\R,\tan\lf{\arctan(x)}=x$
+				\item $\forall\theta\in\left]-\frac{\pi}{2},\frac{\pi}{2}\right[,\arctan\lf{\tan(\theta)}=\theta$
+				\item Pour $x$ reel, $\cos\lf{\arctan(x)}=\frac{1}{\sqrt{1+x^2}}$
+				\item $\forall x\in\R,\arctan'(x)=\frac{1}{\sqrt{1+x^2}}$
+			\end{liste}
 \end{document}
