@@ -109,8 +109,8 @@
 			Donc HA est fausse, $E=\varnothing$\\
 			Conclusion: $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow P(n)$
 		\end{preuve}
-	\section{Ordre sur $\mathbb{R}$}
-			\subsection{Ordre}
+	\section{Ordre naturel sur $\mathbb{R}$}
+		\subsection{Ordre}
 			Ordre sur $\mathbb{R}$: $x\leqslant y\iff y-x\in\mathbb{R}^+$. Il est total.
 			\begin{prop}
 				$(\mathbb{R},+,\times,\leqslant)$ est un \underline{corps totalement ordonn\'e}.\\
@@ -270,12 +270,72 @@
 				\left]a,+\infty\right[;\ \left[a,+\infty\right[;\ \left]-\infty,b\right[;\ \left]-\infty,b\right]$
 			\end{prop}
 			\begin{preuve}
-				Soit $I$ une partie de $\mathbb{R}$
-				\begin{tab}\begin{liste}
-					\item[\cercle1] Montrer que si $I$ est de l'un des types ci-dessus, $I$ est un intervalle.\\
-						\begin{liste}
-							\item[\textbullet]$I$ ni minorée ni majorée. Montrer que $I\
-						\end{liste}
-				\end{liste}\end{tab}
+				Soit $I$ une partie convexe de $\mathbb{R}$
+				\begin{tab}
+					\begin{liste}
+						\item[\cercle1]Montrer que si $I$ est de l'un des types ci-dessus, $I$ est un intervalle.
+							\begin{liste}
+								\item $[a,b]=\{x\in\mathbb{R},\ a\leqslant x\leqslant b\}$
+								\item $]-\infty,b[=\{x\in\mathbb{R},\ x<b \}$
+								\item Etc...
+							\end{liste}
+						\item[\cercle2]Montrer que si $I$ est une partie convexe de $\mathbb{R}$, alors $I$ est de l'un des ces types.
+							\begin{liste}
+								\item[\textbullet]$I$ n'est ni minorée, ni majorée. Montrer que $I=\mathbb{R}$
+									\begin{liste}
+										\item Par hypothèse sur $I$, $I\subset\mathbb{R}$
+										\item Montrer que $\mathbb{R}\subset I$
+											Soit $x$ un réel. $x$ n'est ni majorant, ni minorant:\\
+											$\exists a\in\mathbb{R},\ a\in I\et a<x$\\
+											$\exists b\in\mathbb{R},\ b\in I\et b>x$\\
+											Soit $a$ et $b$ deux tels réels: $(a,b)\in i^2,\ a<x<b$\\
+											Or $I$ est un intervalle, donc $x\in I$\\
+											Ce raisonnement étant valable pour tout $x$, $\mathbb{R}\subset I$\\
+									\end{liste}
+								\item[\textbullet]$I$ est majorée et non minorée. Montrer que $I=\left]-\infty,b\right[$ ou $I=\left]-\infty,\right]$
+									$I$ est non vide et majorée, donc admet une borne supérieure, notée $b$.
+									\begin{liste}
+										\item Montrer que $I\subset ]-\infty,b]$\\
+											C'est a dire montrer que $\forall x\in\mathbb{R},\ x\in I\Rightarrow x\leqslant b$\\
+											Ce qui est vrai car $b$ majore $I$.
+										\item Montrer que $]-\infty,b[\subset I$\\
+											C'est a dire montrer que $\forall x\in\mathbb{R},\ x<b\Rightarrow x\in I$\\
+											Soit $x$ un réel de $I$.
+											\begin{liste}
+												\item $x$ n'est pas un minorant de $I$:\\
+													$\exists a\in \mathbb{R},\ a\in I\et a<x$
+												\item $b$ est une borne supérieure de $I$:\\
+													$(x<b)\Rightarrow(\exists x'\in \mathbb{R},\ x'\in I\et x<x'\leqslant b)$\\
+													Soit $x'$ un tel élément.
+											\end{liste}
+											Donc: $a<x<x'\leqslant b$\\
+											Donc $x\in I$, donc $]-\infty,b[\subset I$
+										\item Donc $]-\infty,b[\subset I \subset ]-\infty,b]$\\
+											Donc $I=\left]-\infty,b\right[$ si $b\notin I$, ou $I=\left]-\infty,b\right]$ si $b\in I$
+									\end{liste}
+								\item[\textbullet] $I$ est minorée et non majorée.
+								\item[\textbullet] $I$ est bornée.
+							\end{liste}
+					\end{liste}
+				\end{tab}
 			\end{preuve}
+			\begin{defi}
+				\textbf{Valeur absolue:} $\fonction{}{\mathbb{R}}{\mathbb{R}}{x}{\left\{\begin{aligned}x\text{ si }& x\in\mathbb{R}^+\\-x\text{ si }& x\in\mathbb{R}^- \end{aligned}\right.}$
+			\end{defi}
+			\begin{prop}
+				$|x|=0\iff x=0\\
+				|x+y|\leqslant|x|+|y|\\
+				|x\,y|=|x|\,|y|$
+			\end{prop}
+			\begin{coro}
+				$|\,|x|-|y|\,|\leqslant|x-y|$
+			\end{coro}
+			\begin{defi}
+				Soit $(a,r)\in\mathbb{R}\times\mathbb{R}^{+*}$\\
+				On appelle \underline{intervalle ouvert centré en $a$ de rayon $r$} le sous-ensemble $]a-r,a+r[$
+			\end{defi}
+			\begin{prop}
+				$]a,b[=\bigcup\limits_{n\in\mathbb{N}^*}[a+\frac{1}{n},b-\frac{1}{n}]$\\\\
+				$[a,b]=\bigcap\limits_{n\in\mathbb{N}^*}]a-\frac{1}{n},b+\frac{a}{n}[$
+			\end{prop}	
 \end{document}
