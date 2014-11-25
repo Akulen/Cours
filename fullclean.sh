@@ -17,11 +17,11 @@ for mat in ${cours[@]}; do
 			rm ${fil:0:1}*.fls 2> /dev/null
 			rm ${fil:0:1}*.syn* 2> /dev/null
 			mkdir ../../../${mat} 2> /dev/null
-			mkdir ../../../${mat}/${cha} 2> /dev/null
-			mv ${fil:0:1}*.pdf ../../../${mat}/${cha}/
+			mkdir ../../../${mat}${cha} 2> /dev/null
+			mv ${fil:0:1}*.pdf ../../../${mat}${cha}
 			mkdir ../../../Code_Source/${mat} 2> /dev/null
-			mkdir ../../../Code_Source/${mat}/${cha} 2> /dev/null
-			cp ${fil:0:1}*.tex ../../../Code_Source/${mat}/${cha}/
+			mkdir ../../../Code_Source/${mat}${cha} 2> /dev/null
+			cp ${fil:0:1}*.tex ../../../Code_Source/${mat}${cha}
 		done
 		cd ../
 	done

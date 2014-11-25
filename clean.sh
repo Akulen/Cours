@@ -21,11 +21,11 @@ select mat in "${cours[@]}";
 			rm ${fil:0:1}*.fls
 			rm ${fil:0:1}*.syn*
 			mkdir ../../../${mat}
-			mkdir ../../../${mat}/${cha}
-			mv ${fil:0:1}*.pdf ../../../${mat}/${cha}/
+			mkdir ../../../${mat}${cha}
+			mv ${fil:0:1}*.pdf ../../../${mat}${cha}
 			mkdir ../../../Code_Source/${mat}
-			mkdir ../../../Code_Source/${mat}/${cha}
-			cp ${fil:0:1}*.tex ../../../Code_Source/${mat}/${cha}/
+			mkdir ../../../Code_Source/${mat}${cha}
+			cp ${fil:0:1}*.tex ../../../Code_Source/${mat}${cha}
 			break;
 		done
 		break;
