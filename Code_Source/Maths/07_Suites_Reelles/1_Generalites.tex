@@ -20,10 +20,10 @@
 		Utilisation: une suite tend vers un élément de $\overline{\mathbb{R}}$
 	\section{Définitions}
 		\begin{defi}
-			On appelle suite réelle toute application $\fonction{\phi}{\mathbb{N}}{\mathbb{R}}{n}{\phi(n)}$
+			On appelle suite r\'eelle toute application $\fonction{\phi}{\mathbb{N}}{\mathbb{R}}{n}{\phi(n)}$
 		\end{defi}
 		\begin{flushleft}
-			Une suite réelle est une famille d'éléments indexée par $\mathbb{N}$\\
+			Une suite r\'eelle est une famille d'\'el\'ements index\'ee par $\mathbb{N}$\\
 			Notations: $\begin{aligned}& u_n=\phi(n)\\ & u=(u_n)_{n\in\mathbb{N}}=\phi \end{aligned}$
 		\end{flushleft}
 		\begin{defi}
@@ -32,24 +32,88 @@
 		\end{defi}
 		\begin{defi}
 			On dit que $u$ est une suite monotone si $\phi$ est monotone.\\
-			De m\^eme avec croissante et décroissante.
+			De m\^eme avec croissante et d\'ecroissante.
 		\end{defi}
 		\begin{defi}
-			On dit que $u$ est majorée si $A$ est majoré dans $\mathbb{R}$\\
-			De m\^eme avec minorée et bornée.
+			On dit que $u$ est major\'ee si $A$ est major\'e dans $\mathbb{R}$\\
+			De m\^eme avec minor\'ee et born\'ee.
 		\end{defi}
 	\section{Notations et limites}
-		\subsection{Limites réelles}
+		\subsection{Limites r\'eelles}
 			\begin{defi}
-				Soit $u=(u_n)_{n\in\mathbb{R}}$ une suite réelle, et $l$ un réel.\\
-				On dit que \underline{$u$ converge vers $l$} si pour tout intervalle $I$ centré en $l$, il existe un rang $n_0$ \`a partir duquel tous les $u_n$ sont dans $I$:
+				Soit $u=(u_n)_{n\in\mathbb{R}}$ une suite r\'eelle, et $l$ un r\'eel.\\
+				On dit que \underline{$u$ converge vers $l$} si pour tout intervalle $I$ centr\'e en $l$, il existe un rang $n_0$ \`a partir duquel tous les $u_n$ sont dans $I$:
 				$$\forall\epsilon\in\mathbb{R}^{+*},\ \exists n_0\in\mathbb{N},\ n\geqslant n_0\Rightarrow|u_n-l|<\epsilon$$
 			\end{defi}
 			\begin{prop}
-				Si $u$ converge vers un $l$ réel, alors \underline{$l$ est unique.}
+				Si $u$ converge vers un $l$ r\'eel, alors \underline{$l$ est unique.}
 			\end{prop}
 			\begin{preuve}
-				Utiliser les définitions, raisonner par l'absurde avec $\epsilon=\frac{l_2-l_1}{2}$
+				Utiliser les d\'efinitions, raisonner par l'absurde avec $\epsilon=\frac{l_2-l_1}{2}$
 			\end{preuve}
-			%Feuille 8-2-1
+			\begin{flushleft}
+				Notation: Si $u$ converge vers $l$, on note: $\begin{aligned}[t]&\lim\limits_{n\rightarrow+\infty}u_n=l\\& u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l \end{aligned}$
+			\end{flushleft}
+			\begin{prop}
+				Toute suite convergente est born\'ee.
+			\end{prop}
+			\begin{preuve}
+				Montrer que toute suite convergente est born\'ee.\\
+				Soit $A$ l'ensemble des valeurs de $u$, suite convergeant vers $l$.\\
+				Donc montrons que $\exists(a,b)\in\mathbb{N},\ A\in[a,b]$
+				\begin{liste}
+					\item $u$ converge vers $l$ donc pour $\epsilon=1$: $\exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow l-1<u_n<l+1$\\
+						Soit $n_0\in\mathbb{N}^*$, un tel entier.
+					\item Soit $B=\{x\in\mathbb{R},\ \exists n\in\lbracket 0,n-1\rbracket,\ x=u_n \}$\\
+						$B$ est un sous-ensemble fini de $\mathbb{R}$ donc $B$ est born\'e.
+				\end{liste}
+				Posons $\begin{aligned}[t]&a=\min(\{l-1\}\cup B)\\&b=\min(\{l+1\}\cup B)\end{aligned}$\\
+				Alors $\forall n\in\mathbb{N},\ a\leqslant u_n\leqslant b$
+			\end{preuve}
+			\begin{prop}
+				Soit $u$ une suite r\'eelle convergeant vers $l$, telle qu'a partir d'un certain rang, tous ses termes appartiennent \`a un intervalle born\'e par $a$ et $b$.\\
+				Alors $l\in[a,b]$
+			\end{prop}
+			\begin{preuve}
+				En sachant que $u$ converge et que ses termes appartiennent a un intervalle born\'e, faire l'hypoth\`ese que $\notin[a,b]$\\
+				Conclure.
+			\end{preuve}
+			\begin{prop}
+				Soit $u$ une suite convergeant vers $l$. Alors:\\
+				$\begin{aligned}
+					&\exists n_0\in\mathbb{N},&\ \forall n\in\mathbb{N},&\ n\geqslant n_0\Rightarrow |u_n|<|l|+1\\
+					&\exists n_1\in\mathbb{N},&\ \forall n\in\mathbb{N},&\ n\geqslant n_1\Rightarrow l-1<u_n<l+1\\
+					&\exists n_2\in\mathbb{N},&\ \forall n\in\mathbb{N},&\ n\geqslant n_2\Rightarrow \frac{|l|}{2}<u_n<\frac{3\,|l|}{2}
+				\end{aligned}$
+			\end{prop}
+			\begin{preuve}
+				\begin{liste}
+					\item $\epsilon=1$ et d'apr\`es la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire: $|\,|u_n|-|l|\,|\leqslant|u_n-l|<1$\\
+						Donc $|u_n|\in]|l|-1,|l|+1[$
+					\item $\epsilon = 1$
+					\item $\epsilon = \frac{|l|}{2}$, en utilisant le cas 1 et la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire.
+				\end{liste}
+			\end{preuve}
+			\begin{prop}
+				Si $u$ converge vers $l$, alors la suite de terme g\'en\'eral $|u_n|$ converge vers $|l|$.
+			\end{prop}
+			\begin{prop}
+				Soit $u$ une suite \`a termes positifs.
+				\begin{liste}
+					\item Si $u$ admet une limite $l$, alors $l\geqslant0$
+					\item Si \underline{de plus} $l\neq0$, alors $u_n>\frac{l}{2}$
+				\end{liste}
+			\end{prop}
+		\subsection{Limites infinies}
+			\begin{defi}
+				Soit $u$ une suite r\'eelle
+				\begin{liste}
+					\item Si $u$ n'admet pas de limites dans $\mathbb{R}$, on dit que $u$ diverge.
+					\item On dit que $u$ diverge vers $-\infty$ si:\\
+						$\forall K\in\mathbb{R},\ \exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow u_n<K$
+					\item On dit que $u$ diverge vers $+\infty$ si:\\
+						$\forall K\in\mathbb{R},\ \exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow u_n>K$
+				\end{liste}
+			\end{defi}
+			Notation: Si $u$ diverge vers l'infini, on note: $\lim\limits_{n\rightarrow+\infty}u_n=\pm\infty$
 \end{document}
