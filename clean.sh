@@ -18,6 +18,7 @@ select mat in "${cours[@]}";
 			texi2pdf ${fil}
 			rm ${fil:0:1}*.aux
 			rm ${fil:0:1}*.log
+			rm ${fil:0:1}*.fls
 			rm ${fil:0:1}*.syn*
 			mkdir ../../../${mat}
 			mkdir ../../../${mat}/${cha}

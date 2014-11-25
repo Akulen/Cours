@@ -1,0 +1,341 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\newcommand{\vdashv}{\mathrel{\text{\ooalign{$\vdash$\cr$\dashv$\cr}}}}
+
+\def\chapitre{Relations Binaires}
+\author{MPSI 2}
+\def\titre{Relations d'ordre}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{D\'efinition}
+		Soit $E$ un ensemble non vide.\\
+		Soit $\mathcal{R}$ une relation binaire sur $E$.
+		\begin{defi}
+			$\mathcal{R}$ est une \underline{relation d'ordre} sur $E$ si:
+			\begin{liste}
+				\item $\mathcal{R}$ est r\'eflexive.
+				\item $\mathcal{R}$ est antisym\'etrique: $\forall(x,y)\in E^2,\ (x\,\mathcal{R}\,y \text{ et }y\,\mathcal{R}\,x)\Rightarrow(x=y)$
+				\item $\mathcal{R}$ est transitive.
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			Notations: $x\,\mathcal{R}\,y$, $x\leq y$\\
+			Se note aussi $x\preccurlyeq y$
+		\end{flushleft}
+		\begin{defi}
+			Soit $\preccurlyeq$ une relation d'ordre sur $E$.\\
+			\begin{liste}
+				\item On dit que l'ordre est \underline{total} si deux \'el\'ements de $E$ sont toujours en relation:\\
+					$\forall(x,y)\in E^2,\ (x\preccurlyeq y)$ ou $(y\preccurlyeq x)$.
+				\item Sinon, on dit que l'ordre est partiel.
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.
+			\begin{liste}
+				\item $m\in E$ est le \underline{plus petit \'el\'ement} de $E$ si: $\forall x\in E,\ m\preccurlyeq x$
+				\item $M\in E$ est le \underline{plus grand \'el\'ement} de $E$ si: $\forall x\in E,\ x\preccurlyeq M$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+		Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.
+			\begin{liste}
+				\item $m\in E$ est un \underline{\'el\'ement minimal} de $E$ si:\\
+					$\forall x\in E,\ (x \preccurlyeq m)\Rightarrow (x=m)$
+				\item $M\in E$ est un \underline{\'el\'ement maximal} de $E$ si:\\
+					$\forall x\in E,\ (M\preccurlyeq x)\Rightarrow (x=M)$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $(E,\preccurlyeq)$ un ensemble ordonn\'e.\\
+			Soit $A$ un sous-ensemble de $E$
+			\begin{liste}
+				\item $\alpha\in E$ est un \underline{minorant de $A$ dans $E$} si:\\
+					$\forall x\in E,\ (x\in A)\Rightarrow(\alpha\preccurlyeq x)$
+				\item $\beta\in E$ est un \underline{majorant de $A$ dans $E$} si:\\
+					$\forall x\in E,\ (x\in A)\Rightarrow(x\preccurlyeq\beta)$
+			\end{liste}
+		\end{defi}
+	\section{Ordre naturel sur $\mathbb{N}$}
+		\begin{defi}
+			$\forall(x,y)\in \mathbb{N},\ x\leqslant y\iff\exists n\in\mathbb{N}, y=x+n$
+		\end{defi}
+		C'est un ordre total de plus petit \'el\'ement $0$.
+		\begin{prop}
+			Propri\'et\'e caract\'eristique de $\mathbb{N}$:\\
+			Tout sous-ensemble de $\mathbb{N}$ admet un plus petit \'el\'ement.
+		\end{prop}
+		\begin{coro}
+			Tout sous-ensemble non vide et major\'e de $\mathbb{N}$ admet un plus grand \'el\'ement.
+		\end{coro}
+		\begin{preuve}
+			Soit $A$ un sous-ensemble non vide et major\'e de $\mathbb{N}$.\\
+			On consid\`ere $B$ l'ensemble des majorants de $A$.\\
+			$B=\{x\in\mathbb{N},\ \forall a\in A, x\geqslant a\}$\\
+			$A$ est major\'e donc $B$ est un sous-ensemble non vide de $\mathbb{N}$.\\
+			D'apr\`es la propri\'et\'e caract\'eristique de $\mathbb{N}$ $B$ admet un plus petit \'el\'ement que l'on note $\alpha$\\
+			On a: $\left\lbrace\begin{aligned}&\alpha\in\mathbb{N}\\&\forall a\in A,\ a\leqslant\alpha\end{aligned}\right.$\\
+			Montrer que $\alpha\in\mathbb{N}$\\
+			\underline{HA}: $\alpha \notin A$\\
+			Alors $\forall x\in A,\ a<\alpha$\\
+			Ou encore, puisque $\alpha$ est entier: $\forall a\in A,\ a\leqslant\alpha-1$\\
+			On a donc $\alpha-1$ entier naturel et $\alpha-1$ majorant de $A$.\\
+			Donc $\alpha\in B$ et $\alpha-1<\alpha$, ce qui contredit $\alpha$ plus petit \'el\'ement de $B$.\\
+			\\
+			Donc $\alpha\in A$\\
+			Conclusion: $\alpha$ est le plus grand \'el\'ement de $A$.
+		\end{preuve}
+		\begin{coro}
+			\textbf{Principe de r\'ecurrence}\\
+			\\
+			Soit $P$ une proposition portant sue les entiers naturels.\\
+			Soit $P(n)$ le pr\'edicat associ\'e a $n$.\\
+			$$\exists n\uu0\in\mathbb{N},\ \left[P(n\uu0)\text{ et }\left(\forall n\in\mathbb{N},\ P(n)\Rightarrow P(n+1)\right)\right]\Rightarrow\left[\forall n\in\mathbb{N},\ n\geqslant n\uu0\Rightarrow P(n)\right]$$
+		\end{coro}
+		\begin{preuve}
+			\underline{H$_1$}: Soit $n_0$ un entier naturel tel que (\underline{H$_1'$}) $P(n_0)$ et (\underline{H$_1''$}) $\forall n\in\mathbb{N},\ P(n)\Rightarrow P(n+1)$\\
+			Montrer que $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow P(n)$\\
+			On consid\`ere l'ensemble $E$, ensemble des $n\in\mathbb{N}, (n\geqslant n_0\text{ et }\neg P(n))$\\
+			Montrer que $E=\varnothing$\\
+			\underline{HA}: Supposons $E$ non vide.\\
+			D'apr\`es la propri\'et\'e caract\'eristique, $E$ admet un plus petit \'el\'ement, pot\'e $p_0$.\\
+			$p_0$ v\'erifie: $\begin{aligned}[t] & p_0\in\mathbb{N}\\ & p_0\geqslant n_0 \\ & P(p_0)\text{ est Faux}\end{aligned}$\\
+			Par ailleurs, $P(n_0)$ est Vrai, donc $p_0>n_0$, ou encore $p_0-1\geqslant n_0$\\
+			Or, $p_0>p_0-1$, donc $p_0-1$ n'est pas dans $E$, donc $P(p_0-1)$ est Vrai.\\
+			D'apr\`es H$_1''$, avec $n=p_0-1$, $P(p_0)$ est Vrai, ce qui est en contradiction avec HA.\\
+			Donc HA est fausse, $E=\varnothing$\\
+			Conclusion: $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow P(n)$
+		\end{preuve}
+	\section{Ordre naturel sur $\mathbb{R}$}
+		\subsection{Ordre}
+			Ordre sur $\mathbb{R}$: $x\leqslant y\iff y-x\in\mathbb{R}^+$. Il est total.
+			\begin{prop}
+				$(\mathbb{R},+,\times,\leqslant)$ est un \underline{corps totalement ordonn\'e}.\\
+				\begin{liste}
+					\item $(\mathbb{R},+)$ est un groupe commutatif car:
+						\begin{liste}
+							\item[]$+$ est associative: $\forall(x,y,z)\in \mathbb{R}^3,\ x+(y+z)=(x+y)+z$
+							\item[]$+$ admet in \'el\'ement neutre: $\forall x\in\mathbb{R},\ x+0=x$
+							\item[]$+$ octroie un \'el\'ement sym\'etrique: $-x$ (car $\forall x\in\mathbb{R},\ x+(-x)=0$)
+							\item[]$+$ est commutative: $\forall(x,y)\in\mathbb{R},\ x+y=y+x$
+						\end{liste}
+					\item $(\mathbb{R}^*,\times)$ est un groupe commutatif car:
+						\begin{liste}
+							\item[]$\times$ est associative: $\forall(x,y,z)\in \mathbb{R}^3,\ x\times(y\times z)=(x\times y)\times z$
+							\item[]$\times$ admet in \'el\'ement neutre: $\forall x\in\mathbb{R},\ x\times1=x$
+							\item[]$\times$ octroie un \'el\'ement sym\'etrique: $\frac{1}{x}$ (car $\forall x\in\mathbb{R},\ x\times\frac{1}{x}=1$)
+							\item[]$\times$ est commutative: $\forall(x,y)\in\mathbb{R},\ xy=yx$
+						\end{liste}
+					\item La relation d'ordre est compatible avec les op\'erateurs:
+						\begin{liste}
+							\item[]$\forall(x,y,x',y')\in\mathbb{R},\ (x\leqslant y\text{ et }x'\leqslant y')\Rightarrow(x+x'\leqslant y+y')$
+							\item[]$\forall(x,y,z)\in\mathbb{R}\times\mathbb{R}\times\mathbb{R}^+,\ (x\leqslant y)\Rightarrow (z\,x\leqslant z\,y)$
+						\end{liste}
+				\end{liste}
+			\end{prop}
+			\begin{defi}
+				Soit $(E,\leqslant)$ un ensemble ordonn\'e.
+				\begin{liste}
+					\item Soit $A$ une partie de $E$ non vide et major\'ee, $B$ l'ensemble des majorants de $A$.\\
+						$B=\left\{x\in E,\ \forall a\in E,\ (a\in A\Rightarrow a\leqslant x) \right\}$\\
+						On appelle \underline{borne sup\'erieure de $A$} le plus petit \'el\'ement de $B$ (lorsqu'il existe).
+					\item  Soit $A$ une partie de $E$ non vide et minor\'ee, $B$ l'ensemble des minorants de $A$.\\
+						$B=\left\{x\in E,\ \forall a\in E,\ (a\in A\Rightarrow a\geqslant x) \right\}$\\
+						On appelle \underline{borne inf\'erieure de $A$} le plus grand \'el\'ement de $B$ (lorsqu'il existe).
+				\end{liste}
+			\end{defi}
+			Notation: $Sup(A)$, $Inf(A)$\\
+			\begin{prop}
+				Propri\'et\'e caract\'eristique de $\mathbb{R}$:
+				\begin{liste}
+					\item Propri\'et\'e de la borne sup\'erieure:\\
+						Tout ensemble non vide et major\'e de $\mathbb{R}$ admet une borne sup\'erieure.
+					\item Propri\'et\'e de la borne inf\'erieure:\\
+						Tout ensemble non vide et minor\'e de $\mathbb{R}$ admet une borne inf\'erieure.
+				\end{liste}
+			\end{prop}
+			\begin{flushleft}
+				\textbf{Remarque}: Soit $A$ une partie de $\mathbb{R}$ non vide et major\'ee (minor\'ee), et $\alpha$ sa borne sup\'erieure (inf\'erieure).\\
+				$\begin{aligned}
+					\alpha\text{ est caract\'eris\'e par: \textbullet\ }&\alpha \text{ est un majorant (minorant) de }A\\
+						\text{\textbullet\ }&\text{si }\beta\text{ est strictement inf\'erieur (sup\'erieur) a }\alpha\text{, il n'est pas majorant }\\
+						&\text{(minorant) de }A\end{aligned}$
+				\begin{liste}
+					\item \textbf{Crit\`ere 1:} $\alpha$ est la borne sup\'erieure de $A$ si et seulement si:\\
+						$\left\{\begin{aligned}
+							&\forall x\in\mathbb{R},\ x\in A\Rightarrow x\leqslant\alpha\\
+							&\forall\beta\in\mathbb{R},\ (\beta\leqslant\alpha)\Rightarrow(\exists x\in\R,\ x\in A\text{ et }\beta<x\leqslant\alpha)
+						\end{aligned} \right.$
+					\item \textbf{Crit\`ere 2:} $\alpha$ est la borne sup\'erieure de $A$ si et seulement si:\\
+						$\left\{\begin{aligned}
+							&\forall x\in\mathbb{R},\ x\in A\Rightarrow x\leqslant\alpha\\
+							&\forall\epsilon\in\mathbb{R}^{+*},\ \exists x\in\mathbb{R},\ (x\in A\text{ et }x-\epsilon<x\leqslant\alpha)
+						\end{aligned} \right.$
+				\end{liste}\ \\
+			\end{flushleft}
+			\begin{coro}
+				$\mathbb{R}$ est \underline{Archim\'edien}: $\forall x\in\mathbb{R},\ x>0\Rightarrow(\exists n\in\mathbb{N}^*,\ n>x)$
+			\end{coro}
+			\begin{coro}
+				$\forall(a,b)\in\mathbb{R}^{+*^2},\ \exists n\in\mathbb{N},\ n\,a>b$
+			\end{coro}
+			\begin{preuve}
+				\textbf{Corollaire 1:}\\
+				Soit $x$ un r\'eel positif.\\
+				On consid\`ere $A=\{n\in\mathbb{N},\ n>x\}$\\
+				Montrer que $A\neq\varnothing$\\
+				\underline{HA}: $A=\varnothing$\\
+				Alors $\forall n\in\mathbb{N},\ n\leqslant x$\\
+				Donc $\mathbb{N}$ est une partie non vide et major\'ee de $\mathbb{R}$.\\
+				Donc $A$ admet une borne sup\'erieure, que l'on note $\alpha$\\
+				En utilisant le critère 2 avec $\epsilon=\frac{1}{2}$:\\
+				$\exists x'\in\mathbb{N},\ \alpha-\frac{1}{2}<x\leqslant\alpha$\\
+				Or $x'+1$ est un entier naturel v\'erifiant $\alpha+\frac{1}{2}<x'+1$\\
+				Ce qui contredit le fait que $\alpha$ soit le majorant de $\mathbb{N}$.\\
+				Conclusion: $A\neq\varnothing$\\
+				Conclusion g\'en\'erale: $\mathbb{R}$ est Archim\'edien.\\
+				\\
+				\textbf{Corollaire 2}: prendre $x=\frac{b}{a}$
+			\end{preuve}
+			\begin{coro}
+				\underline{Partie Entière}: $\forall x\in\mathbb{R},\ \exists n\in\mathbb{Z},\ \text{unique},\ n\leqslant x<n+1$
+			\end{coro}
+			\begin{preuve}
+				\textbf{\'Existance:}\\
+				Soit $x$ un réel positif.\\
+				Soit $A=\left\{ n\in\mathbb{N},\ n>x \right\}$\\
+				$A$ est non vide car $\mathbb{R}$ est archimédien\\
+				Donc $A$ admet un plus petit élément, noté $n_0$.\\
+				On a: $0\leqslant x<n_0$ donc $1\leqslant n_0$. Donc $n_0-1\in\mathbb{N}$ et $n_0-1\notin A$\\
+				Donc $n_0-1\leqslant x<n_0$.\\
+				En posant $n=n_0-1$, on a: $n\leqslant x<n+1$\\\\\\
+				Soit $x$ un réel strictement négatif.\\
+				$-x\in\mathbb{R^+}$, donc on applique la partie précédente.\\
+				$\exists p\in\mathbb{N}, p\leqslant -x<p+1$\\
+				Soit $p_0$ cet entier.\\
+				Donc $-p_0-1<x\leqslant p_0$\\
+				\begin{liste}
+					\item $x=-p_0$\\
+						On peut alors écrire $-p_0\leqslant x < -p_0+1$\\
+						On note $n=-p_0$
+					\item $x\neq -p_0$\\
+						On peut alors écrire $-p_0-1\leqslant x<-p_0$\\
+						On note $n=-p_0-1$
+				\end{liste}\ \\
+				\textbf{Unicité:}\\
+				Supposons qu'il existe deux entiers $n_1$ et $n_2$ tels que:\\
+				$\left\{ \begin{aligned}
+					& n_1\leqslant x<n_1+1\\
+					& n_2\leqslant x<n_2+1\\
+					& n_1<n_2
+				\end{aligned}\right.$\\
+				$n_1<n_2$ donc $x<n_1+1\leqslant n_2\leqslant x$\\
+				Donc  $n$ est unique.
+			\end{preuve}
+		\subsection{Propriétés de $\mathbb{R}$}
+			\begin{prop}
+				$\mathbb{Q}$ est dense dans $\mathbb{R}$\\
+				$\mathbb{Q}\setminus\mathbb{R}$ est dense dans $\mathbb{R}$
+			\end{prop}
+			\begin{preuve}
+				Soit $x$ et $y$ deux réels tels que $x<y$\\
+				$y-x\in\mathbb{R^+}\Rightarrow\exists n\in\mathbb{N},\ n(y-x)>1$\\
+				Soit $n$ un tel entier naturel.\\
+				Donc $y<x+\frac{1}{n}$\\
+				Soit $k$ la partie entière de $nx$:\\
+				$k\leqslant x<k+1$\\
+				$\frac{k}{n}\leqslant x<\frac{x+1}{n}\leqslant x+\frac{1}{n}<y$\\
+				Posons $q=\frac{k+1}{n}$\\
+				$q$ est rationnel, donc $\mathbb{Q}$ est dense dans $\mathbb{R}$\\
+				Soit $x$ et $y$ deux réels tels que $x<y$\\
+				$e$ est un irrationnel strictement positif donc $\frac{x}{e}<\frac{y}{e}$\\
+				$\frac{x}{e}$ et $\frac{y}{e}$ sont deux réels, donc:\\
+				$\exists q\in\mathbb{Q},\ \frac{x}{e}<q<\frac{y}{e}$\\
+				Soit $q$ un tel élément.\\
+				Donc $x<q\,e<y$\\
+				Donc $\mathbb{Q}\setminus\mathbb{R}$ est dense dans $\mathbb{R}$
+			\end{preuve}
+			\begin{defi}
+				Soit $I$ un sous-ensemble de $\mathbb{R}$\\
+				$I$ est un intervalle si $I$ est une partie convexe de $\mathbb{R}$:\\
+				$$\forall(a,b)\in I^2,\ (a<b)\Rightarrow(\forall x\in\mathbb{R},\ a<x<b\Rightarrow x\in I)$$
+			\end{defi}
+			\begin{prop}
+				Les seuls intervalles réels sont les sous-ensembles du type:\\
+				$\mathbb{R};\ \varnothing\\
+				\left]a,b\right[;\ \left[a,b\right[;\ \left]a,b\right];\ \left[a,b\right]\\
+				\left]a,+\infty\right[;\ \left[a,+\infty\right[;\ \left]-\infty,b\right[;\ \left]-\infty,b\right]$
+			\end{prop}
+			\begin{preuve}
+				Soit $I$ une partie convexe de $\mathbb{R}$
+				\begin{tab}
+					\begin{liste}
+						\item[\cercle1]Montrer que si $I$ est de l'un des types ci-dessus, $I$ est un intervalle.
+							\begin{liste}
+								\item $[a,b]=\{x\in\mathbb{R},\ a\leqslant x\leqslant b\}$
+								\item $]-\infty,b[=\{x\in\mathbb{R},\ x<b \}$
+								\item Etc...
+							\end{liste}
+						\item[\cercle2]Montrer que si $I$ est une partie convexe de $\mathbb{R}$, alors $I$ est de l'un des ces types.
+							\begin{liste}
+								\item[\textbullet]$I$ n'est ni minorée, ni majorée. Montrer que $I=\mathbb{R}$
+									\begin{liste}
+										\item Par hypothèse sur $I$, $I\subset\mathbb{R}$
+										\item Montrer que $\mathbb{R}\subset I$
+											Soit $x$ un réel. $x$ n'est ni majorant, ni minorant:\\
+											$\exists a\in\mathbb{R},\ a\in I\et a<x$\\
+											$\exists b\in\mathbb{R},\ b\in I\et b>x$\\
+											Soit $a$ et $b$ deux tels réels: $(a,b)\in i^2,\ a<x<b$\\
+											Or $I$ est un intervalle, donc $x\in I$\\
+											Ce raisonnement étant valable pour tout $x$, $\mathbb{R}\subset I$\\
+									\end{liste}
+								\item[\textbullet]$I$ est majorée et non minorée. Montrer que $I=\left]-\infty,b\right[$ ou $I=\left]-\infty,\right]$
+									$I$ est non vide et majorée, donc admet une borne supérieure, notée $b$.
+									\begin{liste}
+										\item Montrer que $I\subset ]-\infty,b]$\\
+											C'est a dire montrer que $\forall x\in\mathbb{R},\ x\in I\Rightarrow x\leqslant b$\\
+											Ce qui est vrai car $b$ majore $I$.
+										\item Montrer que $]-\infty,b[\subset I$\\
+											C'est a dire montrer que $\forall x\in\mathbb{R},\ x<b\Rightarrow x\in I$\\
+											Soit $x$ un réel de $I$.
+											\begin{liste}
+												\item $x$ n'est pas un minorant de $I$:\\
+													$\exists a\in \mathbb{R},\ a\in I\et a<x$
+												\item $b$ est une borne supérieure de $I$:\\
+													$(x<b)\Rightarrow(\exists x'\in \mathbb{R},\ x'\in I\et x<x'\leqslant b)$\\
+													Soit $x'$ un tel élément.
+											\end{liste}
+											Donc: $a<x<x'\leqslant b$\\
+											Donc $x\in I$, donc $]-\infty,b[\subset I$
+										\item Donc $]-\infty,b[\subset I \subset ]-\infty,b]$\\
+											Donc $I=\left]-\infty,b\right[$ si $b\notin I$, ou $I=\left]-\infty,b\right]$ si $b\in I$
+									\end{liste}
+								\item[\textbullet] $I$ est minorée et non majorée.
+								\item[\textbullet] $I$ est bornée.
+							\end{liste}
+					\end{liste}
+				\end{tab}
+			\end{preuve}
+			\begin{defi}
+				\textbf{Valeur absolue:} $\fonction{}{\mathbb{R}}{\mathbb{R}}{x}{\left\{\begin{aligned}x\text{ si }& x\in\mathbb{R}^+\\-x\text{ si }& x\in\mathbb{R}^- \end{aligned}\right.}$
+			\end{defi}
+			\begin{prop}
+				$|x|=0\iff x=0\\
+				|x+y|\leqslant|x|+|y|\\
+				|x\,y|=|x|\,|y|$
+			\end{prop}
+			\begin{coro}
+				$|\,|x|-|y|\,|\leqslant|x-y|$
+			\end{coro}
+			\begin{defi}
+				Soit $(a,r)\in\mathbb{R}\times\mathbb{R}^{+*}$\\
+				On appelle \underline{intervalle ouvert centré en $a$ de rayon $r$} le sous-ensemble $]a-r,a+r[$
+			\end{defi}
+			\begin{prop}
+				$]a,b[=\bigcup\limits_{n\in\mathbb{N}^*}[a+\frac{1}{n},b-\frac{1}{n}]$\\\\
+				$[a,b]=\bigcap\limits_{n\in\mathbb{N}^*}]a-\frac{1}{n},b+\frac{a}{n}[$
+			\end{prop}	
+\end{document}

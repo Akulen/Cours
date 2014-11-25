@@ -1,0 +1,63 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{El\'ements de Th\'eorie des Ensembles}
+\author{MPSI 2}
+\def\titre{Familles index\'ees}
+
+\input{../../includes/header}
+
+\begin{document}
+	\maketitle
+	\section{Ensembles finis, Ensembles d\'enombrables}
+		\begin{defi}
+			Soit $E$ un ensemble non vide. On dit que $E$ est fini s'il existe un entier naturel non nul $n$ et une application $\phi\colon\lbracket1,n\rbracket\longrightarrow E$ bijective.
+		\end{defi}
+		\begin{prop}
+			Si $n$ existe, alors il est unique et on l'appelle le cardinal de $E$.
+		\end{prop}
+		\textbf{Notation :} $card(E)=\#E=|E|$
+		\begin{defi}
+			$E$ est d\'enombrable s'il existe une bijection de $\N$ sur $E$.
+		\end{defi}
+	\section{Ensemble des familles index\'ees}
+		\subsection{D\'efinitions}
+			Un ensemble d'indexation est un ensemble $I$ non vide.
+			\begin{defi}
+				On dit que $E$ est un ensemble index\'e par $I$ s'il existe une bijection de $I$ sur $E$ $\fonction{\phi}{I}{E}{i}{x\uu i}$ bijective.
+			\end{defi}
+			\textbf{Notation :} $E=\left\{x\uu i,i\in I\right\}$
+			\begin{defi}
+				On appelle famille index\'ee par $I$ dans $E$ toute application de $I$ dans $E$.
+				$$\fonction{\phi}{I}{E}{i}{x\uu i}$$
+			\end{defi}
+		\subsection{Operations ensemblistes sur les familles index\'ees}
+			\begin{defi}
+				Soit $\lf{A\uu i}\uu{i\in I}$ une famille index\'ee de sous-ensembles de $E$.
+				\begin{liste}
+					\item $\bigcup_{i\in I}A\uu i=\left\{x\in E,\exists i\in I,x\in A\uu i\right\}$
+					\item $\bigcap_{i\in I}A\uu i=\left\{x\in E,\forall i\in I,x\in A\uu i\right\}$
+				\end{liste}
+			\end{defi}
+			\begin{prop}
+				$${^c\lf{\bigcup_{i\in I}A\uu i}}=\bigcap_{i\in I}{^cA\uu i};{^c\lf{\bigcap_{i\in I}A\uu i}}=\bigcup_{i\in I}{^cA\uu i}$$
+			\end{prop}
+			\begin{preuve}
+				$$\begin{aligned}
+					x\in{^c\lf{\bigcup_{i\in I}A\uu i}}&\iff\neg\lf{x\in\bigcup_{i\in I}A\uu i}&&\text{par d\'efinition du compl\'ementaire} \\
+													   &\iff\neg\lf{\exists i\in I,x\in A\uu i}&&\text{par d\'efinition de la r\'eunion des }A\uu i \\
+													   &\iff\forall i\in I,x\notin A\uu I&&\text{n\'egation de }"\exists" \\
+													   &\iff\forall i\in I,x\in {^cA\uu i}&&\text{par d\'efinition du compl\'ementaire} \\
+													   &\iff x\in\bigcap_{i\in I}{^cA\uu i}&&\text{par d\'efinition de l'intersection des }A\uu i
+				\end{aligned}$$
+			\end{preuve}
+			\begin{defi}
+				Soit $E$ un ensemble. \\
+				Soit $\lf{A\uu i}\uu{i\in I}$ une famille de sous-ensembles de $E$ index\'ee par $I$. \\
+				On dit que $\lf{A\uu i}\uu{i\in I}$ est une partition de $E$ si :
+				\begin{liste}
+					\item $\forall i\in I,A\uu i\neq\varnothing$
+					\item $\bigcup_{i\in I}A\uu i=E$
+					\item $\forall(i,j)\in I^2,A\uu i=A\uu j\ou A\uu i\cap A\uu j=\varnothing$
+				\end{liste}
+			\end{defi}
+\end{document}
