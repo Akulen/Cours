@@ -50,7 +50,6 @@
 				\item$(\mathcal{E}_b,+,\times,\cdot)$ et $(\mathcal{E}_b,+,\times,\cdot)$ sont des algèbres commutatives.
 			\end{liste}
 		\end{prop}
-		\newpage
 		\begin{flushleft}
 			\textbf{Limites Réelles}
 		\end{flushleft}
@@ -152,7 +151,6 @@
 		\begin{preuve}
 			\textbf{Inverse}\\
 			Montrer que si $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$ et, \`a partir d'un certain rang, $u_n<0$, alors $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$\\
-			\\
 			Soit $u$ une suite convergeant vers $0$ et strictement négative a partir d'un rang $n_1$.\\
 			Donc: $\forall\varepsilon\in\R^{+*},\ \exists n_2\in\N,\ \forall n\in\N,\ n\geqslant n_2\Rightarrow|u_n|<\varepsilon$\\
 			Soit $n_2$ un tel réel, $\varepsilon$ un réel positif, et $n_3=\max(\{n_1,n_2\})$\\
@@ -180,7 +178,41 @@
 			Soit $x$ un réel.
 			\begin{liste}
 				\item Existence de la suite:\\
-					$\Q$
+					$\Q$ est dense dans $\R$\\
+					Donc $\forall \varepsilon\in\R^{+*},\ \exists q\in\R,\ x-\varepsilon<q<x+\varepsilon$\\
+					Pour tout $n$ non nul, posons $\varepsilon=\frac1{n}$\\
+					Soit $q_n$ un rationnel vérifiant $q_n\in\Q,\ x-\frac1{n}<q<x+\frac1{n}$\\
+					Ce raisonnement étant valable pour tout $n$ non nul, on obtient une suite $q$ sur $\N^*$ a valeurs dans $\Q$
+				\item Convergence vers $x$\\
+					Soit $\varepsilon$ un réel strictement positif.\\
+					$\left(\frac1{n} \right)_{n\in\N^*}$ converge vers $0$\\
+					Donc $\exists n_0\in\N,\ 0<\frac1{n}<\varepsilon$\\
+					Soit $n_0$ un tel entier.\\
+					On a donc $\forall n\in\N,\ n\geqslant n_0\Rightarrow |q_n-x|<\frac1{n}<\varepsilon$\\
+					Cela étant valable pour tout $\varepsilon$ strictement positif, on conclut que $q$ converge vers $x$
 			\end{liste}
 		\end{preuve}
+	\section{Relations de comparaison}
+		\begin{prop}
+			Soit $u$ et $v$ deux suites telles que $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_1\Rightarrow u_n\leqslant v_n$
+			\begin{liste}
+				\item Si $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$, alors $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+				\item Si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$, alors $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+				\item Si $u$ et $v$ \`a termes positifs \`a partir d'un certain rang, et si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$, alors $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+			\end{liste}
+		\end{prop}
+		\begin{prop}
+			\underline{Propriété d'encadrement}\\
+			Soit $u$, $v$ et $w$ trois suites telles que $\exists n\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n\leqslant v_n\leqslant w_n$\\
+			Si $u$ et $w$ convergent vers une m\^eme limite $l$, alors $v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$
+		\end{prop}
+		\begin{defi}
+			Soit $u$ et $v$ deux suites réelles.
+			\begin{liste}
+				\item $u_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)$: "$u_n$ est \underline{Grand O} de $v_n$"\\
+					$$\exists M\in\R^+,\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow\left|u_n\right|\leqslant M\,\left|v_n\right|$$
+				\item $u_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)$: "$u_n$ est \underline{Petit o} de $v_n$"\\
+					$$\exists \left(\varepsilon_n\right)_{n\in\N},\ (\varepsilon\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0)\et(\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow\left|u_n\right|\leqslant \varepsilon_n\,\left|v_n\right|)$$
+			\end{liste}
+		\end{defi} %8-6-2, Remarques
 \end{document}
