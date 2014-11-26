@@ -1,6 +1,6 @@
 #!/bin/sh
 cd Temp
-cours=([!i]*/)
+cours=([!.]*/)
 for mat in ${cours[@]}; do
 	echo ${mat}
 	cd ${mat}
