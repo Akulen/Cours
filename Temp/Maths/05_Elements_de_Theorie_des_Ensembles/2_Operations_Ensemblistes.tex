@@ -1,27 +1,36 @@
 \documentclass[12pt,twoside,a4paper]{article}
 
-\def\chapitre{Elements de Theorie des Ensembles}
+\def\chapitre{El\'ements de Th\'eorie des Ensembles}
 \author{MPSI 2}
-\def\titre{Operations Ensemblistes}
+\def\titre{Op\'erations Ensemblistes}
 
-\input{../../includes/header}
+\input{../../.includes/header}
 
 \begin{document}
 	\maketitle
+<<<<<<< HEAD
+	\section{Compl\'ementaire : ${^cF},F^c,\bar{F},C_EF,E\setminus F$}
+		Soit $E$ un ensemble.
+=======
 	\section{Complémentaire : ${^cF},F^c,\bar{F},C_EF,E\setminus F$}
 		Soit $E$ un ensemble
+>>>>>>> 5c834652dfba36294e6593c1445cb0abce99bf2c
 		\begin{defi}
 			Soit $F$ un sous-ensemble de $E$.\\
 			$$\lf{x\in{^cF}}\iff\text{non}\lf{x\in F}$$
 		\end{defi}
+<<<<<<< HEAD
+	\section{R\'eunion}
+=======
 	\section{Réunion}
+>>>>>>> 5c834652dfba36294e6593c1445cb0abce99bf2c
 		\begin{defi}
-			Soit $F$ et $G$ deux sous ensembles de $E$.
+			Soit $F$ et $G$ deux sous-ensembles de $E$.
 			$$\lf{x\in F\cup G}\iff\lf{\lf{x\in F}\ou\lf{x\in G}}$$
 		\end{defi}
 	\section{Intersection}
 		\begin{defi}
-			Soit $F$ et $G$ deux sous ensembles de $E$.
+			Soit $F$ et $G$ deux sous-ensembles de $E$.
 			$$\lf{x\in F\cap G}\iff\lf{\lf{x\in F}\et\lf{x\in G}}$$
 		\end{defi}
 		\begin{prop}
@@ -32,7 +41,16 @@
 		\begin{preuve}
 			$$\begin{aligned}
 				x\in{^c\lf{F\cup G}}&\iff\neg\lf{x\in F\cup G} \\
-									&
+									&\iff\neg\lf{\lf{x\in F}\ou\lf{x\in G}} \\
+									&\iff\neg\lf{x\in F}\et\neg\lf{x\in G} \\
+									&\iff\lf{x\in{^cF}}\et\lf{x\in{^cG}} \\
+									&\iff x\in{^cF}\cap{^cG}
 			\end{aligned}$$
 		\end{preuve}
+	\section{Diff\'erence sym\'etrique}
+		\begin{defi}
+			Soit $F$ et $G$ deux sous-ensembles de $E$. \\
+			$$x\in F\Delta G\iff\lf{x\in F}\xou\lf{x\in G}$$
+			$$F\Delta G=C_{F\cup G}F\cap G$$
+		\end{defi}
 \end{document}

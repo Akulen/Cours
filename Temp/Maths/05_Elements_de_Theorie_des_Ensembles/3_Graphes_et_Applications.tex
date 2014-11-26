@@ -1,10 +1,10 @@
 \documentclass[12pt,twoside,a4paper]{article}
 
-\def\chapitre{Elements de Theorie des Ensembles}
+\def\chapitre{El\'ements de Th\'eorie des Ensembles}
 \author{MPSI 2}
 \def\titre{Graphes et Applications}
 
-\input{../../includes/header}
+\input{../../.includes/header}
 
 \begin{document}
 	\maketitle
@@ -12,7 +12,7 @@
 		Soit $E$ et $F$ deux ensembles. \\
 		On note $E\times E=\{\lf{x,y},x\in E\et y\in F\}$
 		\begin{defi}
-			On appelle graphe de $E$ dans $F$ tout sous ensemble $G$ de $E\times F$
+			On appelle graphe de $E$ dans $F$ tout sous-ensemble $G$ de $E\times F$
 		\end{defi}
 		\begin{defi}
 			On appelle correspondance de $E$ vers $F$ tout triplet $\lf{G,E,F}$ o\`u $E$ et $F$ sont deux ensembles et $G$ un graphe de $E$ vers $F$.
@@ -79,6 +79,8 @@
 		\begin{prop}
 			Notons $\mathcal{P}\lf{E}$ l'ensemble des sous-ensembles de $E$. \\
 			Notons $\mathcal{F}\lf{E,\{0,1\}}$ l'ensemble des applications d\'efinies sur $E$ a valeurs dans $\{0,1\}$. \\
-			L'application $\fonction{\phi}{\mathcal{P}\lf{E}}{\mathcal{F}\lf{E,\{0,1\}}}{A}{\mathds{1}_A}$ r\'ealise une bijection de $\mathcal{P}\lf{E}$ sur $\mathcal{F}\lf{E,\{0,1\}}$.
+			L'application
+			$$\fonction{\phi}{\mathcal{P}\lf{E}}{\mathcal{F}\lf{E,\{0,1\}}}{A}{\mathds{1}_A}$$
+			r\'ealise une bijection de $\mathcal{P}\lf{E}$ sur $\mathcal{F}\lf{E,\{0,1\}}$.
 		\end{prop}
 \end{document}

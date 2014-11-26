@@ -43,13 +43,13 @@
 			\begin{defi}
 				Soit $u=(u_n)_{n\in\mathbb{R}}$ une suite r\'eelle, et $l$ un r\'eel.\\
 				On dit que \underline{$u$ converge vers $l$} si pour tout intervalle $I$ centr\'e en $l$, il existe un rang $n_0$ \`a partir duquel tous les $u_n$ sont dans $I$:
-				$$\forall\varepsilon\in\mathbb{R}^{+*},\ \exists n_0\in\mathbb{N},\ n\geqslant n_0\Rightarrow|u_n-l|<\varepsilon$$
+				$$\forall\epsilon\in\mathbb{R}^{+*},\ \exists n_0\in\mathbb{N},\ n\geqslant n_0\Rightarrow|u_n-l|<\epsilon$$
 			\end{defi}
 			\begin{prop}
 				Si $u$ converge vers un $l$ r\'eel, alors \underline{$l$ est unique.}
 			\end{prop}
 			\begin{preuve}
-				Utiliser les d\'efinitions, raisonner par l'absurde avec $\varepsilon=\frac{l_2-l_1}{2}$
+				Utiliser les d\'efinitions, raisonner par l'absurde avec $\epsilon=\frac{l_2-l_1}{2}$
 			\end{preuve}
 			\begin{flushleft}
 				Notation: Si $u$ converge vers $l$, on note: $\begin{aligned}[t]&\lim\limits_{n\rightarrow+\infty}u_n=l\\& u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l \end{aligned}$
@@ -62,7 +62,7 @@
 				Soit $A$ l'ensemble des valeurs de $u$, suite convergeant vers $l$.\\
 				Donc montrons que $\exists(a,b)\in\mathbb{N},\ A\in[a,b]$
 				\begin{liste}
-					\item $u$ converge vers $l$ donc pour $\varepsilon=1$: $\exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow l-1<u_n<l+1$\\
+					\item $u$ converge vers $l$ donc pour $\epsilon=1$: $\exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow l-1<u_n<l+1$\\
 						Soit $n_0\in\mathbb{N}^*$, un tel entier.
 					\item Soit $B=\{x\in\mathbb{R},\ \exists n\in\lbracket 0,n-1\rbracket,\ x=u_n \}$\\
 						$B$ est un sous-ensemble fini de $\mathbb{R}$ donc $B$ est born\'e.
@@ -88,10 +88,10 @@
 			\end{prop}
 			\begin{preuve}
 				\begin{liste}
-					\item $\varepsilon=1$ et d'apr\`es la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire: $|\,|u_n|-|l|\,|\leqslant|u_n-l|<1$\\
+					\item $\epsilon=1$ et d'apr\`es la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire: $|\,|u_n|-|l|\,|\leqslant|u_n-l|<1$\\
 						Donc $|u_n|\in]|l|-1,|l|+1[$
-					\item $\varepsilon = 1$
-					\item $\varepsilon = \frac{|l|}{2}$, en utilisant le cas 1 et la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire.
+					\item $\epsilon = 1$
+					\item $\epsilon = \frac{|l|}{2}$, en utilisant le cas 1 et la 2$^{\grave{e}me}$ in\'egalit\'e triangulaire.
 				\end{liste}
 			\end{preuve}
 			\begin{prop}
