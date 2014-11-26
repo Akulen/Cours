@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  26 NOV 2014 17:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  26 NOV 2014 19:46
 entering extended mode
-**1_Generalites.tex
+**2_Operations_sur_les_suites.tex
 
-(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\1_Generalite
-s.tex
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\2_Operations
+_sur_les_suites.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -560,21 +560,22 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \c@pro=\count140
 \c@cor=\count141
 )
-(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\1_Generalite
-s.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\2_Operations
+_sur_les_suites.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count142
 \scratchdimen=\dimen176
@@ -623,40 +624,54 @@ LaTeX Font Info:    ... okay on input line 9.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 10.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 12.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Missing character: There is no Ã in font cmbx12!
-Missing character: There is no © in font cmbx12!
-Missing character: There is no Ã in font cmbx12!
-Missing character: There is no © in font cmbx12!
-Missing character: There is no Ã in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no Ã in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no Ã in font cmti12!
-Missing character: There is no © in font cmti12!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmti12!
+Missing character: There is no © in font cmti12!
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+Missing character: There is no Ã in font cmti12!
+Missing character: There is no ¨ in font cmti12!
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no Ã in font cmbx12!
+Missing character: There is no © in font cmbx12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -666,10 +681,44 @@ Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmbx12!
-Missing character: There is no © in font cmbx12!
- [1
+Missing character: There is no ¨ in font cmbx12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 71--92
+
+ []
+
+Missing character: There is no Ã in font cmbx12!
+Missing character: There is no ¨ in font cmbx12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+
+ []
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--108
+[]$[] []$
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -677,33 +726,83 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
- [3] [4]
-(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\1_Generalite
-s.aux) ) 
+Missing character: There is no Ã in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no Ã in font cmti12!
+Missing character: There is no © in font cmti12!
+ [3]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--162
+
+ []
+
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ã in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no © in font cmr12!
+! Undefined control sequence.
+<recently read> \Q 
+                   
+l.183 					$\Q
+              $
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+[4] [5]
+(C:\Users\Utilisateur\Documents\Cours\Temp\Maths\07_Suites_Reelles\2_Operations
+_sur_les_suites.aux) ) 
 Here is how much of TeX's memory you used:
- 14218 strings out of 493921
- 277424 string characters out of 3147264
- 331384 words of memory out of 3000000
- 17214 multiletter control sequences out of 15000+200000
- 15152 words of font info for 61 fonts, out of 3000000 for 9000
+ 14215 strings out of 493921
+ 277495 string characters out of 3147264
+ 338408 words of memory out of 3000000
+ 17210 multiletter control sequences out of 15000+200000
+ 13792 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,13n,61p,445b,306s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+ 57i,14n,61p,459b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxt
+i10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1_Generalites.pdf (4 pages, 132310 bytes).
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 2_Operations_sur_les_suites.pdf (5 pages, 175274 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
