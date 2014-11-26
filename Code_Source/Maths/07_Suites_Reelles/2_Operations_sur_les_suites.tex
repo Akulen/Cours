@@ -6,7 +6,181 @@
 
 \input{../../.includes/header}
 
+%Auteur: Clément Phan, MPSI 2
+
 \begin{document}
 	\maketitle
-	
+	\section{Structure d'alg\`ebre des suites}
+		\begin{flushleft}
+			Soit $\mathcal{E}$ l'ensemble des suites r\'eelles.\\
+			Soit $(u_n)_{n\in\mathbb{N}}$ et $(v_n)_{n\in\mathbb{N}}$ deux suites r\'eelles.\\
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Addition}\\
+			On pose $u+v=(u_n+v_n)_{n\in\mathbb{N}}$\\
+			$(\mathcal{E},+)$ est un \underline{groupe ab\'elien} (commutatif):
+			\begin{liste}
+				\item Il poss\`ede un \'el\'ement neutre: $(0)_{n\in\mathbb{N}}$
+				\item Il poss\`ede un \'el\'ement sym\'etrique: $-u_n=(-u_n)_{n\in\mathbb{N}}$
+			\end{liste}
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Multiplication}\\
+			On pose $u\times v=(u_n\times v_n)_{n\in\mathbb{N}}$\\
+			\begin{liste}
+				\item[$\times$] est associative
+				\item[$\times$] est distributive sur $+$
+				\item[$\times$] admet un élément neutre: $(1)_{n\in\mathbb{N}}$
+			\end{liste}
+			On dit que $(\mathcal{E},+,\times)$ est un \underline{anneau commutatif} (car pas complètement symétrique)
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Multiplication externe}\\
+			On pose $\forall\lambda\in\mathbb{R},\ \lambda\cdot u=(\lambda\times u_n)_{n\in\mathbb{N}}$\\
+			On a de plus $\lambda\cdot(u\times v)=(\lambda\cdot u)\times v=u\times(v\cdot\lambda)$\\
+			On dit que $(\mathcal{E},+,\cdot)$ est un espace vectoriel.\\
+			On dit que $(\mathcal{E},+,\times,\cdot)$ est une \underline{algèbre commutative}.
+		\end{flushleft}
+		\begin{prop}
+			On note $\mathcal{E}_b$ l'ensemble des suites bornées.\\
+			On note $\mathcal{E}_c$ l'ensemble des suites convergentes.\\
+			On a:
+			\begin{liste}
+				\item$\mathcal{E}_c\subset\mathcal{E}_b\subset\mathcal{E}$
+				\item$(\mathcal{E}_b,+,\times,\cdot)$ et $(\mathcal{E}_b,+,\times,\cdot)$ sont des algèbres commutatives.
+			\end{liste}
+		\end{prop}
+		\newpage
+		\begin{flushleft}
+			\textbf{Limites Réelles}
+		\end{flushleft}
+		\begin{prop}
+			\begin{liste}
+				\item Si $u$ converge vers $l$ et $v$ converge vers $l'$, alors $u+v$ converge vers $l+l'$.
+				\item Si $u$ converge vers $l$ et $v$ converge vers $l'$, alors $u\times v$ converge vers $l\times l'$.
+				\item Si $u$ converge vers $l$ et $\lambda\in\mathbb{R}$, alors $\lambda\cdot u$ converge vers $\lambda\,l$
+				\item Si $u$ converge vers $l\neq0$, alors il existe un rang $n_0$ a partir duquel $\left(\frac{1}{u_n}\right)_{n\geq n_0}$ ait un sens, et $\left(\frac{1}{u_n}\right)_{n\geq n_0}$ converge vers $\frac{1}{l}$
+				\item Si $u$ converge vers $l$ et $v$ converge vers $l'\neq0$, alors il existe un rang $n_0$ a partir duquel $\left(\frac{u_n}{v_n}\right)_{n\geq n_0}$ ait un sens, et $\left(\frac{u_n}{v_n}\right)_{n\geq n_0}$ converge vers $\frac{l}{l'}$
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item\textbf{Premier point}:\\
+					Utiliser les définitions des limites avec $\frac{\varepsilon}{2}$, \`a $\varepsilon$ fixé.\\
+					Puis, avec l'addition des deux, utiliser l'inégalité triangulaire.
+				\item\textbf{Deuxième point}:\\
+					Soit $u$ et $v$ tendant vers $l$ et $l'$.\\
+					Montrer que $u\,v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l\,l'$\\
+					Soit $\varepsilon$ un réel strictement positif.\\
+					Montrer que $\exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow|_n\,v_n-l\,l'|<\varepsilon$\\
+					De plus: $\begin{aligned}[t]
+						|u_n\,v_n-l\,l'|&=|u_n\,v_n-u_n\,l'+u_n\,l'-l\,l'|\\
+						                &=|u_n(v_n-l)+l'(u_n-l)|\\
+						|u_n\,v_n-l\,l'|&\leqslant|u_n|\,|v_n-l|+|l'|\,|u_n-l|
+					\end{aligned}$
+					$u$ est convergente, donc bornée. Soit $M$ le majorant de $|u|$.\\
+					Donc $|u_n\,v_n-l\,l'|\leqslant M\,|v_n-l|+|l'|\,|u_n-l|$\\
+					On utilise ensuite la convergence de $u$ avec $\frac{\varepsilon}{2(|l'|+1)}$ et de $v$ avec $\frac{\varepsilon}{2(M+1)}$\\
+					Donc: 
+					$\begin{aligned}[t]
+						&\exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow|u_n-l|<\frac{\varepsilon}{2(|l'|+1)}\\
+						&\exists n_2\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_2\Rightarrow|v_n-l|<\frac{\varepsilon}{2(M+1)}
+					\end{aligned}$
+					Soit $n_1$ et $n_2$ deux tels réels. Posons $n_0=\max(\{n_1,n_2\})$\\
+					Donc $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow|_n\,v_n-l\,l'|<M\frac{\varepsilon}{2(M+1)}+|l'|\frac{\varepsilon}{2(|l'|+1)}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}<\varepsilon$\\\\
+					Ce raisonnement étant vrai pour tout $\varepsilon$, $u\,v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l\,l'$
+				\item\textbf{Quatrième point}:\\
+					Soit $u$ une suite tendant vers un réel $l$ différent de 0.\\
+					\begin{liste}
+						\item Démontrer l'existence de $\left(\frac{1}{u_n}\right)_{n\geqslant n_0}$\\
+							$\exists n_2\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_2\Rightarrow \frac{|l|}{2}<u_n<\frac{3\,|l|}{2}$\\
+							Donc il existe un rang $n_0$ tel que l'inverse de $u_n$ soit défini.
+						\item $\begin{aligned}[t]\text{Montrer que:}&\left(\frac{1}{u_n}\right)_{n\geqslant n_0}\text{converge vers}\frac{1}{l}\\
+								\iff&\forall\varepsilon\in\mathbb{R}^{+*},\ \exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|\end{aligned}$
+							$\begin{aligned}\left|\frac{1}{u_n}-\frac{1}{l}\right|&=\left|\frac{l-u_n}{l\,u_n}\right|
+								&=\frac{\left| l-u_n\right|}{\left| u_n\right| \left| l\right| }\end{aligned}$\\
+							Or $\left| u_n\right| >\frac{\left| l\right| }{2}$\\
+							Donc $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|<\frac{\left| u_n-l\right| }{\frac{\left| l\right| }{2}\times\left| l\right| }\leqslant \frac{2}{\left| l\right| ^2}\left| u_n-l\right|$\\
+							On applique la convergence de $u$ avec $\frac{\left| l\right| ^2}{2}\varepsilon$\\
+							Donc $\exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|< \frac{2}{\left| l\right| ^2}\times\frac{\left| l\right| ^2}{2}\varepsilon \leqslant \varepsilon$\\
+							Donc il existe un rang $n_1$ a partir duquel $\left|\frac{1}{u_n}-\frac{1}{l}\right|$ est inférieur \`a $\varepsilon$\\
+							Cela étant vrai pour tout $\varepsilon$, $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}\frac{1}{l}$
+					\end{liste}
+			\end{liste}
+		\end{preuve}
+		\begin{coro}
+			$\begin{aligned}u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l&\iff u_n-l\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0\\
+				&\iff \frac{u_n}{l}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}1\end{aligned}$
+		\end{coro}
+		\begin{flushleft}
+			\textbf{Limites Infinies}
+		\end{flushleft}
+		\begin{prop}
+			\underline{Somme}:
+			\begin{liste}
+				\item Si $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+				\begin{liste}
+					\item Si $v$ est minorée dans $\mathbb{R}$, $u+v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
+						En particulier si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$ ou si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$ avec $l\in\mathbb{R}$
+					\item On ne peut pas conclure immédiatement si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+				\end{liste}
+				\item De m\^eme avec $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+			\end{liste}
+			\underline{Produit}
+			\begin{liste}
+				\item Si $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+				\begin{liste}
+					\item Si $v$ n'admet pas $0$ pour limite, et si $v_n$ garde un signe constant a partir d'un certain rang, alors:\\
+						Si $v_n<0,\ u_n\,v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$\\
+						Si $v_n>0,\ u_n\,v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+					\item Si $v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$, on ne peut pas conclure a priori,\\
+					\textbf{Sauf si} $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow v_n=0$ Dans ce cas, $u_n\,v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+				\end{liste}
+				\item De m\^eme avec $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+			\end{liste}
+			\underline{Inverse}
+			\begin{liste}
+				\item Si $|u_n|\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$, alors il existe un rang $n_0$ a partir duquel $\left(\frac{1}{u_n}\right)_{n\geqslant n_0}$ existe et $\left(\frac{1}{u_n}\right)\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$\\
+					Cela s'applique aussi a $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+				\item Si $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+				\begin{liste}
+					\item Si a partir d'un certain rang $n_0$, tous les $u_n$ sont non nuls, alors $\left(\frac{1}{u_n}\right)_{n\geqslant n_0}$existe.
+					\item Si de plus $u_n$ garde un signe constant a partir d'un rang $n_1\geqslant n_0$, $\left(\frac{1}{u_n}\right)\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}\pm\infty$ selon le signe de $u_n$
+				\end{liste}
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			\textbf{Inverse}\\
+			Montrer que si $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$ et, \`a partir d'un certain rang, $u_n<0$, alors $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$\\
+			\\
+			Soit $u$ une suite convergeant vers $0$ et strictement négative a partir d'un rang $n_1$.\\
+			Donc: $\forall\varepsilon\in\R^{+*},\ \exists n_2\in\N,\ \forall n\in\N,\ n\geqslant n_2\Rightarrow|u_n|<\varepsilon$\\
+			Soit $n_2$ un tel réel, $\varepsilon$ un réel positif, et $n_3=\max(\{n_1,n_2\})$\\
+			Pour tout $n$ supérieur a $n_3$, $\frac{1}{u_n}$ existe.\\
+			Montrer que $\frac{1}{u_n}$ diverge vers $-\infty$\\
+			Soit $K$ un réel.
+			\begin{liste}
+				\item Si $K\geqslant0$: $\forall n\in\N,\ n\geqslant n_3\Rightarrow \frac1{u_n}<0\geqslant K$
+				\item Si $K<0$\\
+					En appliquant la convergence de $u$ avec le réel $\frac1{|K|}$:\\
+					$\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_4\Rightarrow -\frac1{|K|}<u_n<\frac1{u_n}$\\
+					Soit $n_0$ un tel réel.\\
+					$\begin{aligned}
+						\forall n\in\N,\ n\geqslant n_0&\Rightarrow \frac1{K}<u_n\\
+							&\Rightarrow \frac{1}{u_n}<K
+					\end{aligned}$
+			\end{liste}
+			Ce raisonnement étant valable pour tout $K$ réel, $\frac1{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+		\end{preuve}
+		\begin{prop}
+			Tout réel est limite d'une suite de rationnels.
+		\end{prop}
+		\begin{preuve}
+			Montrer que $\forall x\in\R,\ \exists (q_n)_{n\in\N}\in\mathcal{E},\ (\forall n\in\N,\ q_n\in\mathbb{Q})\et(q_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}x)$\\
+			Soit $x$ un réel.
+			\begin{liste}
+				\item Existence de la suite:\\
+					$\Q$
+			\end{liste}
+		\end{preuve}
 \end{document}
