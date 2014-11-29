@@ -30,28 +30,28 @@
 			\begin{liste}
 				\item[$\times$] est associative
 				\item[$\times$] est distributive sur $+$
-				\item[$\times$] admet un élément neutre: $(1)_{n\in\mathbb{N}}$
+				\item[$\times$] admet un \'el\'ement neutre: $(1)_{n\in\mathbb{N}}$
 			\end{liste}
-			On dit que $(\mathcal{E},+,\times)$ est un \underline{anneau commutatif} (car pas complètement symétrique)
+			On dit que $(\mathcal{E},+,\times)$ est un \underline{anneau commutatif} (car pas compl\'etement sym\'etrique)
 		\end{flushleft}
 		\begin{flushleft}
 			\textbf{Multiplication externe}\\
 			On pose $\forall\lambda\in\mathbb{R},\ \lambda\cdot u=(\lambda\times u_n)_{n\in\mathbb{N}}$\\
 			On a de plus $\lambda\cdot(u\times v)=(\lambda\cdot u)\times v=u\times(v\cdot\lambda)$\\
 			On dit que $(\mathcal{E},+,\cdot)$ est un espace vectoriel.\\
-			On dit que $(\mathcal{E},+,\times,\cdot)$ est une \underline{algèbre commutative}.
+			On dit que $(\mathcal{E},+,\times,\cdot)$ est une \underline{alg\'ebre commutative}.
 		\end{flushleft}
 		\begin{prop}
-			On note $\mathcal{E}_b$ l'ensemble des suites bornées.\\
+			On note $\mathcal{E}_b$ l'ensemble des suites born\'ees.\\
 			On note $\mathcal{E}_c$ l'ensemble des suites convergentes.\\
 			On a:
 			\begin{liste}
 				\item$\mathcal{E}_c\subset\mathcal{E}_b\subset\mathcal{E}$
-				\item$(\mathcal{E}_b,+,\times,\cdot)$ et $(\mathcal{E}_b,+,\times,\cdot)$ sont des algèbres commutatives.
+				\item$(\mathcal{E}_b,+,\times,\cdot)$ et $(\mathcal{E}_b,+,\times,\cdot)$ sont des alg\'ebres commutatives.
 			\end{liste}
 		\end{prop}
 		\begin{flushleft}
-			\textbf{Limites Réelles}
+			\textbf{Limites R\'eelles}
 		\end{flushleft}
 		\begin{prop}
 			\begin{liste}
@@ -65,19 +65,19 @@
 		\begin{preuve}
 			\begin{liste}
 				\item\textbf{Premier point}:\\
-					Utiliser les définitions des limites avec $\frac{\varepsilon}{2}$, \`a $\varepsilon$ fixé.\\
-					Puis, avec l'addition des deux, utiliser l'inégalité triangulaire.
-				\item\textbf{Deuxième point}:\\
+					Utiliser les d\'efinitions des limites avec $\frac{\varepsilon}{2}$, \`a $\varepsilon$ fix\'e.\\
+					Puis, avec l'addition des deux, utiliser l'in\'egalit\'e triangulaire.
+				\item\textbf{Deuxi\'eme point}:\\
 					Soit $u$ et $v$ tendant vers $l$ et $l'$.\\
 					Montrer que $u\,v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l\,l'$\\
-					Soit $\varepsilon$ un réel strictement positif.\\
+					Soit $\varepsilon$ un r\'eel strictement positif.\\
 					Montrer que $\exists n_0\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow|_n\,v_n-l\,l'|<\varepsilon$\\
 					De plus: $\begin{aligned}[t]
 						|u_n\,v_n-l\,l'|&=|u_n\,v_n-u_n\,l'+u_n\,l'-l\,l'|\\
 						                &=|u_n(v_n-l)+l'(u_n-l)|\\
 						|u_n\,v_n-l\,l'|&\leqslant|u_n|\,|v_n-l|+|l'|\,|u_n-l|
 					\end{aligned}$
-					$u$ est convergente, donc bornée. Soit $M$ le majorant de $|u|$.\\
+					$u$ est convergente, donc born\'ee. Soit $M$ le majorant de $|u|$.\\
 					Donc $|u_n\,v_n-l\,l'|\leqslant M\,|v_n-l|+|l'|\,|u_n-l|$\\
 					On utilise ensuite la convergence de $u$ avec $\frac{\varepsilon}{2(|l'|+1)}$ et de $v$ avec $\frac{\varepsilon}{2(M+1)}$\\
 					Donc: 
@@ -85,15 +85,15 @@
 						&\exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow|u_n-l|<\frac{\varepsilon}{2(|l'|+1)}\\
 						&\exists n_2\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_2\Rightarrow|v_n-l|<\frac{\varepsilon}{2(M+1)}
 					\end{aligned}$
-					Soit $n_1$ et $n_2$ deux tels réels. Posons $n_0=\max(\{n_1,n_2\})$\\
+					Soit $n_1$ et $n_2$ deux tels r\'eels. Posons $n_0=\max(\{n_1,n_2\})$\\
 					Donc $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow|_n\,v_n-l\,l'|<M\frac{\varepsilon}{2(M+1)}+|l'|\frac{\varepsilon}{2(|l'|+1)}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}<\varepsilon$\\\\
-					Ce raisonnement étant vrai pour tout $\varepsilon$, $u\,v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l\,l'$
-				\item\textbf{Quatrième point}:\\
-					Soit $u$ une suite tendant vers un réel $l$ différent de 0.\\
+					Ce raisonnement \'etant vrai pour tout $\varepsilon$, $u\,v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l\,l'$
+				\item\textbf{Quatri\'eme point}:\\
+					Soit $u$ une suite tendant vers un r\'eel $l$ diff\'erent de 0.\\
 					\begin{liste}
-						\item Démontrer l'existence de $\left(\frac{1}{u_n}\right)_{n\geqslant n_0}$\\
+						\item D\'emontrer l'existence de $\left(\frac{1}{u_n}\right)_{n\geqslant n_0}$\\
 							$\exists n_2\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_2\Rightarrow \frac{|l|}{2}<u_n<\frac{3\,|l|}{2}$\\
-							Donc il existe un rang $n_0$ tel que l'inverse de $u_n$ soit défini.
+							Donc il existe un rang $n_0$ tel que l'inverse de $u_n$ soit d\'efini.
 						\item $\begin{aligned}[t]\text{Montrer que:}&\left(\frac{1}{u_n}\right)_{n\geqslant n_0}\text{converge vers}\frac{1}{l}\\
 								\iff&\forall\varepsilon\in\mathbb{R}^{+*},\ \exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|\end{aligned}$
 							$\begin{aligned}\left|\frac{1}{u_n}-\frac{1}{l}\right|&=\left|\frac{l-u_n}{l\,u_n}\right|
@@ -102,8 +102,8 @@
 							Donc $\forall n\in\mathbb{N},\ n\geqslant n_0\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|<\frac{\left| u_n-l\right| }{\frac{\left| l\right| }{2}\times\left| l\right| }\leqslant \frac{2}{\left| l\right| ^2}\left| u_n-l\right|$\\
 							On applique la convergence de $u$ avec $\frac{\left| l\right| ^2}{2}\varepsilon$\\
 							Donc $\exists n_1\in\mathbb{N},\ \forall n\in\mathbb{N},\ n\geqslant n_1\Rightarrow\left|\frac{1}{u_n}-\frac{1}{l}\right|< \frac{2}{\left| l\right| ^2}\times\frac{\left| l\right| ^2}{2}\varepsilon \leqslant \varepsilon$\\
-							Donc il existe un rang $n_1$ a partir duquel $\left|\frac{1}{u_n}-\frac{1}{l}\right|$ est inférieur \`a $\varepsilon$\\
-							Cela étant vrai pour tout $\varepsilon$, $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}\frac{1}{l}$
+							Donc il existe un rang $n_1$ a partir duquel $\left|\frac{1}{u_n}-\frac{1}{l}\right|$ est inf\'erieur \`a $\varepsilon$\\
+							Cela \'etant vrai pour tout $\varepsilon$, $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}\frac{1}{l}$
 					\end{liste}
 			\end{liste}
 		\end{preuve}
@@ -119,9 +119,9 @@
 			\begin{liste}
 				\item Si $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
 				\begin{liste}
-					\item Si $v$ est minorée dans $\mathbb{R}$, $u+v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
+					\item Si $v$ est minor\'ee dans $\mathbb{R}$, $u+v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
 						En particulier si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$ ou si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$ avec $l\in\mathbb{R}$
-					\item On ne peut pas conclure immédiatement si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+					\item On ne peut pas conclure imm\'ediatement si $v\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
 				\end{liste}
 				\item De m\^eme avec $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
 			\end{liste}
@@ -151,45 +151,45 @@
 		\begin{preuve}
 			\textbf{Inverse}\\
 			Montrer que si $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$ et, \`a partir d'un certain rang, $u_n<0$, alors $\frac{1}{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$\\
-			Soit $u$ une suite convergeant vers $0$ et strictement négative a partir d'un rang $n_1$.\\
+			Soit $u$ une suite convergeant vers $0$ et strictement n\'egative a partir d'un rang $n_1$.\\
 			Donc: $\forall\varepsilon\in\R^{+*},\ \exists n_2\in\N,\ \forall n\in\N,\ n\geqslant n_2\Rightarrow|u_n|<\varepsilon$\\
-			Soit $n_2$ un tel réel, $\varepsilon$ un réel positif, et $n_3=\max(\{n_1,n_2\})$\\
-			Pour tout $n$ supérieur a $n_3$, $\frac{1}{u_n}$ existe.\\
+			Soit $n_2$ un tel r\'eel, $\varepsilon$ un r\'eel positif, et $n_3=\max(\{n_1,n_2\})$\\
+			Pour tout $n$ sup\'erieur a $n_3$, $\frac{1}{u_n}$ existe.\\
 			Montrer que $\frac{1}{u_n}$ diverge vers $-\infty$\\
-			Soit $K$ un réel.
+			Soit $K$ un r\'eel.
 			\begin{liste}
 				\item Si $K\geqslant0$: $\forall n\in\N,\ n\geqslant n_3\Rightarrow \frac1{u_n}<0\geqslant K$
 				\item Si $K<0$\\
-					En appliquant la convergence de $u$ avec le réel $\frac1{|K|}$:\\
+					En appliquant la convergence de $u$ avec le r\'eel $\frac1{|K|}$:\\
 					$\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_4\Rightarrow -\frac1{|K|}<u_n<\frac1{u_n}$\\
-					Soit $n_0$ un tel réel.\\
+					Soit $n_0$ un tel r\'eel.\\
 					$\begin{aligned}
 						\forall n\in\N,\ n\geqslant n_0&\Rightarrow \frac1{K}<u_n\\
 							&\Rightarrow \frac{1}{u_n}<K
 					\end{aligned}$
 			\end{liste}
-			Ce raisonnement étant valable pour tout $K$ réel, $\frac1{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
+			Ce raisonnement \'etant valable pour tout $K$ r\'eel, $\frac1{u_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}-\infty$
 		\end{preuve}
 		\begin{prop}
-			Tout réel est limite d'une suite de rationnels.
+			Tout r\'eel est limite d'une suite de rationnels.
 		\end{prop}
 		\begin{preuve}
 			Montrer que $\forall x\in\R,\ \exists (q_n)_{n\in\N}\in\mathcal{E},\ (\forall n\in\N,\ q_n\in\mathbb{Q})\et(q_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}x)$\\
-			Soit $x$ un réel.
+			Soit $x$ un r\'eel.
 			\begin{liste}
 				\item Existence de la suite:\\
 					$\Q$ est dense dans $\R$\\
 					Donc $\forall \varepsilon\in\R^{+*},\ \exists q\in\R,\ x-\varepsilon<q<x+\varepsilon$\\
 					Pour tout $n$ non nul, posons $\varepsilon=\frac1{n}$\\
-					Soit $q_n$ un rationnel vérifiant $q_n\in\Q,\ x-\frac1{n}<q<x+\frac1{n}$\\
-					Ce raisonnement étant valable pour tout $n$ non nul, on obtient une suite $q$ sur $\N^*$ a valeurs dans $\Q$
+					Soit $q_n$ un rationnel v\'erifiant $q_n\in\Q,\ x-\frac1{n}<q<x+\frac1{n}$\\
+					Ce raisonnement \'etant valable pour tout $n$ non nul, on obtient une suite $q$ sur $\N^*$ a valeurs dans $\Q$
 				\item Convergence vers $x$\\
-					Soit $\varepsilon$ un réel strictement positif.\\
+					Soit $\varepsilon$ un r\'eel strictement positif.\\
 					$\left(\frac1{n} \right)_{n\in\N^*}$ converge vers $0$\\
 					Donc $\exists n_0\in\N,\ 0<\frac1{n}<\varepsilon$\\
 					Soit $n_0$ un tel entier.\\
 					On a donc $\forall n\in\N,\ n\geqslant n_0\Rightarrow |q_n-x|<\frac1{n}<\varepsilon$\\
-					Cela étant valable pour tout $\varepsilon$ strictement positif, on conclut que $q$ converge vers $x$
+					Cela \'etant valable pour tout $\varepsilon$ strictement positif, on conclut que $q$ converge vers $x$
 			\end{liste}
 		\end{preuve}
 	\section{Relations de comparaison}
@@ -202,17 +202,72 @@
 			\end{liste}
 		\end{prop}
 		\begin{prop}
-			\underline{Propriété d'encadrement}\\
+			\underline{Propri\'et\'e d'encadrement}\\
 			Soit $u$, $v$ et $w$ trois suites telles que $\exists n\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n\leqslant v_n\leqslant w_n$\\
 			Si $u$ et $w$ convergent vers une m\^eme limite $l$, alors $v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$
 		\end{prop}
 		\begin{defi}
-			Soit $u$ et $v$ deux suites réelles.
+			Soit $u$ et $v$ deux suites r\'eelles.
 			\begin{liste}
 				\item $u_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)$: "$u_n$ est \underline{Grand O} de $v_n$"\\
 					$$\exists M\in\R^+,\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow\left|u_n\right|\leqslant M\,\left|v_n\right|$$
 				\item $u_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)$: "$u_n$ est \underline{Petit o} de $v_n$"\\
 					$$\exists \left(\varepsilon_n\right)_{n\in\N},\ (\varepsilon\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0)\et(\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow\left|u_n\right|\leqslant \varepsilon_n\,\left|v_n\right|)$$
 			\end{liste}
-		\end{defi} %8-6-2, Remarques
+		\end{defi}
+		\begin{prop}
+			\item Si $u_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)$ et $w_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)$\\
+				alors $u_n+w_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)$
+			\item Si $u_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)$ et $w_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)$\\
+				alors $u_n+w_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)$
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Remarque:}
+			\begin{liste}
+				\item[\cercle1]$u_n\mathop{=}\limits_{n\rightarrow+\infty}O(v_n)\iff$ la suite $\left(\frac{u_n}{v_n}\right)_{n\in_N}$ est born\'ee.\\
+					On dit que $v$ domine $u$.
+				\item[\cercle2]$u_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)\iff$ la suite $\left(\frac{u_n}{v_n}\right)_{n\in_N}$ converge vers $0$.\\
+					On dit que $u$ est n\'egligeable devant $v$
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			Soit $u$ et $v$ deux suites r\'eelles.\\
+			\textbullet\ $u_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n$: "$u$ est \'equivalente a $v$.\\
+			$$\exists(\alpha_n)_{n\in\N},\ (\alpha_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}1)\et(\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n=\alpha_n\,v_n)$$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Remarque:}
+			\begin{liste}
+				\item Si $v_n$ tous non nuls a partir d'un certain rang, alors la suite $\left(\frac{u_n}{v_n}\right)_{n\in_N}$ converge vers $1$.
+				\item "Etre \'equivalente \`a" est une relation d'\'equivalence sur l'ensemble des suites dont pour tout rang il existe un terme de rang sup\'erieur non nul.
+			\end{liste}
+		\end{flushleft}
+		\begin{prop}
+			Soit $u$ et $v$ deux suites r\'eelles.
+			\begin{liste}
+				\item Si $u_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n$ et si $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$ et si $l\in\overline{\mathbb{R}}$, alors $v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l$
+				\item Si $\lim\limits_{n\rightarrow+\infty}u_n=\lim\limits_{n\rightarrow+\infty}v_n=l\et l\in\R^*$, alors $u_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n$
+			\end{liste}
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Remarque:}\\
+			$\begin{aligned}
+				u_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n \iff\exists\alpha\in\N^\R,\ &(\alpha_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}1)\et(\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n=\alpha_n\,v_n\\
+				&\iff\exists\varepsilon\in\N^\R,\ (\varepsilon_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0)\et(\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n=\varepsilon_n\,v_n\\
+				&\iff u_n-v_n\mathop{=}\limits_{n\rightarrow+\infty}o(v_n)
+			\end{aligned}$
+		\end{flushleft}
+		\newpage
+		\begin{prop}
+			Soit $u$, $v$, $x$ et $y$ quatre suites r\'eelles.
+			\begin{liste}
+				\item Si $u_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n$ et $x_n\mathop{\sim}\limits_{n\rightarrow+\infty}y_n$\\
+					alors $u_n\,x_n\mathop{\sim}\limits_{n\rightarrow+\infty}v_n\,y_n$
+				\item Si de plus $x_n$ et $y_n$ tous non nuls a partir d'un certain rang,\\
+				alors $\frac{u_n}{x_n}\mathop{\sim}\limits_{n\rightarrow+\infty}\frac{v_n}{y_n}$
+			\end{liste}
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Remarque:} ce n'est g\'en\'eralement pas compatible avec l'addition.
+		\end{flushleft}
 \end{document}
