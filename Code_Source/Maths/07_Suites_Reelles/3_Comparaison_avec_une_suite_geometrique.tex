@@ -1,0 +1,53 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Suites R\'eelles}
+\author{MPSI 2}
+\def\titre{Comparaison avec une suite géométrique}
+
+\input{../../.includes/header}
+
+%Auteur: Clément Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Suites et séries géométriques}
+		\begin{defi}
+			On appelle \underline{suite géométrique de raison $a$} toute suite telle que:\\
+			$\systeme{&u_0\in\R\\\forall n\in\N,\ u_{n+1}=a\,u_n}$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Remarques:}
+			\begin{liste}
+				\item C'est équivalent a dire $\forall n\in\N,\ u_n=a^n\,u_0$
+				\item Si $u_0=0$ alors la suite est nulle.
+				\item Si $u_0\neq 0$ alors l'étude de la suite est ramenée a l'étude de $a^n$ \`a une constante multiplicative près.
+			\end{liste}
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Étude de $\left(a^n\right)_{n\in\N}$}
+			\begin{liste}
+				\item \underline{Si $a>1$} alors $\exists h\in\R^{+*},\ a=1+h$\\
+					De plus, $(h+1)^n=\sum\limits_{k=0}^{n}\dbinom{n}{k}\,h^k$\\
+					En particulier, $(1+h)^n\geqslant nh$\\
+					Or par minoration, $a^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+				\item \underline{Si $a=1$} alors $(a_n)_{n\in\N}$ est stationnaire a $1$.
+				\item \underline{Si $a=-1$} alors $(a_n)_{n\in\N}$ diverge.
+				\item \underline{Si $-1<a<1$} alors $|a|^n=\frac{1}{\left(\frac{1}{|a|}\right)^n}$\\
+					et $\frac{1}{|a|^n}>1$ donc d'après le premier point, $\frac1{|a|^n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
+					D'o\`u $|a|^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$\\
+					Ainsi, comme $|a|^n=|a^n|$, $a^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+				\item \underline{Si $a<-1$} alors $|a|^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$ et $a^n$ change de ighe en fonction de la parité de $n$.\\
+					Donc $(a^n)_{n\in\N}$ diverge.
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			On appelle \underline{série géométrique} toute suite de terme général:\\
+			$\systeme{& u_n=\sum\limits_{k=0}^na^k\\& n\in\N\\& a\in\R}$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Étude de $u_n$}\\
+			\begin{liste}
+				\item \underline{Si $a=1$} alors $u_n=n+1$ et $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+			\end{liste}
+		\end{flushleft}
+\end{document}
