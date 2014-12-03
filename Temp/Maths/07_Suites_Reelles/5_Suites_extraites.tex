@@ -2,7 +2,7 @@
 
 \def\chapitre{Suites R\'eelles}
 \author{MPSI 2}
-\def\titre{Suites \'extraites}
+\def\titre{Suites extraites}
 
 \input{../../.includes/header}
 
@@ -10,6 +10,37 @@
 
 \begin{document}
 	\maketitle
-	
-	
+	\section{Définition}
+		\begin{defi}
+			On dit que \underline{$v$ est une suite extraite de $u$} si il existe une application $\phi$ strictement croissante telle que $\forall n\in\N,\ v_n=u_{\phi(n)}$
+		\end{defi}
+		\begin{flushleft}
+			On appelle également $v$ une sous-suite de $u$.\\
+			On a notamment:\\
+			\textbullet\ $(w_n)_{n\in\N}$ la suite des termes d'indices pairs de $u$\\
+			\textbullet\ $(z_n)_{n\in\N}$ la suite des termes d'indices impairs de $u$
+		\end{flushleft}
+	\section{Propriétés de limites}
+		\begin{prop}
+			\textbf{Lemme:} Si $\phi\ \N\rightarrow\N$ est strictement croissante, alors $\phi(n)\geqslant n$
+		\end{prop}
+		\begin{preuve}
+			Par récurrence, avec $\phi(0)\geqslant 0$ et $\phi(n+1)>\phi(n)$
+		\end{preuve}
+		\begin{prop}
+			Si $u$ tend vers $l$ avec $l\in\overline{\R}$, alors toute suite extraite de $u$ tend vers $l$
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item[\cercle1] \underline{$1^{\text{er}}$ cas:} $l\in\R$\\
+					Soit $v$ une suite extraite de $u$, et $\phi : n\rightarrow\N$ une application strictement croissante.\\
+					Montrer que $v$ converge vers $l$\\
+					Soit $\varepsilon$ un réel strictement positif.\\
+					Donc $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow |u_n-l|<\varepsilon$\\
+					Soit $n_0$ un tel entier. On a $\forall n\in\N,\ n\geqslant n_0\Rightarrow n_0\leqslant n\leqslant\phi(n)$\\
+					On a donc $\forall n\in\N,\ n\geqslant n_0\Rightarrow |u_{\phi(n)}-l|<\varepsilon$\\
+					Donc $v$ converge vers $l$.
+				\item[\cercle2]On procède de manière analogue avec $l=\pm\infty$
+			\end{liste}
+		\end{preuve}
 \end{document}
