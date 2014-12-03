@@ -2,29 +2,29 @@
 
 \def\chapitre{Suites R\'eelles}
 \author{MPSI 2}
-\def\titre{Comparaison avec une suite géométrique}
+\def\titre{Comparaison avec une suite g\'eom\'etrique}
 
 \input{../../.includes/header}
 
-%Auteur: Clément Phan, MPSI 2
+%Auteur: Cl\'ement Phan, MPSI 2
 
 \begin{document}
 	\maketitle
-	\section{Suites et séries géométriques}
+	\section{Suites et s\'eries g\'eom\'etriques}
 		\begin{defi}
-			On appelle \underline{suite géométrique de raison $a$} toute suite telle que:\\
+			On appelle \underline{suite g\'eom\'etrique de raison $a$} toute suite telle que:\\
 			$\systeme{&u_0\in\R\\\forall n\in\N,\ u_{n+1}=a\,u_n}$
 		\end{defi}
 		\begin{flushleft}
 			\textbf{Remarques:}
 			\begin{liste}
-				\item C'est équivalent a dire $\forall n\in\N,\ u_n=a^n\,u_0$
+				\item C'est \'equivalent a dire $\forall n\in\N,\ u_n=a^n\,u_0$
 				\item Si $u_0=0$ alors la suite est nulle.
-				\item Si $u_0\neq 0$ alors l'étude de la suite est ramenée a l'étude de $a^n$ \`a une constante multiplicative près.
+				\item Si $u_0\neq 0$ alors l'\'etude de la suite est ramen\'ee a l'\'etude de $a^n$ \`a une constante multiplicative pr\`es.
 			\end{liste}
 		\end{flushleft}
 		\begin{flushleft}
-			\textbf{Étude de $\left(a^n\right)_{n\in\N}$}
+			\textbf{\'etude de $\left(a^n\right)_{n\in\N}$}
 			\begin{liste}
 				\item \underline{Si $a>1$} alors $\exists h\in\R^{+*},\ a=1+h$\\
 					De plus, $(h+1)^n=\sum\limits_{k=0}^{n}\dbinom{n}{k}\,h^k$\\
@@ -33,21 +33,45 @@
 				\item \underline{Si $a=1$} alors $(a_n)_{n\in\N}$ est stationnaire a $1$.
 				\item \underline{Si $a=-1$} alors $(a_n)_{n\in\N}$ diverge.
 				\item \underline{Si $-1<a<1$} alors $|a|^n=\frac{1}{\left(\frac{1}{|a|}\right)^n}$\\
-					et $\frac{1}{|a|^n}>1$ donc d'après le premier point, $\frac1{|a|^n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
+					et $\frac{1}{|a|^n}>1$ donc d'apr\`es le premier point, $\frac1{|a|^n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$\\
 					D'o\`u $|a|^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$\\
 					Ainsi, comme $|a|^n=|a^n|$, $a^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
-				\item \underline{Si $a<-1$} alors $|a|^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$ et $a^n$ change de ighe en fonction de la parité de $n$.\\
+				\item \underline{Si $a<-1$} alors $|a|^n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$ et $a^n$ change de signe en fonction de la parit\'e de $n$.\\
 					Donc $(a^n)_{n\in\N}$ diverge.
 			\end{liste}
 		\end{flushleft}
 		\begin{defi}
-			On appelle \underline{série géométrique} toute suite de terme général:\\
+			On appelle \underline{s\'erie g\'eom\'etrique} toute suite de terme g\'en\'eral:\\
 			$\systeme{& u_n=\sum\limits_{k=0}^na^k\\& n\in\N\\& a\in\R}$
 		\end{defi}
 		\begin{flushleft}
-			\textbf{Étude de $u_n$}\\
+			\textbf{\'Etude de $u_n$}\\
 			\begin{liste}
 				\item \underline{Si $a=1$} alors $u_n=n+1$ et $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+				\item \underline{Si $a\neq1$} alors $u_n=\frac{1-a^{n+1}}{1_a}$
+					\begin{liste}
+						\item \underline{Si $-1<a<1$} alors $a^{n+1}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$\\
+							Donc $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+						\item \underline{Si $1<a$} alors $u\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+						\item \underline{Si $a<-1$} alors $u$ diverge.
+					\end{liste}
 			\end{liste}
 		\end{flushleft}
+	\section{Exemples de comparaison}
+		\begin{flushleft}
+			Soit $u$ une suite a termes positifs.\\
+			\begin{liste}
+				\item Si $\exists K\in]0,1[,\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_{n+1}\leqslant K\,u_n$\\
+					Alors $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+				\item Si $\exists K\in]1,+\infty[,\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_{n+1}\geqslant K\,u_n$\\
+					Alors $u_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}+\infty$
+			\end{liste}
+		\end{flushleft}
+	\section{Echelle de comparaison}
+		Par ordre de n\'egligeabilit\'e:\\\\
+		$\begin{array}{c|c|c|c|c}
+			a^n & (\ln(n))^\alpha & n^\beta & n! & n^n \\ 
+			0<a<1 & 0<\alpha & 0<\beta &  & 
+		\end{array}$ 
+		
 \end{document}
