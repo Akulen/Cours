@@ -1,0 +1,94 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Structures Alg\'ebriqes}
+\author{MPSI 2}
+\def\titre{Lois Internes}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{D\'efinitions}
+		\begin{defi}
+			On appelle \underline{loi interne sur E} toute application $f$ d\'efinie sur $E\times E$ dans $E$:\\
+			$$\fonction{f}{E\times E}{E}{(x,y)}{f(x,y)}$$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $f(x,y)=f*y$
+		\end{flushleft}
+
+	\section{Propri\'et\'es des lois internes}
+		\begin{defi}
+			Soit $E$ un ensemble non vide mini d'une loi interne $*$. $(E,*)$ est un magma.\\
+			$*$ est une loi associative si $\forall (x,y,z)\in\E\times E\times E,\ (x*y)*z=x*(y*z)$
+		\end{defi}
+		\begin{prop}
+			Soit $*$ une \underline{loi associative} sur $E$, et $\{x_1,x_2,..,x_n\}$ un sous-ensemble a $n$ \'el\'ements de $E$.
+			\begin{liste}
+				\item $x_1*...*x_n$ est d\'efini par r\'ecurrence: $(x_1*...*x_{n-1})*x_n=x_1*...*x_n$
+				\item $x_1*...*x_n=(x_1*...*x_{n_1})*(x_{n_{1}+1}*...*x_{n_2})*...*(x_{n_p}*...*x_n)$\\est d\'efini avec $p$ parenth\`eses.
+			\end{liste}
+		\end{prop}
+		\begin{defi}
+			$*$ est une \underline{loi commutative} sur $E$ si $\forall (x,y)\in E\times E,\ x*y=y*x$
+		\end{defi}
+		\begin{defi}
+			On dit que $*$ admet un \underline{\'el\'ement neutre} not\'e $e$ si $\forall x\in\E,\ x*e=x\et e*x=x$
+		\end{defi}
+		\begin{prop}
+			Si $*$ admet un \'el\'ement neutre, alors il est unique
+		\end{prop}
+		\begin{preuve}
+			Soit $e_1$ et $e_2$ deux \'el\'ements neutres de $(E,*)$.\\
+			alors $\begin{aligned}[t]
+				& e_1*e_2=e_1\text{ car }e_1\text{ est un \'el\'emnet neutre}\\
+				& e_1*e_2=e_2\text{ car }e_2\text{ est un \'el\'emnet neutre}
+			\end{aligned}$\\
+			Or, $*$ est une application, donc $e_1=e_2$
+		\end{preuve}
+		\begin{defi}
+			Soit $(E,*)$ un magma. Si $*$ est associative et admet un \'el\'ement neutre dans $E$, alors $(E,*)$ est un \underline{mono\"ide}
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notations:}
+			Soit $(E,*)$ un mono\"ide.\\
+			\underline{Notation multiplicative:}
+			\begin{liste}
+				\item $x*y=x\times y$
+				\item L'\'el\'ement neutre est not\'e $1$ ou $1_E$
+				\item $x_1*...*x_n=\prod\limits_{i=1}^{n}x_i$\\
+				\item S'utilise en g\'en\'eral lorsque $*$ n'est pas commutative.
+			\end{liste}
+			\underline{Notation additive:}
+			\begin{liste}
+				\item $x*y=x+y$
+				\item L'\'el\'ement neutre est not\'e $0$ ou $0_E$
+				\item $x_1*...*x_n=\sum\limits_{i=1}^{n}x_i$\\
+				\item S'utilise en g\'en\'eral lorsque $*$ est commutative.
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			Soit $(E,*)$ un mono\"ide d'\'el\'ement neutre $e$. Soit $x$ un \'el\'ement de $E$.\\
+			$x$ est \underline{sym\'etrisable} dans $E$ si il existe un \'el\'ement $y$ de $E$ tel que:
+			$$x*y=e\et y*x=e$$
+		\end{defi}
+		\begin{prop}
+			Si $x$ est sym\'etrisable, alors son sym\'etrique est unique.
+		\end{prop}
+		\newpage
+		\begin{flushleft}
+			\textbf{Notation:}
+			\begin{liste}
+				\item Multiplicative: le sym\'etrique de $x$ s'appelle inverse et se note $x^{-1}$
+				\item Additive: le sym\'etrique de $x$ s'appelle oppos\'e et se note $-x$
+			\end{liste}
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Remarque:}
+			Soit $(E,*)$ un mono\"ide.\\
+			Si $x$ et $y$ sont sym\'etrisables de sym\'etriques $x'$ et $y'$\\
+			Alors $x*y$ est sym\'etrisable de sym\'etrique $y'*x'$
+		\end{flushleft}
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Structures Alg\'ebriqes}
+\author{MPSI 2}
+\def\titre{Structure de Groupe}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{D\'efinition}
+		\begin{defi}
+			Soit $(G,*)$ un magma.\\
+			On dit que $(G,*)$ est un \underline{groupe} si:
+			\begin{liste}
+				\item $*$ est associative
+				\item $*$ admet un \'el\'ement neutre
+				\item tout \'el\'ement de $G$ est sym\'etrisable par $*$
+			\end{liste}
+			Si de plus, $*$ esr commutative sur $G$, on dit que $(G,*)$ est un \underline{groupe ab\'elien}.
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Cons\'equences:}
+			\begin{liste}
+				\item\underline{R\`egle de simplification:} $a*x=a*y\Rightarrow x=y$
+					D\'emonstration:
+					\begin{tab}
+						Soit $a$, $x$ et $y$ trois \'el\'ements de $G$ tels que $a*x=a*y$\\
+						Notons $a'$ le sym\'etrique de $a$ (car $G$ est un groupe)\\
+						On a alors: $a'*(a*x)=a'*(a*y)$\\
+						Par associativit\'e, on a: $(a'*a)*x=(a'*a)*y$\\
+						Par sym\'etrie, on a: $e*x=e*y$\\
+						Par d\'efinition de l'\'el\'ement neutre: $x=y$						
+					\end{tab}
+				\item\underline{R\'esolution d'\'equations:} $a*x=b\iff x=a'*b$
+			\end{liste}
+		\end{flushleft}
+	\section{Sous-groupes}
+		\subsection{D\'efinition et crit\`eres}
+			\begin{flushleft}
+				Soit $(G,*)$ un groupe.
+			\end{flushleft}
+			\begin{defi}
+				Soit $F$ un sous-ensemble de $G$\\
+				On dit que $(F,*)$ est un sous-groupe de $(G,*)$ si:
+				\begin{liste}
+					\item $\forall (x,y)\in G\times G,\ (x\in F\et y\in F)\Rightarrow (x*y\in F)$
+					\item $(F,*')$ est un groupe o\`u $*'$ est la loi induite de $G$ sur $F$.
+				\end{liste}
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Remarques:} Soit $(F,*')$ un sous-groupe de $(G,*)$
+				\begin{liste}
+					\item $e_G=e_F$
+					\item $F$ est non vide: $e\in F$
+					\item Si $x'$ et $x''$ sont les sym\'etriques de $x\in F$ dans $(G,*)$ et $(F,*')$ respectivement,\\
+						Alors $x'=x''$
+				\end{liste}
+			\end{flushleft}
+			\begin{flushleft}
+				\textbf{Crit\`eres de sous-groupe}\\
+				Soit $F$ un sous-ensemble non vide de $G$.
+				\begin{liste}
+					\item \underline{Crit\`ere $0$:} $F$ est un sous-groupe de $G$ ssi:
+						\begin{liste}
+							\item[\cercle1] $\forall (x,y)\in G\times G,\ (x\in F\et y\in F)\Rightarrow (x*y\in F)$
+							\item[\cercle2] $e\in F$
+							\item[\cercle3] $\forall x\in G,\ (x\in F)\Rightarrow(x^-1\in F)$
+						\end{liste}\ \\
+					\item \underline{Crit\`ere $1$:} $F$ est un sous-groupe de $G$ ssi:
+						\begin{liste}
+							\item[\cercle1] $\forall (x,y)\in G\times G,\ (x\in F\et y\in F)\Rightarrow (x*y\in F)$
+							\item[\cercle2] $\forall x\in G,\ (x\in F)\Rightarrow(x^-1\in F)$
+						\end{liste}\ \\
+					\item \underline{Crit\`ere $2$:} $F$ est un sous-groupe de $G$ ssi:
+						\begin{liste}
+							\item[\cercle1] $\forall (x,y)\in G\times G,\ (x\in F\et y\in F)\Rightarrow (x*y^{-1}\in F)$
+						\end{liste}
+				\end{liste}
+			\end{flushleft}
+			\begin{preuve}
+				D\'emonstration des crit\`eres de sous-groupe
+				\begin{liste}
+					\item Crit\`ere $1$: Soit $F$ un sous-ensemble non vide de $G$ v\'erifiant le crit\`ere $1$.\\
+					D'apr\`es \cercle2, $x^{-1}\in F$\\
+					D'apr\`es \cercle1, $x*x^{-1}\in F$\\
+					Or $x*x^{_1}=e$, donc $e\in F$
+					On a v\'erifi\'e le crit\`ere $0$, donc $(F,*)$ est un sous-groupe de $(G,*)$.
+					\item Crit\`ere $2$: Soit $F$ un sous-ensemble non vide de $G$ v\'erifiant le crit\`ere $2$.\\
+					\begin{liste}
+						\item $F$ est non vide: Soit $x$ un \'el\'ement de $F$\\
+						D'apr\`es \cercle1, $x*x^-1\in F\Rightarrow e\in F$\\
+						Le point \cercle2 du crit\`ere $0$ est v\'erifi\'e.
+						\item D'apr\`es \cercle1 avec $e$ et $x$: $e*x^{-1}\in F\Rightarrow x^{-1}\in F$\\
+						Le pont \cercle3 du crit\`ere $0$ est v\'erifi\'e.
+						\item Soit $x$ et $y$ deux \'el\'ements de $F$. De plus, $y^{-1}\in F$\\
+						donc $x*\left(y^{-1}\right)^{-1}\in F\rightarrow x*y\in F$
+					\end{liste}
+				\end{liste}
+			\end{preuve}
+\end{document}

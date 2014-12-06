@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  6 DEC 2014 13:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.7)  9 DEC 2014 19:00
 entering extended mode
 **2_Structure_de_groupe.tex
 
@@ -550,15 +550,72 @@ File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
 \c@tkz@cnt@pair=\count136
 \c@tkz@cnt@impair=\count137
 \c@tkz@cnt@aw=\count138
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\titling\titling.sty"
+)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\circuitik
+z.sty
+Package: circuitikz 2012/12/29 The CircuiTikz circuit drawing package version 0
+.3.0
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.pathmorphing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
+.tex"
+\pgfdecoratedcompleteddistance=\dimen176
+\pgfdecoratedremainingdistance=\dimen177
+\pgfdecoratedinputsegmentcompleteddistance=\dimen178
+\pgfdecoratedinputsegmentremainingdistance=\dimen179
+\pgf@decorate@distancetomove=\dimen180
+\pgf@decorate@repeatstate=\count139
+\pgfdecorationsegmentamplitude=\dimen181
+\pgfdecorationsegmentlength=\dimen182
+))
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\circuitik
+z.code.tex
+\pgf@circ@Rlen=\dimen183
+
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircut
+ils.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircma
+th.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircsh
+apes.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircmo
+nopoles.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircbi
+poles.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcirctr
+ipoles.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircqu
+adpoles.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircla
+bel.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcircvo
+ltage.sty)
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\pgfcirccu
+rrent.sty))
+(C:\Users\Utilisateur\AppData\Roaming\MiKTeX\2.9\tex\latex\circuitikz\circuitik
+z1.code.tex
+\pgf@circ@res@up=\dimen184
+\pgf@circ@res@down=\dimen185
+\pgf@circ@res@zero=\dimen186
+\pgf@circ@res@left=\dimen187
+\pgf@circ@res@right=\dimen188
+\pgf@circ@res@other=\dimen189
+\pgf@circ@res@step=\dimen190
+\pgfstartlinewidth=\dimen191
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\titling\titling.sty"
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip60
 \thanksmargin=\skip61
 \droptitle=\skip62
 )
-\c@defs=\count139
-\c@pro=\count140
-\c@cor=\count141
+\c@defs=\count140
+\c@pro=\count141
+\c@cor=\count142
 )
 (C:\Users\Utilisateur\Documents\Cours\Temp\Maths\08_Structures_algebriques\2_St
 ructure_de_groupe.aux)
@@ -577,16 +634,16 @@ LaTeX Font Info:    ... okay on input line 11.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen176
+\scratchcounter=\count143
+\scratchdimen=\dimen192
 \scratchbox=\box40
-\nofMPsegments=\count143
-\nofMParguments=\count144
+\nofMPsegments=\count144
+\nofMParguments=\count145
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen177
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen193
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
 \everyMPtoPDFconversion=\toks45
 )
 *geometry* driver: auto-detecting
@@ -650,8 +707,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Utilisateur/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
@@ -661,30 +723,56 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
+
+ []
+
+[6]
 (C:\Users\Utilisateur\Documents\Cours\Temp\Maths\08_Structures_algebriques\2_St
 ructure_de_groupe.aux) ) 
 Here is how much of TeX's memory you used:
- 14222 strings out of 493921
- 277557 string characters out of 3147264
- 330520 words of memory out of 3000000
- 17216 multiletter control sequences out of 15000+200000
+ 18764 strings out of 493921
+ 418119 string characters out of 3147264
+ 535080 words of memory out of 3000000
+ 21708 multiletter control sequences out of 15000+200000
  14441 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,12n,61p,454b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,61p,476b,437s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti12.pfb>
-Output written on 2_Structure_de_groupe.pdf (2 pages, 108856 bytes).
+s/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
+12.pfb>
+Output written on 2_Structure_de_groupe.pdf (6 pages, 137417 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

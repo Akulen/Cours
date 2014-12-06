@@ -1,0 +1,101 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Suites R\'eelles}
+\author{MPSI 2}
+\def\titre{Th\'eor\`emes de comparaison}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{theo}{des suites monotones}
+		Soit $u$ une suite croissante. On a:
+		\begin{liste}
+			\item Si $u$ n'est pas major\'ee, $u$ diverge vers $+\infty$.
+			\item Si $u$ est major\'ee, $u$ converge vers la borne sup\'erieure de ses valeurs.
+		\end{liste}
+		On proc\`ede de m\^eme pour les suites d\'ecroissantes.
+	\end{theo}
+	\begin{preuve}
+		Soit $u$ une suite d\'ecroissante, et $A$ l'ensemble de ses valeurs.
+		\begin{liste}
+			\item[\cercle1]Supposons $u$ non major\'ee.\\
+				Donc $A$ n'est pas major\'e.\\
+				Donc $\forall M\in\R,\ \exists x\in A,\ x>M$\\
+				Donc $\forall M\in\R,\ \exists n_0\in \N,\ u_{n_0}>M$\\
+				Or, sachant $u$ croissante, $\forall M\in\R,\ \exists n_0\in \N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow u_n>M$\\
+				Donc $u$ diverge vers $+\infty$ par d\'efinition.
+			\item[\cercle2]Supposons $u$ major\'ee.\\
+				Donc $A$ est major\'e et non vide. Donc $A$ admet une borne sup\'erieure, not\'ee $\alpha$.\\
+				$\alpha$ est borne sup\'erieure de $A$, donc:
+				\begin{liste}
+					\item $\alpha$ est un majorant de $A$: $\forall n\in\N,\ u_n\leqslant\alpha$
+					\item $\forall \varepsilon\in\R^{+*},\ \exists x\in\R,\ (x\in A)\et(\alpha-\varepsilon<x\leqslant\alpha)$\\
+						C'est \`a dire: $\forall \varepsilon\in\R^{+*},\ \exists n_0\in\N,\ \alpha-\varepsilon<u_{n_0}\leqslant\alpha$\\
+						Donc, sachant $u$ croissante:\\
+						$\forall \varepsilon\in\R^{+*},\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow\alpha-\varepsilon<u_{n_0}\leqslant\alpha<\alpha+\varepsilon$\\
+						Donc $u$ converge vers $\alpha$
+				\end{liste}
+		\end{liste}
+	\end{preuve}
+	\begin{theo}{des suites adjacentes}
+		Soit $u$ et $v$ deux suites r\'eelles telles que:
+		\begin{liste}
+			\item $u$ est croissante, $v$ est d\'ecroissante.
+			\item $u-v$ tend vers $0$
+		\end{liste}
+		Alors $u$ et $v$ convergent vers une m\^eme limite $L$\\Et $\forall n\in\N,\ u_n\leqslant L\leqslant v_n$
+	\end{theo}
+	\newpage
+	\begin{preuve}
+		Soit $u$ et $v$ deux suites adjacentes
+		\begin{liste}
+			\item[\cercle1] Montrer que $\forall n\in\N,\ u_n\leqslant v_n$\\
+				\underline{HA:} Supposons $n_0$ tel que $v_{n_0}<u_{n_0}$\\
+				$u$ est croissante et $v$ est d\'ecroissante:\\
+				$\forall n\in\N,\ n\geqslant n_0\Rightarrow u_n\geqslant u_{n_0}$\\
+				$\forall n\in\N,\ n\geqslant n_0\Rightarrow v_n\leqslant v_{n_0}$\\
+				Donc $\forall n\in\N,\ n\geqslant n_0\Rightarrow u_{n_0}-v_{n_0}\geqslant u_n-v_n$\\
+				Or, sachant $u_{n_0}-v_{n_0}<0$, on a:$\forall n\in\N,\ n\geqslant n_0\Rightarrow |u_{n_0}-v_{n_0}|\leqslant |u_n-v_n|$\\
+				Donc $|u-v|$ est minor\'e par un r\'eel strictement positif, et ne tend donc pas vers $0$.\\
+				Donc il n'existe aucun $n_0$ de $\N$ tel que $v_{n_0}<u_{n_0}$\\
+				Donc $\forall n\in\N,\ u_n\leqslant v_n$
+			\item[\cercle2] $u$ est d\'ecroissante et minor\'ee (par tout terme de $v$), elle admet une limite not\'ee $l_1$\\
+				$u$ est croissante et major\'ee (par tout terme de $u$), elle admet une limite not\'ee $l_2$\\
+				De plus,
+				$\left\{\begin{aligned}
+					& u_n-v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0\\
+					& u_n-v_n\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l_1-l_2
+				\end{aligned}\right.$\\
+				Donc, par unicit\'e de la limite, $l_1=l_2$
+		\end{liste}
+		Donc $\forall n\in\N,\ u_n\leqslant L\leqslant v_n$
+	\end{preuve}
+	\begin{theo}{des segments emboit\'es}
+		Si $a$ et $b$ deux suites adjacentes, avec $a_0\leqslant b_0$, on pose $\forall n\in\N,\ I_n=[a_n,b_n]$\\
+		Alors $\bigcap\limits_{n\in\N}I_n=\{L\}$\\
+		Avec $L$ la limite de $a$ et $b$
+	\end{theo}
+	\begin{preuve}
+		\begin{liste}
+			\item Par le th\'eor\`eme des suites adjacentes, $a$ et $b$ tendent vers $L$, et $\forall n\in\N,\ u_n\leqslant L\leqslant v_n$
+			\item Montrer que $\forall x\in\R,\ (x\in\bigcap\limits_{n\in\N}I_n)\Rightarrow(x=L)$\\
+				Ou bien montrer que $\forall x\in\R,\ (x\neq L)\Rightarrow(x\notin\bigcap\limits_{n\in\N}I_n)$\\
+				Soit $x$ un réel différent de $\R$
+				\begin{liste}
+					\item \underline{$1^{\text{er}}$ cas:} $x>l$\\
+						Soit $\varepsilon=\frac{L-x}{2}$\\
+						$a$ converge vers $L$ donc: $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow L-\varepsilon<a_n<l+\varepsilon$\\
+						Donc $\exists n_0\in\N,\ \forall n\in\N,\ \frac{L+x}{2}<a_n<\frac{3L+x}{2}$\\
+						Soit $n_0$ un tel entier.\\
+						Donc $x<\frac{x+L}{2}<a_{n_0}\leqslant b_{n_0}$, donc $x\notin I_{n_0}$\\
+						Par suite, $(x\neq L)\Rightarrow(x\notin\bigcap\limits_{n\in\N}I_n)$
+					\item \underline{$2^{\text{\`eme}}$ cas:} $x<l$\\
+						Procéder de m\^eme.
+				\end{liste}
+		\end{liste}
+		Donc $\forall x\in\R,\ (x\in\bigcap\limits_{n\in\N}I_n)\Rightarrow(x=L)$
+	\end{preuve}
+\end{document}
