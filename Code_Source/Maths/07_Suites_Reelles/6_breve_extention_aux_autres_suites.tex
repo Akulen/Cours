@@ -1,0 +1,75 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Suites R\'eelles}
+\author{MPSI 2}
+\def\titre{Br\`eve extention aux autres suites}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Familles index\'ees par $\Z$}
+		Soit $(c_n)_{n\in\Z}$\\
+		On se ram\`ene \`a l'\'etude de deux suites:\\
+		$\forall n\in\N,\ \systeme{&a_n=c_n\\&b_n=c_{-n}}$
+	\section{Suites a valeurs complexes}
+		On a:$\fonction{f}{\N}{\C}{n}{z_n}$\\
+		Avec $z_n=x_n+i\,y_n$, $x$ et $y$ deux suites r\'eelles composantes.
+		\begin{defi}
+			Soit $z$ une suite a valeurs complexes, avec $\forall n\in\N,\ z_n=x_n+i_,y_n$\\
+			On dit que $z$ converge vers $a+i\,b$ si et seulement si $x$ tend vers $a$ et $y$ tend vers $b$.
+		\end{defi}
+		\begin{prop}
+			$z$ converge vers $\alpha$ ssi $(|z_n-\alpha|)_{n\in\N}$ converge vers $0$
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item[\cercle1]Supposons que $z$ converge vers $\alpha=a+i\,b$\\
+					Montrer que $(|z_n-\alpha|)_{n\in\N}$ converge vers $0$\\
+					$|z_n-\alpha|=|x_n-a+i(y_n-b)|$\\
+					$\Rightarrow0\leqslant|z_n-\alpha|\leqslant|x_n-a|+|y_n-b|$\\
+					Or, $x$ tend vers $a$ et $y$ tend vers $b$\\
+					Donc par encadrement, on a: $(|z_n-\alpha|)\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}0$
+				\item[\cercle2]Supposons que $(|z_n-\alpha|)_{n\in\N}$ converge vers $0$.\\
+					Montrons que $z$ converge vers $\alpha=a+i\,b$\\
+					Sachant que $z=x+i\,y\Rightarrow(x\leqslant|x|\leqslant|z|)\et(y\leqslant|y|\leqslant|z|)$\\
+					On obtient:$\left\{\begin{aligned}[t]
+						& 0\leqslant|x_n-a|\leqslant|z_n-\alpha|\\
+						& 0\leqslant|y_n-b|\leqslant|z_n-\alpha|
+					\end{aligned}\right.$\\
+					Donc par encadrement, $x$ tend vers $a$ et $y$ tend vers $b$.
+			\end{liste}
+		\end{preuve}
+		\begin{flushleft}
+			\textbf{Remarque:} une suite complexe est born\'ee si son module est major\'e.
+		\end{flushleft}
+		\begin{prop}
+			Si $z$ converge vers $\lambda$, alors:\\
+			\textbullet $|z_n|\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}|\lambda|$\\
+			\textbullet $\overline{z_n}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}\overline{\lambda}$
+		\end{prop}
+		\begin{prop}
+				Soit $z$ une suite complexe born\'ee.\\
+				Alors il existe une suite extraite de $z$ convergente.
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item D'apr\`es le th\'eor\`eme de Bolzano-Weierstrass, il existe une suite extraite de $x$ convergente.\\
+					Soit $(x_{\phi(n)})_{n\in\N}$ une telle suite, et $l_1$ sa limite.
+				\item Notons $\forall n\in\N,\ v_n=y_{\phi(n)}$\\
+					$y$ est born\'ee, donc $v$ est born\'ee.\\
+					D'apr\`es le th\'eor\`eme de Bolzano-Weierstrass, il existe une suite extraite de $v$ convergente.\\
+					Soit $(v_{\psi(n)})_{n\in\N}$ une telle suite, et $l_2$ sa limite.\\
+					$\phi\circ\psi$ est d\'efinie dans $\N$ a valeurs dans $N$ et strictement croissante\\
+					Donc $(y_{\phi(\psi(n))})_{n\in\N}$ est une suite extraite de $y$ et convergeant vers $l_2$.
+				\item $(x_{\phi(\psi(n))})_{n\in\N}$ est une suite extraite de $x$,
+					Donc elle converge vers $l_1$
+				\item Donc:$\left\{\begin{aligned}& x_{\phi(\psi(n))} \mathop{\longrightarrow}\limits_{n\rightarrow+\infty} l_1\\ & y_{\phi(\psi(n))} \mathop{\longrightarrow}\limits_{n\rightarrow+\infty} l_2 \end{aligned}\right.$
+			\end{liste}
+			\begin{flushleft}
+				Donc par d\'efinition de la convergence complexe, $z_{\phi(\psi(n))}\mathop{\longrightarrow}\limits_{n\rightarrow+\infty}l_1+i\,l_2$
+			\end{flushleft}
+		\end{preuve}
+\end{document}

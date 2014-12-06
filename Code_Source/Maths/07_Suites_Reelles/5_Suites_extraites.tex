@@ -1,0 +1,125 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Suites R\'eelles}
+\author{MPSI 2}
+\def\titre{Suites extraites}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{D\'efinition}
+		\begin{defi}
+			On dit que \underline{$v$ est une suite extraite de $u$} si il existe une application $\phi$ strictement croissante telle que $\forall n\in\N,\ v_n=u_{\phi(n)}$
+		\end{defi}
+		\begin{flushleft}
+			On appelle \'egalement $v$ une sous-suite de $u$.\\
+			On a notamment:\\
+			\textbullet\ $(w_n)_{n\in\N}$ la suite des termes d'indices pairs de $u$\\
+			\textbullet\ $(z_n)_{n\in\N}$ la suite des termes d'indices impairs de $u$
+		\end{flushleft}
+	\section{Propri\'et\'es de limites}
+		\begin{prop}
+			\textbf{Lemme:} Si $\phi\ \N\rightarrow\N$ est strictement croissante, alors $\phi(n)\geqslant n$
+		\end{prop}
+		\begin{preuve}
+			Par r\'ecurrence, avec $\phi(0)\geqslant 0$ et $\phi(n+1)>\phi(n)$
+		\end{preuve}
+		\begin{prop}
+			Si $u$ tend vers $l$ avec $l\in\overline{\R}$, alors toute suite extraite de $u$ tend vers $l$
+		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item[\cercle1] \underline{$1^{\text{er}}$ cas:} $l\in\R$\\
+					Soit $v$ une suite extraite de $u$, et $\phi : n\rightarrow\N$ une application strictement croissante.\\
+					Montrer que $v$ converge vers $l$\\
+					Soit $\varepsilon$ un r\'eel strictement positif.\\
+					Donc $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow |u_n-l|<\varepsilon$\\
+					Soit $n_0$ un tel entier. On a $\forall n\in\N,\ n\geqslant n_0\Rightarrow n_0\leqslant n\leqslant\phi(n)$\\
+					On a donc $\forall n\in\N,\ n\geqslant n_0\Rightarrow |u_{\phi(n)}-l|<\varepsilon$\\
+					Donc $v$ converge vers $l$.
+				\item[\cercle2]On proc\`ede de mani\`ere analogue avec $l=\pm\infty$
+			\end{liste}
+		\end{preuve}
+		\begin{prop}
+			Soit $u$ une suite r\'eelle, soit $w$ et $z$ ses suites extraites d'indice pair et impair.\\
+			Si $w$ et $z$ tendent vers $l\in\overline{\R}$, alors $u$ tend vers $\overline{\R}$
+		\end{prop}
+		\begin{preuve}
+			\underline{$1^{\text{er}}$ cas:} $l\in\R$\\
+			Supposons que $w$ et $z$ convergent vers $l$.\\
+			Donc:$\begin{aligned}[t]
+			&\forall\varepsilon\in\R^{+*},\ \exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow |w_n-l|<\varepsilon\\
+			&\forall\varepsilon\in\R^{+*},\ \exists n_1\in\N,\ \forall n\in\N,\ n\geqslant n_1\Rightarrow |z_n-l|<\varepsilon
+			\end{aligned}$\\
+			Soit $n_0$ et $n_1$ deux tels entiers, et $\varepsilon$ un r\'eel strictement positif.\\
+			Soit $N=\max(\{2\,n_0,2\,n_1+1\})$\\
+			Etudions $u_p$ avec $p\geqslant N$
+			\begin{liste}
+				\item Si $p$ est pair, on a $p=2n$, donc $u_p=w_n$, et $|w_n-l|<\varepsilon$
+				\item Si $p$ est impair, on a $p=2n+1$, donc $u_p=z_n$, et $|z_n-l|<\varepsilon$
+			\end{liste}
+			Ceci \'etant vrai pour tout $\varepsilon$,\\
+			$u$ converge vers $l$.
+		\end{preuve}
+	\section{Th\'eor\`eme de Bolzano-Weierstrass}
+		\begin{theo}{de Bolzano-Weierstrass}
+			Soit $u$ une suite born\'ee.\\
+			Alors il existe une suite extraite de $u$ convergente.
+		\end{theo}
+		\begin{preuve}
+			Soit $u$ une suite r\'eelle born\'ee, et $A$ l'ensemble des valeurs de $u$.\\
+			Soit $a$ et $b$ tels que $A\subset[a,b]$ (car $A$ est born\'e)\\
+			D'apr\`es le principe de dichotomie:
+			\begin{liste}
+				\item Soit $I_0=[a,b]$\\
+					$I_0$ contient une infinit\'e de termes de la suite: $I_0\cap A$ est infini.\\
+					Soit $\left[a,\frac{a+b}{2}\right]$ et $\left[\frac{a+b}{2}\right]$ deux sous-ensembles de $I_0$ dont la r\'eunion vaut $I_0$.\\
+					L'intersection de l'un des deux avec $A$ au moins est infini. Notons $I_1$ cet intervalle.\\
+				\item Soit $n\in\N$. Supposons que l'on ait une suite de segments $I_n\subset I_{n-1}\subset...\subset I_0$\\
+					telle que: $\begin{aligned}[t]
+					&\forall j\in\lbrack0,n\rbrack,\ I_j=[a_j,b_j]\\
+					&\forall j\in\lbrack1,n\rbrack,\ b_j-a_j=\frac{1}{2}(b_{j-1}-a_{j-1})\\
+					&\forall j\in\lbrack0,n\rbrack,\ I_j\cap A\text{ est infini}
+					\end{aligned}$\\
+					On applique le principe de dichotomie au segment $I_n$\\
+					On obtient le segment $I_{n+1}$ tel que $I_{n+1}\cap A$ soit infini.
+				\item Propri\'et\'es de $(I_n)_{n\in\N}$\\
+					La suite est d\'ecroissante par inclusion, c'est a dire que $a$ est croissante, $b$ d\'ecroissante.\\
+					La suite $(b_n-a_n)_{n\in\N}$ v\'erifie $\forall n\in\N^*,\ b_n-a_n=\frac{1}{2}(b_{n-1}-a_{n-1})$\\
+					Donc $\forall n\in\N,\ b_n-a_n=\frac{b-_0-a_0}{2^n}$\\
+					donc cette suite tend vers $0$.\\
+					Donc $a$ et $b$ sont deux suites adjacentes\\
+					D'apr\`es le th\'eor\`eme des segments emboit\'es, soit $\alpha$ tel que: $\bigcap\limits_{n\in\N}I_n={\alpha}$
+				\item Soit $E'_0=\{n\in\N,\ u_n\in I_0\cap A\}$\\
+					Soit $\phi(0)$ un \'el\'ement de $E'_0$, car $E'_0\neq\varnothing$\\
+					Consid\'erons $E'_1=\{n\in\N,\ (n>\phi(n))\et(u_n\in I_1\cap A)\}$\\
+					Il n'y a que un nombre fini d'\'el\'ements de $E'_0$ non pr\'esents dans $E'_1$: $E'_1$ est infini.\\
+					Notons $\phi(1)$ un \'el\'ement de $E'_1$.\\
+					Donc: $\phi(1)\in\N,\ \phi(1)>\phi(0),\ u_{\phi(1)}\in I_1$
+				\item Soit $n\in\N^*$, supposons qu'on ait construit $\phi(0)<...<\phi(n)$ des entiers naturels tels que:\\
+					$\forall k\in\lbrack0,n\lbrack,\ u_{\phi(k)}\in I_k$\\
+					On consid\`ere $E'_{n+1}=\{p\in\N,\ p>\phi(n)\et u_p\in I_{n+1}\cap A \}$\\
+					$I_{n+1}\cap A$ est infini, donc $E'_{n+1}$ est infini.\\
+					Donc $E'_{n+1}$ est non vide, soit $\phi{n+1}$ un \'el\'ement de $E'_{n+1}$\\
+					Donc on a: $\phi(n+1)\in\N,\ \phi(n+1)>\phi(n),\ u_{\phi(N+1)}\in I_{n+1}$
+				\item Par r\'ecurrence, on a construit une application $\phi$ strictement croissante de $\N$ dans $\N$, telle que $\forall n\in\N,\ u_{\phi(n)}\in I_n$
+				\item D'apr\`es le point pr\'ec\'edant, $\forall n\in\N,\ a_n\leqslant u_{\phi(n)}\leqslant b_n$\\
+					Or, $a$ et $b$ convergent vers une m\^eme limite\\
+					Donc $\lim\limits_{n\rightarrow+\infty}u_{\phi(n)}=\alpha$ par encadrement.
+			\end{liste} 
+			On a donc construit une suite extraite de $u$ convergente.\\
+			\\
+			Si $A$ est un ensemble fini, alors proc\'eder en construisant l'application $\phi$ avec un \'el\'ement $a$ de $A$ tel que $E=\{n\in\N,\ u_n=a\}$ et $\phi(\N)=\{a\}$
+		\end{preuve}
+		\begin{flushleft}
+			\textbf{Remarques:}\\
+			\begin{liste}
+				\item On a $u_{\phi(n)}-\alpha \mathop{=}\limits_{n\rightarrow+\infty}O\left(\frac{1}{2^n}\right)$\\
+					Ou bien $u_{\phi(n)} \mathop{=}\limits_{n\rightarrow+\infty}\alpha+O\left(\frac{1}{2^n}\right)$
+				\item $u_{\phi(n)}$ converge vers $\alpha$ a vitesse au moins g\'eom\'etrique.
+			\end{liste}
+		\end{flushleft}
+\end{document}
