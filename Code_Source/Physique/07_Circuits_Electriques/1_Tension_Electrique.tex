@@ -1,0 +1,42 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Circuits Electriques dans l'ARQS}
+\author{MPSI 2}
+\def\titre{Tension \'electrique}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	La diff\'erence de potentiel (ddp) est la tension \'electrique.
+	\begin{center}	
+		\begin{circuitikz}[scale=1.5]
+			\draw (0,0)
+				to [battery1] (0,2)
+				-- (0.5,2)
+				to [generic,v=$U_{AB}$] (2.5,2)
+				-- (3,2)
+				-- (3,1.75)
+				to [generic,v^>=$U_{CB}$] (3,0.25)
+				-- (3,0)
+				-- (0,0);
+			\draw (0.5,2) node {$\bullet$} node [above] {A};
+			\draw (2.5,2) node {$\bullet$} node [above] {B};
+			\draw (3,0.25) node {$\bullet$} node [right] {C};
+			\node[anchor=east, left] at (-1,1)
+				{$\underbrace{U_{AB}}_{\text{tension}}=\underbrace{V_A-V_B}_{potentiels}$};
+		\end{circuitikz}
+		\end{center}
+	\textbf{G\'en\'eralisation :} entre deux points $A$ et $B$ du circuit, il existe une tension, un ddp. \\ \\
+	En pratique, on mesure des ddp. \\
+	On choisit l'origine des tensions de fa\c con arbitraire. \\
+	Ce point de potentiel nul est appell\'e la masse du circuit et est symbolys\'e par \begin{circuitikz}\draw node[ground] {};\end{circuitikz}. \\
+	Le potentiel \'electrique s'exprime en Volts ($V$). \\ \\
+	\textbf{Ordres de grandeur :}
+	\begin{liste}
+		\item lignes HT : $10^5V$
+		\item eclair : $10^6V$
+	\end{liste}
+\end{document}
