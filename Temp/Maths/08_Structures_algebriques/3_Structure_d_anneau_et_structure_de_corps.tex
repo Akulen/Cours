@@ -11,7 +11,7 @@
 \begin{document}
 	\maketitle
 	\section{Axiomes des structures}
-		\subsection{Anneau}
+		\subsection{Structure d'anneau}
 			\begin{flushleft}
 				Soit $A$ un ensemble non vide muni de deux lois, $+$ et $\times$.
 			\end{flushleft}
@@ -24,4 +24,128 @@
 						$\times$ admet un élément neutre.
 				\end{liste}
 			\end{defi}
+			\begin{flushleft}
+				\textbf{Notations:} Soit $(A,+,\times)$ un anneau.
+				\begin{liste}
+					\item Alors $(A,+)$ est un groupe abélien. on le note avec la notation additive, et son élément neutre est noté $0_A$.
+					\item $\times$ est noté multiplicativement, mais n'est pas nécessairement commutative. On note son élément neutre $1_A$. C'est \underline{l'élément unité}.
+				\end{liste}
+			\end{flushleft}
+			\begin{defi}
+				Soit $(A,+,\times)$ un anneau non réduit \`a $\{0_A\}$.
+				\begin{liste}
+					\item Si $a$ et $b$ deux éléments de $A$ tels que $\times b=0_A\et a\neq0\et b\neq0$, alors $a$ et $b$ sont des \underline{diviseurs de zéro}
+					\item On dit que $(A,+,\times)$ est \underline{intègre} si $\forall (a,b)\in A^{2},\ (a\times b=0_A)\Rightarrow (a=0_A\ou b=0_A)$
+				\end{liste}
+			\end{defi}
+			\begin{prop}
+				\begin{liste}
+					\item Si $a$ est un élément inversible de $(A,+,\times)$, alors $a$ n'est pas un diviseur de zéro.
+					\item Si $(A,+,\times)$ est un anneau \underline{fini} et et si $a$ est un élément non nul de $A$, alors $a$ est inversible ssi $a$ n'est pas un diviseur de zéro.
+				\end{liste}
+			\end{prop}
+			\begin{defi}
+				Soit $a$ un élément de $A$.\\
+				On dit que $a$ est \underline{nilpotent} si il existe un entier naturel $n$ non nul tel que:
+				$\prod\limits_{k=1}^na=0_A$
+			\end{defi}
+		\subsection{Structure de corps}
+			\begin{flushleft}
+				Soit $K$ un ensemble non vide muni de deux lois internes $+$ et $\times$.
+			\end{flushleft}
+			\begin{defi}
+				$(K,+,\times)$ est un corps si:
+				\begin{liste}
+					\item[\cercle1]$(K,+)$ est un groupe abélien.
+					\item[\cercle2]$(K\setminus\{0_K\},\times)$ est un groupe abélien.\\
+						$\times$ est distributive sur $+$
+				\end{liste}
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Remarques:}
+				\begin{liste}
+					\item Si $(K,+,\times)$ est un corps, alors c'est un anneau intègre.
+					\item Si $(A,+,\times)$ est un anneau intègre fini, alors c'est un corps.
+				\end{liste}
+			\end{flushleft}
+	\section{Calculs dans un anneau}
+		\begin{flushleft}
+			Soit $(A,+,\times)$ un anneau.\\
+			Soit $a$ un élément de $A$.\\
+			Soit $n$ un élément de $\mathbb{N}$.
+			\begin{liste}
+				\item $a+a+...+a$, $n$ fois se note $n\,a$
+				\item $(-a)+(-a)+...+(-a)$ se note $n(-a)\ou(-n)a\ou -na$ et est l'opposé de $na$
+				\item Si $n=0$, alors $0\,a=0_A$
+				\item $a\times a\times...\times a$, $n$ fois se note $a^{n}$
+				\item Si $a$ est inversible, $(a^{-1})\times(a^{-1})\times...\times(a^{-1})$ se note $(a^{-1})^n\ou(a^{-1})^n\ou a^{-n}$ et est l'opposé de $a^n$
+				\item Par convention: $a^0=1_A$
+			\end{liste}
+		\end{flushleft}
+		\begin{prop}
+			\begin{liste}
+				\item $\left( 1_A+a\right) ^n=\sum\limits_{k=0}^n\binom{n}{k}a^k$
+				\item \underline{Si $a$ et $b$ commutent:}\\
+					$\left(a+b\right) ^n=\sum\limits_{k=0}^n\binom{n}{k}a^k\,b^{n-k}$\\
+					
+				\item $1_A-a^{n+1}=(1_A-a)(1_A+a+a^{2}+...+a^{n})$
+				\item \underline{Si $a$ et $b$ commutent:}\\
+					$a^n-b^n=(a-b)\sum\limits_{k=0}^{n-1}a^k\,b^{n-1-k}$
+			\end{liste}
+		\end{prop}
+	\section{Homomorphismes d'anneau et Homomorphismes de corps}
+		\begin{defi}
+			Soit $(A,+,\times)$ et $(A',+',\times')$ deux anneaux.\\
+			Soit $f:A\rightarrow A'$\\
+			On dit que $f$ est un \underline{homomorphisme d'anneau} si:
+			\begin{liste}
+				\item $\forall(x,y)\in A^2,\ f(x+y)=f(x)+'f(y)$
+				\item $\forall(x,y)\in A^2,\ f(x\times y)=f(x)\times'f(y)$
+				\item $f(1_A)=1_{A'}$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+				Soit $(K,+,\times)$ et $(K',+',\times')$ deux corps.\\
+				Soit $f:K\rightarrow K'$\\
+				On dit que $f$ est un \underline{homomorphisme de corps} si $f$ est un homomorphisme d'anneau.
+		\end{defi}
+		\begin{prop}
+			Tout homomorphisme de corps est injectif.
+		\end{prop}
+		\begin{preuve}
+			En utilisant les notations de la définition:\\
+			Soit $\ker(f)=f^{-1}<\{0_{K'}\}>$\\
+			$f$ est en particulier un homomorphisme de groupe de $(K,+)$ dans $(K',+')$. Donc $f$ est injectif ssi $\ker(f)=\{0_K\}$\\
+			Soit x un élément de $K$\\
+			\underline{$1^{\text{er}}$ cas:} $x=0_K$\\
+			$f(0_K)=0_{K'}$ donc $0_K\in\ker(f)$
+			\underline{$2^{\text{\`eme}}$ cas:} $x\neq0_K$\\
+			Alors $x$ est inversible dans $K$: $x\times x^{-1}=1_K$\\
+			Donc: 
+			$\begin{aligned}[t]
+			& f(x\times x^{-1})=f(1_K)=1_{K'}\\
+			& f(x\times x^{-1})=f(x)\times'f(x)^{-1}
+			\end{aligned}$\\
+			D'o\`u $f(x)\times'f(x)^{-1}=1_K'$\\
+			En particulier, $f(x)\neq 0_{K'}$\\
+			Donc $x\notin \ker(f)$\\
+			\\
+			Donc $\ker(f)=\{0_K\}$\\
+			Donc $f$ est injective.
+		\end{preuve}
+		\begin{coro}
+			Soit $f:K\rightarrow K'$ un homomorphisme de corps.\\
+			Alors $K$ est isomorphe \`a un sous-corps de $K'$
+		\end{coro}
+		\begin{preuve}
+			\begin{liste}
+				\item $f$ est un homomorphisme de corps, donc $f$ est injectif.
+				\item L'image d'un corps par un homomorphisme de corps est un corps.
+				\item $f$ induit une bijection de $K$ sur $f(K)$:\\
+					$\fonction{\tilde{f}}{K}{f(K)}{x}{f(x)}$
+			\end{liste}
+			\begin{flushleft}
+				Finalement: $K$ est isomorphe \`a $f(K)$ et $f(K)$ est un sous-groupe de $K'$.
+			\end{flushleft}
+		\end{preuve}
 \end{document}
