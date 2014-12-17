@@ -1,0 +1,46 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Circuits Electriques dans l'ARQS}
+\author{MPSI 2}
+\def\titre{Approximation des r\'egimes quasi-permanents}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	Un circuit doit \^etre ferm\'e pour qu'un courant se cr\'ee. \\
+	Si le courant au point $A$ charge, le point $B$ se charge avec un retard : $\tau=\underbrace{\frac{AB}{c}}_{\text{vitesse de la lumi\`ere}}$.
+	\begin{center}
+		\begin{tikzpicture}
+			\draw [very thin,gray!10] (0,0) grid[step=0.1] (7,3);
+			\draw [very thin,black!10] (0,0) grid[step=0.5] (7,3);
+			\draw [very thin,black!20] (0,0) grid[step=1] (7,3);
+			\draw [->,>=stealth] (0,0) -- (7,0);
+			\draw [->,>=stealth] (0,0) -- (0,3);
+			\draw (1,0.1) -- (1,-0.1) node [below] {{\scriptsize $\frac{T}{2}$}};
+			\draw (2,0.1) -- (2,-0.1) node [below] {{\scriptsize $T$}};
+			\draw [ultra thick,red] (0,2.5)
+				-- (1,2.5)
+				-- (1,0.5)
+				-- (2,0.5)
+				-- (2,2.5)
+				-- (3,2.5)
+				-- (3,0.5)
+				-- (4,0.5)
+				-- (4,2.5)
+				-- (5,2.5)
+				-- (5,0.5)
+				-- (6,0.5)
+				-- (6,2.5)
+				-- (7,2.5);
+			\node[anchor=east, left] at (-1,1.5)
+				{Au point $A$ :};
+		\end{tikzpicture}
+	\end{center}
+	Si $\tau\ll\frac{T}{2}\implies i_B(t)=i_A(t)$ \\
+	Si $\tau<\frac{T}{2}\implies i_B(t)\neq i_A(t)$ \\
+	Se placer dans l'ARQS signifie n\'egliger le ph\'enom\`ne de propagation. \\
+	En TP, on travaille donc avec des fr\'equences inf\'erieures \`a $300MHz$.
+\end{document}

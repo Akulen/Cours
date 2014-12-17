@@ -19,7 +19,7 @@
 				\item $*$ admet un \'el\'ement neutre
 				\item tout \'el\'ement de $G$ est sym\'etrisable par $*$
 			\end{liste}
-			Si de plus, $*$ esr commutative sur $G$, on dit que $(G,*)$ est un \underline{groupe ab\'elien}.
+			Si de plus, $*$ est commutative sur $G$, on dit que $(G,*)$ est un \underline{groupe ab\'elien}.
 		\end{defi}
 		\begin{flushleft}
 			\textbf{Cons\'equences:}
@@ -98,6 +98,164 @@
 						\item Soit $x$ et $y$ deux \'el\'ements de $F$. De plus, $y^{-1}\in F$\\
 						donc $x*\left(y^{-1}\right)^{-1}\in F\rightarrow x*y\in F$
 					\end{liste}
+				\end{liste}
+			\end{preuve}
+		\subsection{Propri\'et\'es des sous-groupes}
+			\begin{flushleft}
+				Soit $(G,*)$ un groupe.
+			\end{flushleft}
+			\begin{prop}
+				\begin{liste}
+					\item Si $F$ et $H$ sont des sous-groupes de $(G,*)$,\\
+						Alors $F\cap H$ est un sous-groupe de $(G,*)$.
+					\item Si $(F_i)_{i\in I}$ est une famille de sous-groupes de $(G,*)$,\\
+						Alors $\bigcap\limits_{i\in I}F_i$ est un sous-groupe de $(G,*)$
+				\end{liste}
+			\end{prop}
+\newpage
+			\begin{preuve}
+				\begin{liste}
+					\item $f\cap H$ est non vide: $e\in F\cap H$
+					\item Montrer que $\forall (x,y)\in G\times G,\ (x\in F\cap H)\et(y\in F\cap H)\Rightarrow (x*y^{-1})\in F\cap H$\\
+						Soit $(x,y)\in F\cap H$\\
+						$x$ et $y$ sont \'el\'ements de $F$ et $F$ est un groupe: $x*y^{-1}\in F$\\
+						De m\^eme, $x*y^{-1}\in H$\\
+						Donc $x*y^{-1}\in F\cap H$\\
+						Vrai pour tout $(x,y)$ de $(F\cap H)^2$, donc on en d\'eduit que $F\cap H$ est un sous-groupe de $(G,*)$
+				\end{liste}
+			\end{preuve}
+			\begin{defi}
+				Soit $(G,*)$ un groupe.\\
+				Soit $B$ une partie non vide de $G$.\\
+				On appelle \underline{sous-groupe de $g$ engendr\'e par $B$} le plus petit sous groupe de $(G,*)$ contenant $B$, au sens de l'inclusion.
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Justification:} On munit $\mathcal{P}(G)$ de la relation d'inclusion: $(\mathcal{P}(G),\subset)$ est un ensemble ordonn\'e.\\
+				Soit $\mathcal{F}$ l'ensemble des groupes contenant $B$.
+				\begin{liste}
+					\item $\mathcal{F}$ est non vide car $G\in\mathcal{F}$
+					\item D'apr\`es la propri\'et\'e pr\'ec\'edente, $H=\bigcap\limits_{F\in\mathcal{F}}F$ est un sous-groupe de $(G,*)$.\\
+						$\forall f\in\mathcal{F},\ b\subset F$, donc $B\subset H$
+					\item Reste \`a montrer que $H$ est le plus petit \'el\'ement de $\mathcal{F}$\\
+						Donc montrer que $\forall F\in\mathcal{F},\ H\subset F$\\
+						Par d\'efinition de $H$, la proposition pr\'ec\'edente est vraie.
+				\end{liste}
+			\end{flushleft}
+			\begin{flushleft}
+				\textbf{Notation:}\\
+				\textbullet\ $<B>$\\\textbullet\ Si $B$ est un singleton $b=\{b\}$, on \'ecrit $<b>$
+			\end{flushleft}
+\newpage
+		\subsection{Morphismes de groupes}
+			Soit $(G,*)$ et $(G',*')$ deux groupes.\\
+			Soit $f:G\rightarrow G'$ une application.
+			\begin{defi}
+				\begin{liste}
+					\item $f$ est un \underline{homomorphisme de groupes} si:\\
+					$\forall(x,y)\in G\times G,\ f(x*y)=f(x)*'f(y)$
+					\item $f$ est un \underline{endomorphisme de groupes} si:\\
+					$f$ est un homomorphisme de groupes et que $(G,*)=(G',*')$
+					\item $f$ est un \underline{isomorphisme de groupes} si:\\
+					$f$ est un homomorphisme de groupes bijectif de $G$ sur $G'$
+					\item $f$ est un \underline{automorphisme de groupes} si:\\
+					$f$ est un endomorphisme de groupes bijectif de $G$ sur $G'$
+				\end{liste}
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Remarques:} Soit $f$ un homomorphisme de groupes de $G$ dans $G'$\\
+				\begin{liste}
+					\item Soit $e$ et $e'$ les \'el\'ements neutres de $G$ et $G'$ respectivement.\\
+						Alors $f(e*e)=f(e)*'f(e)$\\
+						En utilisant le sym\'etrique de $f(e)$ a gauche, on obtient:\\
+						$f(e)^{-1}*'f(e)=f(e)^{-1}*'f(e)*'f'(e)$\\
+						$\iff e'=f(e)$
+					\item Soit $x$ un \'el\'ement de $G$.\\
+						$f(x*x^{-1})=f(x)*'f(x^{-1})$\\
+						Par ailleurs, $f(x*x^{-1})=f(e)=e'$\\
+						Donc $f(x)*'f(x^{-1})=e$\\
+						On en d\'eduit que $f(x^{-1})=f(x)^{-1}$
+				\end{liste}
+			\end{flushleft}
+			\begin{prop}
+				\begin{liste}
+					\item Si $F$ est un sous-groupe de $(G,*)$ et si $f$ est un homomorphisme de groupes de $G$ dans $G'$,\\
+					Alors $f(F)$ est un sous-groupe de $(G',*')$
+					\item Si $H'$ est un sous-groupe de $(G',*')$ et si $f$ est un homomorphisme de groupes de $G$ dans $G'$,\\
+					Alors $f^{-1}<H'>$ est un sous-groupe de $(G,*)$
+				\end{liste}
+			\end{prop}
+			\begin{preuve}
+				\begin{liste}
+					\item \underline{$1^{\text{er}}$ point:} Montrer que $f(F)$ est un sous-groupe de $(G',*')$\\
+						Donc montrer que $\forall(x',y')\in f(F),\ x'*'y'^{-1}\in f(F)$\\
+						$F$ non vide, donc $f(F)$ non vide.\\
+						Soit $x'$ et $y'$ deux \'el\'ements de $f(F)$.\\
+						Donc $\exists (x,y)\in F,\ f(x)=x'\et f(y)=y'$. Soit $x$ et $y$ deux tels \'el\'ements.\\
+						$\begin{aligned}x'*'(y')^{-1}&=f(x)*'f(y)^{-1}\\&=f(x*y^{-1})\end{aligned}$\\
+						Or, $F$ est un groupe, donc $x*y^{-1}\in F$, donc $x'*'(y')^{-1}\in f(F)$\\
+						Cela \'etant vrai pour tout $x'$ et $y'$ de $f(F)$, on en conclut que $f(F)$ est un sous-groupe de $(G',*')$.
+					\item \underline{$2^{\text{\`eme}}$ point:} Montrer que $f^{-1}<H'>$ est un sous-groupe de $(g,*)$.\\
+						\begin{liste}
+							\item $f$ est un homomorphisme de groupes donc $f(e)=e'$\\
+								De plus, $e'\in H'$ car $H'$ est un sous-groupe de $(G,*)$\\
+								Donc $e\in f^{-1}<H'>$, donc $f^{-1}<H'>$ est non vide.
+							\item Montrer que $\forall (x,y)\in G\times G,\ (x\in f^{-1}<H'>\et x\in f^{-1}<H'>)\Rightarrow x*y^{-1}\in f^{-1}<H'>$
+								Soit $x$ et $y$ deux \'el\'ements de $f^{-1}<H'>$.\\
+								Donc montrons que $x*y^{-1}\in f^{-1}<H'>$\\
+								Donc montrons que $f(x*y^{-1})\in H'$\\
+								$f(x*y^{-1})=f(x)*f(y)^{-1}$ car $f$ est un homomorphisme de groupes .\\
+								Or: 
+								$\begin{aligned}[t]
+								&\text{- }f(x)\in H'\text{ car }x\in f^{-1}<H'>\\
+								&\text{- }f(y)\in H'\text{ car }y\in f^{-1}<H'>\text{.}\\
+								&\text{- De plus, }H'\text{ est un sous-groupe donc }f(y)^{-1}\in H'
+								\end{aligned}$\\
+								Sachant $H'$ un sous-groupe, $f(x*y^{-1})\in H'$\\
+								Ce raisonnement \'etant valable pour tout $x,y$ de $f^{-1}<H'>$, on en d\'eduit que $f^{-1}<H'>$ est un sous-groupe de $(G,*)$ d'apr\`es la crit\`ere $2$.
+						\end{liste} 
+				\end{liste}
+			\end{preuve}
+			\begin{coro}
+				\begin{liste}
+					\item L'image $f(G)$ est un sous-groupe de $(G',*')$
+					\item $f^{-1}<\{e\}>$ est un sous-groupe de $(G,*)$. On l'appelle le \underline{noyau de $f$}
+				\end{liste}
+			\end{coro}
+			\begin{flushleft}
+				\textbf{Notation:} $\ker(f)=f^{-1}<\{e\}>$
+			\end{flushleft}
+			\begin{prop}
+				Soit $f$ un homomorphisme de groupes de $(G,*)$ dans $(G',*')$.\\
+				Alors $f$ est injective si et seulement si $\ker(f)=\{e\}$
+			\end{prop}
+\newpage
+			\begin{preuve}
+				\begin{liste}
+					\item[\cercle1]Supposons $f$ injective.\\
+						Montrer que $\ker(f)=\{e\}$\\
+						\begin{liste}
+							\item $\ker(f)$ est un sous-groupe de $(G,*)$, donc $\{e\}\subset\ker(f)$
+							\item montrer que $\ker(f)\subset \{e\}$\\
+								Donc montrer que $\forall x\in G,\ x\in\ker(f)\Rightarrow x=e$\\
+								Soit $x$ un \'el\'ement de $\ker(f)$\\
+								Montrer que $x=e$\\
+								$x\in\ker(f)$, donc $f(x)=e'$\\
+								$f$ est un homomorphisme, donc $f(e)=e'$\\
+								D'o\`u $f(x)=f(e)$\\
+								Donc, sachant $f$ injective, $x=e$
+						\end{liste}
+						Donc $\ker(f)=\{e\}$
+					\item[\cercle2]Supposons que $\ker(f)=\{e\}$\\
+						Montrer que $\forall(x,y)\in G\times G,\ f(x)=f(y)\Rightarrow x=y$\\
+						Soit $x$ et $y$ deux \'el\'ements de $G$ tels que $f(x)=f(y)$\\
+						$\begin{aligned}
+							f(x)=f(y)&\iff f(x)*'f(y)^{-1}=e'\\
+								&\iff f(x*y^{-1})=e'
+						\end{aligned}$\\
+						Or, $\ker(f)=\{e\}$\\
+						Donc $x*y^{-1}=e$\\
+						Donc $x=y$\\
+						Ce raisonnement \'etant valable pour tout $x$ et $y$ de $G$, $f$ est injective.
 				\end{liste}
 			\end{preuve}
 \end{document}
