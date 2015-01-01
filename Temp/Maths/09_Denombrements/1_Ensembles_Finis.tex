@@ -93,14 +93,71 @@
 				Notons $i_0$ l'unique élément de $\lbracket 1,n-1\rbracket$ tel que $f(i_0)=a$\\
 				On considère 
 				$\begin{aligned}[t]
-				\tau:\lbracket 1,n-1\rbracket \longrightarrow \lbracket 1,n-1\rbracket\\
-					i \longmapsto 
+				\tau:\lbracket 1,n-1\rbracket &\longrightarrow \lbracket 1,n-1\rbracket\\
+					i &\longmapsto 
 					\left\{\begin{aligned}
-					& i \text{ si }&(i\neq i_0\et i\neq n)\\
-					& i_0 \text{ si }& i=n\\
-					& n \text{ si }& i=i_0
+					 i &\text{ si }(i\neq i_0\et i\neq n)\\
+					 i_0 &\text{ si } i=n\\
+					 n &\text{ si } i=i_0
 					\end{aligned}\right.
-				\end{aligned}$
+				\end{aligned}$\\
+				$\tau$ réalise un bijection de $\lbracket 1,n\rbracket$ sur $\lbracket 1,n\rbracket$.\\
+				On applique ensuite le premier cas avec $\tau(\lbracket 1,n\rbracket)$ au lieu de $\lbracket 1,n\rbracket$
+		\end{liste}
+	\end{preuve}
+	\begin{prop}
+		Soit $P$ une partie finie, non vide et incluse dans $\N$, de cardinal $p$.\\
+		Alors il existe une unique bijection strictement croissante de $\lbracket 1,p\rbracket$ sur $P$.
+	\end{prop}
+	\begin{preuve}
+		\begin{flushleft}
+			\textbf{Existence:}
+			\begin{liste}
+				\item $P$ est une partie non vide de $\N$, et admet un plus petit élément que l'on note $y_1$.\\
+					On pose $\phi(1)=y_1$
+				\item Soit $k\in \lbracket 1,p-1\rbracket$ tel que $(\phi(i))_{i\in\lbracket 1,k\rbracket}$ est défini \underline{et} $\phi(1)<...<\phi(k)$\\
+					Soit $P_k=\{ x\in\N,\ x\in P\et x>\phi(k) \}$\\
+					$P_k$ est non vide car $k<p$, donc admet un plus petit élément. On le note $\phi(k+1)$
+			\end{liste}
+			On construit alors $\phi$ par itération, et elle est strictement croissante.
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Unicité:}
+			Soit $\psi$ une application strictement croissante bijective de $\lbracket 1,p\rbracket$ sut $P$.\\
+			Alors $P=\{\psi(1),\,\psi(2),\,...,\psi(p) \}$ et $\psi(1)<...<\psi(p)$\\
+			\begin{liste}
+				\item$\psi(1)$ est le plus petit élément de $P$, donc $\psi(1)=\phi(1)$
+				\item$\psi(2)$ est le plus petit élément de $P\setminus\{\psi(1) \}$. Or $P\setminus\{\psi(1) \}=P_1$, donc par définition, $\phi(2)=\psi(2)$		
+				\item ...
+			\end{liste}
+			Conclusion: $\phi=\psi$
+		\end{flushleft}
+	\end{preuve}
+	\begin{prop}
+		Soit $E$ et $F$ deux ensembles finis de m\^eme cardinal $n$.\\
+		Soit $f:E\longrightarrow F$ une application.\\
+		On a alors équivalence entre:
+		\begin{liste}
+			\item[\cercle1] $f$ est injective
+			\item[\cercle2] $f$ est surjective
+			\item[\cercle3] $f$ est bijective
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		\begin{liste}
+			\item[\cercle1]Supposons $f$ injective.\\
+				Montrer que $f$ est surjective.\\
+				Donc montrer que $f(E)=F$\\
+				Soit $\fonction{g}{E}{f(E)}{x}{f(x)}$ une application.\\
+				$g$ réalise une bijection de $E$ sur $f(E)$ par définition de l'espace d'arrivée.\\
+				Par ailleurs, $E$ est de cardinal $n$, donc il existe une bijection $\phi$ de $\lbracket 1,n\rbracket$ sur $E$.\\
+				$g\circ \phi:\lbracket 1,n\rbracket\longrightarrow f(E)$\\
+				$g\circ\phi$ est une bijection, donc $\card(f(E))=n$\\
+				D'o\`u, sachant $f(E)\subset F$ et $\card(E)=\card(F)$, $E=F$\\
+				Donc $f$ est surjective.
+			\item[\cercle2]Supposons $f$ surjective.\\
+				Montrer que $f$ est bijective.\\
+				
 		\end{liste}
 	\end{preuve}
 \end{document}
