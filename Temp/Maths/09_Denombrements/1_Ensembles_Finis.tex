@@ -158,8 +158,35 @@
 			\item[\cercle2]Supposons $f$ surjective.\\
 				Montrer que $f$ est bijective de $E$ sur $F$.
 				\begin{liste}
-					\item[a/] Montrer que $\exists h\in\mathcal{F}()$
+					\item[a/] Montrer que $\exists h\in\mathcal{F}(F,E),\ f\circ h=\text{Id}_F$\\
+						Soit $y$ un élément de $F$.\\
+						$f$ est surjective, donc $f^{-1}<\{y\}>$ est non vide.\\
+						$\exists x\in E,\ x\in f^{-1}<\{y\}>$\\
+						Soit $x_y$ un tel élément.\\
+						Posons $h(y)=x_y$\\
+						Ce raisonnement étant valable pour tout $y$ de $F$, on définit une application $h$ de $F$ dans $E$.\\
+						Vérifions que $f\circ h=\text{Id}_F$:\\
+						$\begin{aligned}
+						\forall y\in F,\ f\circ h(y)&=f(x_y)=y
+						\end{aligned}$\\
+						Donc $f\circ h=\text{Id}_F$
+					\item[b/] Montrer que $h$ est injective.\\
+						Donc montrer que $\forall (y,y')\in F^{2},\ h(y)=h(y')\Rightarrow y=y'$\\
+						Soit $y$ et $y'$ deux éléments de $F$ tels que $h(y)=h(y')$\\
+						Alors 
+						$\begin{aligned}[t]
+						f(h(y))&=f(h(y')) & \text{ car } & f\text{ est une application}\\
+						\iff y&=y' & \text{ car } & f\circ h = \text{Id}_F
+						\end{aligned}$\\
+						Donc $f$ est injective.
+					\item[c/] Montrer que $f$ est bijective.\\
+						$h:F\longrightarrow E$ est injective et $\card(E)=\card(F)$\\
+						Donc $h$ réalise une bijection de $F$ sur $E$.\\
+						Par ailleurs 
+						$\begin{aligned}
+						plop %10-2-3
+						\end{aligned}$
 				\end{liste}
 		\end{liste}
 	\end{preuve}
-\end{document}
+\end{document} %ACCENTS!
