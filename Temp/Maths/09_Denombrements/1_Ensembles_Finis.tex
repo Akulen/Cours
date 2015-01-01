@@ -1,0 +1,106 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Dénombrements}
+\author{MPSI 2}
+\def\titre{Ensembles Finis}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $n$ et $p$ deux entiers naturels non nuls.\\
+		Soit $f$ une application de $\lbracket 1,n\rbracket$ dans $\lbracket 1,p\rbracket$.\\
+		\begin{liste}
+			\item Si $f$ est bijective, alors $n=p$
+			\item Si $f$ est injective, alors $n\leqslant p$
+			\item Si $f$ est surjective, alors $n\geqslant p$
+		\end{liste}
+	\end{prop}
+	\begin{defi}
+		Soit $E$ un ensemble non vide.\\
+		On dit que $E$ est \underline{fini} si il existe un entier naturel non nul $n$ et une bijection de $\lbracket 1,n\rbracket$ sur $E$\\
+		Si un tel entier existe, il est unique et est le \underline{cardinal de $E$}.
+	\end{defi}
+	\begin{flushleft}
+		\textbf{Notations:} $\card(E)$,\ \#$E$,\ $|E|$\\
+		\textbf{Convention:} $\card(\varnothing)=0$
+	\end{flushleft}
+	\begin{prop}
+		Soit $E$ un ensemble fini de cardinal $n$.\\
+		Soit $F$ un sous-ensemble de $E$.\\
+		Alors $F$ est \'egalement un ensemble fini \underline{et} $\card(F)\leqslant n$ \underline{et} $(\card(F)=n)\iff(E=F)$
+	\end{prop}
+	\begin{preuve}
+		On procède par récurrence sur le cardinal de $E$.\\
+		\textbf{Lemme:}
+		$\begin{aligned}[t]
+			&\text{Si }E\text{ est un ensemble fini de cardinal }n\geqslant 1,\\
+			&\text{Et si }a\text{ est un élément de }E,\\
+			&\text{Alors }E\setminus \{a\}\text{ est un ensemble fini de cardinal }n-1
+		\end{aligned}$\\
+		\\
+		\textbf{Démonstration de la propriété}\\
+		Soit $P(n):
+		\begin{aligned}[t]
+			&\text{Pour tout ensemble }E\text{ de cardinal }n\text{, pour tout sous-ensemble }F\text{ de }E\text{,}\\
+			&\text{}F\text{ est fini \underline{et} }\card(F)\leqslant n\text{ \underline{et} }(\card(F)=n)\iff(E=F)
+		\end{aligned}$\\
+		\\
+		\underline{$n=0$}: $E=\varnothing$ et $F=\varnothing$ et $\card(E)=\card(F)=0$\\
+		\\
+		Soit $n\in\N^*$ tel que $P(n-1)$ soit vérifié.\\
+		Montrons $P(n)$\\
+		Soit $E$ un ensemble fini de cardinal $n$.\\
+		Soit $F$ une partie de $E$.\\
+		\underline{$1^{\text{er}}$ cas:} $F=E$ alors $\card(F)=n$\\
+		\underline{$2^{\text{ème}}$ cas:} $F\neq E$\\
+		Alors $\exists a\in E,\ a\notin F$\\
+		Soit $a$ un tel élément.\\
+		$a\notin F$ donc $F\subset E\setminus\{a\}$\\
+		Or, d'après la lemme, $E\setminus\{a\}$ est de cardinal $n-1$, donc d'après l'hypothèse de récurrence, $F$ est fini \underline{et} $\card(F)\leqslant n-1$\\
+		\\
+		Finalement: 
+		$\begin{aligned}[t]
+			& F=E\Rightarrow \card(E)=\card(F)\\
+			& F\neq E\Rightarrow \card(F)<\card(E)
+		\end{aligned}$\\
+		D'où $(\card(F)=n)\iff(E=F)$\\
+		Donc $P(n)$ est vérifié.\\
+		D'après le principe de récurrence, $\forall n\in\N,\ P(n)$\\
+		\\
+		\textbf{Démonstration du lemme}\\
+		Soit $E$ un ensemble fini de cardinal $n\geqslant 1$.\\
+		Il existe une bijection de $\lbracket 1,n\rbracket$ sur $E$.\\
+		\underline{$1^{\text{er}}$ cas:} $n=1$\\
+		$\fonction{f}{\{1\}}{E}{1}{f(1)}$\\
+		$E=\{f(1)\}$, donc $E\setminus \{f(1)\}=\varnothing$, de cardinal $0$.\\
+		\underline{$2^{\text{ème}}$ cas:} $n\geqslant 2$\\
+		Soit $a$ un élément de $E$.\\
+		$f$ réalise une bijection de $\lbracket 1,n\rbracket$ sur $E$, donc $\exists i\in \lbracket 1,n\rbracket,\ \text{unique},\ f(i)=a$
+		\begin{liste}
+			\item \underline{Si $i=n$} alors $f(n)=a$\\
+				$\restr{f}{\lbracket 1,n-1\rbracket}$ réalise une bijection de $\lbracket 1,n-1\rbracket$ sur $f(\lbracket 1,n-1\rbracket)$\\
+				Or $\begin{aligned}
+				f(\lbracket 1,n-1\rbracket)&=f(\lbracket 1,n\rbracket\setminus\{n\})\\
+					&=E\setminus \{a\}
+				\end{aligned}$\\
+				Donc $\restr{f}{\lbracket 1,n-1\rbracket}$ réalise une bijection de $\lbracket 1,n-1\rbracket$ sur $E\setminus \{a\}$.\\
+				Donc $E$ est de cardinal $n-1$
+			\item \underline{Si $i\neq n$}\\
+				Notons $i_0$ l'unique élément de $\lbracket 1,n-1\rbracket$ tel que $f(i_0)=a$\\
+				On considère 
+				$\begin{aligned}[t]
+				\tau:\lbracket 1,n-1\rbracket \longrightarrow \lbracket 1,n-1\rbracket\\
+					i \longmapsto 
+					\left\{\begin{aligned}
+					& i \text{ si }&(i\neq i_0\et i\neq n)\\
+					& i_0 \text{ si }& i=n\\
+					& n \text{ si }& i=i_0
+					\end{aligned}\right.
+				\end{aligned}$
+		\end{liste}
+	\end{preuve}
+\end{document}
