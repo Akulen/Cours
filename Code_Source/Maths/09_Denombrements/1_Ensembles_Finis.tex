@@ -1,0 +1,192 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Dénombrements}
+\author{MPSI 2}
+\def\titre{Ensembles Finis}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $n$ et $p$ deux entiers naturels non nuls.\\
+		Soit $f$ une application de $\lbracket 1,n\rbracket$ dans $\lbracket 1,p\rbracket$.\\
+		\begin{liste}
+			\item Si $f$ est bijective, alors $n=p$
+			\item Si $f$ est injective, alors $n\leqslant p$
+			\item Si $f$ est surjective, alors $n\geqslant p$
+		\end{liste}
+	\end{prop}
+	\begin{defi}
+		Soit $E$ un ensemble non vide.\\
+		On dit que $E$ est \underline{fini} si il existe un entier naturel non nul $n$ et une bijection de $\lbracket 1,n\rbracket$ sur $E$\\
+		Si un tel entier existe, il est unique et est le \underline{cardinal de $E$}.
+	\end{defi}
+	\begin{flushleft}
+		\textbf{Notations:} $\card(E)$,\ \#$E$,\ $|E|$\\
+		\textbf{Convention:} $\card(\varnothing)=0$
+	\end{flushleft}
+	\begin{prop}
+		Soit $E$ un ensemble fini de cardinal $n$.\\
+		Soit $F$ un sous-ensemble de $E$.\\
+		Alors $F$ est \'egalement un ensemble fini \underline{et} $\card(F)\leqslant n$ \underline{et} $(\card(F)=n)\iff(E=F)$
+	\end{prop}
+	\begin{preuve}
+		On procède par récurrence sur le cardinal de $E$.\\
+		\textbf{Lemme:}
+		$\begin{aligned}[t]
+			&\text{Si }E\text{ est un ensemble fini de cardinal }n\geqslant 1,\\
+			&\text{Et si }a\text{ est un élément de }E,\\
+			&\text{Alors }E\setminus \{a\}\text{ est un ensemble fini de cardinal }n-1
+		\end{aligned}$\\
+		\\
+		\textbf{Démonstration de la propriété}\\
+		Soit $P(n):
+		\begin{aligned}[t]
+			&\text{Pour tout ensemble }E\text{ de cardinal }n\text{, pour tout sous-ensemble }F\text{ de }E\text{,}\\
+			&\text{}F\text{ est fini \underline{et} }\card(F)\leqslant n\text{ \underline{et} }(\card(F)=n)\iff(E=F)
+		\end{aligned}$\\
+		\\
+		\underline{$n=0$}: $E=\varnothing$ et $F=\varnothing$ et $\card(E)=\card(F)=0$\\
+		\\
+		Soit $n\in\N^*$ tel que $P(n-1)$ soit vérifié.\\
+		Montrons $P(n)$\\
+		Soit $E$ un ensemble fini de cardinal $n$.\\
+		Soit $F$ une partie de $E$.\\
+		\underline{$1^{\text{er}}$ cas:} $F=E$ alors $\card(F)=n$\\
+		\underline{$2^{\text{ème}}$ cas:} $F\neq E$\\
+		Alors $\exists a\in E,\ a\notin F$\\
+		Soit $a$ un tel élément.\\
+		$a\notin F$ donc $F\subset E\setminus\{a\}$\\
+		Or, d'après la lemme, $E\setminus\{a\}$ est de cardinal $n-1$, donc d'après l'hypothèse de récurrence, $F$ est fini \underline{et} $\card(F)\leqslant n-1$\\
+		\\
+		Finalement: 
+		$\begin{aligned}[t]
+			& F=E\Rightarrow \card(E)=\card(F)\\
+			& F\neq E\Rightarrow \card(F)<\card(E)
+		\end{aligned}$\\
+		D'où $(\card(F)=n)\iff(E=F)$\\
+		Donc $P(n)$ est vérifié.\\
+		D'après le principe de récurrence, $\forall n\in\N,\ P(n)$\\
+		\\
+		\textbf{Démonstration du lemme}\\
+		Soit $E$ un ensemble fini de cardinal $n\geqslant 1$.\\
+		Il existe une bijection de $\lbracket 1,n\rbracket$ sur $E$.\\
+		\underline{$1^{\text{er}}$ cas:} $n=1$\\
+		$\fonction{f}{\{1\}}{E}{1}{f(1)}$\\
+		$E=\{f(1)\}$, donc $E\setminus \{f(1)\}=\varnothing$, de cardinal $0$.\\
+		\underline{$2^{\text{ème}}$ cas:} $n\geqslant 2$\\
+		Soit $a$ un élément de $E$.\\
+		$f$ réalise une bijection de $\lbracket 1,n\rbracket$ sur $E$, donc $\exists i\in \lbracket 1,n\rbracket,\ \text{unique},\ f(i)=a$
+		\begin{liste}
+			\item \underline{Si $i=n$} alors $f(n)=a$\\
+				$\restr{f}{\lbracket 1,n-1\rbracket}$ réalise une bijection de $\lbracket 1,n-1\rbracket$ sur $f(\lbracket 1,n-1\rbracket)$\\
+				Or $\begin{aligned}
+				f(\lbracket 1,n-1\rbracket)&=f(\lbracket 1,n\rbracket\setminus\{n\})\\
+					&=E\setminus \{a\}
+				\end{aligned}$\\
+				Donc $\restr{f}{\lbracket 1,n-1\rbracket}$ réalise une bijection de $\lbracket 1,n-1\rbracket$ sur $E\setminus \{a\}$.\\
+				Donc $E$ est de cardinal $n-1$
+			\item \underline{Si $i\neq n$}\\
+				Notons $i_0$ l'unique élément de $\lbracket 1,n-1\rbracket$ tel que $f(i_0)=a$\\
+				On considère 
+				$\begin{aligned}[t]
+				\tau:\lbracket 1,n-1\rbracket &\longrightarrow \lbracket 1,n-1\rbracket\\
+					i &\longmapsto 
+					\left\{\begin{aligned}
+					 i &\text{ si }(i\neq i_0\et i\neq n)\\
+					 i_0 &\text{ si } i=n\\
+					 n &\text{ si } i=i_0
+					\end{aligned}\right.
+				\end{aligned}$\\
+				$\tau$ réalise un bijection de $\lbracket 1,n\rbracket$ sur $\lbracket 1,n\rbracket$.\\
+				On applique ensuite le premier cas avec $\tau(\lbracket 1,n\rbracket)$ au lieu de $\lbracket 1,n\rbracket$
+		\end{liste}
+	\end{preuve}
+	\begin{prop}
+		Soit $P$ une partie finie, non vide et incluse dans $\N$, de cardinal $p$.\\
+		Alors il existe une unique bijection strictement croissante de $\lbracket 1,p\rbracket$ sur $P$.
+	\end{prop}
+	\begin{preuve}
+		\begin{flushleft}
+			\textbf{Existence:}
+			\begin{liste}
+				\item $P$ est une partie non vide de $\N$, et admet un plus petit élément que l'on note $y_1$.\\
+					On pose $\phi(1)=y_1$
+				\item Soit $k\in \lbracket 1,p-1\rbracket$ tel que $(\phi(i))_{i\in\lbracket 1,k\rbracket}$ est défini \underline{et} $\phi(1)<...<\phi(k)$\\
+					Soit $P_k=\{ x\in\N,\ x\in P\et x>\phi(k) \}$\\
+					$P_k$ est non vide car $k<p$, donc admet un plus petit élément. On le note $\phi(k+1)$
+			\end{liste}
+			On construit alors $\phi$ par itération, et elle est strictement croissante.
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Unicité:}
+			Soit $\psi$ une application strictement croissante bijective de $\lbracket 1,p\rbracket$ sut $P$.\\
+			Alors $P=\{\psi(1),\,\psi(2),\,...,\psi(p) \}$ et $\psi(1)<...<\psi(p)$\\
+			\begin{liste}
+				\item$\psi(1)$ est le plus petit élément de $P$, donc $\psi(1)=\phi(1)$
+				\item$\psi(2)$ est le plus petit élément de $P\setminus\{\psi(1) \}$. Or $P\setminus\{\psi(1) \}=P_1$, donc par définition, $\phi(2)=\psi(2)$		
+				\item ...
+			\end{liste}
+			Conclusion: $\phi=\psi$
+		\end{flushleft}
+	\end{preuve}
+	\begin{prop}
+		Soit $E$ et $F$ deux ensembles finis de m\^eme cardinal $n$.\\
+		Soit $f:E\longrightarrow F$ une application.\\
+		On a alors équivalence entre:
+		\begin{liste}
+			\item[\cercle1] $f$ est injective
+			\item[\cercle2] $f$ est surjective
+			\item[\cercle3] $f$ est bijective
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		\begin{liste}
+			\item[\cercle1]Supposons $f$ injective.\\
+				Montrer que $f$ est surjective.\\
+				Donc montrer que $f(E)=F$\\
+				Soit $\fonction{g}{E}{f(E)}{x}{f(x)}$ une application.\\
+				$g$ réalise une bijection de $E$ sur $f(E)$ par définition de l'espace d'arrivée.\\
+				Par ailleurs, $E$ est de cardinal $n$, donc il existe une bijection $\phi$ de $\lbracket 1,n\rbracket$ sur $E$.\\
+				$g\circ \phi:\lbracket 1,n\rbracket\longrightarrow f(E)$\\
+				$g\circ\phi$ est une bijection, donc $\card(f(E))=n$\\
+				D'o\`u, sachant $f(E)\subset F$ et $\card(E)=\card(F)$, $E=F$\\
+				Donc $f$ est surjective.
+			\item[\cercle2]Supposons $f$ surjective.\\
+				Montrer que $f$ est bijective de $E$ sur $F$.
+				\begin{liste}
+					\item[a/] Montrer que $\exists h\in\mathcal{F}(F,E),\ f\circ h=\text{Id}_F$\\
+						Soit $y$ un élément de $F$.\\
+						$f$ est surjective, donc $f^{-1}<\{y\}>$ est non vide.\\
+						$\exists x\in E,\ x\in f^{-1}<\{y\}>$\\
+						Soit $x_y$ un tel élément.\\
+						Posons $h(y)=x_y$\\
+						Ce raisonnement étant valable pour tout $y$ de $F$, on définit une application $h$ de $F$ dans $E$.\\
+						Vérifions que $f\circ h=\text{Id}_F$:\\
+						$\begin{aligned}
+						\forall y\in F,\ f\circ h(y)&=f(x_y)=y
+						\end{aligned}$\\
+						Donc $f\circ h=\text{Id}_F$
+					\item[b/] Montrer que $h$ est injective.\\
+						Donc montrer que $\forall (y,y')\in F^{2},\ h(y)=h(y')\Rightarrow y=y'$\\
+						Soit $y$ et $y'$ deux éléments de $F$ tels que $h(y)=h(y')$\\
+						Alors 
+						$\begin{aligned}[t]
+						f(h(y))&=f(h(y')) & \text{ car } & f\text{ est une application}\\
+						\iff y&=y' & \text{ car } & f\circ h = \text{Id}_F
+						\end{aligned}$\\
+						Donc $f$ est injective.
+					\item[c/] Montrer que $f$ est bijective.\\
+						$h:F\longrightarrow E$ est injective et $\card(E)=\card(F)$\\
+						Donc $h$ réalise une bijection de $F$ sur $E$.\\
+						Par ailleurs 
+						$\begin{aligned}
+						plop %10-2-3
+						\end{aligned}$
+				\end{liste}
+		\end{liste}
+	\end{preuve}
+\end{document} %ACCENTS!
