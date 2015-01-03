@@ -1,0 +1,37 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Circuits Electriques dans l'ARQS}
+\author{MPSI 2}
+\def\titre{Lois de Kirchhoff}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	Les fils de connection sont id\'eaux. \\
+	\textbf{Noeud :} point o\`u se rencontrent au moins 3 fils. \\
+	\textbf{Branche :} partition de circuit entre 2 noeuds cons\'ecutifs. \\
+	\textbf{Maille :} ensemble de branches successives qui reviennent au point de d\'epart. \\
+	2 branches sont en \textbf{s\'erie} si elles sont parcourures par le m\^eme courant. \\
+	2 branches sont en \textbf{d\'erivation} si elles ont la m\^eme tension \`a leurs bornes. \\
+	\section{Loi des noeuds}
+		La somme des courants entrants dans un noeud = La somme des courants sortants.
+	\section{Loi des mailles}
+		\begin{center}
+			\begin{tikzpicture}
+				\draw (0,4)
+					to [generic,v=$U_{AB}$] (6,4)
+					to [generic,v=$U_{BC}$] (6,0)
+					to [generic,v=$U_{CD}$] (0,0)
+					to [generic,v=$U_{DA}$] (0,4);
+				\draw (0,4) node {$\bullet$} node [above left] {A};
+				\draw (6,4) node {$\bullet$} node [above right] {B};
+				\draw (6,0) node {$\bullet$} node [below right] {C};
+				\draw (0,0) node {$\bullet$} node [below left] {D};
+				\node[anchor=west, right] at (7,2)
+					{$\underbrace{V_A-V_B}_{V_{AB}}+\underbrace{V_B-V_C}_{V_{BC}}+\underbrace{V_C-V_D}_{V_{CD}}+\underbrace{V_D-V_A}_{V_{DA}}=0$};
+			\end{tikzpicture}
+		\end{center}
+\end{document}
