@@ -1,0 +1,52 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{D\'enombrements}
+\author{MPSI 2}
+\def\titre{Proprités des coefficients binomiaux}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		$\sum\limits_{k=0}^{n}\binom{n}{k}=2^{n}$
+	\end{prop}
+	\begin{prop}
+		\textbf{Triangle de Pascal}\\
+		$\binom{n+1}{p}=\binom{n}{p}+\binom{n}{p-1}$
+	\end{prop}
+	\begin{prop}
+		\textbf{Généralisation du triangle de Pascal}\\
+		$\sum\limits_{k=p}^{n}\binom{k}{p}=\binom{n+1}{p+1}$
+	\end{prop}
+	\begin{prop}
+		\textbf{Formule du bin\^ome}\\
+		Soit $A$ est un anneau, et $a$ et $b$ deux éléments de $A$ qui commutent.\\
+		Soit $n\in\N$.\\
+		Alors $(a+b)^{n}=\sum\limits^{n}_{k=0}\binom{n}{k}a^{k}b^{n-k}$
+	\end{prop}
+\newpage
+	\begin{prop}
+		\textbf{Formule de Vandermonde}\\
+		$\binom{n+m}{p}=\sum\limits^{p}_{k=0}\binom{n}{k}\binom{m}{p-k}$
+	\end{prop}
+	\begin{preuve}
+		\begin{liste}
+			\item $\binom{n+m}{p}$ est le coefficient du terme de degré $p$ dans $(1+x)^{n+m}$
+			\item $\begin{aligned}[t]
+				(1+x)^{n+m} & = (1+x)^{n}\,(1+x)^{m}\\
+				& = \left(\sum\limits_{k=0}^{n}\binom{n}{x}x^{k} \right)\,\left(\sum\limits_{k=0}^{m}\binom{n}{x}x^{k} \right)\\
+				& = \!\!\!\!\!\!\sum\limits_{(i,j)\in \lbracket 0,n\rbracket\times \lbracket 0,m\rbracket}\!\!\!\!\!\! \binom{n}{i}\,\binom{m}{j}\,x^{i}\,x^{j}
+			\end{aligned}$\\
+			On veut procéder par identification, on réécrit donc la somme:\\
+			$\begin{aligned}[t]
+				(1+x)^{n+m} & =\sum\limits_{p=0}^{n+m}\sum\limits^{p}_{k=0}\binom{n}{k}\binom{m}{p-k} x^{p}\\
+				& = \sum\limits_{p=0}^{n+m} \left( \sum\limits^{p}_{k=0}\binom{n}{k}\binom{m}{p-k}\right)  x^{p}
+			\end{aligned}$\\
+			D'o\`u le coefficient du terme de degré $p$.\\
+			N.B. Les termes limites de la somme sont nuls.
+		\end{liste}
+	\end{preuve}
+\end{document} %ACCENTS

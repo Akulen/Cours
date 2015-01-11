@@ -1,0 +1,145 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{D\'enombrements}
+\author{MPSI 2}
+\def\titre{Op\'erations sur les cardinaux}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $E$ et $F$ deux ensembles finis de cardinal $n$ et $p$ respectivement.\\
+		Alors $E\times F$ est fini et son cardinal est $n\,p$
+	\end{prop}
+	\begin{flushleft}
+		\textbf{Remarque:} On d\'emontre par r\'ecurrence le cardinal de $E_1\times ...\times E_n$
+	\end{flushleft}
+	\begin{preuve}
+		Soit deux applications bijectives $f$ et $g$ telles que $f:\lbracket 1,n\rbracket \rightarrow E$ et  $g:\lbracket 1,p\rbracket\rightarrow F$\\
+		Soit $\fonction{\phi}{\lbracket 1,n\rbracket\times \lbracket 1,p\rbracket}{E\times F}{(i,j)}{(f(i),g(j)}$\\
+		$\phi$ r\'ealise une bijection de $\lbracket 1,n\rbracket\times \lbracket 1,p\rbracket$ sur $E\times F$ car $f$ et $g$ sont bijectives.\\
+		Reste a construire une bijection de $\lbracket 1,n\,p\rbracket$ sur $\lbracket 1,n\rbracket\times\lbracket 1,p\rbracket$\\
+		Soit $\fonction{\psi}{\lbracket 1,n\rbracket\times \lbracket 1,p\rbracket}{\lbracket 1,n\,p\rbracket}{(i,j)}{(i-1)p+j}$\\
+		Montrons que $\psi$ est bijective.\\
+		\\
+		Application r\'eciproque.\\
+		Soit $k\in \lbracket 1,n\,p\rbracket$\\
+		\underline{$1^{\text{er}}$ cas:} $p|k$\\
+		Donc $\exists q\in\lbracket 1,n\rbracket,\ k=q\,p$\\
+		Alors $i=q$ et $j=p$.\\
+		\underline{$2^{\text{\`eme}}$ cas:} $k$ n'est pas multiple de $p$.\\
+		Division euclidienne de $k$ par $p$:\\
+		$\exists(q,r)\in \N^{2},\ \left\{
+		\begin{aligned}
+		& k=q\,p+r\\
+		& 0\leqslant r<p
+		\end{aligned}\right.$\\
+		Alors $i=q+1$ et $j=r$\\
+		\\
+		D'apr\`es ces r\'esultats, soit $\fonction{\gamma}{\lbracket 1,n\,p\rbracket}{\lbracket 1,n\rbracket\times \lbracket 1,p\rbracket}{k}{\left\{\begin{aligned}
+			& (q,p) &\text{ si } & k=q\,p\\
+			& (q+1,p)&\text{ si } & k=qp+r\et r\neq0
+			\end{aligned}\right.} $\\
+		On v\'erifie que :
+		$\begin{aligned}[t]
+		& \psi \text{ est a valeurs dans }\lbracket 1,n\,p\rbracket\\
+		& \gamma \text{ est a valeurs dans }\lbracket 1,n\rbracket\times \lbracket 1,p\rbracket\\
+		& \psi\circ\gamma=\text{Id}_{\lbracket 1,n\,p\rbracket} \et \gamma\circ \psi=\text{Id}_{\lbracket 1,n\rbracket\times\lbracket 1,p\rbracket}
+		\end{aligned}$\\
+		\\
+		\textbf{Conclusion:} $\phi\circ\gamma$ r\'ealise une bijection de $\lbracket 1,n\,p\rbracket$ sur $E\times F$, d'o\`u $E\times F$ est un ensemble fini de cardinal $n\,p$
+	\end{preuve}
+	\begin{prop}
+		Soit $A$ et $B$ deux sous-ensembles finis et disjoints d'un ensemble $E$.\\
+		Alors $A\cup B$ est fini et $\card(A\cup B)=\card(A)+\card(B)$
+	\end{prop}
+	\begin{coro}
+		Soit $\left(A_i\right)_{i\in\lbracket 1,n\rbracket}$ une famille d'ensembles finis deux \`a deux disjoints d'un ensemble $E$.\\
+		Alors $\bigcap\limits^{n}_{i=1}\left(A_i\right)$ est fini et $\card(\bigcap\limits^{n}_{i=1}\left(A_i\right))=\sum\limits^{n}_{k=1}\card\left(A_i\right)$
+	\end{coro}
+	\begin{coro}
+		Soit $A$ et $B$ deux sous-ensembles finis d'un ensemble $E$.\\
+		Alors $A\cup B$ est fini et $\card(A\cup B)=\card(A)+\card(B)-\card(A\cap B)$
+	\end{coro}
+	\begin{preuve}
+		Il existe deux bijections: $f:\lbracket 1,n\rbracket\rightarrow A$ et $g:\lbracket 1,p\rbracket\rightarrow B$\\
+		Soit $\fonction{\phi}{\lbracket 1,n+p\rbracket}{A\cup B}{i}{\left\{
+			\begin{aligned}
+			& f(i) & \text{ si } & i\in\lbracket 1,n\rbracket\\
+			& g(n-i) & \text{ si } & i\in \lbracket n+1,n+p\rbracket
+			\end{aligned}\right.}$\\
+		$\phi$ est bien d\'efinie, car $f$ l'est sur $\lbracket 1,n\rbracket$, et $g$ sur $\lbracket 1,p\rbracket$.\\
+		$\phi$ est a valeurs dans $A\cup B$ car $f$ est a valeurs dans $A$ et $g$ dans $B$.\\
+		\\
+		Montrer que $\phi$ r\'ealise une bijection de $\lbracket 1,n+p\rbracket$ sur $A\cup B$.
+		\begin{liste}
+			\item $\phi$ est surjective car $f$ et $g$ le sont.
+			\item Montrer que $\phi$ est injective.\\
+				Soit $(i,i')\in \lbracket 1,n+p\rbracket^{2}$ tel que $\phi(i)=\phi(i')$\\
+				\underline{$1^{\text{er}}$ cas:} $f(i)=f(i')$\\
+				Alors $i=i'$ car $f$ est injective.\\
+				\underline{$2^{\text{\`eme}}$ cas:} $g(i-n)=g(i'-n)$\\
+				Alors $i=i'$ car $g$ est injective.\\
+				\underline{$3^{\text{\`eme}}$ cas:} $f(i)=g(i-n)$\\
+				Impossible car $f$ est a valeurs dans $A$ et $g$ dans $B$ et $A\cap B=\varnothing$
+		\end{liste}
+	\end{preuve}
+	\begin{preuve}
+		Par r\'ecurrence.
+	\end{preuve}
+	\begin{preuve}
+		Soit $A$ et $B$ deux ensembles finis de $E$.\\
+		On consid\`ere $D=C_B\ A\cap B$\\
+		Donc $A\cup B=A\cup B$\\
+		$B=(A\cap B)\cup D$ et cette r\'eunion est disjointe.\\
+		Donc $\card(B)=\card(A\cap B)+\card(D)$\\
+		D'o\`u $\card(A\cup B)=\card(A)+\card(B)-\card(A\cap B)$
+	\end{preuve}
+	\begin{prop}
+		\textbf{Formule du crible ou de Poincar\'e}\\
+		Soit $\left(A_i \right)_{i\in \lbracket 1,n\rbracket}$ une famille d'ensembles finis.\\
+		$\card\left(\bigcup\limits^{n}_{k=1}A_k \right)=\sum\limits^{n}_{k=1} (-1)^{k-1}\!\!\!\!\!\!\sum\limits_{1\leqslant j_1<...<j_k\leqslant n}\!\!\!\!\!\! \card\left(A_{j_1}\cap...\cap A_{j_k} \right)$
+	\end{prop}
+	\begin{prop}
+		Soir $E,F$ deux sous-ensembles tels que $F$ soit fini.\\
+		Soit $f:E\rightarrow F$ une application telle que $\exists r\in\N^{*},\ \forall y\in F,\ \card(f^{-1}<\{y\}>)=r$\\
+		Alors $E$ est fini et $\card(E)=r\times \card(F)$
+	\end{prop}
+	\begin{preuve}
+		Montrons que $\left(f^{-1}<\{y\}> \right)_{y\in F}$ est une partition de $E$
+		\begin{liste}
+			\item $\forall y\in F,\ f^{-1}<\{y\}>\subset E\et f^{-1}<\{y\}>\neq \varnothing$\\
+			\item Si $y$ et $y'$ deux \'el\'ements distincts de $F$, alors $f^{-1}<\{y\}>\cap f^{-1}<\{y'\}>=\varnothing$\\
+				En effet, supposons $f^{-1}<\{y\}>\cap f^{-1}<\{y'\}>\neq\varnothing$\\
+				Soit $x_0$ un \'el\'ement de $E$ tel que $x_0\in f^{-1}<\{y\}>\cap f^{-1}<\{y'\}>\neq\varnothing$\\
+				Donc $f(x_0)=y\et f(x_0)=y'$, d'o\`u $y=y'$ car $f$ est une application.\\
+				Conclusion: $\forall (y,y')\in F^{2},\ f^{-1}<\{y\}>\cap f^{-1}<\{y'\}>\neq\varnothing\Rightarrow y=y'$\\
+			\item Montrer que $E=\bigcup\limits_{y\in F}f^{-1}<\{y\}>$
+			\begin{liste}
+				\item $\bigcup\limits_{y\in F}f^{-1}<\{y\}>\subset E$\\
+					Par r\'eunions de sous-ensembles de $E$.
+				\item Montrer que $E\subset\bigcup\limits_{y\in F}f^{-1}<\{y\}>$\\
+					C'est \`a dire $\forall x\in E,\ exists y\in F,\ x\in f^{-1}<\{y\}>$\\
+					Soit $x$ un \'el\'ement de $E$. Posons $y=f(x)$\\
+					$f$ est a valeurs dans $F$ donc $y\in F\et y=f(x)$\\
+					Ceci est vrai pour tout $x$ de $E$, donc $E\subset\bigcup\limits_{y\in F}f^{-1}<\{y\}>$
+			\end{liste}
+			Donc $E=\bigcup\limits_{y\in F}f^{-1}<\{y\}>$
+		\end{liste}
+		\textbf{Conclusion:} $\left(f^{-1}<\{y\}> \right)_{y\in F}$ est une partition de $E$ de sous-ensembles deux \`a deux disjoints.\\
+		\\
+		Donc, sachant les sous-ensembles disjoints et finis, on a:
+		\begin{liste}
+			\item $E$ est un ensemble fini.
+			\item $\begin{aligned}[t]
+			\card(E) & = \card\left( \bigcup\limits_{y\in F}f^{-1}<\{y\}>\right)\\
+				& = \sum\limits_{y\in F}\card\left( f^{-1}<\{y\}>\right)\\
+				& = \sum\limits_{y\in F} r\\
+				& = r\times \card(F)
+			\end{aligned}$
+		\end{liste}
+	\end{preuve}
+\end{document}

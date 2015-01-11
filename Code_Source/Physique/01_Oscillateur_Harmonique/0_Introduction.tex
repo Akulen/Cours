@@ -1,0 +1,26 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Oscillateur Harmonique}
+\author{MPSI 2}
+\def\titre{Introduction}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	On raisonne sur le pendule horizontal. \\
+	\begin{tikzpicture}
+		\draw[->] (0,0) node[below left] {$O$} -- (10,0) node[below] {$x$};
+		\draw (0,-0.5) -- (0,1);
+		\draw[->, ultra thick] (0,0) -- (1,0) node[below] {$\vec{e}_x$};
+		\node[rectangle,fill=black,inner sep=5,label=above right:{$M$}] (M) at (5,0.5) {};
+		\draw[decoration={aspect=0.3, segment length=3mm, amplitude=3mm,coil},decorate] (0,.5) -- (M);
+		\draw[->] (5,0.5) -- (5,1) node[above] {$\vec{R}$};
+		\draw[->] (5,0.5) -- (5,0) node[below] {$\vec{P}$};
+		\draw[->] (5,0.5) -- (5.5,.5) node[right] {$\vec{T}$};
+	\end{tikzpicture} \\
+	Le solide $M$ peut coulisser sans frottements sur $(Ox)$ et est accroch\'e \`a un ressort de (constante de) raideur $k$ et de longueur \`a vide $l_0$, Le solide $M$ a pour masse $m$. \\
+	On se placera dans le referentiel terrestre $R_T$ suppos\'e galil\'een.
+\end{document}

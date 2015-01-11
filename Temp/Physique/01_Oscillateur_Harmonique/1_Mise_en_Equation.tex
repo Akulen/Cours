@@ -1,0 +1,43 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Oscillateur Harmonique}
+\author{MPSI 2}
+\def\titre{Mise en \'equation}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	\section{Inventaire des forces}
+		Dans $R_T$ galil\'een	, le solide $M$ est soumis \`a :
+		\begin{liste}
+			\item Son poids : $\vec{P}=m\vec{g}$, $||\vec{g}||=9.81 N.kg^{-1}$.
+			\item La r\'eaction du support (axe $(Ox)$) sur la masse : $\vec{R}$, perpendiculaire au suport car les frottements solides sont n\'eglig\'es.
+			\item La force de rappel exerc\'ee par le ressort $\vec{T}$.
+		\end{liste}
+		On a vu en TP que $||\vec{T}||$ est proportionelle \`a l'alllongement du ressort $\Delta l$ et da direction est colin\'eaire au ressort :
+		$$\vec{T}=\pm k(l-l_0)\vec{e}_x$$
+		\textbf{Remarques :}
+		\begin{liste}
+			\item La formule est la m\^eme si le ressort est \'etir\'e ou comprim\'e.
+			\item \textbf{Unit\'e de k :} $||\vec{T}||=k(l-l_0)\implies k$ est en $N.m^{-1}$.
+			\item On n\'eglige les frottements fluides.
+		\end{liste}
+	\section{Equations du mouvement}
+		On applique la seconde loi de Newton :
+		$$\begin{aligned}
+			\frac{d\vec{P}}{dt}=\Sigma\vec{F}&\text{ avec }\vec{P}=m\vec{v} \\
+											 &\text{ ici, }m=constante \\
+											 &\text{ donc }\frac{d\vec{P}}{dt}=m\vec{a}
+		\end{aligned}$$
+		D'ou $m\vec{a}=\vec{P}+\vec{R}+\vec{T}\ (E)$ \\
+		Le mouvement se fait sur l'axe $(Ox)$ donc on projette $(E)$ sur $Ox$ :
+	$$\begin{aligned}
+		m\ddot x&=0+0-k(l-l_0) \\
+		\ddot x+\frac{k}{m}x&=\frac{k}{m}l_0
+	\end{aligned}$$
+	On pose $\omega_0^2=\frac{k}{m}$ de telle sorte que : \\
+	$(E)\iff\fbox{$\ddot x+\omega_0^2x=\omega_0^2l_0$}$ : \'equation de l'oscillateur harmonique.
+\end{document}
