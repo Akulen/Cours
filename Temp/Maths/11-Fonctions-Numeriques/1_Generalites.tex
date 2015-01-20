@@ -1,11 +1,10 @@
+% !TeX encoding = UTF-8
 \documentclass[12pt,twoside,a4paper]{article}
 
-\usepackage[francais]{babel}
-\usepackage[ansinew]{inputenc}
 
-\def\chapitre{Fonctions Numériques}
+\def\chapitre{Fonctions Num\'eriques}
 \author{MPSI 2}
-\def\titre{Généralités}
+\def\titre{G\'en\'eralit\'es}
 
 \input{../../.includes/header}
 
@@ -14,105 +13,166 @@
 \begin{document}
 	\maketitle
 	\begin{defi}
-		On appelle \underline{Fonction numérique} toute application de $\mathcal{F}(I,\R,G)$ o\`u:
+		On appelle \underline{Fonction num\'erique} toute application de $\mathcal{F}(I,\R,G)$ o\`u:
 		\begin{liste}
-			\item $I$ est un intervalle réel.
-			\item $G$ est un graphe de $I$ dans $\R$ associé a cette application.
+			\item $I$ est un intervalle r\'eel.
+			\item $G$ est un graphe de $I$ dans $\R$ associ\'e a cette application.
 		\end{liste}
-		On écrit $\fonction{f}{I}{\R}{x}{f(x)}$
+		On \'ecrit $\fonction{f}{I}{\R}{x}{f(x)}$
 	\end{defi}
 	\begin{flushleft}
-		\underline{Notation:} $\mathcal{F}(I,\R)$ désigne l'ensemble des applications de $I$ vers $\R$.
+		\underline{Notation:} $\mathcal{F}(I,\R)$ d\'esigne l'ensemble des applications de $I$ vers $\R$.
 	\end{flushleft}
-	\section{Opérations}
+	\section{Op\'erations}
 		\begin{flushleft}
-			Soit $f$ et $g$ deux fonctions numérique définies sur $I$.\\
+			Soit $f$ et $g$ deux fonctions num\'erique d\'efinies sur $I$.\\
 			On pose :
 			$\begin{aligned}[t]
 			\bullet & \fonction{f+g}{I}{\R}{x}{f(x)+g(x)}\\
 			\bullet & \fonction{f\times g}{I}{\R}{x}{f(x)\times g(x)}\\
 			\bullet & \forall \lambda \in \R,\ \fonction{\lambda\dot f}{I}{\R}{x}{\lambda\times f(x)}
 			\end{aligned}$\\
-			On définit ainsi deux lois internes et une loi externe: $\left(\mathcal{F}(I,\R),\ +,\ \times,\ \dot \right)$ est une algèbre commutative.\\
+			On d\'efinit ainsi deux lois internes et une loi externe: $(\mathcal{F}(I,\R),\ +,\ \times,\ \dot )$ est une alg\`ebre commutative.\\
 			Cela signifie que :
 			$\begin{aligned}[t]
 			\bullet & \left(\mathcal{F}(I,\R),\ +,\ \times\right) \text{ est un anneau commutatif.}\\
-			\bullet & \left(\mathcal{F}(I,\R),\ +,\ \dot\right) \text{ est un espace véctoriel.}\\
+			\bullet & (\mathcal{F}(I,\R),\ +,\ \dot) \text{ est un espace v\'ectoriel.}\\
 			\bullet & \forall (f,g,\lambda)\in \mathcal{F}(I,\R)^{2}\times\R,\ \lambda\dot (f \times g) = (\lambda\dot f) \times g = f\times (\lambda\dot g)
 			\end{aligned}$
 		\end{flushleft}
 		\begin{flushleft}
 			\textbf{Notations:}
-			\begin{lsite}
-				\item $0_{\mathcal{F}(I,\R)}$ désigne l'application $\fonction{}{I}{\R}{x}{0}$
+			\begin{liste}
+				\item $0_{\mathcal{F}(I,\R)}$ d\'esigne l'application $\fonction{}{I}{\R}{x}{0}$
 				\item Si $f\in \mathcal{F}(I,\R)$, on note $\fonction{-f}{I}{\R}{x}{-f(x)}$
-				\item Si $f\in\mathcal{F}(I,\R)$ vérifie $\forall x\in I,\ f(x)\neq I$,\\
+				\item Si $f\in\mathcal{F}(I,\R)$ v\'erifie $\forall x\in I,\ f(x)\neq I$,\\
 					Alors on note $\fonction{\frac{1}{f}}{I}{\R}{x}{\frac{1}{f(x)}}$
-			\end{lsite}
+			\end{liste}
 		\end{flushleft}
 	\section{Relation d'ordre}
 		\begin{defi}
-			Soit $f$ et $g$ deux fonctions numériques définies sur $I$.\\
+			Soit $f$ et $g$ deux fonctions num\'eriques d\'efinies sur $I$.\\
 			On note $f \leqslant g \iff \forall x \in I,\ f(x) \leqslant g(x)$
 		\end{defi}
 		\begin{flushleft}
-			On définit alors une relation d'ordre partielle sur $\mathcal{F}(I,\R)$.
+			On d\'efinit alors une relation d'ordre partielle sur $\mathcal{F}(I,\R)$.
 		\end{flushleft}
 		\begin{defi}
 			\begin{liste}
 				\item On dit que $f$ est positive sur $I$ si:\\
 					$\forall x\in I,\ f(x) \geqslant 0$\\
 					On note alors $f\geqslant 0$
-				\item On procède de manière analogue pour $f>0$
+				\item On proc\`ede de mani\`ere analogue pour $f>0$
 			\end{liste}
 		\end{defi}
 		\begin{prop}
-			Soit $f_1,\ f_2,\ g_1,\ g_2$ des fonctions numériques définies sur $I$.
+			Soit $f_1,\ f_2,\ g_1,\ g_2$ des fonctions num\'eriques d\'efinies sur $I$.
 			\begin{liste}
 				\item $f_1 \leqslant f_2 \et g_1 \leqslant g_2 \Longrightarrow f_1+g_1 \leqslant f_2 + g_2$
 				\item $\left(g_1\geqslant 0 \et f_1 \geqslant f_2 \right) \Longrightarrow f_1 \times g_1 \leqslant f_2 \times g_1$
 			\end{liste}
 		\end{prop}
 		\begin{preuve}
-			Cela découle du fait que $(\R,+,\times,\leqslant)$ soit un corps totalement ordonné.
+			Cela d\'ecoule du fait que $(\R,+,\times,\leqslant)$ soit un corps totalement ordonn\'e.
 		\end{preuve}
 		\begin{defi}
-			Soit $f$ une fonction numérique définie sur $I$.\\
+			Soit $f$ une fonction num\'erique d\'efinie sur $I$.\\
 			On pose $\fonction{f^{+}}{I}{\R}{x}{\left\{\begin{aligned}& f(x) & \text{ si }f(x)\geqslant 0\\	& 0 & \text{ si }f(x)<0	\end{aligned} \right.}$ et $\fonction{f^{-}}{I}{\R}{x}{\left\{\begin{aligned}& 0 & \text{ si }f(x)> 0\\	& -f(x) & \text{ si }f(x) \leqslant 0	\end{aligned} \right.}$\\
-			$f^{+}$ et $f^{-}$ sont les parties positive et négative de $f$.
+			$f^{+}$ et $f^{-}$ sont les parties positive et n\'egative de $f$.
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Remarques:}
+			\begin{liste}
+				\item $f^{+}$ et $f^{-}$ sont toutes deux positives.
+				\item $f=f^{+}-f^{-}$
+				\item $|f|=f^{+}+f^{-}$
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			Soit $f$ une fonction num\'erique d\'efinie sur $I$.\\
+			L'image de $f$, $F(I)$, est l'ensemble :\\
+			$f(I)=\{y\in \R,\ \exists x\in I, f(x)=y \}$
+		\end{defi}
+		\begin{defi}
+			Soit $f\in \mathcal{F}(I,\R)$.
+			\begin{liste}
+				\item On dit que \underline{$f$ est born\'ee sur $I$} si $f(I)$ est born\'e.\\
+					$\exists(a,b)\in \R^{2},\ f(I)\subset [a,b]$
+				\item On dit que \underline{$f$ est major\'ee sur $I$} si $f(I)$ est major\'e.\\
+					$\exists K\in\R,\ f \leqslant K$
+				\item On dit que \underline{$f$ est minor\'ee sur $I$} si $f(I)$ est minor\'e.\\
+					$\exists k\in\R,\ k\leqslant f$
+			\end{liste}
+		\end{defi}
+		\begin{defi}
+			Soit $f\in \mathcal{F}(I,\R)$.
+			\begin{liste}
+				\item Si $f$ est major\'ee sur $I$, on appelle borne sup\'erieure de $f$ sur $I$ la borne sup\'erieure de $f(I)$
+				\item Si $f$ est minor\'ee sur $I$, on appelle borne inf\'erieure de $f$ sur $I$ la borne inf\'erieure de $f(I)$
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $\begin{aligned}[t]
+			& \Sup\limits_{x\in I}f(x) = \Sup\limits_{I} f  = \Sup(f(I))\\
+			& \Inf\limits_{x\in I}f(x) = \Inf\limits_{I} f  = \Inf(f(I))
+			\end{aligned}$
+		\end{flushleft}
+		\begin{defi}
+			Soit $f\in \mathcal{F}(I,\R)$.\\
+			Soit $J$ un sous-ensemble de $I$.\\
+			Soit $x_0$ un \'el\'ement de $J$.
+			\begin{liste}
+				\item $f$ admet un maximum en $x_0$ sur $J$ si: $\forall x\in J,\ f(x)leqslant f(x_0)$
+				\item $f$ admet un minimum en $x_0$ sur $J$ si: $\forall x\in J,\ f(x_0)leqslant f(x)$
+				\item $f$ pr\'esente un extremum en $x_0$ sur $J$ si $f$ admet un minimum ou un maximum en $x_0$ sur $J$.
+			\end{liste}
+		\end{defi}
+	\section{Autres propri\'et\'es}
+		\subsection{P\'eriodicit\'e}
+			\begin{defi}
+				Soit $f$ une fonction num\'erique d\'efinie sur $I$.\\
+				Soit $p$ un r\'eel.\\
+				On dit que $p$ est une p\'eriode de $f$ si:\\
+				$\left\{\begin{aligned}
+				&\forall x\in \R,\ x\in I\Rightarrow x+p\in I\\
+				&\forall x\in I,\ f(x+p)=f(x)
+				\end{aligned} \right.$
 			\end{defi}
 			\begin{flushleft}
-				\textbf{Remarques:}
-				\begin{lsite}
-					\item $f^{+}$ et $f^{-}$ sont toutes deux positives.
-					\item $f=f^{+}-f^{-}$
-					\item $|f|=f^{+}+f^{-}$
-				\end{lsite}
+				Notons $G_f$ l'ensemble des p\'eriodes de $f$:\\
+				$G_f=\{p\in\R,\ \forall x\in I,\ f(x+p)=f(x) \}$\\
+				Alors $G_f$ est un sous-groupe de $(\R,+)$
 			\end{flushleft}
-			\begin{defi}
-				Soit $f$ une fonction numérique définie sur $I$.\\
-				L'image de $f$, $F(I)$, est l'ensemble :\\
-				$f(I)=\{y\in \R,\ \exists x\in I, f(x)=y \}$
-			\end{defi}
+		\subsection{Parit\'e}
 			\begin{defi}
 				Soit $f\in \mathcal{F}(I,\R)$.
 				\begin{liste}
-					\item On dit que \underline{$f$ est bornée sur $I$} si $f(I)$ est borné.\\
-						$\exists(a,b)\in \R^{2},\ f(I)\subset [a,b]$
-					\item On dit que \underline{$f$ est majorée sur $I$} si $f(I)$ est majoré.\\
-						$\exists K\in\R,\ f \leqslant K$
-					\item On dit que \underline{$f$ est minorée sur $I$} si $f(I)$ est minoré.\\
-						$\exists k\in\R,\ k\leqslant f$
+					\item $f$ est paire sur $I$ si:
+						$\left\{\begin{aligned}
+						& \forall x\in \R,\ x\in I\Rightarrow -x\in I\\
+						& \forall x\in I,\ f(x)=f(-x)
+						\end{aligned} \right.$
+					\item $f$ est impaire sur $I$ si:
+						$\left\{\begin{aligned}
+						& \forall x\in \R,\ x\in I\Rightarrow -x\in I\\
+						& \forall x\in I,\ f(x)=-f(-x)
+						\end{aligned} \right.$
 				\end{liste}
 			\end{defi}
 			\begin{defi}
-				Soit $f\in \mathcal{F}(I,\R)$.
-				\begin{liste}
-					\item Si $f$ est majorée sur $I$, on appelle borne supérieure de $f$ sur $I$ la borne supérieure de $f(I)$
-					\item Si $f$ est minorée sur $I$, on appelle borne inférieure de $f$ sur $I$ la borne inférieure de $f(I)$
-				\end{liste}
+				Soit $I$ un intervalle centr\'e en $0$.\\
+				Soit $f$ une application d\'efinie sur $I$ a valeurs dans $\R$.\\
+				On note $\fonction{P}{I}{\R}{x}{\frac{f(x)=f(-x)}{2}} \et \fonction{Imp}{I}{\R}{x}{\frac{f(x)-f(-x)}{2}}$\\
+				$P$ et $Imp$ sont les parties Paire et Impaire de $f$.
 			\end{defi}
-			\begin{flushleft}
-				\textbf{Notation:} %12-1-4
-			\end{flushleft}
+			\begin{prop}
+				$f=P+Imp$
+			\end{prop}
+		\subsection{Fonctions $k$-Lipschitziennes}
+			\begin{defi}
+				Soit $f$ une fonction num\'erique d\'efinie sur $I$.\\
+				Soit $k$ un r\'eel positif.\\
+				On dit que $f$ est $k$-lipschitzienne sur $I$ si:\\
+				$\forall (x,x')\in I^{2},\ \left| f(x)-f(x') \right| \leqslant k \left|x-x' \right|$
+			\end{defi}
 \end{document}
