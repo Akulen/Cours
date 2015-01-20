@@ -1,0 +1,37 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Fonctions Num\'eriques}
+\author{MPSI 2}
+\def\titre{Limites de fonctions}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Définitions}
+		\begin{defi}
+			Soit $f\in\mathcal{F}(I,\R)$\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			Soit $l\in\R$\\
+			\textbullet \underline{$f(x)$ tend vers $l$ quand $x$ tend vers $x_0$:}
+			$$\forall \varepsilon\in\R^{+*},\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$$
+		\end{defi}
+		\begin{defi}
+			Soit $f\in\mathcal{F}(I,\R)$\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			\textbullet \underline{$f(x)$ tend vers $+\infty$ quand $x$ tend vers $x_0$:}
+			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$$\\
+			\textbullet \underline{$f(x)$ tend vers $-\infty$ quand $x$ tend vers $x_0$:}
+			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)<K$$
+		\end{defi}
+		\begin{prop}
+			Si $x_0\in I$, alors la seule limite éventuelle de $f(x)$ en $x_0$ est $f(x_0)$
+		\end{prop}
+		\begin{preuve}
+			On suppose qu'il existe $l$ dans $\R$, tel que $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0}\limits_{plop} l$
+			\end{preuve}
+\end{document}
