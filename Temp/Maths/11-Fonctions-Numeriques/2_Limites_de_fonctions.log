@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  20 JAN 2015 18:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  20 JAN 2015 20:56
 entering extended mode
 **2_Limites_de_fonctions.tex
 
@@ -705,25 +705,60 @@ Missing character: There is no √ in font cmti12!
 Missing character: There is no © in font cmti12!
 Missing character: There is no √ in font cmti12!
 Missing character: There is no © in font cmti12!
-
-! Double subscript.
-l.35 ...htarrow}\limits_{x\rightarrow x_0}\limits_
-                                                  {plop} l$
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-[1
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no ® in font cmr12!
+ [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no √ in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no √ in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no √ in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no √ in font cmti12!
+Missing character: There is no © in font cmti12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--91
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+[3]
 (C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11-Fonctions-Numeriques\2_Limites
 _de_fonctions.aux) ) 
 Here is how much of TeX's memory you used:
- 18805 strings out of 493921
- 419310 string characters out of 3147273
- 527839 words of memory out of 3000000
- 21745 multiletter control sequences out of 15000+200000
+ 18821 strings out of 493921
+ 419616 string characters out of 3147273
+ 532839 words of memory out of 3000000
+ 21761 multiletter control sequences out of 15000+200000
  13433 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,8n,61p,477b,200s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,61p,477b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
@@ -732,12 +767,12 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on 2_Limites_de_fonctions.pdf (1 page, 101161 bytes).
+fonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 2_Limites_de_fonctions.pdf (3 pages, 128012 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

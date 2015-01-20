@@ -32,6 +32,73 @@
 			Si $x_0\in I$, alors la seule limite éventuelle de $f(x)$ en $x_0$ est $f(x_0)$
 		\end{prop}
 		\begin{preuve}
-			On suppose qu'il existe $l$ dans $\R$, tel que $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0}\limits_{plop} l$
-			\end{preuve}
+			On suppose qu'il existe $l$ dans $\R$, tel que $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$\\
+			\fbox{HA} $l\neq f(x_0)$
+			\begin{liste}
+				\item[\cercle1] $l\in\R$\\
+					Alors $\forall \varepsilon\in\R^{+*},\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+					Supposons $l>f(x_0)$\\
+					Posons $\varepsilon=\frac{l-f(x_0)}{2}$\\
+					Alors $f(x_0)\notin ]l-\varepsilon,l+\varepsilon[$.\\
+					Soit $\alpha$ vérifiant les conditions de limites.\\
+					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+					En particulier, avec $x=x_0$, on a $f(x_0)\in ]l-\varepsilon,l+varepsilon[$\\
+					On a donc une contradiction.
+				\item[\cercle2] $l=+\infty$\\
+					Alors $\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$\\
+					Soit $K$ un réel strictement supérieur \`a $f(x_0)$\\
+					Soit $\alpha$ un réel vérifiant les condition de limites.\\
+					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x) >K$\\
+					En particulier, avec $x=x_0$, on a $f(x_0)>K$\\
+					On a donc une contradiction.
+				\item[\cercle3] $l=-\infty$\\
+					On procède de m\^eme.
+			\end{liste}
+			\begin{flushleft}
+				\textbf{Conclusion:} $l=f(x_0)$
+			\end{flushleft}
+		\end{preuve}
+		\begin{defi}
+			Soit $f\in \mathcal{F}(I,\R)$\\
+			\textbullet \ \underline{$f(x)$ tend vers $l\in\R$ lorsque $x$ tend vers $+\infty$:}
+			$$\forall \varepsilon \in \R^{+*},\ \exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow \left| f(x)-l\right| <\varepsilon$$
+			\textbullet \ \underline{$f(x)$ tend vers $+\infty$ lorsque $x$ tend vers $+\infty$:}
+			$$\forall K \in \R,\ \exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow f(x)>K$$
+		\end{defi}
+		\begin{prop}
+			Soit $f\in \mathcal{F}(I,\R)$.\\
+			Soit $x_0\in \overline{\R}$ tel que $x_0$ soit un élément de $I$ ou une extrémité de $I$.\\
+			Soit $(l,l')\in \overline{\R}\times \overline{\R}$.\\
+			Si $f$ admet $l$ et $l'$ comme limite en $x_0$, alors $l=l'$
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Notations:}$\lim\limits_{\substack{x\rightarrow x_0 \\x\in I}} f(x)=l$ et $f(x) \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l$\\
+		\end{flushleft}
+		\begin{preuve}
+			Cas o\`u $x_0\in\R \et l\in\R\et l'\in\R$\\
+			\cercle1 : $\forall \varepsilon\in\R^{+*},\ \exists \alpha_1 \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha_1 \Rightarrow \left| f(x)-l)\right| <\varepsilon$\\
+			\cercle2 : $\forall \varepsilon\in\R^{+*},\ \exists \alpha_2 \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha_2 \Rightarrow \left| f(x)-l'\right| <\varepsilon$\\
+			Supposons $l\neq l'$, et $l>l'$\\
+			Posons $\varepsilon = \frac{l-l'}{2}$\\
+			On a donc $]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [=\varnothing$\\
+			\\
+			Soit $\alpha_1 \et \alpha_2$ vérifiant \cercle1 et \cercle2.\\
+			Soit $\alpha=\min(\{\alpha_1,\alpha_2 \})$\\
+			Alors $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow (\left| f(x)-l\right| <\varepsilon \et \left| f(x)-l'\right| <\varepsilon)$\\
+			Autrement dit: $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)\in ]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [$\\
+			On a donc une contradiction.\\
+			\textbf{Conclusion:} $l=l'$
+		\end{preuve}
+		\begin{flushleft}
+			\textbf{Remarques:}
+			\begin{liste}
+				\item Soit $l\in\R$. Alors $f(x) \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff f(x) -l \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} 0$
+				\item Soit $l\in\R^{+*}$. Alors f(x) $\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff \frac{f(x)}{l}\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} 1$
+				\item Soit $x_0\in I$. Alors $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff f(x_0+h)\mathop{\longrightarrow}\limits_{\substack{x_0+h\in I\\h\rightarrow 0}} l$
+			\end{liste}
+		\end{flushleft}
+		\begin{prop}
+			On suppose que $f(x)$ tend vers $l\in\overline{\R}$ quand $x$ tend vers $x_0\in I$\\
+			
+		\end{prop}
 \end{document}
