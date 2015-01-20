@@ -1,0 +1,118 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\usepackage[francais]{babel}
+\usepackage[ansinew]{inputenc}
+
+\def\chapitre{Fonctions Numériques}
+\author{MPSI 2}
+\def\titre{Généralités}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{defi}
+		On appelle \underline{Fonction numérique} toute application de $\mathcal{F}(I,\R,G)$ o\`u:
+		\begin{liste}
+			\item $I$ est un intervalle réel.
+			\item $G$ est un graphe de $I$ dans $\R$ associé a cette application.
+		\end{liste}
+		On écrit $\fonction{f}{I}{\R}{x}{f(x)}$
+	\end{defi}
+	\begin{flushleft}
+		\underline{Notation:} $\mathcal{F}(I,\R)$ désigne l'ensemble des applications de $I$ vers $\R$.
+	\end{flushleft}
+	\section{Opérations}
+		\begin{flushleft}
+			Soit $f$ et $g$ deux fonctions numérique définies sur $I$.\\
+			On pose :
+			$\begin{aligned}[t]
+			\bullet & \fonction{f+g}{I}{\R}{x}{f(x)+g(x)}\\
+			\bullet & \fonction{f\times g}{I}{\R}{x}{f(x)\times g(x)}\\
+			\bullet & \forall \lambda \in \R,\ \fonction{\lambda\dot f}{I}{\R}{x}{\lambda\times f(x)}
+			\end{aligned}$\\
+			On définit ainsi deux lois internes et une loi externe: $\left(\mathcal{F}(I,\R),\ +,\ \times,\ \dot \right)$ est une algèbre commutative.\\
+			Cela signifie que :
+			$\begin{aligned}[t]
+			\bullet & \left(\mathcal{F}(I,\R),\ +,\ \times\right) \text{ est un anneau commutatif.}\\
+			\bullet & \left(\mathcal{F}(I,\R),\ +,\ \dot\right) \text{ est un espace véctoriel.}\\
+			\bullet & \forall (f,g,\lambda)\in \mathcal{F}(I,\R)^{2}\times\R,\ \lambda\dot (f \times g) = (\lambda\dot f) \times g = f\times (\lambda\dot g)
+			\end{aligned}$
+		\end{flushleft}
+		\begin{flushleft}
+			\textbf{Notations:}
+			\begin{lsite}
+				\item $0_{\mathcal{F}(I,\R)}$ désigne l'application $\fonction{}{I}{\R}{x}{0}$
+				\item Si $f\in \mathcal{F}(I,\R)$, on note $\fonction{-f}{I}{\R}{x}{-f(x)}$
+				\item Si $f\in\mathcal{F}(I,\R)$ vérifie $\forall x\in I,\ f(x)\neq I$,\\
+					Alors on note $\fonction{\frac{1}{f}}{I}{\R}{x}{\frac{1}{f(x)}}$
+			\end{lsite}
+		\end{flushleft}
+	\section{Relation d'ordre}
+		\begin{defi}
+			Soit $f$ et $g$ deux fonctions numériques définies sur $I$.\\
+			On note $f \leqslant g \iff \forall x \in I,\ f(x) \leqslant g(x)$
+		\end{defi}
+		\begin{flushleft}
+			On définit alors une relation d'ordre partielle sur $\mathcal{F}(I,\R)$.
+		\end{flushleft}
+		\begin{defi}
+			\begin{liste}
+				\item On dit que $f$ est positive sur $I$ si:\\
+					$\forall x\in I,\ f(x) \geqslant 0$\\
+					On note alors $f\geqslant 0$
+				\item On procède de manière analogue pour $f>0$
+			\end{liste}
+		\end{defi}
+		\begin{prop}
+			Soit $f_1,\ f_2,\ g_1,\ g_2$ des fonctions numériques définies sur $I$.
+			\begin{liste}
+				\item $f_1 \leqslant f_2 \et g_1 \leqslant g_2 \Longrightarrow f_1+g_1 \leqslant f_2 + g_2$
+				\item $\left(g_1\geqslant 0 \et f_1 \geqslant f_2 \right) \Longrightarrow f_1 \times g_1 \leqslant f_2 \times g_1$
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			Cela découle du fait que $(\R,+,\times,\leqslant)$ soit un corps totalement ordonné.
+		\end{preuve}
+		\begin{defi}
+			Soit $f$ une fonction numérique définie sur $I$.\\
+			On pose $\fonction{f^{+}}{I}{\R}{x}{\left\{\begin{aligned}& f(x) & \text{ si }f(x)\geqslant 0\\	& 0 & \text{ si }f(x)<0	\end{aligned} \right.}$ et $\fonction{f^{-}}{I}{\R}{x}{\left\{\begin{aligned}& 0 & \text{ si }f(x)> 0\\	& -f(x) & \text{ si }f(x) \leqslant 0	\end{aligned} \right.}$\\
+			$f^{+}$ et $f^{-}$ sont les parties positive et négative de $f$.
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Remarques:}
+				\begin{lsite}
+					\item $f^{+}$ et $f^{-}$ sont toutes deux positives.
+					\item $f=f^{+}-f^{-}$
+					\item $|f|=f^{+}+f^{-}$
+				\end{lsite}
+			\end{flushleft}
+			\begin{defi}
+				Soit $f$ une fonction numérique définie sur $I$.\\
+				L'image de $f$, $F(I)$, est l'ensemble :\\
+				$f(I)=\{y\in \R,\ \exists x\in I, f(x)=y \}$
+			\end{defi}
+			\begin{defi}
+				Soit $f\in \mathcal{F}(I,\R)$.
+				\begin{liste}
+					\item On dit que \underline{$f$ est bornée sur $I$} si $f(I)$ est borné.\\
+						$\exists(a,b)\in \R^{2},\ f(I)\subset [a,b]$
+					\item On dit que \underline{$f$ est majorée sur $I$} si $f(I)$ est majoré.\\
+						$\exists K\in\R,\ f \leqslant K$
+					\item On dit que \underline{$f$ est minorée sur $I$} si $f(I)$ est minoré.\\
+						$\exists k\in\R,\ k\leqslant f$
+				\end{liste}
+			\end{defi}
+			\begin{defi}
+				Soit $f\in \mathcal{F}(I,\R)$.
+				\begin{liste}
+					\item Si $f$ est majorée sur $I$, on appelle borne supérieure de $f$ sur $I$ la borne supérieure de $f(I)$
+					\item Si $f$ est minorée sur $I$, on appelle borne inférieure de $f$ sur $I$ la borne inférieure de $f(I)$
+				\end{liste}
+			\end{defi}
+			\begin{flushleft}
+				\textbf{Notation:} %12-1-4
+			\end{flushleft}
+\end{document}
