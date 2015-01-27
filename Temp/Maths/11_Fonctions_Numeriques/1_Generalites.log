@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  20 JAN 2015 21:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  27 JAN 2015 18:45
 entering extended mode
-**2_Limites_de_fonctions.tex
+**1_Generalites.tex
 
-(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11-Fonctions-Numeriques\2_Limites
-_de_fonctions.tex
+(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11_Fonctions_Numeriques\1_General
+ites.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -608,8 +608,8 @@ librarydecorations.code.tex"
 \c@pro=\count141
 \c@cor=\count142
 )
-(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11-Fonctions-Numeriques\2_Limites
-_de_fonctions.aux)
+(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11_Fonctions_Numeriques\1_General
+ites.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
@@ -686,54 +686,19 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 14.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Missing character: There is no √ in font cmbx12!
-Missing character: There is no © in font cmbx12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no ® in font cmr12!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmti12!
-Missing character: There is no © in font cmti12!
-Missing character: There is no √ in font cmr12!
-Missing character: There is no © in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--91
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
@@ -743,31 +708,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3]
-(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11-Fonctions-Numeriques\2_Limites
-_de_fonctions.aux) ) 
+[2]
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+ [3]
+[4] [5]
+(C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11_Fonctions_Numeriques\1_General
+ites.aux) ) 
 Here is how much of TeX's memory you used:
- 18821 strings out of 493921
- 419616 string characters out of 3147273
- 532839 words of memory out of 3000000
- 21761 multiletter control sequences out of 15000+200000
- 13433 words of font info for 54 fonts, out of 3000000 for 9000
+ 18824 strings out of 493921
+ 419558 string characters out of 3147273
+ 532827 words of memory out of 3000000
+ 21762 multiletter control sequences out of 15000+200000
+ 14441 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,12n,61p,477b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 2_Limites_de_fonctions.pdf (3 pages, 128012 bytes).
+ 57i,18n,61p,468b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 1_Generalites.pdf (5 pages, 137267 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
+ 69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

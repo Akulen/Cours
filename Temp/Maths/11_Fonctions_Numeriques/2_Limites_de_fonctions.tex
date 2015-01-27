@@ -1,0 +1,205 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Fonctions Num\'eriques}
+\author{MPSI 2}
+\def\titre{Limites de fonctions}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Définitions}
+		\begin{defi}
+			Soit $f\in\mathcal{F}(I,\R)$\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			Soit $l\in\R$\\
+			\textbullet \underline{$f(x)$ tend vers $l$ quand $x$ tend vers $x_0$:}
+			$$\forall \varepsilon\in\R^{+*},\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$$
+		\end{defi}
+		\begin{defi}
+			Soit $f\in\mathcal{F}(I,\R)$\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			\textbullet \underline{$f(x)$ tend vers $+\infty$ quand $x$ tend vers $x_0$:}
+			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$$\\
+			\textbullet \underline{$f(x)$ tend vers $-\infty$ quand $x$ tend vers $x_0$:}
+			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)<K$$
+		\end{defi}
+		\begin{prop}
+			Si $x_0\in I$, alors la seule limite éventuelle de $f(x)$ en $x_0$ est $f(x_0)$
+		\end{prop}
+		\begin{preuve}
+			On suppose qu'il existe $l$ dans $\R$, tel que $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$\\
+			\fbox{HA} $l\neq f(x_0)$
+			\begin{liste}
+				\item[\cercle1] $l\in\R$\\
+					Alors $\forall \varepsilon\in\R^{+*},\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+					Supposons $l>f(x_0)$\\
+					Posons $\varepsilon=\frac{l-f(x_0)}{2}$\\
+					Alors $f(x_0)\notin ]l-\varepsilon,l+\varepsilon[$.\\
+					Soit $\alpha$ vérifiant les conditions de limites.\\
+					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+					En particulier, avec $x=x_0$, on a $f(x_0)\in ]l-\varepsilon,l+varepsilon[$\\
+					On a donc une contradiction.
+				\item[\cercle2] $l=+\infty$\\
+					Alors $\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$\\
+					Soit $K$ un réel strictement supérieur \`a $f(x_0)$\\
+					Soit $\alpha$ un réel vérifiant les condition de limites.\\
+					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x) >K$\\
+					En particulier, avec $x=x_0$, on a $f(x_0)>K$\\
+					On a donc une contradiction.
+				\item[\cercle3] $l=-\infty$\\
+					On procède de m\^eme.
+			\end{liste}
+			\begin{flushleft}
+				\textbf{Conclusion:} $l=f(x_0)$
+			\end{flushleft}
+		\end{preuve}
+		\begin{defi}
+			Soit $f\in \mathcal{F}(I,\R)$\\
+			\textbullet \ \underline{$f(x)$ tend vers $l\in\R$ lorsque $x$ tend vers $+\infty$:}
+			$$\forall \varepsilon \in \R^{+*},\ \exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow \left| f(x)-l\right| <\varepsilon$$
+			\textbullet \ \underline{$f(x)$ tend vers $+\infty$ lorsque $x$ tend vers $+\infty$:}
+			$$\forall K \in \R,\ \exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow f(x)>K$$
+		\end{defi}
+		\begin{prop}
+			Soit $f\in \mathcal{F}(I,\R)$.\\
+			Soit $x_0\in \overline{\R}$ tel que $x_0$ soit un élément de $I$ ou une extrémité de $I$.\\
+			Soit $(l,l')\in \overline{\R}\times \overline{\R}$.\\
+			Si $f$ admet $l$ et $l'$ comme limite en $x_0$, alors $l=l'$
+		\end{prop}
+		\begin{flushleft}
+			\textbf{Notations:}$\lim\limits_{\substack{x\rightarrow x_0 \\x\in I}} f(x)=l$ et $f(x) \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l$\\
+		\end{flushleft}
+		\begin{preuve}
+			Cas o\`u $x_0\in\R \et l\in\R\et l'\in\R$\\
+			\cercle1 : $\forall \varepsilon\in\R^{+*},\ \exists \alpha_1 \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha_1 \Rightarrow \left| f(x)-l)\right| <\varepsilon$\\
+			\cercle2 : $\forall \varepsilon\in\R^{+*},\ \exists \alpha_2 \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha_2 \Rightarrow \left| f(x)-l'\right| <\varepsilon$\\
+			Supposons $l\neq l'$, et $l>l'$\\
+			Posons $\varepsilon = \frac{l-l'}{2}$\\
+			On a donc $]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [=\varnothing$\\
+			\\
+			Soit $\alpha_1 \et \alpha_2$ vérifiant \cercle1 et \cercle2.\\
+			Soit $\alpha=\min(\{\alpha_1,\alpha_2 \})$\\
+			Alors $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow (\left| f(x)-l\right| <\varepsilon \et \left| f(x)-l'\right| <\varepsilon)$\\
+			Autrement dit: $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)\in ]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [$\\
+			On a donc une contradiction.\\
+			\textbf{Conclusion:} $l=l'$
+		\end{preuve}
+		\begin{flushleft}
+			\textbf{Remarques:}
+			\begin{liste}
+				\item Soit $l\in\R$. Alors $f(x) \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff f(x) -l \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} 0$
+				\item Soit $l\in\R^{+*}$. Alors f(x) $\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff \frac{f(x)}{l}\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} 1$
+				\item Soit $x_0\in I$. Alors $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} l \iff f(x_0+h)\mathop{\longrightarrow}\limits_{\substack{x_0+h\in I\\h\rightarrow 0}} l$
+			\end{liste}
+		\end{flushleft}
+		\begin{prop}
+			On suppose que $f(x)$ tend vers $l\in\overline{\R}$ quand $x$ tend vers $x_0\in I$.
+			\begin{liste}
+				\item Si $f(x)\in [a,b]$ au voisinage de $x_0$, alors $l\in [a,b]$.
+				\item Au voisinage de $x_0$: $l-1<f(x)<l+1$
+				\item Si $l\neq 0$ alors au voisinage de $x_0$: $\frac{|l|}{2}<\left| f(x) \right| <\frac{3\,|l|}{2}$
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			\begin{flushleft}
+				\underline{$1^{\text{er}}$ point} dans le cas o\`u $x_0=+\infty$
+				\begin{tab}
+					Donc \cercle1$:\forall \varepsilon\in\R^{+*},\ \exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow \left| f(x)-l \right| <\varepsilon$\\
+					On suppose $\exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow f(x)\in[a,b]$\\
+					Montrer que $l\in[a,b]$\\
+					\fbox{HA} $l\notin [a,b]$. Donc $l<a$ ou $l>b$.
+					\begin{liste}
+						\item Si $l<a$\\
+							Soit $\varepsilon=a-l$ (car $l<a$)\\
+							Donc \cercle2$:\exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow f(x)\in ]2l-a,a[$\\
+							Soit $k_1$ et $k_2$ deux réels vérifiant \cercle1 et \cercle2.\\
+							On pose $k=\min\{k_1,k_2\}$\\
+							D'apr\`es \cercle1 et \cercle2: $\forall x\in I,\ x>k\Rightarrow f(x)\in ]2l-a,a[\cap[a,b]$\\
+							Or, $]2l-a,a[\cap[a,b]=\varnothing$\\
+							On a donc une contradiction.
+						\item Si $l>b$, on proc\`ede de m\^eme.
+					\end{liste}
+					On conclut que $l\in[a,b]$
+				\end{tab}
+				\underline{$2^{\text{\`eme}}$ point:} On revient aux définitions avec $\varepsilon=1$\\
+				\underline{$3^{\text{\`eme}}$ point:} On revient aux définitions et on prend $\varepsilon=\frac{|l|}{2}$
+			\end{flushleft}
+		\end{preuve}
+		\begin{prop}
+			Soit $x_0\in \R$.
+			\begin{liste}
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$, avec $l\in\R$,\\
+					Alors $f$ est bornée au voisinage de $x_0$.
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$, avec $l\in\R^{*}$,\\
+					Alors $|f(x)|$ est minoré par un nombre strictement positif au voisinage de $x_0$
+				\item Si $f(x)$ est de signe constant au voisinage de $+\infty$, et si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$,\\
+					Alors $l$ est du m\^eme signe.
+			\end{liste}
+		\end{prop}
+		\begin{prop}
+			Utilisation des propriétés précédentes.
+		\end{prop}
+		\begin{defi}
+			Soit $f\in\mathcal{F}(I,\R)$.\\
+			Soit $x_0\in I$.\\
+			On note $I^{+}=I\ \cap\  ]x_0,+\infty[$ et $I^{-}=I\ \cap\  ]-\infty,x_0[$
+			\begin{liste}
+				\item On appelle \underline{limite \`a droite de $f(x)$ en $x_0$} la limite finie, si elle existe, de $f(x)$ lorsque $x$ tend vers $x_0$ sur $I^{+}$
+				\item On appelle \underline{limite \`a gauche de $f(x)$ en $x_0$} la limite finie, si elle existe, de $f(x)$ lorsque $x$ tend vers $x_0$ sur $I^{-}$
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notations:} $\lim\limits_{\substack{x\rightarrow x_0\\x\in I^{+}}} f(x) = f(x_0^{+})$ et $\lim\limits_{\substack{x\rightarrow x_0\\x\in I^{-}}} f(x) = f(x_0^{-})$
+		\end{flushleft}
+		\begin{prop}
+			Soit $x_0\in I$
+			\begin{liste}
+				\item Si $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$, alors $f({x_0}^{+})=f({x_0}^{-})=l$.
+				\item Si $f(x)$ admet une limite \`a droite et \`a gauche en $x_0$, et si $f({x_0}^{+})=f({x_0}^{-})=f(x_0)$,\\
+				Alors $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} f(x_0)$.
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			\underline{$1^{\text{er}}$ point}: On suppose $\forall \varepsilon\in\R^{+*},\exists \alpha \in \R^{+*},\forall x\in I,\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-l\right| <\varepsilon$
+			\begin{tab}
+				Alors: $\forall \varepsilon\in\R^{+*},\exists \alpha \in \R^{+*},\forall x\in I^{+},\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-l\right| <\varepsilon$\\
+				Et: $\forall \varepsilon\in\R^{+*},\exists \alpha \in \R^{+*},\forall x\in I^{-},\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-l\right| <\varepsilon$\\
+				Donc $f(x)$ admet une limite \`a droite et \`a gauche en $x_0$, et $f({x_0}^{+})=f({x_0}^{-})=l$
+			\end{tab}
+			\underline{$2^{\text{\`eme}}$ point}: On suppose que $f({x_0}^{+})=f({x_0}^{-})=f(x_0)$.
+			\begin{tab}
+				Soit $\varepsilon\in \R^{+*}$ fixé.\\
+				On  a: $\exists \alpha_1 \in \R^{+*},\forall x\in I^{+},\left|x-x_0 \right|<\alpha_1 \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+				Et: $\exists \alpha_2 \in \R^{+*},\forall x\in I^{-},\left|x-x_0 \right|<\alpha_2 \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+				Soit $\alpha_1\et\alpha_2$ deux tels réels.\\
+				Soit $\alpha=\min(\{\alpha_1, \alpha_2 \})$\\
+				D'o\`u: $\forall x\in I\setminus\{x_0\},\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+				Par ailleurs, pour $x=x_0$: $\left|x-x_0 \right|<\alpha$ et $\left| f(x)-f(x_0)\right| <\varepsilon$\\
+				Donc:$\forall x\in I,\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
+				Ce raisonnement étant valable pour tout $\varepsilon\in\R^{+*}$, on conclut que $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} f(x_0)$
+			\end{tab}
+		\end{preuve}
+	\section{Limites et continuité}
+		\begin{defi}
+			Soit $I$ un intervalle non vide.\\
+			Soit $f$ une fonction numérique définie sur $I$.\\
+			Soit $x_0$ un élément de $I$.\\
+			On dit que \underline{$f$ est continue en $x_0$} si:\\
+			$\forall \varepsilon \in\R^{+*},\ \exists\alpha\in\R^{+*},\ \forall x\in I,\ |x-x_0|<\alpha\Rightarrow |f(x)-f(x_0)|<\varepsilon$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Remarque}: on peut prolonger certaines fonctions par continuité.
+		\end{flushleft}
+	\section{Limite de fonction et convergence de suites}
+		\begin{prop}
+			\textbf{Caractérisation séquentielle de la limite}\\
+			\\
+			Soit $f\in\mathcal{F}(I,\R)$.\\
+			Soit $x_0\et l$ deux éléments de $\overline{\R}$
+		\end{prop}
+\end{document}
