@@ -12,24 +12,24 @@
 
 \begin{document}
 	\maketitle
-	\section{Définitions}
+	\section{D\'efinitions}
 		\begin{defi}
 			Soit $f\in\mathcal{F}(I,\R)$\\
-			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extr\'emit\'e de $I$.\\
 			Soit $l\in\R$\\
 			\textbullet \underline{$f(x)$ tend vers $l$ quand $x$ tend vers $x_0$:}
 			$$\forall \varepsilon\in\R^{+*},\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$$
 		\end{defi}
 		\begin{defi}
 			Soit $f\in\mathcal{F}(I,\R)$\\
-			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extrémité de $I$.\\
+			Soit $x_0\in\R$, tel que $x_0\in I$ ou $x_0$ est une extr\'emit\'e de $I$.\\
 			\textbullet \underline{$f(x)$ tend vers $+\infty$ quand $x$ tend vers $x_0$:}
 			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$$\\
 			\textbullet \underline{$f(x)$ tend vers $-\infty$ quand $x$ tend vers $x_0$:}
 			$$\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)<K$$
 		\end{defi}
 		\begin{prop}
-			Si $x_0\in I$, alors la seule limite éventuelle de $f(x)$ en $x_0$ est $f(x_0)$
+			Si $x_0\in I$, alors la seule limite \'eventuelle de $f(x)$ en $x_0$ est $f(x_0)$
 		\end{prop}
 		\begin{preuve}
 			On suppose qu'il existe $l$ dans $\R$, tel que $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$\\
@@ -40,14 +40,14 @@
 					Supposons $l>f(x_0)$\\
 					Posons $\varepsilon=\frac{l-f(x_0)}{2}$\\
 					Alors $f(x_0)\notin ]l-\varepsilon,l+\varepsilon[$.\\
-					Soit $\alpha$ vérifiant les conditions de limites.\\
+					Soit $\alpha$ v\'erifiant les conditions de limites.\\
 					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
 					En particulier, avec $x=x_0$, on a $f(x_0)\in ]l-\varepsilon,l+varepsilon[$\\
 					On a donc une contradiction.
 				\item[\cercle2] $l=+\infty$\\
 					Alors $\forall K\in\R,\ \exists \alpha \in \R^{+*},\ \forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow K<f(x)$\\
-					Soit $K$ un réel strictement supérieur \`a $f(x_0)$\\
-					Soit $\alpha$ un réel vérifiant les condition de limites.\\
+					Soit $K$ un r\'eel strictement sup\'erieur \`a $f(x_0)$\\
+					Soit $\alpha$ un r\'eel v\'erifiant les condition de limites.\\
 					Donc $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x) >K$\\
 					En particulier, avec $x=x_0$, on a $f(x_0)>K$\\
 					On a donc une contradiction.
@@ -67,7 +67,7 @@
 		\end{defi}
 		\begin{prop}
 			Soit $f\in \mathcal{F}(I,\R)$.\\
-			Soit $x_0\in \overline{\R}$ tel que $x_0$ soit un élément de $I$ ou une extrémité de $I$.\\
+			Soit $x_0\in \overline{\R}$ tel que $x_0$ soit un \'el\'ement de $I$ ou une extr\'emit\'e de $I$.\\
 			Soit $(l,l')\in \overline{\R}\times \overline{\R}$.\\
 			Si $f$ admet $l$ et $l'$ comme limite en $x_0$, alors $l=l'$
 		\end{prop}
@@ -82,7 +82,7 @@
 			Posons $\varepsilon = \frac{l-l'}{2}$\\
 			On a donc $]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [=\varnothing$\\
 			\\
-			Soit $\alpha_1 \et \alpha_2$ vérifiant \cercle1 et \cercle2.\\
+			Soit $\alpha_1 \et \alpha_2$ v\'erifiant \cercle1 et \cercle2.\\
 			Soit $\alpha=\min(\{\alpha_1,\alpha_2 \})$\\
 			Alors $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow (\left| f(x)-l\right| <\varepsilon \et \left| f(x)-l'\right| <\varepsilon)$\\
 			Autrement dit: $\forall x\in I,\ \left|x-x_0 \right|<\alpha \Rightarrow f(x)\in ]l-\varepsilon,l+\varepsilon [\cap]l'-\varepsilon, l'+\varepsilon [$\\
@@ -117,7 +117,7 @@
 						\item Si $l<a$\\
 							Soit $\varepsilon=a-l$ (car $l<a$)\\
 							Donc \cercle2$:\exists k\in\R,\ \forall x\in I,\ x>k\Rightarrow f(x)\in ]2l-a,a[$\\
-							Soit $k_1$ et $k_2$ deux réels vérifiant \cercle1 et \cercle2.\\
+							Soit $k_1$ et $k_2$ deux r\'eels v\'erifiant \cercle1 et \cercle2.\\
 							On pose $k=\min\{k_1,k_2\}$\\
 							D'apr\`es \cercle1 et \cercle2: $\forall x\in I,\ x>k\Rightarrow f(x)\in ]2l-a,a[\cap[a,b]$\\
 							Or, $]2l-a,a[\cap[a,b]=\varnothing$\\
@@ -126,24 +126,24 @@
 					\end{liste}
 					On conclut que $l\in[a,b]$
 				\end{tab}
-				\underline{$2^{\text{\`eme}}$ point:} On revient aux définitions avec $\varepsilon=1$\\
-				\underline{$3^{\text{\`eme}}$ point:} On revient aux définitions et on prend $\varepsilon=\frac{|l|}{2}$
+				\underline{$2^{\text{\`eme}}$ point:} On revient aux d\'efinitions avec $\varepsilon=1$\\
+				\underline{$3^{\text{\`eme}}$ point:} On revient aux d\'efinitions et on prend $\varepsilon=\frac{|l|}{2}$
 			\end{flushleft}
 		\end{preuve}
 		\begin{prop}
 			Soit $x_0\in \R$.
 			\begin{liste}
 				\item Si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$, avec $l\in\R$,\\
-					Alors $f$ est bornée au voisinage de $x_0$.
+					Alors $f$ est born\'ee au voisinage de $x_0$.
 				\item Si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$, avec $l\in\R^{*}$,\\
-					Alors $|f(x)|$ est minoré par un nombre strictement positif au voisinage de $x_0$
+					Alors $|f(x)|$ est minor\'e par un nombre strictement positif au voisinage de $x_0$
 				\item Si $f(x)$ est de signe constant au voisinage de $+\infty$, et si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$,\\
 					Alors $l$ est du m\^eme signe.
 			\end{liste}
 		\end{prop}
-		\begin{prop}
-			Utilisation des propriétés précédentes.
-		\end{prop}
+		\begin{preuve}
+			Utilisation des propri\'et\'es pr\'ec\'edentes.
+		\end{preuve}
 		\begin{defi}
 			Soit $f\in\mathcal{F}(I,\R)$.\\
 			Soit $x_0\in I$.\\
@@ -173,33 +173,58 @@
 			\end{tab}
 			\underline{$2^{\text{\`eme}}$ point}: On suppose que $f({x_0}^{+})=f({x_0}^{-})=f(x_0)$.
 			\begin{tab}
-				Soit $\varepsilon\in \R^{+*}$ fixé.\\
+				Soit $\varepsilon\in \R^{+*}$ fix\'e.\\
 				On  a: $\exists \alpha_1 \in \R^{+*},\forall x\in I^{+},\left|x-x_0 \right|<\alpha_1 \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
 				Et: $\exists \alpha_2 \in \R^{+*},\forall x\in I^{-},\left|x-x_0 \right|<\alpha_2 \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
-				Soit $\alpha_1\et\alpha_2$ deux tels réels.\\
+				Soit $\alpha_1\et\alpha_2$ deux tels r\'eels.\\
 				Soit $\alpha=\min(\{\alpha_1, \alpha_2 \})$\\
 				D'o\`u: $\forall x\in I\setminus\{x_0\},\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
 				Par ailleurs, pour $x=x_0$: $\left|x-x_0 \right|<\alpha$ et $\left| f(x)-f(x_0)\right| <\varepsilon$\\
 				Donc:$\forall x\in I,\left|x-x_0 \right|<\alpha \Rightarrow \left| f(x)-f(x_0)\right| <\varepsilon$\\
-				Ce raisonnement étant valable pour tout $\varepsilon\in\R^{+*}$, on conclut que $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} f(x_0)$
+				Ce raisonnement \'etant valable pour tout $\varepsilon\in\R^{+*}$, on conclut que $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} f(x_0)$
 			\end{tab}
 		\end{preuve}
-	\section{Limites et continuité}
+	\section{Limites et continuit\'e}
 		\begin{defi}
 			Soit $I$ un intervalle non vide.\\
-			Soit $f$ une fonction numérique définie sur $I$.\\
-			Soit $x_0$ un élément de $I$.\\
+			Soit $f$ une fonction num\'erique d\'efinie sur $I$.\\
+			Soit $x_0$ un \'el\'ement de $I$.\\
 			On dit que \underline{$f$ est continue en $x_0$} si:\\
 			$\forall \varepsilon \in\R^{+*},\ \exists\alpha\in\R^{+*},\ \forall x\in I,\ |x-x_0|<\alpha\Rightarrow |f(x)-f(x_0)|<\varepsilon$
 		\end{defi}
 		\begin{flushleft}
-			\textbf{Remarque}: on peut prolonger certaines fonctions par continuité.
+			\textbf{Remarque}: on peut prolonger certaines fonctions par continuit\'e.
 		\end{flushleft}
 	\section{Limite de fonction et convergence de suites}
 		\begin{prop}
-			\textbf{Caractérisation séquentielle de la limite}\\
-			\\
+			\textbf{Caract\'erisation s\'equentielle de la limite}\\
 			Soit $f\in\mathcal{F}(I,\R)$.\\
-			Soit $x_0\et l$ deux éléments de $\overline{\R}$
+			Soit $x_0\et l$ deux \'el\'ements de $\overline{\R}$\\
+			On a \'equivalence entre:
+			\begin{liste}
+				\item $f(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$
+				\item Pour toute suite $\left(u_n \right)_{n\in\N}$ d'\'el\'ements de $I$ convergeant vers $x_0$, $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$
+			\end{liste}
 		\end{prop}
+		\begin{preuve}
+			\begin{liste}
+				\item On suppose que $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0} l$.\\
+					Donc \cercle1$\ :\forall \varepsilon \in\R^{+*},\ \exists\alpha\in\R^{+*},\ \forall x\in I,\ |x-x_0|<\alpha\Rightarrow |f(x)-l|<\varepsilon$\\
+					Soit $\left( x_n\right) _{n\in\N}$ une suite d'\'el\'ements de $I$ convergeant vers $x_0$.\\
+					Montrer que $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$\\
+					Soit $\varepsilon$ un r\'eel strictement positif.\\
+					Soit $\alpha$ un r\'eel v\'erifiant \cercle1 pour $\varepsilon$.\\
+					De plus, $\left( x_n\right) $ converge: $\exists n_0\in\N,\ \forall n\in\N,\ n\geqslant n_0\Rightarrow \left| x_n-x_0\right| <\alpha$\\
+					Soit $n_0$ un tel entier.\\
+					D'o\`u: $\forall n\in\N,\ (n\geqslant n_0)\Rightarrow (\left| x_n-x_0\right| <\alpha) \Rightarrow (|f(x_n)-l|<\varepsilon)$\\
+					Donc $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$\\
+					C'est vrai pour toute suite d'\'el\'ements de $I$ convergeant vers $x_0$,\\
+					Donc la proposition 2 est v\'erifi\'ee.
+				\item On suppose que pour toute suite $\left(u_n \right)_{n\in\N}$ d'\'el\'ements de $I$ convergeant vers $x_0$, on ait: $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$\\
+				\fbox{HA} Supposons que $f(x)$ ne tende pas vers $l$ quand $x$ tend vers $x_0$
+				\begin{tab}
+					Alors $\exists \varepsilon\in\R^{+*},\ \forall \alpha\in\R^{+*},\ \exists x\in\I,\ |x-x_0|<\alpha\et|f(x)-l|\geqslant\varepsilon$
+				\end{tab}
+			\end{liste}
+		\end{preuve}
 \end{document}
