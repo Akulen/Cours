@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  28 JAN 2015 16:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  28 JAN 2015 16:44
 entering extended mode
 **2_Limites_de_fonctions.tex
 
@@ -714,10 +714,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 (C:\Users\Clément\Documents\Cours\Temp\Maths\11_Fonctions_Numeriques\2_Limites
 _de_fonctions.aux) ) 
 Here is how much of TeX's memory you used:
- 18829 strings out of 493921
- 419698 string characters out of 3147273
- 534839 words of memory out of 3000000
- 21766 multiletter control sequences out of 15000+200000
+ 18831 strings out of 493921
+ 419707 string characters out of 3147273
+ 534853 words of memory out of 3000000
+ 21768 multiletter control sequences out of 15000+200000
  14493 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  57i,12n,61p,477b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
