@@ -244,7 +244,44 @@
 			Alors $f(x)$ admet une limite \`a droite et \`a gauche en tout point de $I$.
 		\end{prop}
 		\begin{preuve}
-			Soit $x_0$ un élément de $I$ qui ne soit pas une extrémité de $I$\\
-			
+			Soit $x_0$ un élément de $I$ qui ne soit pas une extrémité de $I$
+			\begin{liste}
+				\item Soit $I^{+}=I\ \cap\  ]x_0,+\infty[$ et $I^{-}=I\ \cap\  ]-\infty,x_0[$\\
+					$I^{+}\et I^{-}$ ne sont pas vides car $x_0$ n'est pas une extrémité de $I$.\\
+					On considère $A^{+}=f(I^{+})\et A^{-}=f(I^{-})$\\
+					$f$ est une application, $I^{+}\et I^{-}$ ne sont pas vides, donc $A^{+}\et A^{-}$ ne sont pas vides.\\
+					$f$ est croissante, donc pour tout $x$ de $I$:
+					\begin{tab}
+						$x>x_0\Rightarrow f(x)\geqslant f(x_0)$\\
+						$x<x_0\Rightarrow f(x)\leqslant f(x_0)$
+					\end{tab}
+					Ainsi, $f(x_0)$ est un minorant de $A^{+}$ et un majorant de $A^{-}$.\\
+					Donc $A^{+}$ admet une borne inf notée $M$, et $A^{-}$ admet une borne sup notée $m$.\\
+					On a ainsi $m\leqslant f(x_0)\leqslant M$
+				\item Montrer que $f(x)$ admet une limite \`a droite en $x_0$, et que $f({x_0}^{+})=M$\\
+					Soit $\varepsilon\in\R^{+*}$ fixé.\\
+					Critère de borne inf avec $\varepsilon$:\\
+					$\exists x_1\in I^{+},\ M\leqslant f(x_1) <M+\varepsilon$\\
+					Soit $x_1$ un tel réel.\\
+					Donc $\forall x\in\R,\ (x_0<x<x_1)\Rightarrow M\leqslant f(x)\leqslant f(x_1)<M+\varepsilon$\\
+					Posons $\alpha = x_1-x_0$\\
+					Alors $\systeme{& x_0<x<x_1\\& x\in\R}\iff \systeme{& 0<x-x_0<\alpha\\& x\in I^{+}}\iff \systeme{&|x-x_0|<\alpha\\& x\in I^{+}}$\\
+					Finalement: $\forall x\in\I^{+},\ (|x-x_0|<\alpha)\Rightarrow (M\leqslant f(x)<M+\varepsilon)\Rightarrow (|f(x)-M|<\varepsilon)$\\
+					Ce raisonnement est valable pour tout $\varepsilon\in\R^{+*}$,\\
+					Donc on conclut que $f(x)$ admet une limite \`a droite, et que $f({x_0}^{+})=M$
+				\item De m\^eme, on montre que $f({x_0}^{-})$ existe et vaut $m$.
+			\end{liste}
+			Ce raisonnement est vrai en tout point $x_0$ de $I$.\\
+			On en conclut que $f(x)$ admet une limite \`a droite et \`a gauche en tout point de $I$.
 		\end{preuve}
+		\begin{prop}
+			Soit $f:[a,+\infty[\rightarrow \R$ une fonction numérique croissante.\\
+			De deux choses l'une:
+			\begin{liste}
+				\item $f$ admet un majorant $K$.\\
+					Alors $f(x)$ admet une limite $l$ en $+\infty$, et $l\leqslant K$
+				\item $f$ n'est pas majorée.\\
+					Alors $f(x)$ tend vers $+\infty$ quand $x$ tend vers $+\infty$.
+			\end{liste}
+		\end{prop}
 \end{document}
