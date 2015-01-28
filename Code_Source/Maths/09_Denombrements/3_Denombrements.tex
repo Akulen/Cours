@@ -1,0 +1,36 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{D\'enombrements}
+\author{MPSI 2}
+\def\titre{D\'enombrements}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $E$ et $F$ deux ensembles finis de cardinaux respectifs $n$ et $p$.\\
+		Alors $\mathcal{F}(E,F)$ est fini de cardinal $p^{n}$
+	\end{prop}
+	\begin{coro}
+		Soit $E$ un ensemble fini de cardinal $n$.\\
+		Alors $\mathcal{P}(E)$ est fini et de cardinal $2^{n}$
+	\end{coro}
+	\begin{preuve}
+		Voir bijection de $\mathcal(P)$ sur l'ensemble des fonctions indicatrices de $\mathcal{P}$
+	\end{preuve}
+	\begin{prop}
+		Soit $E$ et $F$ deux ensembles finis de cardinaux respectifs $n$ et $p$.\\
+		Soit $\mathcal{E}$ l'ensemble des applications injectives de $E$ vers $F$.\\
+		Alors $\mathcal{E}$ est fini et $\card(\mathcal{E})=\frac{n!}{(n-p)!}$
+	\end{prop}
+	\begin{coro}
+		Soit $E$ et $F$ deux ensembles finis de m\^eme cardinal $n$.\\
+		\begin{liste}
+			\item Le nombre de bijections de $E$ dans $F$ est $n!$
+			\item Le nombre de bijections de $E$ dans $E$ est $n!$
+		\end{liste}
+	\end{coro}
+\end{document}

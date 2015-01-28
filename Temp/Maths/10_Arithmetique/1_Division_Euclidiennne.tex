@@ -1,0 +1,112 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Arithm\'etique}
+\author{MPSI 2}
+\def\titre{Division Euclidienne}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $a$ un entier naturel, $b$ un entier naturel non nul. \\
+		Alors il existe un unique couple d'entiers naturels $q$ et $r$ tels que : \\
+		\begin{tab}
+			$\left\{\begin{aligned}&a=b*q+r\\
+									&0\leq r<b\end{aligned}\right.$
+		\end{tab}
+		\begin{liste}
+			\item $q$ est le \textbf{quotient} de la division euclidienne de $a$ par $b$.
+			\item $r$ est le \textbf{reste} de la division euclidienne de $a$ par $b$.
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		\cercle{1} \textbf{Existence}
+		\begin{tab}
+			\begin{liste}
+				\item si $a=0,0=0*b+0$ \\
+					Le couple $(q,r)=(0,0)$ convient.
+				\item si $b=1,a=1*a+0$ \\
+					Le couple $(q,r)=(a,0)$ convient.
+				\item \textbf{Cas g\'eneral :} \\
+					Supposons $a\geq 1$ et $b\geq 2$. \\
+					\textbf{Cas 1 :} $a<b$
+					\begin{tab}
+						Alors $a=b*0+a$ \\
+						Le couple $(0,a)$ convient.
+					\end{tab}
+					\textbf{Cas 2 :} $a\geq b$
+					\begin{tab}
+						Soit $E=\left\{q\in\N^*,b*q>a\right\}$
+						\begin{liste}
+							\item $E$ est une partie de $\N$.
+							\item $E$ est non vide car $a\in E$ ($a\neq 0$ et $b\geq 2$).
+						\end{liste}
+						Donc $E$ admet un plus petit \'el\'ement not\'e $q_1$. \\
+						$q1\in\N^*$ et $1\notin E$ car $a\geq b$. \\
+						Donc $q_1\geq 2$. \\
+						Ainsi, $q_1-1\in\N^*$. Posons $q_0=q_1-1$. \\
+						On a : $q_0\in\N$ et $q_0<q_1$ donc $q_0\notin E$. \\
+						On en deduit que $b*q_0\leq a$. \\
+						Par ailleurs, $q_1\in E$, donc $a<bq_1$. \\
+						Donc $bq_0\leq a<b(q_0+1)$. \\
+						Posons $r=a-bq_0$. \\
+						Donc $0\leq r<b$. \\
+						\textbf{Conclusion :} Le couple $(q_0,r)$ satisfait : \\
+						\begin{tab}
+							$q_0\in\N,r\in\N,\left\{\begin{aligned}&a=b*q_0+r\\
+																   &0\leq r<b\end{aligned}\right.$
+						\end{tab}
+					\end{tab}
+			\end{liste}
+		\end{tab}
+		\cercle{2} \textbf{Unicit\'e}
+		\begin{tab}
+			Soit $a$ un entier naturel et $b$ un entier naturel non nul. \\
+			Supposons qu'il existe deux couples d'entiers naturels $(q,r)$ et $(q',r')$ tels que :
+			\begin{tab}
+				$\left\{\begin{aligned}&a=bq+r \\
+									   &a=bq'+r' \\
+									   &0\leq r<b \\
+									   &0\leq r'<b\end{aligned}\right.$
+			\end{tab}
+			Montrons que $(q,r)=(q',r')$. \\
+			On remarque que : $b(q'-q)=r-r'$. \\
+			Ainsi, $q=q'\iff r=r'$. \\
+			Il suffit donc de montrer que $q=q'$. \\
+			\fbox{HA} Supposons $q=q'$. Par exemple, $q<q'$.
+			\begin{tab}
+				Alors $q-q'>0$. \\
+				Donc $q-q'\geq 1$ car $(q,q')\in\N^2$. \\
+				On en deduit que $r-r'\geq b$. \\
+				Par ailleurs, $\systeme{&0\leq r<b\\
+										&0\leq r'<b}$. \\
+				D'o\`u $-b<r-r<b$. \\
+				Or $r-r'\geq b$, donc contradiction. \\
+				Donc $q=q'$, d'o\`u $r=r'$.
+			\end{tab}
+			On a donc existence et unicit\'e de l'\'ecriture.
+		\end{tab}
+	\end{preuve}
+	\textbf{Remarque :} Avec les notations de la d\'emonstration, on a : $bq_0\leq a<b(q_0+1)$. \\
+	Ou encore, sachant $b\in\N^*$, $q_0\leq \frac{a}{b}<q_0+1$. \\
+	Donc $q_0=\floor{\frac{a}{b}}$.
+	\begin{coro}
+		\cercle{1} Soit $a\in\Z$ et $b\in\N^*$, alors :
+		\begin{tab}
+			\begin{tab}
+				$\exists!(q,r)\in\Z\times\N,\systeme{&a=bq+r\\
+													 &0\leq r<b}$
+			\end{tab}
+		\end{tab}
+		\cercle{2} Soit $a\in\Z$ et $b\in\Z*$, alors :
+		\begin{tab}
+			\begin{tab}
+				$\exists!(q,r)\in\Z\times\N,\systeme{&a=bq+r\\
+													 &0\leq r<|b|}$
+			\end{tab}
+		\end{tab}
+	\end{coro}
+\end{document}

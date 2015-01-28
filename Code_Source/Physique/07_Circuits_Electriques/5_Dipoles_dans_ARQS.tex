@@ -1,0 +1,49 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Circuits Electriques dans l'ARQS}
+\author{MPSI 2}
+\def\titre{Dipoles dans l'ARQS}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle\ \\
+	\begin{defi}
+		Un dipole est un composant qui poss\`ede 2 bornes.
+	\end{defi}
+	\section{Conventions}
+		\begin{center}
+			\begin{tikzpicture}
+				\draw (0,0)
+					to [short,i_>=$i_{AB}$] (1,0)
+					to [generic,l=$D$] (3,0)
+					to [short,i_<=$i_{BA}$] (4,0);
+				\draw (0,0) node {$\bullet$} node [above] {A};
+				\draw (4,0) node {$\bullet$} node [above] {B};
+				\node[anchor=west, right] at (5,0)
+					{$i_{AB}=-i_{BA}$};
+			\end{tikzpicture}
+		\end{center}
+		$i_{AB}$ : courant de $A$ vers $B$. \\
+		\textbf{Convention recepteur :} \\ \ \\
+		\begin{tikzpicture}
+			\draw (0,0)
+				to [short,i_>=$i_{AB}$] (1,0)
+				to [generic,l_=$D$,v^=$U_{AB}{=}V_A-V_B$] (3,0)
+				to [short] (4,0);
+			\draw (0,0) node {$\bullet$} node [above] {A};
+			\draw (4,0) node {$\bullet$} node [above] {B};
+		\end{tikzpicture}
+		\textbf{Convention g\'en\'erateur :} \\ \ \\
+		\begin{tikzpicture}
+			\draw (0,0)
+				to [short] (1,0)
+				to [generic,l_=$D$,v^>=$U_{BA}{=}V_B-V_A$] (3,0)
+				to [short,i_>=$i_{AB}$] (4,0);
+			\draw (0,0) node {$\bullet$} node [above] {A};
+			\draw (4,0) node {$\bullet$} node [above] {B};
+		\end{tikzpicture}
+	\section{Puissance recue par un dip\^ole $D$}
+\end{document}
