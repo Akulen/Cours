@@ -223,8 +223,28 @@
 				\item On suppose que pour toute suite $\left(u_n \right)_{n\in\N}$ d'\'el\'ements de $I$ convergeant vers $x_0$, on ait: $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$\\
 				\fbox{HA} Supposons que $f(x)$ ne tende pas vers $l$ quand $x$ tend vers $x_0$
 				\begin{tab}
-					Alors $\exists \varepsilon\in\R^{+*},\ \forall \alpha\in\R^{+*},\ \exists x\in\I,\ |x-x_0|<\alpha\et|f(x)-l|\geqslant\varepsilon$
+					Alors $\exists \varepsilon\in\R^{+*},\ \forall \alpha\in\R^{+*},\ \exists x\in\I,\ |x-x_0|<\alpha\et|f(x)-l|\geqslant\varepsilon$\\
+					Soit $\varepsilon$ un tel réel.\\
+					Pour $n\in\N^{*}$, on pose $\alpha=\frac{1}{n}$: $\exists x\in I,\ |x-x_0|<\alpha\et|f(x)-l|\geqslant\varepsilon$\\
+					Soit $x_n$ un tel réel.\\
+					On procède de m\^eme pour tout $n$ de $\N^{*}$. On construit donc une suite $(x_n)_{n\in\N^{*}}$\\
+					On a: $\begin{aligned}[t]
+					&\bullet\ (x_n)_{n\in\N^{*}} \text{ est une suite d'éléments de }I\\
+					&\bullet\ (x_n)_{n\in\N^{*}} \text{ converge vers }x_0\\
+					&\bullet\ (f(x_n))_{n\in\N^{*}} \text{ ne converge pas vers }l
+					\end{aligned}$\\
+					On contredit l'hypothèse de départ, donc HA est fausse.
 				\end{tab}
+				Donc $f\left( x_n\right) \mathop{\longrightarrow}\limits_{n\rightarrow +\infty}l$
 			\end{liste}
+		\end{preuve}
+	\section{Liens entre notion de limite et de monotonie}
+		\begin{prop}
+			Soit $f:I\rightarrow \R$ une application monotone sur $I$.\\
+			Alors $f(x)$ admet une limite \`a droite et \`a gauche en tout point de $I$.
+		\end{prop}
+		\begin{preuve}
+			Soit $x_0$ un élément de $I$ qui ne soit pas une extrémité de $I$\\
+			
 		\end{preuve}
 \end{document}
