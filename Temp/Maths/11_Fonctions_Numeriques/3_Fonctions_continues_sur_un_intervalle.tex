@@ -4,7 +4,7 @@
 
 \def\chapitre{Fonctions Num\'eriques}
 \author{MPSI 2}
-\def\titre{Limites de fonctions}
+\def\titre{Fonctions continues sur un intervalle}
 
 \input{../../.includes/header}
 
@@ -12,5 +12,25 @@
 
 \begin{document}
 	\maketitle
-	plop
+	\section{Fonctions continues}
+		\begin{flushleft}
+			Soit $I$ un intervalle non vide.\\
+			Soit $f: I\rightarrow \R$ une fonction définie sur $I$.\\
+			On dit que \underline{$f$ est continue sur $I$} si pout tout $x_0$ de $I$, $f$ est continue en $x_0$.
+		\end{flushleft}
+		\begin{theo}{des valeurs intermédiaires}
+			L'image d'un intervalle par une fonction continue est un intervalle.
+		\end{theo}
+		\begin{preuve}
+			Soit $I$ un intervalle.\\
+			Soit $f:I\rightarrow R$ une application continue sut $I$.\\
+			Montrer que $f(I)$ est un intervalle.\\
+			Ou montrer que $\forall (y,y')\in \R^{2},\ ((y,y')\in f(I)^{2}\Rightarrow (\forall y''\in\R,\ y<y''<y'\Rightarrow y''\in f(I))$\\
+			\\
+			Soit $y\et y'$ deux éléments distincts de $f(I)$.\\
+			Alors il existe $a\et b$ dans $I$ tels que: $f(a)=y\et f(b)=y'$\\
+			$y\et y'$ sont distincts, donc $a\et b$ sont distincts.\\
+			On suppose par exemple que $f(a)<f(b)\et a<b$\\
+			
+		\end{preuve}
 \end{document}

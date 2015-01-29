@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  28 JAN 2015 18:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.18)  29 JAN 2015 22:29
 entering extended mode
 **3_Fonctions_continues_sur_un_intervalle.tex
 
@@ -686,26 +686,51 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 14.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmbx12!
+Missing character: There is no © in font cmbx12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no © in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--34
+
+ []
+
+[1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\Users\Cl√©ment\Documents\Cours\Temp\Maths\11_Fonctions_Numeriques\3_Fonctio
 ns_continues_sur_un_intervalle.aux) ) 
 Here is how much of TeX's memory you used:
- 18754 strings out of 493921
- 418802 string characters out of 3147273
- 523853 words of memory out of 3000000
- 21707 multiletter control sequences out of 15000+200000
- 7332 words of font info for 30 fonts, out of 3000000 for 9000
+ 18793 strings out of 493921
+ 419232 string characters out of 3147273
+ 526887 words of memory out of 3000000
+ 21735 multiletter control sequences out of 15000+200000
+ 13792 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,6n,61p,494b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,7n,61p,494b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr17.pfb>
-Output written on 3_Fonctions_continues_sur_un_intervalle.pdf (1 page, 20815 by
+ublic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 3_Fonctions_continues_sur_un_intervalle.pdf (1 page, 86730 by
 tes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
