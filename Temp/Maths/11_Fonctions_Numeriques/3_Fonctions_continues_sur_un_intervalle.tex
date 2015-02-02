@@ -31,6 +31,24 @@
 			Alors il existe $a\et b$ dans $I$ tels que: $f(a)=y\et f(b)=y'$\\
 			$y\et y'$ sont distincts, donc $a\et b$ sont distincts.\\
 			On suppose par exemple que $f(a)<f(b)\et a<b$\\
-			
+			\\
+			Montrer que $\forall z\in\R,\ \left( f(a)<z<f(b)\right) \Rightarrow \left( \exists x\in ]a,b[,\ f(x)=z\right) $\\
+			Soit $z$ un réel compris strictement entre $f(a)\et f(b)$.\\
+			On considère l'ensemble $E= \left\lbrace x\in [a,b],\ f(x)<z\right\rbrace $\\
+			\\
+			\underline{Principe de Borne supérieure}
+			\begin{tab}
+				Montrer que $E$ admet une borne supérieure:\begin{liste}
+					\item $E$ est non vide: $a\in E$
+					\item $E$ est majoré par $b$
+				\end{liste}
+				Donc $E$ admet une borne supérieure que l'on notera $c$\\
+				\\
+				On a: $a\leqslant c\leqslant b$\\
+				Et $\forall \varepsilon \in\R^{+*},\ \exists x\in E,\ c-\varepsilon<x\leqslant c$\\
+				Pour tout $n$ de $\N^{*}$, on pose $\varepsilon = \frac1{n}$, et on pose $x_n$ un réel vérifiant le critère.\\
+				On définit donc une suite: $\forall n\in\N^{*},\ x_n\in E\et c-\frac1{n}<x_n\geqslant c$
+				
+			\end{tab}
 		\end{preuve}
 \end{document}
