@@ -78,7 +78,7 @@
 			\\
 			Montrer que $f(I)$ est fermé et borné.
 			\begin{liste}
-				\item[\cercle1] Montrer que $f(I)$ est borné.\\
+				\item Montrer que $f(I)$ est borné.\\
 					C'est \`a dire, montrer que $\exists M\in\R^{+},\ \forall y\in\R, y\in f(I)\Rightarrow |y|\leqslant M$\\
 					\fbox{HA} Supposons que $f(I)$ ne soit pas borné.
 					\begin{tab}
@@ -93,10 +93,75 @@
 								Soit $E_{n+1}=\{x\in I,\ |f(x)|>|f(x_n)|+1 \}$\\
 								$f(I)$ n'est pas borné, donc $E_{n+1}$ n'est pas vide.\\
 								On note $x_{n+1}$ un élément de cet ensemble.
-							\item Par récurrence, on construit une suite $(x_n)_{n\in \N}$.\\
-							De plus, $\forall n\in\N^{*},\ |f(x_n)|>|f(x_{n-1})|+1$ %12-8-1
+							\item Par récurrence, on construit une suite $(x_n)_{n\in \N}$.
 						\end{liste}
+						De plus, $\forall n\in\N^{*},\ |f(x_n)|>|f(x_{n-1})|+1$\\
+						Par récurrence, on montre que: $\forall n\in\N,\ |f(x_n)|>|f(x_0)|+n$\\
+						Ainsi, $\left( |f(x_n)|\right) _{n\in\N}$ diverge vers $+\infty$.\\
+						\newpage
+						Par ailleurs, $(x_n)_{n\in\N}$ est une suite d'éléments de $I$. Donc d'après le théorème de Bolzano-Weierstrass, il existe $\phi:\N\Rightarrow\N$ strictement croissante telle que $(x_{\phi(n)})_{n\in\N}$ converge.\\
+						Notons $\phi$ une telle suite et $l$ la limite.
+						\begin{liste}
+							\item $\forall n\in\N,\ x_n\in I$, donc $l\in I$
+							\item $f$ est continue en $l\in I$, donc (cara séquentielle de la limite) $f(x_n)\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}f(l)$
+							\item On a aussi \cercle1:$|f(x_n)|\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}|f(l)|$\ \ \ \ (car $abs$ est continue en $f(l)$)
+							\item De plus, $(|f(x_{\phi(n)})|)_{n\in\N}$ est une suite extraite de $(|f(x_{n})|)_{n\in\N}$.\\
+								Donc \cercle2:$|f(x_{\phi(n)})|\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}+\infty$
+						\end{liste}
+						On a contradiction entre \cercle1 et \cercle2. On en déduit que \fbox{HA} est fausse.
 					\end{tab}
+					Conclusion: $f(I)$ est in intervalle borné.
+				\item Montrer que $\exists (c,d)\in\R,\ f(I)=[c,d]$\\
+					On pose $c=\inf(f(I))\et d=\sup(f(I))$\\
+					Montrer que $c\in I\et d\in I$
+					\begin{liste}
+						\item Montrons que $d\in I$\\
+							Donc Montrons que $\exists x\in I,\ f(x)=d$\\
+							En appliquant le principe de la borne supérieure avec $\varepsilon = \frac1{n}$ pour tout $n$ de $\N^{*}$, on construit une suite $(x_n)_{n\in\N^{*}}$ d'éléments de $I$ telle que $(f(x_n))_{n\in\N^{*}}$ converge vers $d$.
+							\begin{liste}
+								\item $(x_n)$ est une suite de réels bornée, donc d'après le théorème de B-W, il existe une application strictement croissante $\phi:\N\rightarrow\N$ telle que $(x_{\phi(n)})_{n\in\N}$ soit convergente.\\
+									Notons $l$ sa limite.\\
+									De plus, $l\in I$.
+								\item $f$ est continue sur $I$ donc $(f(x_{\phi(n)}))_{n\in\N}$ converge vers $f(l)$
+								\item Par ailleurs, $(f(x_{\phi(n)}))$ est une suite extraite de $(f(x_n))$, donc $(f(x_{\phi(n)}))$ converge vers $d$.
+							\end{liste}
+							Par unicité de la limite, $d=f(l)$. Or, $l\in I$.\\
+							Finalement, $d\in f(I)$
+						\item On procède de m\^eme pour montrer que $c\in f(I)$.
+					\end{liste}
 			\end{liste}
+			\textbf{Conclusion générale:} $\exists (c,d)\in \R^{2},\ f(I)=[c,d]$
+		\end{preuve}
+		\newpage
+		\begin{prop}
+			Soit $f:I\rightarrow \R$ une fonction continue.\\
+			Alors on a équivalence entre:
+			\begin{liste}
+				\item[\cercle1] $f$ est injective
+				\item[\cercle2] $f$ est strictement monotone
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			Soit $f:I\rightarrow \R$ une fonction continue.\\
+			\underline{\cercle1$\Rightarrow$\cercle2:} Supposons $f$ injective.
+			\begin{tab}
+				Montrer que $f$ est strictement croissante sur $I$.\\
+				Donc montrer que $f$ est croissante sur $I$.\ \ \ \ (car $f$ est injective)\\
+				Montrer que pour tous $x_1<x_2<x_3$ de $I$, $f(x_2)$ soit compris entre $f(x_1)\et f(x_3)$\\
+				\fbox{HA} Supposons qu'il existe $x_1<x_2<x_3$ de $I$ tels que $f(x_2)$ ne soit pas compris
+				\begin{tab}
+					entre $f(x_1)\et f(x_3)$.\\
+					Alors il existe $y_0\in\R$, tel que $y_0$ soit compris strictement entre $f(x_1) \et f(x_2)$ et entre $f(x_2) \et f(x_3)$\\
+					D'après le TVI, $\exists \alpha\in]x_1,x_2[,\ y_0=f(\alpha)$ et $\exists \beta\in]x_2,x_3[,\ y_0=f(\beta)$\\
+					Les intervalles $]x_1,x_2[\et]x_2,x_3[$ sont disjoints, donc $\alpha\neq\beta$.\\
+					Cependant, $f(\alpha)=f(\beta)$, ce qui contredit l'injectivité de $f$.\\
+					Donc \fbox{HA} est contradictoire.
+				\end{tab}
+				On conclut que $f$ est monotone sur $I$\\
+				Or, $f$ est injective.\\
+				\\
+				\textbf{Conclusion générale:} $f$ est strictement monotone sur $I$
+			\end{tab}
+			\underline{\cercle2$\Rightarrow$\cercle1:} Facile.
 		\end{preuve}
 \end{document}
