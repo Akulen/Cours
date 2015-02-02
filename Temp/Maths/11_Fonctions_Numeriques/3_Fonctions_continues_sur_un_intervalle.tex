@@ -43,12 +43,60 @@
 					\item $E$ est majoré par $b$
 				\end{liste}
 				Donc $E$ admet une borne supérieure que l'on notera $c$\\
-				\\
 				On a: $a\leqslant c\leqslant b$\\
 				Et $\forall \varepsilon \in\R^{+*},\ \exists x\in E,\ c-\varepsilon<x\leqslant c$\\
 				Pour tout $n$ de $\N^{*}$, on pose $\varepsilon = \frac1{n}$, et on pose $x_n$ un réel vérifiant le critère.\\
-				On définit donc une suite: $\forall n\in\N^{*},\ x_n\in E\et c-\frac1{n}<x_n\geqslant c$
-				
-			\end{tab}
+				On définit donc une suite: $\forall n\in\N^{*},\ x_n\in E\et c-\frac1{n}<x_n\geqslant c$\\
+				En particulier: $\forall n\in\N^{*},\ x_n\in[a,b]\et f(x_n)<z\et |x_n-c|<\frac1{n}$\\
+				Ainsi, la suite $(x_n)_{n\in\N^{*}}$ converge vers $c$.\\
+				Donc $\left( f(x_n)\right) _{n\in\N^{*}}$ converge vers $f(c)$ d'après la caractérisation séquentielle de la limite.\\
+				Or, $\forall n\in\N^{*},\ f(x_n)<z$\\
+				Donc $f(c)\leqslant z$\\
+				On a donc $f(c)\leqslant z<f(b)$\\
+				D'o\`u $c<b$.\\
+				Par définition de $c$: $\begin{aligned}[t]
+				& \forall x\in ]c,b[,\ x\notin E\\
+				& \Rightarrow \forall x\in ]c,b[,\ f(x)\geqslant z
+				\end{aligned}$\\
+				Par ailleurs, $f$ est continue, donc sa limite \`a droite en $c$ existe et vaut $f(c)$.\\
+				Ainsi, $f(c)\geqslant z$\\
+				\\
+				Conclusion: $f(c)=z$
+			\end{tab}	
+			Conclusion générale: $\exists c\in ]a,b[,\ f(c)=z$\\
+			\\
+			Ce raisonnement est valable pour tout $z$ entre $a$ et $b$. On étend le raisonnement \`a $y$ et $y'$ dans $f(I)$\\
+			On conclut que $f(I)$ est un intervalle.
+		\end{preuve}
+		\begin{prop}
+			L'image d'un segment par une application continue est un segment.
+		\end{prop}
+		\begin{preuve}
+			Soit $I$ un segment réel non vide.\\
+			Soit $f:I\rightarrow \R$ continue sur $I$.\\
+			D'apr\`es le TVI, $f(I)$ est un intervalle.\\
+			\\
+			Montrer que $f(I)$ est fermé et borné.
+			\begin{liste}
+				\item[\cercle1] Montrer que $f(I)$ est borné.\\
+					C'est \`a dire, montrer que $\exists M\in\R^{+},\ \forall y\in\R, y\in f(I)\Rightarrow |y|\leqslant M$\\
+					\fbox{HA} Supposons que $f(I)$ ne soit pas borné.
+					\begin{tab}
+						Donc $\forall M\in\R^{+},\ \exists y\in\R,\ y\in I\et |y|> M$\\
+						Soit $x_0$ un élément de $I$.
+						\begin{liste}
+							\item On considère $E_1=\{x\in I,\ |f(x)|>f(x_0)+1 \}$\\
+								$f(I)$ n'est pas borné, donc $E_1$ est non vide.\\
+								Notons $x_1$ un élément de $E_1$.
+							\item Soit $n\in\N$, supposons construits $(x_i)_{i\in\lbrack0,n\rbrack}$,\\
+								Tels que: $\forall i\in\lbrack1,n\rbrack,\ |f(x_i)|>|f(x_{i-1})|+1$\\
+								Soit $E_{n+1}=\{x\in I,\ |f(x)|>|f(x_n)|+1 \}$\\
+								$f(I)$ n'est pas borné, donc $E_{n+1}$ n'est pas vide.\\
+								On note $x_{n+1}$ un élément de cet ensemble.
+							\item Par récurrence, on construit une suite $(x_n)_{n\in \N}$.\\
+							De plus, $\forall n\in\N^{*},\ |f(x_n)|>|f(x_{n-1})|+1$ %12-8-1
+						\end{liste}
+					\end{tab}
+			\end{liste}
 		\end{preuve}
 \end{document}
