@@ -12,5 +12,27 @@
 
 \begin{document}
 	\maketitle
-	plop
+	\section{Opérations sur les fonctions admettant des limites}
+		\subsection{Limites finies}
+			Soit $x_0\in\R$, tel que $x\in I$ ou que $x$ soit une extrémité de $I$.
+			\begin{liste}
+				\item $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0\iff|f(x)|\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$\\
+				
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et si $g(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l'$,\\
+					Alors $(f+g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l+l'$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$ et si $g$ est bornée au voisinage de $x_0$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et $g(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l'$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l\times l'$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et $l\neq0$,\\
+					Alors $\frac1{f}$ existe au voisinage $V$ de $x_0$, et $\frac1{f(x)}\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in V}}\frac1l$
+			\end{liste}
+		\subsection{Limites infinies}
+			Soit $x_0\in\R$, tel que $x\in I$ ou que $x$ soit une extrémité de $I$.
+			\begin{liste}
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$ et si $g$ est minorée au voisinage de $x_0$,\\
+					Alors $(f+g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$ et si $g$ est minorée par un réel strictement positif au voisinage de $x_0$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$
+			\end{liste}
 \end{document}
