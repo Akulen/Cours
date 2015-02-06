@@ -1,0 +1,257 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Fonctions Num\'eriques}
+\author{MPSI 2}
+\def\titre{Fonctions continues sur un intervalle}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Fonctions continues}
+		\begin{flushleft}
+			Soit $I$ un intervalle non vide.\\
+			Soit $f: I\rightarrow \R$ une fonction d\'efinie sur $I$.\\
+			On dit que \underline{$f$ est continue sur $I$} si pour tout $x_0$ de $I$, $f$ est continue en $x_0$.
+		\end{flushleft}
+		\begin{theo}{des valeurs interm\'ediaires}
+			L'image d'un intervalle par une fonction continue est un intervalle.
+		\end{theo}
+		\begin{preuve}
+			Soit $I$ un intervalle.\\
+			Soit $f:I\rightarrow R$ une application continue sut $I$.\\
+			Montrer que $f(I)$ est un intervalle.\\
+			Ou montrer que $\forall (y,y')\in \R^{2},\ ((y,y')\in f(I)^{2}\Rightarrow (\forall y''\in\R,\ y<y''<y'\Rightarrow y''\in f(I))$\\
+			\\
+			Soit $y\et y'$ deux \'el\'ements distincts de $f(I)$.\\
+			Alors il existe $a\et b$ dans $I$ tels que: $f(a)=y\et f(b)=y'$\\
+			$y\et y'$ sont distincts, donc $a\et b$ sont distincts.\\
+			On suppose par exemple que $f(a)<f(b)\et a<b$\\
+			\\
+			Montrer que $\forall z\in\R,\ \left( f(a)<z<f(b)\right) \Rightarrow \left( \exists x\in ]a,b[,\ f(x)=z\right) $\\
+			Soit $z$ un r\'eel compris strictement entre $f(a)\et f(b)$.\\
+			On consid\`ere l'ensemble $E= \left\lbrace x\in [a,b],\ f(x)<z\right\rbrace $\\
+			\\
+			\underline{Principe de Borne sup\'erieure}
+			\begin{tab}
+				Montrer que $E$ admet une borne sup\'erieure:\begin{liste}
+					\item $E$ est non vide: $a\in E$
+					\item $E$ est major\'e par $b$
+				\end{liste}
+				Donc $E$ admet une borne sup\'erieure que l'on notera $c$\\
+				On a: $a\leqslant c\leqslant b$\\
+				Et $\forall \varepsilon \in\R^{+*},\ \exists x\in E,\ c-\varepsilon<x\leqslant c$\\
+				Pour tout $n$ de $\N^{*}$, on pose $\varepsilon = \frac1{n}$, et on pose $x_n$ un r\'eel v\'erifiant le crit\`ere.\\
+				On d\'efinit donc une suite: $\forall n\in\N^{*},\ x_n\in E\et c-\frac1{n}<x_n\geqslant c$\\
+				En particulier: $\forall n\in\N^{*},\ x_n\in[a,b]\et f(x_n)<z\et |x_n-c|<\frac1{n}$\\
+				Ainsi, la suite $(x_n)_{n\in\N^{*}}$ converge vers $c$.\\
+				Donc $\left( f(x_n)\right) _{n\in\N^{*}}$ converge vers $f(c)$ d'apr\`es la caract\'erisation s\'equentielle de la limite.\\
+				Or, $\forall n\in\N^{*},\ f(x_n)<z$\\
+				Donc $f(c)\leqslant z$\\
+				On a donc $f(c)\leqslant z<f(b)$\\
+				D'o\`u $c<b$.\\
+				Par d\'efinition de $c$: $\begin{aligned}[t]
+				& \forall x\in ]c,b[,\ x\notin E\\
+				& \Rightarrow \forall x\in ]c,b[,\ f(x)\geqslant z
+				\end{aligned}$\\
+				Par ailleurs, $f$ est continue, donc sa limite \`a droite en $c$ existe et vaut $f(c)$.\\
+				Ainsi, $f(c)\geqslant z$\\
+				\\
+				Conclusion: $f(c)=z$
+			\end{tab}	
+			Conclusion g\'en\'erale: $\exists c\in ]a,b[,\ f(c)=z$\\
+			\\
+			Ce raisonnement est valable pour tout $z$ entre $a$ et $b$. On \'etend le raisonnement \`a $y$ et $y'$ dans $f(I)$\\
+			On conclut que $f(I)$ est un intervalle.
+		\end{preuve}
+		\begin{prop}
+			L'image d'un segment par une application continue est un segment.
+		\end{prop}
+		\begin{preuve}
+			Soit $I$ un segment r\'eel non vide.\\
+			Soit $f:I\rightarrow \R$ continue sur $I$.\\
+			D'apr\`es le TVI, $f(I)$ est un intervalle.\\
+			\\
+			Montrer que $f(I)$ est ferm\'e et born\'e.
+			\begin{liste}
+				\item Montrer que $f(I)$ est born\'e.\\
+					C'est \`a dire, montrer que $\exists M\in\R^{+},\ \forall y\in\R, y\in f(I)\Rightarrow |y|\leqslant M$\\
+					\fbox{HA} Supposons que $f(I)$ ne soit pas born\'e.
+					\begin{tab}
+						Donc $\forall M\in\R^{+},\ \exists y\in\R,\ y\in I\et |y|> M$\\
+						Soit $x_0$ un \'el\'ement de $I$.
+						\begin{liste}
+							\item On consid\`ere $E_1=\{x\in I,\ |f(x)|>f(x_0)+1 \}$\\
+								$f(I)$ n'est pas born\'e, donc $E_1$ est non vide.\\
+								Notons $x_1$ un \'el\'ement de $E_1$.
+							\item Soit $n\in\N$, supposons construits $(x_i)_{i\in\lbrack0,n\rbrack}$,\\
+								Tels que: $\forall i\in\lbrack1,n\rbrack,\ |f(x_i)|>|f(x_{i-1})|+1$\\
+								Soit $E_{n+1}=\{x\in I,\ |f(x)|>|f(x_n)|+1 \}$\\
+								$f(I)$ n'est pas born\'e, donc $E_{n+1}$ n'est pas vide.\\
+								On note $x_{n+1}$ un \'el\'ement de cet ensemble.
+							\item Par r\'ecurrence, on construit une suite $(x_n)_{n\in \N}$.
+						\end{liste}
+						De plus, $\forall n\in\N^{*},\ |f(x_n)|>|f(x_{n-1})|+1$\\
+						Par r\'ecurrence, on montre que: $\forall n\in\N,\ |f(x_n)|>|f(x_0)|+n$\\
+						Ainsi, $\left( |f(x_n)|\right) _{n\in\N}$ diverge vers $+\infty$.\\
+						\newpage
+						Par ailleurs, $(x_n)_{n\in\N}$ est une suite d'\'el\'ements de $I$. Donc d'apr\`es le th\'eor\`eme de Bolzano-Weierstrass, il existe $\phi:\N\Rightarrow\N$ strictement croissante telle que $(x_{\phi(n)})_{n\in\N}$ converge.\\
+						Notons $\phi$ une telle suite et $l$ la limite.
+						\begin{liste}
+							\item $\forall n\in\N,\ x_n\in I$, donc $l\in I$
+							\item $f$ est continue en $l\in I$, donc (cara s\'equentielle de la limite) $f(x_n)\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}f(l)$
+							\item On a aussi \cercle1:$|f(x_n)|\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}|f(l)|$\ \ \ \ (car $abs$ est continue en $f(l)$)
+							\item De plus, $(|f(x_{\phi(n)})|)_{n\in\N}$ est une suite extraite de $(|f(x_{n})|)_{n\in\N}$.\\
+								Donc \cercle2:$|f(x_{\phi(n)})|\mathop{\longrightarrow}\limits_{n\rightarrow +\infty}+\infty$
+						\end{liste}
+						On a contradiction entre \cercle1 et \cercle2. On en d\'eduit que \fbox{HA} est fausse.
+					\end{tab}
+					Conclusion: $f(I)$ est in intervalle born\'e.
+				\item Montrer que $\exists (c,d)\in\R,\ f(I)=[c,d]$\\
+					On pose $c=\inf(f(I))\et d=\sup(f(I))$\\
+					Montrer que $c\in I\et d\in I$
+					\begin{liste}
+						\item Montrons que $d\in I$\\
+							Donc Montrons que $\exists x\in I,\ f(x)=d$\\
+							En appliquant le principe de la borne sup\'erieure avec $\varepsilon = \frac1{n}$ pour tout $n$ de $\N^{*}$, on construit une suite $(x_n)_{n\in\N^{*}}$ d'\'el\'ements de $I$ telle que $(f(x_n))_{n\in\N^{*}}$ converge vers $d$.
+							\begin{liste}
+								\item $(x_n)$ est une suite de r\'eels born\'ee, donc d'apr\`es le th\'eor\`eme de B-W, il existe une application strictement croissante $\phi:\N\rightarrow\N$ telle que $(x_{\phi(n)})_{n\in\N}$ soit convergente.\\
+									Notons $l$ sa limite.\\
+									De plus, $l\in I$.
+								\item $f$ est continue sur $I$ donc $(f(x_{\phi(n)}))_{n\in\N}$ converge vers $f(l)$
+								\item Par ailleurs, $(f(x_{\phi(n)}))$ est une suite extraite de $(f(x_n))$, donc $(f(x_{\phi(n)}))$ converge vers $d$.
+							\end{liste}
+							Par unicit\'e de la limite, $d=f(l)$. Or, $l\in I$.\\
+							Finalement, $d\in f(I)$
+						\item On proc\`ede de m\^eme pour montrer que $c\in f(I)$.
+					\end{liste}
+			\end{liste}
+			\textbf{Conclusion g\'en\'erale:} $\exists (c,d)\in \R^{2},\ f(I)=[c,d]$
+		\end{preuve}
+		\newpage
+		\begin{prop}
+			Soit $f:I\rightarrow \R$ une fonction continue.\\
+			Alors on a \'equivalence entre:
+			\begin{liste}
+				\item[\cercle1] $f$ est injective
+				\item[\cercle2] $f$ est strictement monotone
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			Soit $f:I\rightarrow \R$ une fonction continue.\\
+			\underline{\cercle1$\Rightarrow$\cercle2:} Supposons $f$ injective.
+			\begin{tab}
+				Montrer que $f$ est strictement croissante sur $I$.\\
+				Donc montrer que $f$ est croissante sur $I$.\ \ \ \ (car $f$ est injective)\\
+				Montrer que pour tous $x_1<x_2<x_3$ de $I$, $f(x_2)$ soit compris entre $f(x_1)\et f(x_3)$\\
+				\fbox{HA} Supposons qu'il existe $x_1<x_2<x_3$ de $I$ tels que $f(x_2)$ ne soit pas compris
+				\begin{tab}
+					entre $f(x_1)\et f(x_3)$.\\
+					Alors il existe $y_0\in\R$, tel que $y_0$ soit compris strictement entre $f(x_1) \et f(x_2)$ et entre $f(x_2) \et f(x_3)$\\
+					D'apr\`es le TVI, $\exists \alpha\in]x_1,x_2[,\ y_0=f(\alpha)$ et $\exists \beta\in]x_2,x_3[,\ y_0=f(\beta)$\\
+					Les intervalles $]x_1,x_2[\et]x_2,x_3[$ sont disjoints, donc $\alpha\neq\beta$.\\
+					Cependant, $f(\alpha)=f(\beta)$, ce qui contredit l'injectivit\'e de $f$.\\
+					Donc \fbox{HA} est contradictoire.
+				\end{tab}
+				On conclut que $f$ est monotone sur $I$\\
+				Or, $f$ est injective.\\
+				\\
+				\textbf{Conclusion g\'en\'erale:} $f$ est strictement monotone sur $I$
+			\end{tab}
+			\underline{\cercle2$\Rightarrow$\cercle1:} Facile.
+		\end{preuve}
+		\begin{coro}
+			Soit $f:I\rightarrow\R$ continue et strictement monotone sur $I$.\\
+			Alors $J=f(I)$ est un intervalle et $f$ r\'ealise une bijection de $I$ sur $J$.
+		\end{coro}
+		\begin{prop}
+			Soit $f$ une fonction strictement croissante sur $[a,b]$.\\
+			Alors on a \'equivalence entre:\\
+			\cercle1: $f$ est continue sur $[a,b]$\\
+			\cercle2: $f$ est surjective sur $[f(a),f(b)]$
+		\end{prop}
+		\begin{flushleft}
+			\textbf{N.B.} Fonctionne aussi avec la stricte d\'ecroissance.
+		\end{flushleft}
+		\begin{preuve}
+			On suppose $f$ strictement croissante.\\
+			\cercle1 On suppose $f$ continue sur $[a,b]$
+			\begin{tab}
+				$f$ est surjective sur $f([a,b])$ (par d\'efinition de l'image)
+				\begin{liste}
+					\item $f([a,b])$ est un segment car $f$ est continue: $\exists(c,d)\in\R^{2},\ f([a,b])=[c,d]$
+					\item $f$ est strictement croissante: $\forall x\in [a,b],\ f(a)\leqslant f(x)\leqslant f(b)$\\
+						Donc $\systeme{& f(a)\text{ est un minorant de }f([a,b])\\& f(a)\in f([a,b])}$\\
+						Ainsi, $f(a)$ est le plus petit \'el\'ement de $f([a,b])$\\
+						Autrement dit, $f(a)=c$.
+					\item On proc\`ede de m\^eme pour montrer que $f(b)=d$
+				\end{liste}
+				Conclusion: $f([a,b])=[f(a),f(b)]$
+			\end{tab}
+			\cercle2 Supposons $f$ surjective sur $[f(a),f(b)]$
+			\begin{tab}
+				Montrer que $f$ est continue sur $[a,b]$\\
+				Soit $x_0$ un \'el\'ement de $]a,b[$\\
+				Montrer que $f$ est continue en $x_0$.\\
+				C'est a dire $\forall \varepsilon\in\R^{+*},\ \exists \alpha\in\R^{+*},\ \forall x\in[a,b],\ |x-x_0|<\alpha\Rightarrow|f(x)-f(x_0)|<\varepsilon$\\
+				Soit $\varepsilon$ un r\'eel positif.\\
+				Soient $y_0=\max(\{f(a),\ f(x_0)-\varepsilon \})$ et $y_1=\min(\{f(b),\ f(x_0)+\varepsilon \})$\\
+				On a: $f(a)\leqslant y_0<f(x_0)<y_1\leqslant f(b)$\\
+				\\
+				$y_0\et y_1$ sont compris entre $f(a)$ et $f(b)$, et $f$ est surjective sur $[f(a),f(b)]$.\\
+				Donc $\exists ({x_0}',{x_1}'),\ f({x_0}')=y_0 \et f({x_1}')=y_1$\\
+				Posons $\alpha = \min(\{x_0 - {x_0}',\ {x_1}' - x_0 \})$\\
+				Alors $]x_0-\alpha,x_0+\alpha [\subset [{x_0}',{x_1}']\subset[a,b]$
+				Et $\forall x\in ]x_0-\alpha,x_0+\alpha [,\ f(x_0)-\varepsilon\leqslant f({x_0}')<f(x)<f({x_1}')\leqslant f(x_0)+\varepsilon$\\
+				Car $f$ est strictement croissante, et par d\'efinition de $y_0$ et de $y_1$.\\
+				\\
+				Finalement, $\forall x\in [a,b],\ |x-x_0|<\alpha\Rightarrow |f(x)-f(x_0)|<\varepsilon$\\
+				Ceci est valable pour tout $\varepsilon$ strictement positif, donc $f$ est continue en $x_0$\\
+				Ceci est valable pour tout $x_0$ de $]a,b[$, donc $f$ est continue sur $]a,b[$\\
+				\\
+				On adapte la d\'emonstration en $a$ et $b$.\\
+				On conclut que $f$ est continue sur $[a,b]$.
+			\end{tab}
+		\end{preuve}
+		\begin{coro}
+			Soit $f:[a,b]\rightarrow\R$ continue et strictement croissante.\\
+			Alors $f$ r\'ealise une bijection de $[a,b]$ sur $f([a,b])$ et son application r\'eciproque est continue sur $f([a,b])$.
+		\end{coro}
+		\newpage
+		\begin{preuve}
+			Supposons $f$ strictement croissante.
+			\begin{liste}
+				\item $f$ est strictement croissante, donc $f$ r\'ealise une bijection de $[a,b]$ sur $J=f([a,b])$.
+				\item $f$ est continue donc $J$ est un segment.
+				\item De plus, $f$ est croissante, donc $J=[f(a),f(b)]$
+				\item $f^{-1}:[f(a),f(b)]\rightarrow[a,b]$\\
+					Montrer que $f^{-1}$ est continue sur $[f(a),f(b)]$.\\
+					$f$ est strictement croissante sur $[a,b]$, donc $f^{-1}$ l'est sur $[f(a),f(b)]$.\\
+					Donc, sachant $f^{-1}$ surjective, $f^{-1}$ est continue sur $[f(a),f(b)]$
+			\end{liste}
+		\end{preuve}
+		\begin{coro}
+			Soit $I$ un intervalle r\'eel.\\
+			Soit $f:I\rightarrow\R$ strictement croissante et continue.\\
+			Alors: $\begin{aligned}[t]
+			\bullet \ & f(I)\text{ est un intervalle}\\
+			\bullet \ & f \text{ r\'ealise une bijection de }I\text{ sur }f(I)\\
+			\bullet \ & f^{-1}\text{ est strictement monotone sur }f(I)\\
+			\bullet \ & f^{-1}\text{ est continue sur }f(I)
+			\end{aligned}$
+		\end{coro}
+	\section{Fonctions uniform\'ement continues}
+		\begin{defi}
+			Soit $I$ un intervalle r\'eel.\\
+			Soit $f:I\rightarrow\R$\\
+			On dit que \underline{$f$ est uniform\'ement continue sur $I$} si:
+			$$\forall\varepsilon\in\R^{+*},\ \exists\alpha\in\R^{+*},\ \forall(x_1,x_2)\in I^{2},\ |x_1-x_2|<\alpha\Rightarrow |f(x_1)-f(x_2)|<\varepsilon$$
+		\end{defi}
+		\begin{theo}{de Heine}
+			Si $f$ est continue sur le segment $[a,b]$, alors $f$ est uniform\'ement continue sur ce segment
+		\end{theo}
+\end{document}
