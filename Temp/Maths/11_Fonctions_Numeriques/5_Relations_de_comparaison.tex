@@ -12,17 +12,17 @@
 
 \begin{document}
 	\maketitle
-	Soit $x_0$ un élément de $\overline{\R}$.
+	Soit $x_0$ un \'el\'ement de $\overline{\R}$.
 	\begin{defi}
-		Soient $f$ et $g$ deux fonctions définies sur un voisinage $V$ de $x_0$, sauf éventuellement en $x_0$.\\
-		On dit que \underline{$f$ est négligeable devant $g$} si il existe une application $\varepsilon:V\rightarrow\R^+$ telle que:
+		Soient $f$ et $g$ deux fonctions d\'efinies sur un voisinage $V$ de $x_0$, sauf \'eventuellement en $x_0$.\\
+		On dit que \underline{$f$ est n\'egligeable devant $g$} si il existe une application $\varepsilon:V\rightarrow\R^+$ telle que:
 		$$\systeme{& \varepsilon(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in V}}0\\&\forall x\in V\setminus \{x_0\},\ |f(x)|<\varepsilon(x)\,|g(x)| }$$
 	\end{defi}
 	\begin{flushleft}
 		\underline{Notation:} $f(x)\mathop{=}\limits_{x\rightarrow x_0} o(g(x))$
 	\end{flushleft}
 	\begin{flushleft}
-		\underline{Résultats usuels:}
+		\underline{R\'esultats usuels:}
 		\begin{liste}
 			\item $\forall \alpha\in\R^{+*},\ \ln(x)\mathop{=}\limits_{\substack{x\rightarrow 0\\x>0}}o(\frac1{x^\alpha})$\\\ \\
 			\item $\forall \alpha\in\R^{+*},\ \ln(x)\mathop{=}\limits_{x\rightarrow +\infty} o(x^\alpha)$\\\ \\
@@ -30,15 +30,15 @@
 		\end{liste}
 	\end{flushleft}
 	\begin{defi}
-		Soient $f$ et $g$ deux fonctions définies sur un voisinage $V$ de $x_0$, sauf éventuellement en $x_0$.\\
-		On dit que \underline{$f$ est dominée par $g$} si:
+		Soient $f$ et $g$ deux fonctions d\'efinies sur un voisinage $V$ de $x_0$, sauf \'eventuellement en $x_0$.\\
+		On dit que \underline{$f$ est domin\'ee par $g$} si:
 		$$\exists M\in\R^{+*},\ \forall x\in V\setminus \{x_0\},\ |f(x)|<M\,|g(x)|$$
 	\end{defi}
 	\begin{flushleft}
 		\underline{Notation:} $f(x)\mathop{=}\limits_{x\rightarrow x_0} O(g(x))$
 	\end{flushleft}
 	\begin{defi}
-		Soient $f$ et $g$ deux fonctions définies sur un voisinage $V$ de $x_0$, sauf éventuellement en $x_0$.\\
+		Soient $f$ et $g$ deux fonctions d\'efinies sur un voisinage $V$ de $x_0$, sauf \'eventuellement en $x_0$.\\
 		On dit que \underline{$f$ et $g$ sont \'equivalentes en $x_0$} si il existe une application $h:V\rightarrow\R$ telle que:
 		$$\systeme{& h(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in V}}1\\&\forall x\in V\setminus \{x_0\},\ f(x)=h(x)\,g(x) }$$
 	\end{defi}
@@ -47,9 +47,33 @@
 	\end{flushleft}
 	\newpage
 	\begin{flushleft}
-		\underline{Résultats usuels en $0$:}
+		\underline{R\'esultats usuels en $0$:}
 		\begin{liste}
 			\item $\sin(x)\sim x,\ \ \ \ \ \cos(x)\sim 1,\ \ \ \ \  1-\cos(x)\sim \frac{x^2}2,\ \ \ \ \  \tan(x)\sim x$
+			\item $\arcsin \sim x,\ \ \ \ \ \arctan(x)\sim x$
+			\item $\ln(1+x)\sim x,\ \ \ \ \ (1+x)^\alpha\sim 1,\ \ \ \ \ (1+x)^\alpha-1\sim\alpha\,x $
+			\item $\text{sh}(x)\sim x,\ \ \ \ \ \text{ch}(x)\sim 1,\ \ \ \ \ \text{th}(x)\sim 1,\ \ \ \ \ \text{ch}(x)-1\sim \frac{x^2}2$
 		\end{liste}
 	\end{flushleft}
+	\begin{prop}
+		\textbf{Op\'erations sur les \'equivalences}\\
+		Soient $f$ et $g$ deux fonctions d\'efinies au voisinage de $x_0$ telles que $f(x)\mathop{\sim}\limits_{x\rightarrow x_0}g(x)$.
+		\begin{liste}
+			\item Si $\phi$ est une fonction ne s'annulant pas au voisinage de $x_0$, sauf \'eventuellement en $x_0$,\\
+				Alors $f(x)\,\phi(x)\mathop{\sim}\limits_{x\rightarrow x_0}g(x)\,\phi(x)$
+			\item Si $f_1(x)\mathop{\sim}\limits_{x\rightarrow x_0}g_1(x)$, alors $f(x)\,f_1(x)\mathop{\sim}\limits_{x\rightarrow x_0}g(x)\,g_2(x)$
+			\item $\forall n\in\N^{*},(f(x))^n\mathop{\sim}\limits_{x\rightarrow x_0}(g(x))^n$
+			\item Si $f_1$ ne s'annule pas au voisinage de $x_0$, sauf \'eventuellement en $x_0$, et si $f_1(x)\mathop{\sim}\limits_{x\rightarrow x_0}g_1(x)$\\
+				Alors $\frac{f(x)}{f_1(x)}\mathop{\sim}\limits_{x\rightarrow x_0}\frac{g(x)}{g_1(x)}$
+			\item Si $f$ ne s'annule pas au voisinage de $x_0$, alors $\forall n\in\Z,\ (f(x))^n\mathop{\sim}\limits_{x\rightarrow x_0}(g(x))^n $
+		\end{liste}
+	\end{prop}
+	\begin{prop}
+		\begin{liste}
+			\item Si $f(x)\mathop{\sim}\limits_{x\rightarrow x_0}g(x)$ et si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l\in\overline{\R}$,\\
+				Alors $g(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$
+			\item Si $f(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$ et $g(x)\mathop{\longrightarrow}\limits_{x\rightarrow x_0}l$ et $lin\R^{*}$,\\
+				Alors $f(x)\mathop{\sim}\limits_{x\rightarrow x_0}g(x)$ 
+		\end{liste}
+	\end{prop}
 \end{document}
