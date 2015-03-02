@@ -1,0 +1,74 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels\\ de Dimension finie}
+\author{MPSI 2}
+\def\titre{Espaces Vectoriels}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Structure d'espace vectoriel}
+		Soit $E$ un ensemble non vide.
+		\begin{defi}
+			$E$ est un \underline{espace vectoriel sur $\K$} (ou $\K$-espace vectoriel) si:
+			\begin{liste}
+				\item $(E,+)$ est un groupe abélien.
+				\item $\begin{aligned}[t]\K\times E&\longrightarrow E \\(\lambda,x)&\longmapsto \lambda\cdot x\end{aligned}$ est un loi interne telle que:\\
+				$\forall (x,y)\in E^{2},\ \forall (\lambda,\mu)\in\K^{2}:$
+				\begin{liste}
+					\item $(\lambda+\mu)\cdot x=\lambda\cdot x+\mu\cdot x$
+					\item $\lambda\cdot(x+y)=\lambda\cdot x+\lambda\cdot y$
+					\item $\lambda\cdot(\mu\cdot x)=(\lambda\times\mu)\cdot x$
+					\item $1_\K\cdot x=x$
+				\end{liste}
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\underline{Règles de calcul dans un espace vectoriel:}
+			\begin{liste}
+				\item $(-\lambda)\cdot x=-(\lambda\cdot x)$
+				\item $\lambda\cdot (-x)=-(\lambda\cdot x)$
+				\item $0_\K\cdot x=0_E$
+				\item $\lambda\cdot 0_E=0_E$
+			\end{liste}
+		\end{flushleft}
+	\section{Sous-espace vectoriel}
+		Soit $E$ un $\K_\text{EV}$, soit $F$ un sous-ensemble non vide de $E$.
+		\begin{defi}
+			On dit que $F$ est un \underline{sous-espace vectoriel de $E$} si il est stable par les lois de $E$ et si, muni des restrictions de ces lois, $F$ est un $\K_\text{EV}$
+		\end{defi}
+		\begin{flushleft}
+			\underline{Critères de $\Sev$}
+			\begin{liste}
+				\item Critère 1: $F$ est un $\Sev$ de $E$ si il est non vide et stable par les lois de $E$.
+				\begin{liste}
+					\item $0_E\in F$
+					\item $\forall(x,y)\in F^{2},\ x+y\in F$
+					\item $\forall \lambda\in\K,\ \forall x\in F,\ \lambda\cdot x\in F$
+				\end{liste}
+				\item Critère 2: $F$ est un $\Sev$ de $E$ si il est non vide et stable par combinaison linéaire.
+				\begin{liste}
+					\item $0_E\in F$
+					\item $\forall (\lambda,\mu)\in\K^{2},\ \forall (x,y)\in F^{2},\ \lambda\cdot x+\mu\cdot y\in F$
+				\end{liste}
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			On appelle \underline{espace vectoriel engendré par $A$} le plus petit espace vectoriel contenant $A$.
+		\end{defi}
+		\begin{flushleft}
+			\underline{Notation:} $\vect(A)$
+		\end{flushleft}
+		\begin{flushleft}
+			\underline{Justification}\\
+			Soit $\mathcal{F}=\left\lbrace F\subset E,\ F\ \sev\text{ de }E\et A\subset F\right\rbrace $
+			\begin{liste}
+				\item $F_0=\bigcap\limits
+			\end{liste}
+		\end{flushleft}
+\end{document}
