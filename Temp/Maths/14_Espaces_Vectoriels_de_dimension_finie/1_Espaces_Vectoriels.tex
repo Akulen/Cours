@@ -66,9 +66,21 @@
 		\end{flushleft}
 		\begin{flushleft}
 			\underline{Justification}\\
-			Soit $\mathcal{F}=\left\lbrace F\subset E,\ F\ \sev\text{ de }E\et A\subset F\right\rbrace $
+			Soit $\mathcal{F}=\left\lbrace F\subset E,\ F\ \Sev\text{ de }E\et A\subset F\right\rbrace $
 			\begin{liste}
-				\item $F_0=\bigcap\limits
+				\item $F_0=\bigcap\limits_{F\in\mathcal{F}}F$ est un $\Sev$ de $E$, et contient $A$: $\forall F\in\mathcal{F},\ A\subset F$\\
+					D'o\`u $F_0\in\mathcal{F}$
+				\item Par définition de $F_0$, c'est le plus petit élément de $\mathcal{F}$.
 			\end{liste}
+			Donc $F_0$ existe.
 		\end{flushleft}
-\end{document}
+		\begin{prop}
+			Soit $A=\{X_1,X_2,\ ...\ ,X_p \}$ une partie finie de $E$.\\
+			Alors $\vect(A)$ est l'ensemble des combinaisons linéaires de $A$.
+		\end{prop}
+		\begin{preuve}
+			Soit $B$ l'ensemble des combinaisons linéaires de $A$:\\
+			$B=\left\lbrace x\in E,\ \exists (\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^{p},\ x=\sum\limits_{i=1}^{p}\lambda_i \cdot X_i\right\rbrace $
+			%15-3-1
+		\end{preuve}
+\end{document} %ACCENTS!!!
