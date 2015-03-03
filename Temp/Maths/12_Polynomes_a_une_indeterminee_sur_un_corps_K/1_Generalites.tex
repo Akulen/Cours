@@ -2,7 +2,7 @@
 \documentclass[12pt,twoside,a4paper]{article}
 
 
-\def\chapitre{Polyn\^omes \`a une indéterminée\\sur un corps $\mathbb{K}$}
+\def\chapitre{Polyn\^omes \`a une indéterminée sur un corps $\mathbb{K}$}
 \author{MPSI 2}
 \def\titre{Généralités}
 
@@ -24,7 +24,93 @@
 			\begin{liste}
 				\item On appelle \underline{degré de $P$}, noté $\deg(P)$, le plus grand entier $n_0$ tel que: $a_{n_0}\neq 0_{K[X]}$
 				\item Si $\deg(P)=n_0$, alors on appelle \underline{coefficient dominant de $P$} $a_{n_0}$.
-				\item 
+				\item Si $\deg(P)=n_0$, alors $P$ est unitaire si $a_{n_0}=1_\K$.
 			\end{liste}
 		\end{defi}
+		\begin{flushleft}
+			\underline{Convention:} $\deg(0_{\K[X]})=-\infty$
+		\end{flushleft}
+		\begin{defi}
+			Soit $P$ un polynôme \`a coefficients dans $\K$ et non nul.\\
+			On appelle \underline{valuation de $P$}, noté $\mathrm{val}(P)$, le plus petit indice $n$ tel que $a_n\neq0_\K$.
+		\end{defi}
+	\section{Structure algébrique}
+		\subsection{Addition}
+			\begin{prop}
+				Si $P=(a_n)_{n\in\N}$ et $Q=(b_n)_{n\in\N}$ sont deux polynômes de $\K[X]$,\\
+				Alors $P+Q=(a_n+b_n)_{n\in\N}$ est un polynôme de $\K[X]$
+			\end{prop}
+			\begin{prop}
+				$(\K[X],+)$ est un groupe abélien.
+			\end{prop}
+			\begin{prop}
+				Soient $P$ et $Q$ deux polynômes de $\K[X]$.
+				\begin{liste}
+					\item $\deg(P+Q)\leqslant\max(\{\deg(P),\ deg(Q) \})$
+					\item Si $\deg(P)\neq \deg(Q)$, alors $\deg(P+Q)=\max(\{\deg(P),\ deg(Q) \})$
+				\end{liste}
+			\end{prop}
+		\subsection{Loi externe}
+			\begin{defi}
+				Soit $\lambda\in\K\et P=(a_n)_{n\in\N}$ un élément de $\K[X]$.\\
+				$\lambda\cdot P=(\lambda\times a_n)_{n\in\N}$
+			\end{defi}
+			\begin{prop}
+				$(\K[X],+,\cdot)$ est un espace vectoriel.\\
+				C'est un sous-espace vectoriel de $(\K^\N,+,\cdot)$
+			\end{prop}
+			\begin{prop}
+				$\forall \lambda\in\K,\ \lambda\neq 0_\K\Rightarrow \deg(\lambda\cdot P)=\deg(P)$
+			\end{prop}
+		\subsection{Multiplication}
+			\begin{defi}
+				Soient $P$ et $Q$ deux éléments de $\K[X]$, avec $P=(a_n)_{n\in\N}$ et $Q=(b_n)_{n\in\N}$.\\
+				On appelle \underline{produit de $P$ par $Q$}, noté $P\times Q$, la suite $(c_n)_{n\in\N}$, de $\K[X]$, définie par:
+				$$\forall n\in\N,\ c_n=\sum\limits_{\substack{(i,j)\in\N^{2}\\i+j=n}}a_i\times b_j$$
+			\end{defi}
+			\begin{prop}
+				$(\K[X],+,\times)$ est un anneau commutatif.
+			\end{prop}
+			\begin{prop}
+				$\forall (P,Q)\in\K[X]^{2},\ \deg(P\times Q)=\deg(P)+\deg(Q)$
+			\end{prop}
+			\begin{coro}
+				$\K[X]$ est un anneau intègre.
+			\end{coro}
+			\begin{defi}
+				\begin{liste}
+					\item $a_n$ s'appelle le \underline{coefficient de $X^{n}$} dans $P$.
+					\item $a_n\,X^{n}$ s'appelle le \underline{terme de degré $n$} dans $P$.
+					\item $X$ s'appelle l'indéterminée.
+				\end{liste}
+			\end{defi}
+			\begin{prop}
+				$(\K[X],+,\times,\cdot)$ est une algèbre commutative sur $\K$:
+				\begin{liste}
+					\item $(\K[X],+,\times)$ est un anneau commutatif.
+					\item $(K[X],+,\cdot)$ est un espace vectoriel sur $K$
+					\item $\forall(\lambda,P,Q)\in\K\times \K[X]^{2},\ \lambda\cdot(P\times Q)=(\lambda\cdot P)\times Q=P\times(\lambda\cdot Q)$
+				\end{liste}
+			\end{prop}
+		\subsection{Bases et familles libres}
+			\begin{prop}
+				La famille $(X^{n})_{n\in\N}$ est une base de $\K[X]$.\\
+				Donc tout élément de $\K[X]$ peut s'écrire de manière unique comme combinaison linéaire finie d'éléments de $(X^{n})_{n\in\N}$.
+			\end{prop}
+			\begin{prop}
+				Soit $n\in\N$.\\
+				On note $\K_n[X]=\left\lbrace P\in\K[X],deg(P)\leqslant n\right\rbrace$\\
+				$\K_n[X]$ est un sous-espace vectoriel de $(\K[X],+,\cdot)$ dont une base est donnée par $(X^{i})_{i\in\lbracket0,n\rbracket}$
+			\end{prop}
+		\subsection{Autres Opérations}
+			\begin{defi}
+				Soit $P=\sum\limits_{r=0}^Na_n\,X^{n}$ et $Q\in\K[X]$\\
+				On définit le polynôme composé $P\circ Q$ par:
+				$$p\circ Q=\sum\limits_{r=0}^Na_n\,Q^{n}$$
+			\end{defi}
+			\begin{defi}
+				Soit $P=\sum\limits_{r=0}^Na_n\,X^{n}$ un polynôme de $\K[X]$.\\
+				On appelle \underline{polynôme dérivé de $P$}, noté $P'$, le polynôme:
+				$$P'=\sum\limits_{r=1}^Na_n\,n\,nX^{n-1} $$
+			\end{defi}
 \end{document}
