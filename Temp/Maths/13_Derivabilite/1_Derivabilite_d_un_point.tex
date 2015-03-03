@@ -12,5 +12,24 @@
 
 \begin{document}
 	\maketitle
-	
+	\begin{flushleft}
+		Soit $I$ un intervalle réel non réduit \`a un point.\\
+		Soit $f:I\rightarrow\R$ une fonction numérique.
+	\end{flushleft}
+	\section{Définition}
+	\begin{flushleft}
+		Soit $x_0$ un élément de $I$.\\
+		On pose $\fonction{\phi}{I\setminus\{x_0\}}{\R}{x}{\frac{f(x)-f(x_0)}{x-x_0}}$
+	\end{flushleft}
+	\begin{defi}
+		\begin{liste}
+			\item On dit que $f$ est dérivable en $x_0$ si $\phi(x)$ admet une limite finie notée $L$ lorsque $x$ tend vers $x_0$ sur $i\setminus\{x_0\}$:\\
+				$$\text{On note }f'(x)=L=\lim\limits_{\substack{x\rightarrow x_0 \\x\in I\setminus\{x_0\}}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$\\
+				Cette limite, quand elle existe, s'appelle le nombre dérivé de $f$ en $x_0$.
+			\item On dit que $f$ est dérivable \`a gauche en $x_0$ si $\phi(x)$ admet une limite finie \`a gauche, $L_g$:\\
+				$$\text{On note }f'_g(x)=L_g=\lim\limits_{\substack{x\rightarrow x_0 \\x<x_0}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$\\
+			\item On dit que $f$ est dérivable \`a droite en $x_0$ si $\phi(x)$ admet une limite finie \`a droite, $L_d$:\\
+				$$\text{On note }f'_d(x)=L_d=\lim\limits_{\substack{x\rightarrow x_0 \\x>x_0}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$\\
+		\end{liste}
+	\end{defi}
 \end{document}
