@@ -1,0 +1,60 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{D\'erivabilit\'e}
+\author{MPSI 2}
+\def\titre{D\'erivabilit\'e d'un point}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{flushleft}
+		Soit $I$ un intervalle r\'eel non r\'eduit \`a un point.\\
+		Soit $f:I\rightarrow\R$ une fonction num\'erique.
+	\end{flushleft}
+	\section{D\'efinition}
+		\begin{flushleft}
+			Soit $x_0$ un \'el\'ement de $I$.\\
+			On pose $\fonction{\phi}{I\setminus\{x_0\}}{\R}{x}{\frac{f(x)-f(x_0)}{x-x_0}}$
+		\end{flushleft}
+		\begin{defi}
+			\begin{liste}
+				\item On dit que $f$ est d\'erivable en $x_0$ si $\phi(x)$ admet une limite finie not\'ee $L$ lorsque $x$ tend vers $x_0$ sur $i\setminus\{x_0\}$:\\
+					$$\text{On note }f'(x)=L=\lim\limits_{\substack{x\rightarrow x_0 \\x\in I\setminus\{x_0\}}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$\\
+					Cette limite, quand elle existe, s'appelle le nombre d\'eriv\'e de $f$ en $x_0$.\\
+				\item On dit que $f$ est d\'erivable \`a gauche en $x_0$ si $\phi(x)$ admet une limite finie \`a gauche, $L_g$:\\
+					$$\text{On note }f'_g(x)=L_g=\lim\limits_{\substack{x\rightarrow x_0 \\x<x_0}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$\\
+				\item On dit que $f$ est d\'erivable \`a droite en $x_0$ si $\phi(x)$ admet une limite finie \`a droite, $L_d$:\\
+					$$\text{On note }f'_d(x)=L_d=\lim\limits_{\substack{x\rightarrow x_0 \\x>x_0}}\!\!\left(\frac{f(x)-f(x_0)}{x-x_0} \right) $$
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\underline{Remarque:} $f$ est d\'erivable en $x_0$ ssi: $\systeme{& f\text{ est d\'erivable \`a droite en }x_0\\& f\text{ est d\'erivable \`a gauche en }x_0\\& f'_d(x_0)=f'_g(x_0)}$
+		\end{flushleft}
+	\section{Interpr\'etation g\'eom\'etrique}
+		\begin{flushleft}
+			Soit $x_0$ un \'el\'ement de $I$ qui ne soit pas une borne de $I$.\\
+			Pour $x\neq x_0,\ \phi(x)=\frac{f(x)-f(x_0)}{x-x_0}$
+		\end{flushleft}
+		\begin{defi}
+			$f$ est d\'erivable en $x_0$ si il existe un r\'eel $L$, un r\'eel $\alpha$ strictement positif et une application $\varepsilon:]x-\alpha,x+\alpha[\rightarrow\R$ tels que:
+			$$\systeme{&\forall x\in I,\ x\in]x-\alpha,x+\alpha[\et x\neq x_0,\ f(x)=f(x_0)+L\,f(x-x_0)+\varepsilon (x)\,(x-x_0)\\
+				&\varepsilon(x) \mathop{\longrightarrow}\limits_{x\rightarrow x_0}0}$$
+		\end{defi}
+		\begin{flushleft}
+			On dit que $f$ admet un d\'eveloppement limit\'e \`a l'ordre $1$ au voisinage de $x_0$.
+		\end{flushleft}
+	\section{Fonctions \`a valeurs complexes}
+		\begin{flushleft}
+			Soit $\fonction{f}{I}{\C}{x}{f_1(x)+i\,f_2(x)}$
+			\begin{liste}
+				\item $f_1$ et $f_2$ sont a valeurs r\'eelles et d\'efinies sur $I$.
+				\item Soit $x_0$ un \'el\'ement de $I$.\\
+					On dit que $f$ est d\'erivable en $x_0$ si $f_1\et f_2$ le sont, et $f'(x_0)=f_1'(x)+i\,f_2'(x)$
+			\end{liste}
+		\end{flushleft}
+\end{document}
