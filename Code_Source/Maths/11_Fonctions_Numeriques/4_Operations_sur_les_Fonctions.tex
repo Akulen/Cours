@@ -1,0 +1,80 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Fonctions Num\'eriques}
+\author{MPSI 2}
+\def\titre{Op\'erations sur les fonctions}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Op\'erations sur les fonctions admettant des limites}
+		\subsection{Limites finies}
+			Soit $x_0\in\R$, tel que $x\in I$ ou que $x$ soit une extr\'emit\'e de $I$.
+			\begin{liste}
+				\item $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0\iff|f(x)|\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$\\
+				
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et si $g(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l'$,\\
+					Alors $(f+g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l+l'$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$ et si $g$ est born\'ee au voisinage de $x_0$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}0$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et $g(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l'$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l\times l'$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$ et $l\neq0$,\\
+					Alors $\frac1{f}$ existe au voisinage $V$ de $x_0$, et $\frac1{f(x)}\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in V}}\frac1l$
+			\end{liste}
+		\subsection{Limites infinies}
+			Soit $x_0\in\R$, tel que $x\in I$ ou que $x$ soit une extr\'emit\'e de $I$.
+			\begin{liste}
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$ et si $g$ est minor\'ee au voisinage de $x_0$,\\
+					Alors $(f+g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$\\
+				\item Si $f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$ et si $g$ est minor\'ee par un r\'eel strictement positif au voisinage de $x_0$,\\
+					Alors $(f\times g)(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}+\infty$
+			\end{liste}
+		\newpage
+		\subsection{Composition de limites}
+			Soient $I$ et $J$ deux intervalles.\\
+			Soient $f:I\rightarrow \R$ et $g:J\rightarrow\R$ telles que $f(I)\subset J$\\
+			Soit $x_0\in \overline{\R}$ tel que $x_0\in I$ ou que $x_0$ soit une extr\'emit\'e de $I$.\\
+			Soit $y_0\in \overline{\R}$ tel que $y_0\in J$ ou que $y_0$ soit une extr\'emit\'e de $J$.\\
+			Soit $l\in\overline{\R}$\\
+			Alors:
+			$$\systeme{& f(x)\mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}} y_0\\ & g(y)\mathop{\longrightarrow}\limits_{\substack{y\rightarrow y_0\\y\in J}}l}\Longrightarrow (g\circ f)(x) \mathop{\longrightarrow}\limits_{\substack{x\rightarrow x_0\\x\in I}}l$$
+	\section{Op\'erations sur les fonctions continues}
+		\begin{prop}
+			Soit $I$ un intervalle r\'eel non vide.\\
+			L'ensemble des applications continues sur $I$ a valeurs dans $\R$ est not\'e $\mathcal{C}(I,\R)$ ou $\mathcal{C}^{0}(I,\R)$\\
+			$\left(\mathcal{C}(I,\R),+,\cdot \right)$ est un espace vectoriel.
+		\end{prop}
+		\begin{preuve}
+			Montrer que:
+			\begin{liste}
+				\item $\mathcal{C}(I,\R)$ est non vide.
+				\item $\mathcal{C}(I,\R)$ est stable par combinaison lin\'eaire.
+			\end{liste}
+		\end{preuve}
+		\begin{prop}
+			\begin{liste}
+				\item Si $f$ et $g$ sont continues en $x_0$, alors $f\times g$ est continue en $x_0$.
+				\item Si $g(x_0)\neq 0$ et si $g$ est continue en $x_0$, alors $\frac1g$ a un sens au voisinage de $x_0$ et $\frac1g$ est continue en $x_0$.
+				\item Si $f$ et $g$ sont continues en $x_0$ et si $g(x_0)\neq 0$, alors $\frac{f}g$ a un sens au voisinage de $x_0$, et $\frac{f}g$ est continue en $x_0$.
+			\end{liste}
+		\end{prop}
+		\begin{coro}
+			\begin{liste}
+				\item Si $f$ est continue en $x_0$, alors $\forall n\in\N,\ f^n$ est continue en $x_0$.
+				\item Si de plus, $f(x_0)\neq0$, alors $\forall n\in\Z^*,\ f^n$ est continue en $x_0$.
+			\end{liste}
+		\end{coro}
+		\begin{flushleft}
+			Par cons\'equence, toutes les fonctions polynomiales sont continues sur $\R$.\\
+			De plus, les fonctions rationnelles sont continues sur leur ensemble de d\'efinition.
+		\end{flushleft}
+		\begin{prop}
+			Si $f$ est continue sur $I$, et si $g$ est continue sur $f(I)$, alors $g\circ f$ est continue sur $I$.
+		\end{prop}
+\end{document}
