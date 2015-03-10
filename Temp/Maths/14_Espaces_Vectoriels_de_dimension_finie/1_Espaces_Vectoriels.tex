@@ -2,7 +2,7 @@
 \documentclass[12pt,twoside,a4paper]{article}
 
 
-\def\chapitre{Espaces Vectoriels\\ de Dimension finie}
+\def\chapitre{Espaces Vectoriels de Dimension finie}
 \author{MPSI 2}
 \def\titre{Espaces Vectoriels}
 
@@ -74,13 +74,73 @@
 			\end{liste}
 			Donc $F_0$ existe.
 		\end{flushleft}
+	\section{Dépendance linéaire}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un système libre ssi:
+			$$\forall(\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^p,\ \left( \sum\limits_{i=1}^p\lambda_i\cdot X_i=0_E\right) \Rightarrow \left(  \forall i\in\lbracket1,p\rbracket, \lambda_i=0_\K\right) $$
+		\end{defi}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un système lié ssi:
+			$$\exists(\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^p,\ \left( \sum\limits_{i=1}^p\lambda_i\cdot X_i=0_E\right) \et \left(  \exists i\in\lbracket1,p\rbracket, \lambda_i\neq 0_\K\right) $$
+		\end{defi}
 		\begin{prop}
 			Soit $A=\{X_1,X_2,\ ...\ ,X_p \}$ une partie finie de $E$.\\
 			Alors $\vect(A)$ est l'ensemble des combinaisons linéaires de $A$.
 		\end{prop}
 		\begin{preuve}
 			Soit $B$ l'ensemble des combinaisons linéaires de $A$:\\
-			$B=\left\lbrace x\in E,\ \exists (\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^{p},\ x=\sum\limits_{i=1}^{p}\lambda_i \cdot X_i\right\rbrace $
-			%15-3-1
+			$B=\left\lbrace x\in E,\ \exists (\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^{p},\ x=\sum\limits_{i=1}^{p}\lambda_i \cdot X_i\right\rbrace $\\
+			Montrer que $B$ est un $\Sev$ de $E$.
+			\begin{liste}
+				\item $0_E\in B: \sum\limits_{i=1}^p0_\K\,X_i=0_E$
+				\item $B$ est stable par combinaison linéaire.
+			\end{liste}
+			Donc $B$ est un $\Sev$ de $E$.\\
+			\\
+			$B$ contient $A$:
+			\begin{tab}
+				Soit $i_0\in\lbracket1,p\rbracket$\\
+				$X_{i_0}=(\delta^{i_0}_i)_{i_0\in\lbracket1,p\rbracket}$\\
+				D'o\`u $X_{i_0}\in B$.\\
+				Valable pour tout $i_0$ de $\lbracket1,p\rbracket$,\\
+				Donc $A\subset B$
+			\end{tab}\ \\
+			Reste \`a montrer que $B$ est le plus petit $\Sev$ de $E$ contenant $A$.
+			\begin{tab}
+				Soit $F$ un $\Sev$ de $E$ contenant $A$.\\
+				$F$ est stable par CL et contient $A$.\\
+				Donc $F$ contient $B$.
+			\end{tab}
 		\end{preuve}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un \underline{système générateur de $E$} si $\vect(\{X_1,\ ...\ ,X_p \})=E$
+		\end{defi}
+		\begin{defi}
+			La famille $(X_1,\ ...\ ,X_p)$ est une \underline{base de $E$} si $\{X_1,\ ...\ ,X_p\}$ est libre et générateur de $E$.
+		\end{defi}
+	\section{Applications linéaires}
+		\begin{defi}
+			Soient $E$ et $F$ deux $\Kev$.\\
+			Soit $f:E\rightarrow F$\\
+			On dit que $f$ est un \underline{homomorphisme d'EV} de $E$ dans $F$ ou \underline{application linéaire} de $E$ dans $F$ si:
+			$$\forall (x,y)\in E^{2},\ \forall(\alpha,\beta)\in\K^{2},\ f(\alpha\cdot x+\beta\cdot y)=\alpha\cdot f(x)+\beta\cdot f(y)$$
+		\end{defi}
+		\begin{defi}
+			\begin{liste}
+				\item $f$ est un \underline{endomorphisme} si $(F,+,\cdot)=(E,+,\cdot)$ et si $f$ est un homomorphisme d'EV.
+				\item $f$ est un \underline{isomorphisme} d'EV si $f$ est un homomorphisme d'EV bijectif.
+				\item $f$ est un \underline{automorphisme} d'EV si $f$ est un endomorphisme bijectif.
+				\item $f$ est une \underline{forme linéaire sur $E$} si $(f,+,\cdot)=(\K,+,\cdot)$ et $f$ est un homomorphisme d'EV.
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\underline{Remarques:}
+			\begin{liste}
+				\item Si $f$ est un isomorphisme d'EV, alors $f^{-1}$ l'est aussi.
+				\item $\mathcal{L}_\K(E,F)$ désigne l'ensemble des applications linéaires de $E$ dans $F$.
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			Soient $E$ et $F$ deus $\Kev$
+		\end{defi}
 \end{document} %ACCENTS!!!
