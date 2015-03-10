@@ -4,7 +4,7 @@
 
 \def\chapitre{Espaces Vectoriels de Dimension finie}
 \author{MPSI 2}
-\def\titre{Dépendance linéaire dans $\mathbb{K}^{n}$}
+\def\titre{D\'ependance lin\'eaire dans $\mathbb{K}^{n}$}
 
 \input{../../.includes/header}
 
@@ -12,5 +12,28 @@
 
 \begin{document}
 	\maketitle
-	
+	\section{Structure d'espace vectoriel de $\K^{n}$}
+		\begin{defi}
+			Soit $n$ un entier non nul.
+			$$\K^{n}=\{(x_1,\ ...\ ,x_n),\ \forall i\in\lbracket1,n\rbracket,\ x_i\in\K \}$$
+			Soient $X$ et $Y$ deux \'el\'ements de $\K^{n}$, soit $\lambda$ un \'el\'ement de $\K$.\\
+			On pose:
+			\begin{liste}
+				\item $X+Y=(x_1+y_1,\ ...\ ,x_n+y_n)$
+				\item $\lambda\cdot X=(\lambda\times x_1,\ ...\ ,\lambda \times x_n)$
+			\end{liste}
+		\end{defi}
+		\begin{prop}
+			$\K^{n}$ est un $\Kev$.
+		\end{prop}
+		\begin{preuve}
+			Application de la d\'efinition et des axiomes.
+		\end{preuve}
+	\section{Syst\`eme lin\'eaire d'\'equations}
+		\begin{defi}
+			On dit que deux syst\`emes sont \'equivalents si ils ont le m\^eme ensemble de solutions.
+		\end{defi}
+		\begin{defi}
+			On appelle op\'erations permises toute transformation sur les lignes telle que le syst\`eme obtenu soit \'equivalent au syst\`eme initial.
+		\end{defi}
 \end{document} %ACCENTS!!!
