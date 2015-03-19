@@ -1,0 +1,41 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Fractions Rationnelles}
+\author{MPSI 2}
+\def\titre{Fonctions fraction Rationnelles}
+
+\input{../../.includes/header}
+
+\DeclareMathOperator{\PGCD}{pgcd}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	Soit $F=\frac PQ$ o\`u $(P,Q)\in\K[X]\times\K[X]^*,P\wedge Q=1$ \\
+	On note $p=\deg(Q)(\in\N)$. \\
+	On pose $\mathcal{D}_F\left\{x\in\K,\widetilde Q(x)\neq0\right\}$ \\
+	$\mathcal D_F$ est l'ensemble $\K$ prive d'un nombre fini d'\'el\'ements.
+	\begin{defi}
+		\begin{liste}
+			\item On note $\fonction{\widetilde{F}}{\mathcal{D}_F}{\R}{x}{\frac{\widetilde{P}(x)}{\widetilde{Q}(x)}}$ \\
+				$\widetilde F$ s'appelle la fonction fraction rationnelle associ\'ee \`a $F$.
+			\item Un \'el\'ement $x\in\K\setminus\mathcal D_F$ est un p\^ole de F.
+			\item Un \'el\'ement $x\in\mathcal D_F,\widetilde P(x)=0$ s'appelle une racine de $F$.
+		\end{liste}
+	\end{defi}
+	\begin{prop}
+		On note $E$ l'ensemble des fraction rationnelles \`a coefficients dans $\K$. \\
+		Soit $\fonction{\psi}{\K(X)}{E}{F}{\widetilde F}$
+		\begin{liste}
+			\item $\psi$ est surjective.
+			\item Si $\K$ est un corps infini, alors $\phi$ est injective.
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		\begin{liste}
+			\item $\psi$ est surjective par d\'efinition de $E$.
+			\item Pour montrer que si $E$ est infini, $\psi$ est injective, on utilise le fait que $\frac{\widetilde P_1}{\widetilde Q_1}=\frac{\widetilde P_2}{\widetilde Q_2}\iff\widetilde P_1\widetilde Q_2=\widetilde P_2\widetilde Q_1$ puis on montre que $P_1Q_2-P_2Q_1$ est le polynome nul en montrant qu'il poss\`ede une infinit\'e de racines.
+		\end{liste}
+	\end{preuve}
+\end{document}
