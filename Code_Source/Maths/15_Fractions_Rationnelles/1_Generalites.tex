@@ -1,0 +1,77 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+\def\chapitre{Fractions Rationnelles}
+\author{MPSI 2}
+\def\titre{G\'en\'eralit\'es}
+
+\input{../../.includes/header}
+
+\DeclareMathOperator{\PGCD}{pgcd}
+\DeclareMathOperator{\Max}{Max}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	On note $\K(X)$ le corps des fractionnelles sur $\K$ (le corps des fractions de l'anneau int\`egre $\K[X]$). \\
+	L'existence et la construction de $\K(X)$ sont admises. \\
+	\begin{liste}
+		\item Soit $(P_1,Q_1)\in\K[X]^2,(P_2,Q_2)\in\K[X]^2,Q_1\neq0\et Q_2\neq0$ \\
+			\begin{liste}
+				\item $\frac{P_1}{Q_1}+\frac{P_2}{Q_2}=\frac{P_1Q_2+P_2Q_1}{Q_1Q_2}$ El\'ement neutre : $\frac0Q$
+				\item $\frac{P_1}{Q_1}\times\frac{P_2}{Q_2}=\frac{P_1P_2}{Q_1Q_2}$ El\'ement unit\'e : $\frac{Q}Q$
+				\item $\frac{P_1}{Q_1}=\frac{P_2}{Q_2}\iff P_1Q_2=P_2Q_1$ \\
+					On dit que $(P_1,Q_1)$ et $(P_2,Q_2)$ sont deux repr\'esentants de la m\^eme fraction.
+			\end{liste}
+		\item On a $\K\overset{\varphi}\hookrightarrow\K[X]\overset{\iota}\hookrightarrow\K(X)$ ``iota`` \\
+			$$\begin{aligned}
+				&\fonction{\varphi}{\K}{K[X]}{\lambda}{(\lambda,0,0,\ldots)}&&\text{est un homomorphisme d'anneaux injectif} \\
+				&\fonction{\iota}{\K}{K[X]}{P}{\frac P1}&&\text{est un homomorphisme d'anneaux injectif}
+			\end{aligned}$$
+		\item Forme irr\'eductible d'une fraction rationnelle : \\
+			$\frac PQ\text{ o\`u }\left\{\begin{aligned}&P\in\K[X],Q\in\K[X],Q\neq0 \\
+														&P\wedge Q=1\\
+														&Q\text{ est unitaire}\end{aligned}\right.$
+	\end{liste}
+	\begin{prop}
+		Toute fraction rationnelle de $\K[X]$ peut \^etre mise de mani\`ere unique sous forme irr\'eductible.
+	\end{prop}
+	\begin{preuve}
+		\begin{liste}
+			\item \textbf{Existence :} Soit $\begin{aligned}[t]&(P,Q)\in\K[X]\times\K[X]^* \\
+															   &D=\PGCD(P,Q)\end{aligned}$ \\
+				Alors $\exists(P_1,Q_1)\in\K[X]^2,P=DP_1\et Q=DQ_1\et P_1\wedge Q_1=1$ \\
+				On a : $\frac PQ=\frac{P_1}{Q_1}$ \\
+				Soit $\lambda$ le coefficient dominant de $Q_1$. \\
+				Alors $\lambda\in\K^*$ et : $\exists Q_2\in\K[X],Q_1=\lambda Q_2\et Q_2\text{ est unitaire}$ \\
+				$$\frac{P_1}{Q_1}=\frac{\lambda(\lambda^{-1}P_1)}{\lambda Q_2}=\frac{\lambda^{-1}P_1}{Q_2}$$
+				Posons $P_2=\lambda^{-1}P_1$. \\
+				$P_2\wedge Q_2=1$ car $P_1\wedge Q_1=1$. \\
+				Finalement, le couple $(P_2,Q_2)$ convient.
+			\item \textbf{Unicit\'e :} Supposons qu'il existe deux formes irr\'eductibles $(P_1,Q_1)\et(P_2,Q_2)$ d'une m\^eme fraction. \\
+				Alors :$\left\{\begin{aligned}&P_1\wedge Q_1=1 \\
+											  &P_2\wedge Q_2=1 \\
+											  &Q1,Q2\text{ unitaires} \\
+											  &P_1Q_2-P_2Q_1=0\end{aligned}\right.$ \\
+				$P_1Q_2=P_2Q_1$ En utilisant un th\'eor\`eme de GAUSS, on obtient : $\left\{\begin{aligned}&Q_2|Q_1 \\
+																										   &Q_1|Q_2\end{aligned}\right.$ \\
+				Donc $Q_1$ et $Q_2$ sont des polynomes associ\'es. Comme $Q_1$ et $Q_2$ sont unitaires, on en d\'eduit que $Q_1=Q_2$ , d'o\`u l'unicit\'e de l'\'ecriture.
+		\end{liste}
+	\end{preuve}
+	\begin{defi}
+		Soit $F\in\K[X]:\exists(P,Q)\in\K[X]^2,Q\neq0\et F=\frac PQ$ \\
+		On pose : $\deg(F)=\deg(P)-\deg(Q)$
+	\end{defi}
+	\textbf{Justification :} Soit $(P,Q)$ et $(P',Q')$ deux repr\'esentants de $F$. \\
+	Alors $PQ'=P'Q$ \\
+	Donc : $\deg(P)+\deg(Q)=\deg(P')+\deg(Q')$ \\
+	D'o\`u : $\deg(P)-\deg(Q')=\deg(P')-\deg(Q)$
+	\begin{prop}
+		Soit $F_1$ et $F_2$ deux \'el\'ements de $\K[X]$. On a : \\
+		$$\begin{aligned}
+			\deg(F_1+F_2)&\leq\Max(\{\deg(F_1),\deg(F_2)\}) \\
+			\text{Si }\deg{F_1}\neq\deg{F_2}\text{ alors }\deg(F_1+F_2)&=\Max(\{\deg(F_1),\deg(F_2)\}) \\
+			\deg(F_1F_2)&=\deg(F_1)+\deg(F_2)
+		\end{aligned}$$
+	\end{prop}
+\end{document}
