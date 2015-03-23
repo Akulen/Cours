@@ -1,0 +1,92 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels de Dimension finie}
+\author{MPSI 2}
+\def\titre{Sous-Espaces Vectoriels}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Dimension de sous-espaces vectoriels}
+		Soit $E$ un $\Kev$ de dimension finie.
+		\begin{prop}
+			Soit $F$ un $\Sev$ de $E$.\\
+			Alors:
+			\begin{liste}
+				\item $F$ est de dimension finie.
+				\item $\dim(F)\leqslant\dim(E)$
+				\item $F=E\iff \dim(F)=dim(E)$
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			On raisonne sur une base de $F$.
+		\end{preuve}
+	\section{Somme de sous-espaces vectoriels}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		Soient $F$ et $G$ deux $\Sev$ de $E$.
+		\begin{defi}
+			On appelle \underline{somme de $F$ et $G$} le sous-espace vectoriel engendré par $F\cup G$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $F+G=\vect(F\cup G)$
+		\end{flushleft}
+		\begin{prop}
+			$$F+G=\{x\in E,\ \exists(x_F,x_G)\in F\times G,\ x=x_F+x_G \}$$
+		\end{prop}
+		\newpage
+		\begin{prop}
+			$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)$$
+		\end{prop}
+		\begin{preuve}
+			On raisonne avec les bases de $F$, $G$, et $F\cap G$, et avec le théorème de la base incomplète sur $F\cap G$.
+		\end{preuve}
+	\section{Somme directe, espaces supplémentaires}
+		\begin{flushleft}
+			Soit $E$ un $\Kev$ de dimension $n$.
+		\end{flushleft}
+		\begin{defi}
+			Soient $F$ et $G$ deux $\Sev$ de $E$.
+			\begin{liste}
+				\item La somme $F+G$ est \underline{directe} si $F\cap G=\{0_E\}$
+				\item $F$ et $G$ sont \underline{supplémentaires de $E$} si $F\oplus G=E$
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} Somme directe de $F$ et $G$: $F\oplus G$
+		\end{flushleft}
+		\begin{prop}
+			$\fonction{\varphi_1}{F\times G}{F+G}{(x_F,x_G)}{x_F+x_G}$\\
+			$\varphi_1$ est linéaire et surjective.\\
+			\begin{liste}
+				\item $F$ et $G$ sont en somme directe ssi $\varphi_1$ est injective.
+				\item $F$ et $G$ sont en somme directe ssi tout élément de $F+G$ s'écrit comme manière unique comme CL d'éléments de $F$ et de $G$.
+			\end{liste}
+		\end{prop}
+		\begin{defi}
+			$$\sum\limits_{i=1}^pE_i=\vect\left( \bigcup\limits_{i=1}^pE_i\right) $$
+		\end{defi}
+		\begin{defi}
+			Soit $\fonction{\varphi}{E_1\times...\times E_p}{E_1+...+E_p}{(x_1,\,...\,,\,x_p)}{x_1+...+x_p}$\\
+			La somme $\sum\limits_{i=1}^pE_i$ est directe ssi $\varphi$ est injective, c'est \`a dire si tout élément de $E_1+...+E_p$ s'écrit comme CL unique d'éléments de $\{E_1\times...\times E_p\}$.
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $\bigoplus\limits_{i=1}^pE_i$
+		\end{flushleft}
+		\begin{prop}
+			$F+G$ est une somme directe ssi la réunion d'une base de $F$ et d'une base de $G$ est une base de $F+G$.
+		\end{prop}
+		\begin{coro}
+			$$\dim(F\oplus G)=\dim(F)+\dim(G)$$
+		\end{coro}
+		\begin{coro}
+			\begin{liste}
+				\item Si $F$ et $G$ sont supplémentaires de $E$, alors $\dim(F)+\dim(G)=\dim(E)$
+				\item Tous les $\Sev$ supplémentaires de $F$ dans $E$ sont de dimension $\dim(E)-\dim(F)$
+			\end{liste}
+			\end{coro}
+\end{document} %ACCENTS!!!
