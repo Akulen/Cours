@@ -1,0 +1,112 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels de Dimension finie}
+\author{MPSI 2}
+\def\titre{Existance de bases}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{defi}
+		Soit $E$ un espace vectoriel.\\
+		On dit que $E$ est \underline{de dimension finie} si $E$ admet un syst\`eme g\'en\'erateur fini.
+	\end{defi}
+	\begin{prop}
+		\textbf{Caract\'erisation de bases}\\
+		Soit $\mathcal{S}$ un syst\`eme de vecteurs de $E$.\\
+		On a \'equivalence entre:
+		\begin{liste}
+			\item $\mathcal{S}$ est une base de $E$.
+			\item $\mathcal{S}$ est un syst\`eme g\'en\'erateur minimal.
+			\item $\mathcal{S}$ est un syst\`eme libre maximal.
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		Utilisation des d\'efinitions et des axiomes.
+	\end{preuve}
+	\begin{prop}
+		Soient $A$ et $B$ deux syst\`emes finis de $E$ tels que $A$ soit libre et $B$ g\'en\'erateur.\\ 
+		Alors il existe un syst\`eme $\mathcal{S}$ de $E$ tel que:
+		\begin{liste}
+			\item $A\subset\mathcal{S}\subset B$
+			\item $\mathcal{S}$ est une base de $E$.
+		\end{liste}
+	\end{prop}
+	\begin{preuve}
+		On pose $\mathcal{S}$ le plus grand \'el\'ement de $\{A'\subset E,\ A' \mathrm{ libre}\et A\subset A'\subset B \}$ au sens du cardinal.\\
+		On montre ensuite que ce syst\`eme est g\'en\'erateur en montrant que $B$ est CL de $\mathcal{S}$.
+	\end{preuve}
+	\begin{theo}{d'existance de base}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		Alors il existe un syst\`eme fini d'\'el\'ements de $E$ qui soit une base de $E$.
+	\end{theo}
+	\begin{preuve}
+		On applique la propri\'et\'e pr\'ec\'edente, avec $1_E$ et le syst\`eme g\'en\'erateur fini.\\
+		Par convention, $\{\varnothing\}$ est la base de $\{0_E\}$
+	\end{preuve}
+	\begin{theo}{de l'\'echange}
+		Soit $A=\{a_1,\,...\,,\,a_r\}$ une partie libre de E.\\
+		Soit $A'=\{a'_1,\,...\,,\,a'_p\}$ une partie g\'en\'eratrice de E.\\
+		Alors on peut remplacer $r$ \'el\'ements de $A'$ par des \'el\'ements de $A$ pour obtenir un syst\`eme g\'en\'erateur de $E$.
+	\end{theo}
+	\begin{preuve}
+		On exprime les \'el\'ements de $A$ comme CL d'\'el\'ements de $A'$, et on remplace un \'el\'ement exprimant par l'exprim\'e.
+	\end{preuve}
+	\textbf{Cons\'equences en dimension finie}
+	\begin{coro}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		Tout syst\`eme libre de $E$ a au plus autant d'\'el\'ements qu'un syst\`eme g\'en\'erateur de $E$.
+	\end{coro}
+	\begin{preuve}
+		Application du th\'eor\`eme de l'\'echange.
+	\end{preuve}
+	\begin{coro}
+		Si $E$ est un $\Kev$ de dimension finie, alors deux bases de $E$ ont le m\^eme nombre d'\'el\'ements.
+	\end{coro}
+	\begin{preuve}
+		Application du th\'eor\`eme de l'\'echange.
+	\end{preuve}
+	\begin{defi}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		On appelle \underline{dimension de $E$} le cardinal d'une base de $E$.
+	\end{defi}
+	\begin{coro}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		Soit $B$ une base de $E$ de cardinal $n$.\\
+		Soit $A$ une partie de $E$.\\
+		Alors on a:
+		\begin{liste}
+			\item $\dim(E)=n$
+			\item Si $A$ est libre, alors $\mathrm{card}(A)\leqslant n$
+			\item Si $A$ est g\'en\'erateur de $E$, alors $\mathrm{card}(A)\geqslant n$
+		\end{liste}
+	\end{coro}
+	\begin{coro}
+		Soit $E$ un $\Kev$ de dimension $n$.\\
+		Soit $A$ une partie de $E$ de cardinal $n$.\\
+		Alors on a \'equivalence entre :
+		\begin{liste}
+			\item $A$ est une base de $E$.
+			\item $A$ est libre.
+			\item $A$ est g\'en\'erateur de $E$.
+		\end{liste}
+	\end{coro}
+	\begin{preuve}
+		Syst\`emes libres maximaux et g\'en\'erateurs minimaux.
+	\end{preuve}
+	\begin{theo}{de la base incompl\`ete}
+		Soit $E$ un $\Kev$ de dimension $n$.\\
+		Soit $A=\{a_1,\,...\,,\,a_r \}$ un syst\`eme libre de $E$.\\
+		Soit $A'=\{a'_1,\,...\,,\,a'_p \}$ un syst\`eme g\'en\'erateur de $E$.\\
+		Alors on peut compl\'eter $A$ avec $n-r$ \'el\'ements de $A'$ pour obtenir une base de $E$.
+	\end{theo}
+	\begin{preuve}
+		$\exists \mathcal{S}\in \mathcal{P}(E),\ A\subset \mathcal{S}\subset A\cup A',\ \mathcal{S}\text{ g\'en\'erateur}$\\
+		En particulier, $\mathrm{card}(\mathcal S)=n$
+	\end{preuve}
+\end{document} %ACCENTS!!!
