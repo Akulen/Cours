@@ -1,0 +1,37 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels de Dimension finie}
+\author{MPSI 2}
+\def\titre{D\'ependance lin\'eaire dans un espace vectoriel de dimension finie}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{prop}
+		Soit $E$ un $\Kev$.\\
+		Soit $(e_1,\, ...\,,\,e_n)_{i\in\lbracket1,n\rbracket}$ une base de $E$\\
+		$\fonction{\varphi}{(\K^n,+,\cdot)}{(E,+,\cdot)}{(x_1,\,...\,,\,x_n)}{\sum\limits^{n}_{i=1}x_i\cdot e_i}$\\
+		$\varphi$ est un isomorphisme de $\Kev$, de $\K^{n}$ dans $E$.\\
+		En particulier, $K^n$ et $E$ sont isomorphes.
+	\end{prop}
+	\begin{prop}
+		Soit $\{V_1,\,...\,,\,V_p \}$ un syst\`eme d'\'el\'ements de $E$.
+		\begin{liste}
+			\item $\{V_1,\,...\,,\,V_p \}$ est libre ssi $\{\varphi^{-1}(V_1),\,...\,,\,\varphi^{-1}(V_p) \}$ est libre dans $\K^n$.
+			\item $\{V_1,\,...\,,\,V_p \}$ est g\'en\'erateur ssi $\{\varphi^{-1}(V_1),\,...\,,\,\varphi^{-1}(V_p) \}$ est g\'en\'erateur de $\K^n$.
+			\item $(V_1,\,...\,,\,V_p)$ est une base ssi $(\varphi^{-1}(V_1),\,...\,,\,\varphi^{-1}(V_p) )$ est une base de $\K^n$.
+		\end{liste}
+	\end{prop}
+	\begin{coro}
+		\begin{liste}
+			\item Si $\{V_1,\,...\,,\,V_p \}$ est libre, alors $p\leqslant n$.
+			\item Si $\{V_1,\,...\,,\,V_p \}$ est g\'en\'erateur, alors $p\geqslant n$.
+			\item Si $(V_1,\,...\,,\,V_p)$ est une base, alors $p=n$.
+		\end{liste}
+	\end{coro}
+\end{document} %ACCENTS!!!
