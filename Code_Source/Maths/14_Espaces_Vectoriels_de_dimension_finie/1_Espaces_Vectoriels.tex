@@ -1,0 +1,175 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels de Dimension finie}
+\author{MPSI 2}
+\def\titre{Espaces Vectoriels}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Structure d'espace vectoriel}
+		Soit $E$ un ensemble non vide.
+		\begin{defi}
+			$E$ est un \underline{espace vectoriel sur $\K$} (ou $\K$-espace vectoriel) si:
+			\begin{liste}
+				\item $(E,+)$ est un groupe ab\'elien.
+				\item $\begin{aligned}[t]\K\times E&\longrightarrow E \\(\lambda,x)&\longmapsto \lambda\cdot x\end{aligned}$ est un loi interne telle que:\\
+				$\forall (x,y)\in E^{2},\ \forall (\lambda,\mu)\in\K^{2}:$
+				\begin{liste}
+					\item $(\lambda+\mu)\cdot x=\lambda\cdot x+\mu\cdot x$
+					\item $\lambda\cdot(x+y)=\lambda\cdot x+\lambda\cdot y$
+					\item $\lambda\cdot(\mu\cdot x)=(\lambda\times\mu)\cdot x$
+					\item $1_\K\cdot x=x$
+				\end{liste}
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\underline{R\`egles de calcul dans un espace vectoriel:}
+			\begin{liste}
+				\item $(-\lambda)\cdot x=-(\lambda\cdot x)$
+				\item $\lambda\cdot (-x)=-(\lambda\cdot x)$
+				\item $0_\K\cdot x=0_E$
+				\item $\lambda\cdot 0_E=0_E$
+			\end{liste}
+		\end{flushleft}
+	\section{Sous-espace vectoriel}
+		Soit $E$ un $\K_\text{EV}$, soit $F$ un sous-ensemble non vide de $E$.
+		\begin{defi}
+			On dit que $F$ est un \underline{sous-espace vectoriel de $E$} si il est stable par les lois de $E$ et si, muni des restrictions de ces lois, $F$ est un $\K_\text{EV}$
+		\end{defi}
+		\begin{flushleft}
+			\underline{Crit\`eres de $\Sev$}
+			\begin{liste}
+				\item Crit\`ere 1: $F$ est un $\Sev$ de $E$ si il est non vide et stable par les lois de $E$.
+				\begin{liste}
+					\item $0_E\in F$
+					\item $\forall(x,y)\in F^{2},\ x+y\in F$
+					\item $\forall \lambda\in\K,\ \forall x\in F,\ \lambda\cdot x\in F$
+				\end{liste}
+				\item Crit\`ere 2: $F$ est un $\Sev$ de $E$ si il est non vide et stable par combinaison lin\'eaire.
+				\begin{liste}
+					\item $0_E\in F$
+					\item $\forall (\lambda,\mu)\in\K^{2},\ \forall (x,y)\in F^{2},\ \lambda\cdot x+\mu\cdot y\in F$
+				\end{liste}
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			On appelle \underline{espace vectoriel engendr\'e par $A$} le plus petit espace vectoriel contenant $A$.
+		\end{defi}
+		\begin{flushleft}
+			\underline{Notation:} $\vect(A)$
+		\end{flushleft}
+		\begin{flushleft}
+			\underline{Justification}\\
+			Soit $\mathcal{F}=\left\lbrace F\subset E,\ F\ \Sev\text{ de }E\et A\subset F\right\rbrace $
+			\begin{liste}
+				\item $F_0=\bigcap\limits_{F\in\mathcal{F}}F$ est un $\Sev$ de $E$, et contient $A$: $\forall F\in\mathcal{F},\ A\subset F$\\
+					D'o\`u $F_0\in\mathcal{F}$
+				\item Par d\'efinition de $F_0$, c'est le plus petit \'el\'ement de $\mathcal{F}$.
+			\end{liste}
+			Donc $F_0$ existe.
+		\end{flushleft}
+	\section{D\'ependance lin\'eaire}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un syst\`eme libre ssi:
+			$$\forall(\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^p,\ \left( \sum\limits_{i=1}^p\lambda_i\cdot X_i=0_E\right) \Rightarrow \left(  \forall i\in\lbracket1,p\rbracket, \lambda_i=0_\K\right) $$
+		\end{defi}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un syst\`eme li\'e ssi:
+			$$\exists(\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^p,\ \left( \sum\limits_{i=1}^p\lambda_i\cdot X_i=0_E\right) \et \left(  \exists i\in\lbracket1,p\rbracket, \lambda_i\neq 0_\K\right) $$
+		\end{defi}
+		\begin{prop}
+			Soit $A=\{X_1,X_2,\ ...\ ,X_p \}$ une partie finie de $E$.\\
+			Alors $\vect(A)$ est l'ensemble des combinaisons lin\'eaires de $A$.
+		\end{prop}
+		\begin{preuve}
+			Soit $B$ l'ensemble des combinaisons lin\'eaires de $A$:\\
+			$B=\left\lbrace x\in E,\ \exists (\lambda_i)_{i\in\lbracket1,p\rbracket}\in\K^{p},\ x=\sum\limits_{i=1}^{p}\lambda_i \cdot X_i\right\rbrace $\\
+			Montrer que $B$ est un $\Sev$ de $E$.
+			\begin{liste}
+				\item $0_E\in B: \sum\limits_{i=1}^p0_\K\,X_i=0_E$
+				\item $B$ est stable par combinaison lin\'eaire.
+			\end{liste}
+			Donc $B$ est un $\Sev$ de $E$.\\
+			\\
+			$B$ contient $A$:
+			\begin{tab}
+				Soit $i_0\in\lbracket1,p\rbracket$\\
+				$X_{i_0}=(\delta^{i_0}_i)_{i_0\in\lbracket1,p\rbracket}$\\
+				D'o\`u $X_{i_0}\in B$.\\
+				Valable pour tout $i_0$ de $\lbracket1,p\rbracket$,\\
+				Donc $A\subset B$
+			\end{tab}\ \\
+			Reste \`a montrer que $B$ est le plus petit $\Sev$ de $E$ contenant $A$.
+			\begin{tab}
+				Soit $F$ un $\Sev$ de $E$ contenant $A$.\\
+				$F$ est stable par CL et contient $A$.\\
+				Donc $F$ contient $B$.
+			\end{tab}
+		\end{preuve}
+		\begin{defi}
+			$\{X_1,\ ...\ ,X_p \}$ est un \underline{syst\`eme g\'en\'erateur de $E$} si $\vect(\{X_1,\ ...\ ,X_p \})=E$
+		\end{defi}
+		\begin{defi}
+			La famille $(X_1,\ ...\ ,X_p)$ est une \underline{base de $E$} si $\{X_1,\ ...\ ,X_p\}$ est libre et g\'en\'erateur de $E$.
+		\end{defi}
+	\section{Applications lin\'eaires}
+		\begin{defi}
+			Soient $E$ et $F$ deux $\Kev$.\\
+			Soit $f:E\rightarrow F$\\
+			On dit que $f$ est un \underline{homomorphisme d'EV} de $E$ dans $F$ ou \underline{application lin\'eaire} de $E$ dans $F$ si:
+			$$\forall (x,y)\in E^{2},\ \forall(\alpha,\beta)\in\K^{2},\ f(\alpha\cdot x+\beta\cdot y)=\alpha\cdot f(x)+\beta\cdot f(y)$$
+		\end{defi}
+		\newpage
+		\begin{defi}
+			\begin{liste}
+				\item $f$ est un \underline{endomorphisme} si $(F,+,\cdot)=(E,+,\cdot)$ et si $f$ est un homomorphisme d'EV.
+				\item $f$ est un \underline{isomorphisme} d'EV si $f$ est un homomorphisme d'EV bijectif.
+				\item $f$ est un \underline{automorphisme} d'EV si $f$ est un endomorphisme bijectif.
+				\item $f$ est une \underline{forme lin\'eaire sur $E$} si $(f,+,\cdot)=(\K,+,\cdot)$ et $f$ est un homomorphisme d'EV.
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\underline{Remarques:}
+			\begin{liste}
+				\item Si $f$ est un isomorphisme d'EV, alors $f^{-1}$ l'est aussi.
+				\item $\mathcal{L}_\K(E,F)$ d\'esigne l'ensemble des applications lin\'eaires de $E$ dans $F$.
+			\end{liste}
+		\end{flushleft}
+		\begin{defi}
+			Soient $E$ et $F$ deux $\Kev$.\\
+			Soit $f:E\rightarrow F$
+			\begin{liste}
+				\item \underline{L'image de $f$}: $\mathrm{Im}(f)=f(E)$
+				\item \underline{Le noyau de $f$}: $\ker(f)=f^{-1}<\{0_F\}>$
+			\end{liste}
+		\end{defi}
+		\begin{prop}
+			$\mathrm{Im}(f)\et \ker(f)$ sont des $\Sev$ de $F$ et $E$ respectivement.
+		\end{prop}
+		\begin{prop}
+			Soit $(X_1,\ ...\ ,X_p)$ une famille de vecteurs de $E$.\\
+			Soit $f:E\rightarrow F$ une application lin\'eaire.
+			\begin{liste}
+				\item Si $(X_1,\ ...\ ,X_p)$ est li\'e, alors $(f(X_1),\ ...\ ,f(X_p))$ est li\'e.
+				\item Par contrapos\'ee, si $(f(X_1),\ ...\ ,f(X_p))$ est libre, alors $(X_1,\ ...\ ,X_p)$ est libre.
+				\item Si $(X_1,\ ...\ ,X_p)$ est libre et $f$ est injective, alors $(f(X_1),\ ...\ ,f(X_p))$ est libre.
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			Application des propri\'et\'es
+		\end{preuve}
+		\newpage
+		\begin{prop}
+			Soit $f:E\rightarrow F$ une application lin\'eaire.
+			\begin{liste}
+				\item Si $(X_1,\ ...\ ,X_p)$ est une famille g\'en\'eratrice de $E$, alors $(f(X_1),\ ...\ ,f(X_p))$ est g\'en\'eratrice de $f(E)$.
+				\item Si $f$ est surjective, alors l'image d'une famille g\'en\'eratrice de $E$ est g\'en\'eratrice de $F$ (car $f(E)=F$).
+			\end{liste}
+		\end{prop}
+\end{document} %ACCENTS!!!

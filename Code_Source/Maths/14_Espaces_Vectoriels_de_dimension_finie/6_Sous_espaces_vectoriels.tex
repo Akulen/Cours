@@ -1,0 +1,164 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{Espaces Vectoriels de Dimension finie}
+\author{MPSI 2}
+\def\titre{Sous-Espaces Vectoriels}
+
+\input{../../.includes/header}
+
+%Auteur: Cl\'ement Phan, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Dimension de sous-espaces vectoriels}
+		Soit $E$ un $\Kev$ de dimension finie.
+		\begin{prop}
+			Soit $F$ un $\Sev$ de $E$.\\
+			Alors:
+			\begin{liste}
+				\item $F$ est de dimension finie.
+				\item $\dim(F)\leqslant\dim(E)$
+				\item $F=E\iff \dim(F)=dim(E)$
+			\end{liste}
+		\end{prop}
+		\begin{preuve}
+			On raisonne sur une base de $F$.
+		\end{preuve}
+	\section{Somme de sous-espaces vectoriels}
+		Soit $E$ un $\Kev$ de dimension finie.\\
+		Soient $F$ et $G$ deux $\Sev$ de $E$.
+		\begin{defi}
+			On appelle \underline{somme de $F$ et $G$} le sous-espace vectoriel engendr\'e par $F\cup G$
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $F+G=\vect(F\cup G)$
+		\end{flushleft}
+		\begin{prop}
+			$$F+G=\{x\in E,\ \exists(x_F,x_G)\in F\times G,\ x=x_F+x_G \}$$
+		\end{prop}
+		\newpage
+		\begin{prop}
+			$$\dim(F+G)=\dim(F)+\dim(G)-\dim(F\cap G)$$
+		\end{prop}
+		\begin{preuve}
+			On raisonne avec les bases de $F$, $G$, et $F\cap G$, et avec le th\'eor\`eme de la base incompl\`ete sur $F\cap G$.
+		\end{preuve}
+	\section{Somme directe, espaces suppl\'ementaires}
+		\begin{flushleft}
+			Soit $E$ un $\Kev$ de dimension $n$.
+		\end{flushleft}
+		\begin{defi}
+			Soient $F$ et $G$ deux $\Sev$ de $E$.
+			\begin{liste}
+				\item La somme $F+G$ est \underline{directe} si $F\cap G=\{0_E\}$
+				\item $F$ et $G$ sont \underline{suppl\'ementaires de $E$} si $F\oplus G=E$
+			\end{liste}
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} Somme directe de $F$ et $G$: $F\oplus G$
+		\end{flushleft}
+		\begin{prop}
+			$\fonction{\varphi_1}{F\times G}{F+G}{(x_F,x_G)}{x_F+x_G}$\\
+			$\varphi_1$ est lin\'eaire et surjective.\\
+			\begin{liste}
+				\item $F$ et $G$ sont en somme directe ssi $\varphi_1$ est injective.
+				\item $F$ et $G$ sont en somme directe ssi tout \'el\'ement de $F+G$ s'\'ecrit comme mani\`ere unique comme CL d'\'el\'ements de $F$ et de $G$.
+			\end{liste}
+		\end{prop}
+		\begin{defi}
+			$$\sum\limits_{i=1}^pE_i=\vect\left( \bigcup\limits_{i=1}^pE_i\right) $$
+		\end{defi}
+		\begin{defi}
+			Soit $\fonction{\varphi}{E_1\times...\times E_p}{E_1+...+E_p}{(x_1,\,...\,,\,x_p)}{x_1+...+x_p}$\\
+			La somme $\sum\limits_{i=1}^pE_i$ est directe ssi $\varphi$ est injective, c'est \`a dire si tout \'el\'ement de $E_1+...+E_p$ s'\'ecrit comme CL unique d'\'el\'ements de $\{E_1\times...\times E_p\}$.
+		\end{defi}
+		\begin{flushleft}
+			\textbf{Notation:} $\bigoplus\limits_{i=1}^pE_i$
+		\end{flushleft}
+		\begin{prop}
+			$F+G$ est une somme directe ssi la r\'eunion d'une base de $F$ et d'une base de $G$ est une base de $F+G$.
+		\end{prop}
+		\begin{coro}
+			$$\dim(F\oplus G)=\dim(F)+\dim(G)$$
+		\end{coro}
+		\begin{coro}
+			\begin{liste}
+				\item Si $F$ et $G$ sont suppl\'ementaires de $E$, alors $\dim(F)+\dim(G)=\dim(E)$
+				\item Tous les $\Sev$ suppl\'ementaires de $F$ dans $E$ sont de dimension $\dim(E)-\dim(F)$
+				\item Tous les $\Sev$ suppl\'ementaires de $F$ dans $E$ sont isomorphes.
+			\end{liste}
+		\end{coro}
+		\begin{flushleft}
+			\textbf{Crit\`eres de suppl\'ementarit\'e}
+			$$ \left\lbrace \begin{aligned}
+			& F\cap G=\{O_E\}\\ & F+G=E
+			\end{aligned}\right. \ou 
+			\left\lbrace \begin{aligned}
+			& \dim(F)+\dim(G)=\dim(E)\\& F+G=E
+			\end{aligned}\right. \ou
+			\left\lbrace \begin{aligned}
+			& \dim(F)+\dim(G)=\dim(E)\\ & F\cap G=\{0_E \}
+			\end{aligned}\right. $$
+		\end{flushleft}
+		\begin{prop}
+			\textbf{Existence d'un suppl\'ementaire d'un $\Sev$ de $E$}\\
+			Soit $F$ un $\Sev$ de $E$.\\
+			$F$ admet au moins un $\Sev$ suppl\'ementaire dans $E$.
+		\end{prop}
+		\begin{preuve}
+			On utilise le th\'eor\`eme de la base incompl\`ete, et on forme l'espace vectoriel engendr\'e par les termes ajout\'es \`a la base de $F$.\\
+			On a donc l'union des deux bases \'egale a une base de $E$.
+		\end{preuve}
+		\begin{defi}
+			Soit $F$ et $G$ deux $\Sev$ suppl\'ementaires de $E$.\\
+			On a: $\forall x\in E,\ \exists (x_F,x_G)\in F\times G,\ uniques,\ x=x_F+x_G$
+			\begin{liste}
+				\item $\fonction{P_F}{E}{E}{x}{x_F}$ est la \underline{projection sur $F$ parall\`element \`a $G$}.
+				\item $\fonction{S_F}{E}{E}{x}{x_F-x_G}$ est la \underline{sym\'etrie par rapport \`a $F$ et parall\`element \`a $G$}.
+			\end{liste}
+		\end{defi}
+		\begin{prop}
+			\begin{liste}
+				\item $P_F$ est lin\'eaire, $P_F\circ P_F=P_F$, $\mathrm{Im}(P_F)=F$, $\ker(P_F)=G$
+				\item $S_F$ est lin\'eaire, $S_F\circ S_F=\mathrm{Id}_F$, $\mathrm{Im}(S_F)=E$, $\ker(P_F)=\{0_E\}$
+			\end{liste}
+		\end{prop}
+	\section{Th\'eor\`eme du Rang}
+		\begin{theo}{du Rang}
+			Soit $E$ un $\Kev$ de dimension $n$.\\
+			Soit $F$ un $\Kev$.\\
+			Soit $f:E\rightarrow F$ lin\'eaire.\\
+			On a alors:
+			$$
+			\underbrace{\dim(\mathrm{Im}(f))}_{\text{Rang de }f}+\dim(\ker(f))=n
+			$$
+		\end{theo}
+		\begin{preuve}
+			\begin{liste}
+				\item Soit $(e_1,\,...\,,\,e_n)$ une base de $E$.\\
+					Soit $(\varepsilon_1,\,...\,,\,\varepsilon_k)$ une base de $\ker(f)$.\\
+					D'apr\`es le th\'eor\`eme de la base incompl\`ete:\\
+					il existe $i_1,\,...\,,\,i_{n-k}$ indices distincts de $\lbracket1,n\rbracket$ tels que $(\varepsilon_1,\,...\,,\,\varepsilon_k\,,e_{i_1},\,...\,,\,e_{i_{n-k}})$ soit une base de $E$.\\
+					Soit $E_1=\vect(\{e_{i_1},\,...\,,\,e_{i_{n-k}}\})$\\
+					Alors $E=\ker(f)\oplus E_1$, et $\restr{f}{E_1}$ est injective.
+				\item $\mathrm{Im}(\restr{f}{E_1})=\vect(\{f(e_{i_1}),\,...\,,\,f(e_{i_{n-k}})\})$ car $\{e_{i_1},\,...\,,\,e_{i_{n-k}}\}$ est g\'en\'erateur de $E_1$.\\
+					De plus, $\{e_{i_1},\,...\,,\,e_{i_{n-k}}\}$ est libre \underline{et} $f$ est injective, donc $\{f(e_{i_1}),\,...\,,\,f(e_{i_{n-k}})\}$ est libre.\\
+					\textbf{Ccl:} $\{f(e_{i_1}),\,...\,,\,f(e_{i_{n-k}})\}$ est une base de $\mathrm{Im}(\restr{f}{E_1})$
+				\item $\begin{aligned}[t]
+					\mathrm{Im}(f) & =\vect(\{\underbrace{\varepsilon_1}_{=0_E},\,...\,,\,\underbrace{\varepsilon_k}_{=0_E}\,,e_{i_1},\,...\,,\,e_{i_{n-k}}\})\\
+						& =\vect(\{e_{i_1},\,...\,,\,e_{i_{n-k}} \}) \\
+						& =\mathrm{Im}(\restr{f}{E_1})
+					\end{aligned}$\\
+					\textbf{Ccl:} $\mathrm{Im}(f)=\mathrm{Im}(\restr{f}{E_1})$
+			\end{liste}
+			\ \\
+			Donc $\begin{aligned}[t]
+				\dim(\mathrm{Im}(f)) & = \dim(\mathrm{Im}(\restr{f}{E_1}))\\
+					& = n-k\\
+					& = n-\dim(\ker(f))
+			\end{aligned}$\\\\
+			\textbf{Conclusion g\'en\'erale:} $\dim(\mathrm{Im}(f)) +\dim(\ker(f))=n$
+		\end{preuve}
+\end{document} %ACCENTS!!!
