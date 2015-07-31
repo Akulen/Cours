@@ -1,0 +1,46 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{D\'erivabilit\'e}
+\author{MPSI 2}
+\def\titre{D\'erivations successives}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{flushleft}
+		Soit $f$ une fonction num\'erique d\'efinie sur un intervalle r\'eel $I$.
+	\end{flushleft}
+	\begin{defi}
+		$f$ est d\'erivable sur $I$ si elle est d\'erivable en tout point de $I$. Dans ce cas, on definit la fonction d\'eriv\'ee $f'$ par :
+		$$
+			\fonction{f'}{I}{\R}{x}{f'\left(x_0\right)}
+		$$
+		\begin{liste}
+			\item Si $f'$ est d\'erivable en $x_0$, on note $f"\left(x_0\right)=\left(f'\right)'\left(x_0\right)$
+			\item Par r\'ecurrence, on d\'efinit, si $f^{\left(p-1\right)}$ existe et est d\'erivable en $x_0$ :
+				$$
+					f^{\left(p\right)}\left(x_0\right)=\left(f^{\left(p-1\right)}\right)'\left(x_0\right)
+				$$
+		\end{liste}
+	\end{defi}
+	\begin{defi}
+		Soit $n\in\N$.
+		\begin{liste}
+			\item On dit que $f$ est de classe $\mathcal{C}^n$ sur $I$ si $f$ est d\'erivable $n$ fois sur $I$ et que $f^{\left(n\right)}$ est continue sur $I$. \\
+				On note parfois $\mathcal{C}^n\left(I,\R\right)$ l'ensemble de ces applications.
+			\item On dit que $f$ est de classe $\mathcal{C}^\infty$ sur $I$ si $f$ admet des d\'eriv\'ees \`a tout ordre sur $I$.
+		\end{liste}
+	\end{defi}
+	\begin{prop}
+		\textbf{Formule de Leibniz} \\
+		Si $f$ et $g$ admettent des d\'eriv\'ees jusqu'\`a l'ordre $n$ sur $I$, alors $f\times g$ aussi et :
+		$$
+			\forall x\in I,\left(f\times g\right)^{\left(n\right)}\left(x\right)=\left(\sum\limits_{k=0}^n\dbinom{n}{k}f^{\left(k\right)}\times g^{\left(n-k\right)}\right)\left(x\right)
+		$$
+	\end{prop}
+\end{document}
