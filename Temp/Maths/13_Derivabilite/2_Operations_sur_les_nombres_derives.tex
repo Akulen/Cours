@@ -1,0 +1,58 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{D\'erivabilit\'e}
+\author{MPSI 2}
+\def\titre{Op\'erations sur les nombres d\'eriv\'es}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	\begin{flushleft}
+		$I\subset\R$ est un intervalle non vide et non r\'eduit \`a un point.
+	\end{flushleft}
+	\begin{prop}
+		Soit $x_0\in I$.
+		\begin{liste}
+			\item L'ensemble $\mathcal{E}$ des applications d\'efinies sur $I$ \`a valeurs r\'eelles et d\'erivables en $x_0$ est un espace vectoriel sur $\R$. ($\mathcal{E}$ est non vide et stable par combinaisons linéaires).
+			\item $\fonction{\Phi}{\mathcal{E}}{\R}{f}{f'\left(x_0\right)}$ est une forme lin\'eaire.
+		\end{liste}
+	\end{prop}
+	\begin{prop}
+		Soit $x_0$ un \'el\'ement de $I$. \\
+		Soit $f$ et $g$ deux fonctions num\'eriques d\'efinies sur $I$ et d\'erivables en $x_0$. Alors :
+		\begin{liste}
+			\item $f\times g$ est d\'erivable en $x_0$ et $\left(f\times g\right)'\left(x_0\right)=\left(f'\times g+g'\times f\right)\left(x_0\right)$.
+			\item Si $g\left(x_0\right)\neq 0$ alors il existe un r\'eel strictement positif $\alpha$ tel que :
+				$$
+					\forall x\in\left]x_0-\alpha,x_0+\alpha\right[\cap I,g\left(x\right)\neq 0
+				$$
+				Sur $\left]x_0-\alpha,x_0+\alpha\right[\cap I$, $\frac{f}{g}$ \`a un sens, $\frac{f}{g}$ est d\'erivable en $x_0$ et
+				$$
+					\left(\frac{f}{g}\right)'\left(x_0\right)=\left(\frac{f'\times g-g'\times f}{g^2}\right)\left(x_0\right)
+				$$
+		\end{liste}
+	\end{prop}
+	\begin{prop}
+		Soit $g$ d\'efinie sur $I$, d\'erivable en $x_0$. \\
+		Soit $f$ d\'efinie sur un intervalle contenant $g\left(I\right)$ et d\'erivable en $g\left(x_0\right)$. \\
+		Alors $f\circ g$ \`a un sens sur $I$, est d\'erivable en $x_0$ et :
+		$$
+			\left(f\circ g\right)'\left(x_0\right)=\left(g'\times f'\circ g\right)\left(x_0\right)
+		$$
+	\end{prop}
+	\newpage
+	\begin{theo}{des fonctions r\'eciproques}
+		\begin{liste}
+			\item Si $f$ est d\'efinie sur $I$, continue sur $I$ et strictement monotone sur $I$, alors $f$ r\'ealise une bijection de $I$ sur l'intervalle $f\left(I\right)$.
+			\item Soit $x_0\in I$. Si de plus $f$ est d\'erivable en $x_0$ et $f'\left(x_0\right)\neq 0$ alors l'application r\'eciproque $f^{-1}$ est d\'erivable en $f\left(x_0\right)$ et on a :
+			$$
+				f^{-1}\left(f\left(x_0\right)\right)=\frac{1}{f'\left(x_0\right)}
+			$$
+		\end{liste}
+	\end{theo}
+\end{document}
