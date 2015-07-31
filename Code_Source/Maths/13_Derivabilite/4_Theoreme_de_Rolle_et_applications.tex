@@ -1,0 +1,74 @@
+% !TeX encoding = UTF-8
+\documentclass[12pt,twoside,a4paper]{article}
+
+
+\def\chapitre{D\'erivabilit\'e}
+\author{MPSI 2}
+\def\titre{Th\'eor\`me de Rolle et applications}
+
+\input{../../.includes/header}
+
+%Auteur: Tomas Rigaux, MPSI 2
+
+\begin{document}
+	\maketitle
+	\section{Extremums relatifs}
+		\begin{defi}
+			Soit $I$ un intervalle, soit $x_0\in I$. \\
+			Soit $f\colon R\longrightarrow\R$ une fonction num\'erique. \\
+			On dit que $f$ pr\'esente un extremum relatif en $x_0$ sur $I$ si la quantit\'e $f\left(x\right)-f\left(x_0\right)$ garde un signe constant au voisinage de $x_0$.
+		\end{defi}
+		\begin{prop}
+			Si $x_0$ n'est pas une borne de $I$, si $f$ pr\'esente un extremum relatif en $x_0$ et si $f$ est d\'erivable en $x_0$ alors $f'\left(x_0\right)=0$
+		\end{prop}
+	\section{Th\'eor\`eme de Rolle}
+		\begin{flushleft}
+			Soit $a$ et $b$ deux r\'eels tels que $a<b$.
+		\end{flushleft}
+		\begin{theo}{de Rolle}
+			Soit $f$ une application continue sur $\left[a,b\right]$, d\'erivable sur $\left]a,b\right[$ et telle que $f\left(a\right)=f\left(b\right)$. \\
+			Alors il existe $c$ appartenant \`a $\left]a,b\right[$ tel que  $f'\left(c\right)=0$.
+		\end{theo}
+	\section{Th\'eor\`eme des accroissements finis}
+		\begin{theo}{des accroissements finis}
+			Soit $f$ une application continue sur $\left[a,b\right]$ et d\'erivable sur $\left]a,b\right[$. \\
+			Alors il existe $c$ appartenant \`a $\left]a,b\right[$ tel que : $f(b)-f(a)=f'(c)\times(b-a)$
+		\end{theo}
+	\section{Cons\'equences du Th\'eor\`eme des accroissements \\ finis}
+		\subsection{In\'egalit\'e des accroissements finis}
+			\begin{prop}
+				Soit $f$ une application continue sur $\left[a,b\right]$, d\'erivable sur $\left]a,b\right[$ et de d\'eriv\'ee born\'ee sur $\left]a,b\right[$.
+				$$
+					\exists\left(k,K\right)\in\R^2,\forall x\in\left]a,b\right[,k\leq f'(x)\leq K
+				$$
+				Alors : $k\times(b-a)\leq f(b)-f(a)\leq K\times(b-a)$.
+			\end{prop}
+		\subsection{Th\'eor\`eme de prolongement}
+			\begin{prop}
+				Soit $f$ une fonction continue sur $\left[a,b\right]$, d\'erivable sur $\left]a,b\right[$. \\
+				On suppose $f'$ continue sur $\left]a,b\right[$ et admet des limites finies en $a$ et en $b$. \\
+				Alors $f$ est de classe $\mathcal{C}^1$ sur $\left[a,b\right]$.
+			\end{prop}
+		\subsection{Fonctions Lipschitziennes}
+			Sous les hypoth\`eses de l'in\'egalit\'e des accroissements finis, $f$ est lipschitzienne.
+		\subsection{Variations d'une fonction}
+			\begin{prop}
+				Soit $f$ une application continue sur $\left[a,b\right]$, d\'erivable sur $\left]a,b\right[$. \\
+				Soit $\left[\alpha,\beta\right]\subset\left[a,b\right]$. Alors :
+				\begin{liste}
+					\item $f$ est croissante sur $\left[\alpha,\beta\right]$ si et seulement si $f'\geq 0$ sur $\left]\alpha,\beta\right[$.
+					\item $f$ est d\'ecroissante sur $\left[\alpha,\beta\right]$ si et seulement si $f'\leq 0$ sur $\left]\alpha,\beta\right[$.
+					\item $f$ est constante sur $\left[\alpha,\beta\right]$ si et seulement si $f'=0$ sur $\left]\alpha,\beta\right[$.
+				\end{liste}
+			\end{prop}
+		\subsection{Application au calcul de primitive}
+			\begin{defi}
+				Soit $f$ une fonction num\'erique. On dit que $F$ est une primitive de $f$ sur $[a,b]$ si $F$ est une fonction d\'erivable sur $[a,b]$ et si $F'=f$ sur $[a,b]$.
+			\end{defi}
+			\begin{prop}
+				Soit $F_1$ et $F_2$ deux primitives de $f$ sur $[a,b]$. Alors :
+				$$
+					\exists\lambda\in\R,\forall x\in[a,b],F_2(x)-F_1(x)=\lambda
+				$$
+			\end{prop}
+\end{document}
